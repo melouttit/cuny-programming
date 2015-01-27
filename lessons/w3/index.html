@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week Three</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="../js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="../js/reveal/css/theme/beige.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	#backTo{ 
+		margin:0 20px; 
+		font-family: sans-serif;
+		font-size: 13px;
+	}
+	#backTo p a{ 
+		color: #333; 
+		text-decoration:none;
+		padding:3px 5px;
+	}
+	#backTo p a:hover,
+	#backTo p a.current{
+		background:#333;
+		color:#fff;
+	}
+	.code{ color:#000;font-family: monospace!important; }
+
+	/*exercise*/
+	div#floatBox{
+		width:200px;
+		height:200px;
+		border:3px solid #000;
+		border-radius:8px;
+		background-color:white;
+		margin:8px;
+	}
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 3;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 3 | Sept. 17, 2014</h2>
+				<h4>CSS: Making Pages Pretty</h4>
+			</section>
+			<section>
+				<h2>Week Two Review</h2>
+				<p><a href="../reviews/html_review_2.html" target="_blank">Click to take Review Quiz &raquo;</a></p>
+			</section>
+			<section>
+				<section>
+					<h2>What Is CSS?</h2>
+				</section>
+				<section>
+					<h3>Definition</h3>
+					<ul>
+						<li>CSS stands for <strong>Cascading Style Sheets</strong></li>
+						<li>CSS allows you to create style rules that specify how an element will appear on your page.</li>
+						<li>With CSS you can control things like positioning, color, fonts, borders, backgrounds, size and more.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Example</h3>
+					<p style="text-align:left;"><span class="code">h1 {<br />
+						&nbsp;&nbsp;margin-bottom: 12px;<br />
+						&nbsp;&nbsp;color: #fff;<br />
+					}</span></p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Style Syntax</h2>
+				</section>
+				<section>
+					<h3>The Selector</h3>
+					<p>Indicates which element(s) the rule applies to</p>
+				</section>
+				<section>
+					<h3>Common Selectors</h3>
+					<ul>
+						<li><strong>Type/Tag</strong> matches an element name: <span class="code">h1, p, a</span></li>
+						<li><strong>Class</strong> matches an element with that class value: <span class="code">.credit</span></li>
+						<li><strong>ID</strong> matches the element with that ID value: <span class="code">#container</span></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Other Selectors</h3>
+					<ul>
+						<li><strong>Universal</strong> targets all elements on a page: <span class="code">*</span></li>
+						<li><strong>Child</strong> matches an element that is the direct child of another: <span class="code">li > a</span></li>
+						<li><strong>Descendant</strong> matches an element that is a descendant of anotehr element (not necessarily a direct child): <span class="code">p a</span></li>
+					</ul>
+				</section>
+				<section>
+					<h3>The Rule</h3>
+					<ul>
+						<li>Defines a set of styles for the selector element. There are two parts to each declaration.</li>
+						<li><strong>Property:</strong> The aspect of the element you wish to style</li>
+						<li><strong>Value:</strong> The setting you choose for that property</li>
+					</ul>
+				</section>
+				<section>
+					<h3>The Cascade</h3>
+					<p>If two or more rules apply to the same element the one that takes precedence is either:</p>
+					<ul>
+						<li><strong>Last:</strong> If the selectors are identical the latter will take precedence.</li>
+						<li><strong>Specificity:</strong> If one selector is more specific it will take precedence.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Inheriting Styles</h3>
+					<p>Child elements, unless specificed in the styles, will usually <em>inherit</em> a style from their parent or container element. You can also declare <span class="code">inherit</span> as a value to any property.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Adding CSS to your page</h2>
+					<p>There are three ways to apply CSS to your page.</p>
+				</section>
+				<section>
+					<h3>1. Inline Styles</h3>
+					<ul>
+						<li>You can add a <span class="code">style</span> attribute to any HTML tag, with the value being CSS styling.</li>
+						<li>EX: <span class="code">&lt;div style="width:200px;"&gt;&lt;/div&gt;</span></li>
+						<li>Using inline styles is generally not good practice, but you will alter them when you start using JavaScript.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>2. External: In Your Head</h3>
+					<ul>
+						<li>Within your <span class="code">&lt;head&gt;</span> include a set of <span class="code">&lt;style&gt;&lt;/style&gt;</span> tags</li>
+						<li>Write your styles inside these tags.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>3. External: Using <span class="code">&lt;link /&gt;</span></h3>
+					<ul>
+						<li>Create a file called <span class="code">styles.css</span> and store it in a directory on your site called <strong>css</strong>.</li>
+						<li>Within your <span class="code">&lt;head&gt;</span> write out a <span class="code">&lt;link /&gt;</span> tag and include an <span class="code">href</span> attribute to link to your stylesheet.</li>
+						<li><span class="code">&lt;link rel="stylesheet" href="css/styles.css" /&gt;</span></li>
+						<li>The <span class="code">rel</span> attribute describes the relationship between the current document and the linked document.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<p>Create <span class="code">&lt;style&gt;&lt;/style&gt;</span> in your <span class="code">&lt;head&gt;</span> and start a rule for your <span class="code">&lt;h1&gt;</span>.</p>
+				</section>
+			</section>
+			<section>
+				<h2>Editing in the Console</h2>
+				<p>One of the best ways to test CSS is to first edit in the console. Open up your website in a browser and open the developer tools. You can write out styles in the Elements tab to see how they would look on the page. Just remember to add the ones you want to your stylesheet later!</p>
+			</section>
+			<section>
+				<section>
+					<h2>Colors</h2>
+				</section>
+				<section>
+					<h3>Common Color Properties</h3>
+					<ul>
+						<li><span class="code">color</span> is used for text colors</li>
+						<li><span class="code">background-color</span> defines the background color of an element</li>
+						<li><span class="code">border-color</span> is the color of an element's border</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Color Values</h3>
+					<ul>
+						<li>There are currently 147 predefined colors that are recognized by most browsers, including <span class="code">black</span>, <span class="code">blue</span> and <span class="code">DarkCyan</span>.</li>
+						<li>You can use HEX and RGBA values</li>
+						<li>HEX values are more common but RGBA is useful if you want to define the opacity of a background color</li>
+					</ul>
+				</section>
+				<section>
+					<h3>How to Pick Colors</h3>
+					<ul>
+						<li>When picking foreground (text) and background colors, you want to make sure that there is enough contrast for text to be legible</li>
+						<li>Reverse, high contrast (like white text on a black background) should not be used for large blocks of text because it strains the eye.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<p>Add the following to your page in your <span class="code">&lt;style&gt;</span> tags</p>
+					<ul>
+						<li>Background Color</li>
+						<li>Two text colors</li>
+						<li>A link color</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Fonts</h2>
+				</section>
+				<section>
+					<h3>Common Font Properties</h3>
+					<ul>
+						<li><span class="code">font-family</span> defines a cascading font stack starting with the preferred font, then fallback fonts in case the browser doesn't recognize the first. Ex: <span class="code">font-family: arial,helvetica,sans-serif;</span></li>
+						<li><span class="code">font-size</span> can be in pixels or ems</li>
+						<li><span class="code">font-weight</span> normal, light, bold</li>
+						<li><span class="code">font-style</span> normal, italic, oblique</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Types of Fonts</h3>
+					<ul>
+						<li><strong>Serif</strong> fronts have extra details (serifs) on the ends of the main strokes of the letters</li>
+						<li><strong>Sans-Serif</strong> have straight ends to letters</li>
+						<li><strong>Monospace</strong> means each letter has the same width</li>
+					</ul>
+				</section>
+				<section>
+					<h3>More Text Properties</h3>
+					<ul>
+						<li><span class="code">text-transform</span></li>
+						<li><span class="code">text-decoration</span></li>
+						<li><span class="code">text-align</span></li>
+						<li><span class="code">text-indent</span></li>
+						<li><span class="code">text-shadow</span> a CSS3 property for drop shadows</li>
+						<li><span class="code">line-height</span></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<p>Add the following to your page styles:</p>
+					<ul>
+						<li>A sans-serif font for your headline</li>
+						<li>A serif font for your body text</li>
+						<li>A text-transform, text-decoration OR text-align</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Psuedo Elements</h2>
+					<p>Can be added to the end of your selector for more control.</p>
+				</section>
+				<section>
+					<h3>Examples</h3>
+					<ul>
+						<li><span class="code">:first-letter</span> and <span class="code">:first-line</span></li>
+						<li><span class="code">:hover</span> and <span class="code">:active</span> for links</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<p>Use the <span class="code">:first-letter</span> psuedo element to add a drop cap to your text.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Box Styling</h2>
+					<p>This references styling the parts included in the box model.</p>
+				</section>
+				<section>
+					<h3>Size Properties</h3>
+					<ul>
+						<li><span class="code">width, min-width, max-width</span> defined in pixels</li>
+						<li><span class="code">height, min-height, max-height</span> defined in pixels</li>
+						<li>These properties can also be set to percentages of the width and height of the parent or container element.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Overflow</h3>
+					<p>A property that controls what happens to content that doesn't fit inside of the box. By default, <span class="code">overflow: visible;</span></p>
+				</section>
+				<section>
+					<h3>Box Margins</h3>
+					<ul>
+						<li><span class="code">margin</span> set in pixels or percentage</li>
+						<li><span class="code">margin-top, margin-right, margin-bottom, margin-left</span></li>
+						<li>Set all sides at the same time: <span class="code">margin: 10px;</span></li>
+						<li>Set all four in one: <span class="code">margin: 5px 0px 10px 5px;</span> going clockwise from the top side to the left side.</li>
+						<li>To center a box, you can set <span class="code">margin: 0 auto;</span></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Box Padding</h3>
+					<p>Set exactly like margins, except the property name is <span class="code">padding</span></p>
+					<ul>
+						<li><span class="code">padding</span></li>
+						<li><span class="code">padding-top, padding-right, padding-bottom, padding-left</span></li>
+						<li><span class="code">padding: 10px;</span></li>
+						<li><span class="code">padding: 5px 0px 10px 5px;</span></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Box Border</h3>
+					<ul>
+						<li><span class="code">border</span> to sell all sides or specify <span class="code">border-top, border-right, border-bottom</span> or <span class="code">border-left</span></li>
+						<li>You can also set <span class="code">border-width</span> in pixels, <span class="code">border-style</span> and <span class="code">border-color</span>.</li>
+						<li><span class="code">border-radius</span> is CSS3 property that allows you to create rounded corners. Set <span class="code">border-radius: 10px;</span>.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Box Display</h3>
+					<ul>
+						<li>You can use the <span class="code">display</span> property to specify whether the box should be <span class="code">visible</span> or <span class="code">hidden</span></li>
+						<li>You can also set the property to <span class="code">block</span> or <span class="code">inline</span> to, for example, make an inline element have the properties of a block element.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<p>Add rules to a <span class="code">&lt;h1&gt;</span> or <span class="code">&lt;div&gt;</span> to change the size, padding, margin and borders.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>The Float</h2>
+				</section>
+				<section>
+					<h3>The <span class="code">float</span> Property</h3>
+					<p>Allows you to "float" an element to the left or right, which removes the element from the flow of elements on the page, bringing any element beneath up and around.</p>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<p>Write a rule for the box below with the ID "floatBox" to float it right or left.</p>
+					<div id="testFloat">
+						<div id="floatBox"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra nec ligula sit amet iaculis. Vivamus eget purus diam. Aenean ullamcorper risus non metus tincidunt vehicula. Suspendisse luctus, dui a porta molestie, turpis ante rhoncus nunc, at fermentum urna sapien ac felis.</p>
+					</div>
+				</section>
+			</section>
+			<section>
+				<h2>Comments in CSS</h2>
+				<p>Same principle as in HTML, you use these to write notes to yourself or anyone who is looking at your code.</p>
+				<p><span class="code">/* CSS Comment Here */</span></p>
+			</section>
+			<section>
+				<section>
+					<h2>Assignments</h2>
+				</section>
+				<section>
+					<h3>Finish Lesson</h3>
+					<ul>
+						<li>Make sure you take the <a href="../reviews/html_review_2.html" target="_blank">review quiz</a> and submit</li>
+						<li>Go over and practice with the rules the follow slides:
+							<ul>
+								<li><a href="#/6">Color Rules</a></li>
+								<li><a href="#/7">Font Rules</a></li>
+								<li><a href="#/8">Pseudo Elements</a></li>
+								<li><a href="#/11">CSS Comments</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Readings</h2>
+					<ul>
+						<li>In HTML&CSS read Chapters 10-13</li>
+						<li>Read <em><a href="http://sixrevisions.com/web_design/a-look-into-color-theory-in-web-design/" target="_blank">A Look Into Color Theory and Web Design</a></em></li>
+						<li>Read <em><a href="http://webdesign.tutsplus.com/articles/a-beginners-guide-to-pairing-fonts--webdesign-5706" target="_blank">A Beginner's Guide to Pairing Fonts</a></em></li>
+						<li><strong>Extra:</strong> Smashing Magazine's Color Theory for Designers <a href="http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color/" target="_blank">Part 1</a>, <a href="http://www.smashingmagazine.com/2010/02/02/color-theory-for-designers-part-2-understanding-concepts-and-terminology/" target="_blank">Part 2</a> and <a href="http://www.smashingmagazine.com/2010/02/08/color-theory-for-designer-part-3-creating-your-own-color-palettes/" target="_blank">Part 3</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Choose Colors & Fonts</h2>
+					<ul>
+						<li>Pick a color theme for your site. Choose at least 3 colors (backgrounds, text, links) using a tool like the <a href="https://kuler.adobe.com/create/color-wheel/" target="_blank">Kuler Color Wheel</a>.</li>
+						<li>Decide on complimentary serif and sans-serif font stacks (refer to <a href="#/7/1">slide 7</a> for <span class="code">font-family</span> example. Use tools like <a href="http://cssfontstack.com/" target="_blank">CSS Font Stack</a> and <a href="http://www.google.com/fonts/" target="_blank">Google Fonts</a>. Your font stacks should have three fonts each: Your ideal font, a fallback, and a generic <span class="code">serif</span> or <span class="code">sans-serif</span> declaration.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Create Rules</h2>
+					<p>Create example rules for your color and font choices. For example, if you want the background of your page to be blue, you would write:</p><p> <span class="code">body{ background-color: blue; }</span></p><p> Put those rules in a file with a .css extension and upload to your folder in Week 2 on Dropbox. There are more examples in the Week 2 Dropbox file called <strong>zexample.css</strong></p>
+				</section>
+				<section>
+					<h1>Have a great week!</h1>
+				</section>
+			</section>
+		</div>
+	</div>
+
+
+<script src="../js/reveal/lib/js/head.min.js"></script>
+<script src="../js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: '../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: '../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: '../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: '../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="../js/lessonHeader.js"></script>
+</body>
+</html>

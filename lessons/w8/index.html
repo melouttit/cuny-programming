@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week Eight</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="../js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="../js/reveal/css/theme/beige.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	#backTo{ 
+		margin:0 20px; 
+		font-family: sans-serif;
+		font-size: 13px;
+	}
+	#backTo p a{ 
+		color: #333; 
+		text-decoration:none;
+		padding:3px 5px;
+	}
+	#backTo p a:hover,
+	#backTo p a.current{
+		background:#333;
+		color:#fff;
+	}
+	.code{ color:#000;font-family: monospace!important; }
+
+	/*exercise*/
+	div.floatBox{
+		width:200px;
+		height:200px;
+		border:3px solid #000;
+		border-radius:8px;
+		background-color:white;
+		margin:8px;
+	}
+	div.floatBox{
+		position:relative;
+		top:0;
+		left:0;
+	}
+	div#floatOne{}
+	div#floatTwo{}
+	div#floatThree{}
+	span.red{ color:red; }
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 8;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 8 | October 29, 2014</h2>
+				<h4>Introduction to jQuery</h4>
+			</section>
+			<section>
+				<h2>JavaScript vs. jQuery</h2>
+				<ul>
+					<li><strong>Javascript is the language, jQuery is the library</strong></li>
+					<li>jQuery is essentially a set of shortcuts to doing common tasks with JavaScript</li>
+					<li>Most importantly, it simplifies the interaction between HTML and JavaScript.</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Using <span class="code">jQuery</span></h2>
+					<p>To access the methods and shortcuts of the jQuery library, you first have to make sure the full jQuery library is available on your page.</p>
+				</section>
+				<section>
+					<h3>Adding to your Page</h3>
+					<ul>
+						<li>First, download the set of predefined functions</li>
+						<li>Then we include the library on the page like any other script</li>
+						<li>Make sure the script tag that pulls in the jQuery library is on the page <em>before</em> any script to write that uses jQuery</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<ul>
+						<li><a href="http://jquery.com/download/">Download jQuery</a> and put it in a directory in your site called js</li>
+						<li>Include jQuery on your site as an external file</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>The <span class="code">jQuery</span> Wrapper</h2>
+				</section>
+				<section>
+					<h3>Syntax</h3>
+					<p><span class="code">jQuery(document).ready(function(){ &nbsp;&nbsp;&nbsp; });</span></p>
+				</section>
+				<section>
+					<h3>The Dollar Sign</h3>
+					<p>To use jQuery, you have to declare when you are going to access the library. You can either write out <span class="code">jQuery</span> before your selector or use the <span class="code">$</span> sign.</p>
+				</section>
+				<section>
+					<h3>jQuery Selectors</h3>
+					<ul>
+						<li>jQuery selects elements just like CSS</li>
+						<li>Remember, selectors can be <strong>tags</strong>, <strong>classes</strong> and <strong>IDs</strong></li>
+						<li><strong>CSS:</strong> <span class="code">h1 {}</span></li>
+						<li><strong>jQuery:</strong> <span class="code">$('h1')</span></li>
+					</ul>
+				</section>
+				<section>
+					<h3>jQuery Methods</h3>
+					<ul>
+						<li>A series of predefined events and effects that you can run on any jQuery selector</li>
+						<li>For example: <span class="code">$('h1').click();</span> allows you to run a function when that element has been clicked</li>
+						<li><a href="http://api.jquery.com/">Refer to the documention</a> for the methods that are available to you</li>
+					</ul>
+				</section>
+				<section>
+					<h3>The <span class="code">ready</span> Method</h3>
+					<p>This method prevents your script from running until the page has loaded. It's best to wrap all your jQuery in this method to make sure all the elements you are targeting are on the page.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Disect the Wrapper</h2>
+				</section>
+				<section>
+					<h3><span class="code">$()</span></h3>
+					<p>The Wrapper - The dollar sign calls the jQuery library and indicates that a jQuery method will be used on the element in the wrapper.</p>
+				</section>
+				<section>
+					<h3><span class="code">document</span></h3>
+					<p>The Selector - the element that you are going to run your method on. This can be the page itself <span class="code">document</span> or a tag <span class="code">'h1'</span>, an ID <span class="code">'#idname'</span> or class <span class="code">'.classname'</span></p>
+				</section>
+				<section>
+					<h3><span class="code">.ready()</span></h3>
+					<p>The Method - whatever jQuery method you are running on the element you've specified. In this case we are running <span class="code">ready</span>, which means to wait until the page is loaded before running the code.</p>
+				</section>
+				<section>
+					<h3><span class="code">function(){ }</span></h3>
+					<p>The beginning of your function. The parenthese after <span class="code">function</span> is where you can pass in other information that your function needs, but not neessary. The code you are going to run goes inside the curly brackets.</p>
+				</section>
+			</section>
+			<section>
+				<h2>Exercise</h2>
+				<ul>
+					<li>Start your code by writing a wrapper with the <span class="code">ready</span> method.</li>
+					<li>Similar to last week's exercise, write a function inside that will log a message to the console when you click your headline.</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Chaining</h2>
+				<p>You can run multiple methods on a single selector with jQuery. For example: <span class="code">$('h1').css('color','red').fadeOut();</span> will change the color of your headline and the fade it off the page.</p>
+			</section>
+			<section>
+				<section>
+					<h2>Assignment</h2>
+				</section>
+				<section>
+					<h3>Reading</h3>
+					<ul>
+						<li>Read in JavaScript&JQuery Chapter 7.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<ul>
+						<li>Using the <a href="http://api.jquery.com/">jQuery documentation</a>, write five lines of jQuery on your homepage using each of the following methods: <span class="code">click</span>, <span class="code">css</span>, <span class="code">append</span>, <span class="code">hide</span> and a fifth one of your choice. Upload your homepage to Dropbox.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Definitions</h3>
+					<p>In the Week 8 Dropbox, copy the file <span class="code">definitions.docx</span> and fill out the definitions for the terms and decribing the code. You'll need to use Google or the resources on the class website. Save your copy your folder in Week 8.</p>
+				</section>
+			</section>
+		</div>
+	</div>
+
+<script src="../js/reveal/lib/js/head.min.js"></script>
+<script src="../js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: '../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: '../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: '../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: '../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="../js/lessonHeader.js"></script>
+</body>
+</html>

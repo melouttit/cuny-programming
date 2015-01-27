@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week Six</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="../js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="../js/reveal/css/theme/beige.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	#backTo{ 
+		margin:0 20px; 
+		font-family: sans-serif;
+		font-size: 13px;
+	}
+	#backTo p a{ 
+		color: #333; 
+		text-decoration:none;
+		padding:3px 5px;
+	}
+	#backTo p a:hover,
+	#backTo p a.current{
+		background:#333;
+		color:#fff;
+	}
+	.code{ color:#000;font-family: monospace!important; }
+
+	/*exercise*/
+	div.floatBox{
+		width:200px;
+		height:200px;
+		border:3px solid #000;
+		border-radius:8px;
+		background-color:white;
+		margin:8px;
+	}
+	div.floatBox{
+		position:relative;
+		top:0;
+		left:0;
+	}
+	div#floatOne{}
+	div#floatTwo{}
+	div#floatThree{}
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 6;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 6 | October 15, 2014</h2>
+				<h4>Intro to JavaScript</h4>
+			</section>
+			<section>
+				<h2>Objectives for Javascript</h2>
+				<ul>
+					<li>Write introductory JavaScript from scratch to add interactivity to your web pages</li>
+					<li>How to use basic jQuery libraries (plugins)</li>
+					<li>A feel for the capabilities and limitations of programming</li>
+					<li>Understand the basics of functional programming: loops, control structures and data types, which provide a foundation for any language</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Javascript, A History</h2>
+				</section>
+				<section>
+					<h3>An 'Old' Language</h3>
+					<ul>
+						<li>Was created in 1995 by Brendan Eich</li>
+						<li>In 1996-1997 was taken to the ECMA Board to set standards, which could then be implemented by other browsers</li>
+						<li>The base for modern javascript was released in 1999 as ECMAScript 3</li>
+						<li>Originally, Microsoft had no intention of properly implementing JS into IE</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Present Day</h3>
+					<ul>
+						<li>In 2005, partly in response to a paper released by Jesse James Garret, JS began its renaissance, spearheaded by open source communities</li>
+						<li>Out of this, libraries like Prototype, MooTools, jQuery and more were released</li>
+						<li>The latest rounds of innovation have produced developments like the NodeJS platform, HTML5 APIs, moustache templates, Backbone and more</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Mobile Implications</h3>
+					<p>With the fast surge of mobile devices and Apple's decision to forego supporting Adobe's Flash - which had previously been the go-to technology for creating on-page interactions and animations - JavaScript became even more important because it was already native to browsers on any device.</p>
+				</section>
+			</section>
+			<section>
+				<h2>What do we use it for?</h2>
+				<ul>
+					<li>Dynamically add elements to a web page</li>
+					<li>Add animations based on user actions</li>
+					<li>Alert users to form actions</li>
+					<li>Add motions and transitions to text and photos</li>
+					<li>Load data from a server only when a user requests it</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Javascript v. jQuery</h2>
+				<ul>
+					<li><strong>Javascript is the language, jQuery is the library</strong></li>
+					<li>jQuery is essentially a set of shortcuts to doing common tasks with JavaScript</li>
+					<li>Use the <a href="http://jquery.com/">jQuery website</a> to look up specific uses</li>
+				</ul>
+			</section>
+			<section>
+				<h2>What a Little JS Can Do</h2>
+				<ul>
+					<li><a href="http://www.nytimes.com/interactive/2013/02/12/science/12scibook-unfeathered-bird-zoomer.html">The Naked Bird, Illustrated</a></li>
+					<li><a href="http://www.nytimes.com/2014/05/18/us/politics/quixotic-80-campaign-gave-birth-to-kochs-powerful-network.html">Campaign Gave Birth to Koch's Powerful Network</a></li>
+					<li><a href="http://www.nytimes.com/interactive/2012/11/26/sports/basketball/section15.html">Portraits of Nets Fans</a></li>
+					<li><a href="http://www.nytimes.com/interactive/2014/06/15/opinion/sunday/exposures-kiev-ukraine-protesters-mourners.html">Portraits from Kiev</a></li>
+					<li><a href="http://www.nytimes.com/interactive/2014/10/14/world/middleeast/us-casualties-of-iraq-chemical-weapons.html">The Secret Casualties of Iraq's Abandoned Chemical Weapons</a></li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Adding Javascript to Your Page</h2>
+					<p>The following methods are true whether you are using native JavaScript, a library like jQuery, plugins, etc.</p>
+				</section>
+				<section>
+					<h2>Internally</h2>
+					<p>You can add the following at any point in your HTML file, however, it is best to add it to the bottom of the page, before your closing <span class="code">&lt;/body&gt;</span> tag</p>
+					<p><span class="code">&lt;script type="text/javascript"&gt;Your Script Here&lt;/script&gt;</span></p>
+				</section>
+				<section>
+					<h2>Externally</h2>
+					<p>Almost the same as adding internal script, except you add a source attribute to the <span class="code">&lt;script&gt;</span> tag, and nothing in between</p>
+					<p><span class="code">&lt;script type="text/javascript" src="js/main.js"&gt;&lt;/script&gt;</span></p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Javascript Vocab</h2>
+				</section>
+				<section>
+					<h3>Values</h3>
+					<p>Javascript recognizes the following value types:</p>
+					<ul>
+						<li><strong>Numbers:</strong> 42, 1025, 3.14</li>
+						<li><strong>Boolean (Logic):</strong> True / False</li>
+						<li><strong>Strings:</strong> "Hello, World!"</li>
+						<li><strong><code>null</code>:</strong> A special keyword assigned as a representation of no value</li>
+						<li><strong><code>undefined</code>:</strong> A variable that has been declared by has not been assigned a value</li>
+				</section>
+				<section>
+					<h3>Variables</h3>
+					<p>Variables are symbolic names for values in your code</p>
+					<ul>
+						<li>Javascript is case-sensitive</li>
+						<li>You can declare variables in two ways:
+							<ul>
+								<li>Using the keyword <code>var</code>. For example <code>var x = 1025;</code> or <code>var x = "Hello, World!";</code></li>
+								<li>Simply declaring. For example <code>x = 1025</code>. This method creates a global variable; however, and in most cases shouldn't be used.</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Scope</h3>
+					<ul>
+						<li>When you declare a variable outside of a function it is called a <em>global</em> variable because it is available to all functions in a document</li>
+						<li>When you declar a variable inside a function it is called a <em>local</em> variable because it is only available inside that function</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Object-Oriented Programming</h3>
+					<ul>
+						<li><strong>Objects:</strong> In programming, something that has a value, which can be a variable, function or data structure</li>
+						<li><strong>Class:</strong> In OOP this is an object that is used to created instances of itself - it is a blueprint for building a specific object</li>
+						<li><strong>Methods:</strong> Behaviors associated with a class that are executed when the program is run</li>
+						<li><a href="http://en.wikipedia.org/wiki/Object-oriented_programming">Extra Reading about OOP</a></li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>The DOM</h2>
+				</section>
+				<section>
+					<h3>Definition</h3>
+					<p>DOM = Document Object Model</p>
+				</section>
+				<section>
+					<h3>Nodes</h3>
+					<p>In the DOM, everything is a node - HTML elements are <strong>element nodes</strong> and attributes are <strong>attribute nodes</strong> and text inside of elements are <strong>text nodes</strong>.</p>
+				</section>
+				<section>
+					<h3>Manipulating the DOM</h3>
+					<p>When we refer to the DOM, which we do a lot in JavaScript, we are simply referring to the layout of nodes that make up a page.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>The DOCUMENT</h2>
+				</section>
+				<section>
+					<h3>Native JavaScript</h3>
+					<p>To use methods, Javascript uses <span class="code">document</span> to refer to your HTML. By calling <span class="code">document</span>, we can access the entire DOM (all the nodes!) on the page..
+				</section>
+				<section>
+					<h3>Try It Yourself!</h3>
+					<ul>
+						<li><span class="code">document.write()</span> to add text to a page</li>
+						<li><span class="code">document.createElement()</span> to create an HTML element</li>
+						<li><span class="code">document.createTextNode()</span> to create text</li>
+						<li><span class="code">document.appendChild()</span> to add an element to the page</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Accessing Nodes</h3>
+					<p>To refer to specific nodes on the page that we want to change, we can called <span class="code">document.getElementsByTagName()</span> and <span class="code">document.getElementsById()</span></p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Functions</h2>
+				</section>
+				<section>
+					<h3>What are they?</h3>
+					<p>Functions in JavaScript combine a series of events or actions into one step. This is useful when there is a series of actions you want to perform more than once. <em>Remember: Functions are also objects!</em></p>
+				</section>
+				<section>
+					<h3>Syntax</h3>
+					<p><span class="code" style="text-align:left;">var myFunc = function(param){ <br />
+						&nbsp;&nbsp;&nbsp;&nbsp;console.log("RUN MY FUNCTION");<br />
+					}</span>
+				</section>
+				<section>
+					<h3>Arguments / Parameters</h3>
+					<p>Can be passed to your function so that the events within the function can be run on different objects. The parameter is a placeholder name for whatever value we pass to the function.</p>
+				</section>
+				<section>
+					<h3>Run your Function</h3>
+					<p>Just putting a function in your code will not automatically run that function. To call the function, type the name of the function with a set of parathenses after it (which is where you will pass your parameter if you have one): <span class="code" style="text-align:left;">myFunc(param);</p>
+				</section>
+				<section>
+					<h3>A Lack of Class</h3>
+					<p>In other programming languages there are classes, which can be repeated. We can simulate this in JS using named functions:<br />
+					<span class="code" style="text-align:left;">function addItem(param){<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;console.log("ADD AN ITEM");<br />
+					}<br/ ></span>
+					And then to run, call the name of the function: <span class="code" style="text-align:left;">addItem(param);</span>
+					</p>
+				</section>
+			</section>
+			<section>
+				<h2>Exercise</h2>
+				<p>Write a function on your homepage that triggers an alert when the user clicks your logo.</p>
+			</section>
+			<section>
+				<section>
+					<h2>Assignment</h2>
+				</section>
+				<section>
+					<h3>Reading</h3>
+					<ul>
+						<li>Read in JavaScript&JQuery, Chapters 1-2 and 5 (pages 184-227).</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<ul>
+						<li>Sign up for Codecademy</li>
+						<li>Go to the <a href="http://www.codecademy.com/tracks/javascript">JavaScript section</a> (NOT jQuery) and go to section 3, <a href="http://www.codecademy.com/courses/javascript-beginner-en-6LzGd/0/1?curriculum_id=506324b3a7dffd00020bf661">Introduction to Functions in JS</a>. Complete lessons 1-7.</li>
+						<li>Take a screenshot of your last lesson (there will be a green bar telling you you've succeeded and can move on) and upload to Dropbox.</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+	</div>
+  
+
+<script src="../js/reveal/lib/js/head.min.js"></script>
+<script src="../js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: '../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: '../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: '../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: '../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="../js/lessonHeader.js"></script>
+</body>
+</html>
