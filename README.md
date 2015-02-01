@@ -28,3 +28,4 @@ Lessons and notes for CUNY Graduate School of Journalism “Programming for Jour
 </ul>
 
 <p>* <em>Class is held on Wednesday, no class that Monday 2/16</em></p>
+<p><em>NO class on Monday 4/6 (spring recess)</em></p>
