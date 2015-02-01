@@ -65,10 +65,9 @@
 	<section>
 		<h3>How This Class Works</h3>
 		<ul>
-			<li>Weekly lessons will be on the <a href="http://mlouttit.com/cuny">class site</a>, along with links to other resources - some of which we will cover in class, others are there for your own exploration.</li>
-			<li>Each class we will review assignments from the previous week, followed by a lecture on a new concept and a workshop on that lesson.</li>
-			<li>Assignments are <strong>due by midnight</strong> the day before class (Tuesday). Most assignments will be turned in via <a href="https://www.dropbox.com/sh/l0f8f5t7zvfqp83/AAA1lW67JTLcyG7LoHJVWGc0a">the class Dropbox</a>.</li>
-			<li>Some chapters will be assigned for reading, along with other online resources.</li>
+			<li>Weekly lessons will be on the <a href="http://mlouttit.com/cuny">class site</a>, along with links to other resources - some of which we will cover in class, others are there for your own reading and exploration.</li>
+			<li>Each class will include some lecture time on a new concept, following by exercises. Some weeks will be all workshop time. A few classes will include lab lessons from Jue Yang.</li>
+			<li>Assignments are due by the start of class. Most assignments will be turned in via <a href="https://www.dropbox.com/sh/townfq72i0uorco/AAAwOol_EooPnse41AOYaZFKa">the class Dropbox</a>.</li>
 		</ul>
 	</section>
 	<section>
@@ -78,6 +77,7 @@
 			<li>Write introductory-to-intermediate CSS to precisely control and manipulate HTML for Web page layout.</li>
 			<li>Ability to follow a design workflow</li>
 			<li>Knowledge of the basic structure and infrastructure of a website.</li>
+			<li>Knowledge of common project workflows used in modern newsrooms.</li>
 			<li>Understand the empowering role of design and programming in journalism.</li>
 		</ul>
 	</section>
@@ -90,9 +90,9 @@
 	<ul>
 		<li>Become a better problem solver</li>
 		<li>To gain an understanding for how your work is delivered</li>
-		<li>To be able to communicate with technology professionals in the workplace</li>
+		<li>To be able to communicate with technology professionals in the workplace who support your work or who will be direct colleagues.</li>
 		<li>Brainstorm new ideas for how to tell a story</li>
-		<li>It'll help you get a job</li>
+		<li>It'll probably help you get a job</li>
 	</ul>
 </section>
 <section>
@@ -100,13 +100,21 @@
 		<h2>Introductions</h2>
 	</section>
 	<section>
-		<h3>Skills Survey</h3>
-		<p><a href="../skills">Click here to take the survey</a></p>
-		<p>*There are no right or wrong answers, this is to learn more about where you currently are skills-wise so I can better adjust the course.</p>
+		<h3>Class Sign-In & Survey</h3>
+		<p><a href="https://docs.google.com/forms/d/1TaF3kZ418pUkMxYc1hNE0Gbw0m_CWGH3bTeHWDOE58c/viewform" target="_blank">Click here to take the survey</a></p>
+		<p>* Please use the email you want to use for class communications, including sharing Dropbox and Slack access. </p>
+	</section>
+	<section>
+		<h3>Instructor Introductions</h3>
+		<ul>
+			<li>Class Instructor: <a href="http://www.journalism.cuny.edu/cunyj_profiles/louttit-meghan-adjunct-faculty-jquery-and-javascript/#.VM6e4mRHKQ0">Meghan Louttit</a></li>
+			<li>Lab Instructor: Jue Yang</li>
+		</ul>
 	</section>
 	<section>
 		<h3>Student Introductions</h3>
 		<ul>
+			<li>What is your name? And what do you want us to call you in class?</li>
 			<li>Where are you from?</li>
 			<li>Why are you at CUNY?</li>
 			<li>Why did you take this class?</li>
@@ -121,9 +129,9 @@
 		<h3>Necessary Programs</h3>
 		<ul>
 			<li>Browsers: <a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/new/?utm_expid=65789850-8&utm_referrer=https%3A%2F%2Fwww.google.com%2F">Firefox</a></li>
-			<li>Text Editors: <a href="http://www.barebones.com/products/textwrangler/download.html">Textwrangler</a>, <a href="http://www.sublimetext.com/">Sublime</a>*</li>
+			<li>Text Editor: <a href="http://www.sublimetext.com/">Sublime</a>*</li>
 			<li>Class Docs & Turning in Assignments: <a href="https://www.dropbox.com/sh/l0f8f5t7zvfqp83/AAA1lW67JTLcyG7LoHJVWGc0a">Dropbox</a></li>
-			<li>FTP Program: <a href="http://cyberduck.ch/">Cyberduck</a> (or your preferred software)</li>
+			<li>FTP Program: <a href="http://cyberduck.ch/">Cyberduck</a></li>
 		</ul>
 	</section>
 	<section>
@@ -146,8 +154,8 @@
 		<h3>Directory Structure</h3>
 		<ul>
 			<li>The <strong>root</strong> folder is the most top-level folder with your content in directories or files within the root.</li>
-			<li>The main homepage of a site or section is always <span class="code">index.html</span>, which is returned when no other file type is specified in the URL</li>
-			<li>For example: <span class="code">http://mysite.com</span> will return the same thing as <span class="code">http://mysite.com/index.html</code></li>
+			<li>The default page of a directory (site) is always <span class="code">index.html</span>, which is returned when no other file type is specified in the URL</li>
+			<li>For example: <span class="code">http://mysite.com</span> will go to the same page as <span class="code">http://mysite.com/index.html</code></li>
 		</ul>
 	</section>
 	<section>
@@ -170,7 +178,11 @@
 	</section>
 	<section>
 		<h3>Create Your Homepage</h3>
-		<p>In your site's root directory, create a file called <span class="code">index.html</span>. This will be your site's homepage.</p>
+		<p>Open Sublime and start a new file. Save this file to your site's root directory and name it <span class="code">index.html</span>. This will be your site's homepage.</p>
+	</section>
+	<section>
+		<h3>File Extensions</h3>
+		<p>The file extension simply tells your text editor and the browser what type of file (what language) it's opening and displaying. Your file extension should match the language you're writing in. In this class, we will primarily be working with three file extensions: <span class="code">.html</span>, <span class="code">.css</span>, <span class="code">.js</span>
 	</section>
 </section>
 <section>
@@ -191,66 +203,25 @@
 	</section>
 	<section>
 		<h3>View Your Local Website</h3>
-		<p>Type a line of text in your <span class="code">index.html</span> file, save it, and open in a browser.</p>
-	</section>
-</section>
-<section>
-	<section>
-		<h2>HTML & Page Setup</h2>
-	</section>
-	<section>
-		<h3>What is HTML?</h3>
-		<ul>
-			<li>Stands for <strong>Hyper-Text Markup Language</strong></li>
-			<li>It is a language for 'writing' or 'describing' web pages. Those pages are then 'read' by your browser.</li>
-			<li>HTML is a semantic language - some tags have default styles but most do not</li>
-			<li><strong>Valid HTML:</strong> HTML with the proper syntax. Most modern browers will interpret invalid HTML correctly, but it is <em>not</em> a good idea to leave it that way - your page might not look correct in other browers, older browers, on mobile or in newer versions of browsers. Think of it as using bad grammer.</li>
-		</ul>
-	</section>
-	<section>
-		<h3>Standard Page Setup</h3>
-		<pre><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span><br /><span class="tag">&lt;<span class="title">html</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">head</span>&gt;</span><br /><span class="tag">&lt;<span class="title">/head</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">body</span>&gt;</span><br /><span class="tag">&lt;/<span class="title">body</span>&gt;</span><br /><br /><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>	
-	</section>
-	<section>
-		<h3>DOCTYPE</h3>
-		<ul>
-			<li>Declared at the beginning of your page</li>
-			<li>Helps browser know how to read your page so it displays correctly</li>
-			<li>Within the doctype you will declare that the page is in HTML and which version you are using</li>
-			<li>There have been a handful of versions of HTML, we'll be sticking with HTML5: <span class="code">&lt;!DOCTYPE html&gt;</span></li>
-		</ul>	
-	</section>
-	<section>
-		<h3>Tags</h3>
-		<ul>
-			<li>The heart of any language markup, even if the syntax is different</li>
-			<li>Each tag is a keyword surrounded by angle brackets: <span class="code">&lt;p&gt;</span></li>
-			<li>Most tags come in pairs and need to be closed. Closing tags look like this: <span class="code">&lt;/p&gt;</span></li>
-			<li>The basic setup of any HTML content: <pre><code><span class="tag">&lt;<span class="title">tagname</span>&gt;</span>content<span class="tag">&lt;/<span class="title">tagname</span>&gt;</span></code></pre></li>
-		</ul>
-	</section>
-	<section>
-		<h3>Add to your Homepage</h3>
-		<ul>
-			<li><span class="code">DOCTYPE, html, head</span> and <span class="code">body</span> tags</li>
-			<li>Page title to your <span class="code">&lt;head&gt;</span></li>
-			<li>Page headline using an <span class="code">h1</span></li>
-		</ul>
+		<p>Type <span class="code">&lt;h1&gt;Hello, World!&lt;/h1&gt;</span> in your <span class="code">index.html</span> file, save it, and open in a browser.</p>
 	</section>
 </section>
 <section>
 	<section>
 		<h2>Site Maps</h2>
-		<p>A "family tree" style chart that outlines the pages and content on your website and how they relate to each other.</p>
+		<p>A "family tree" style chart that outlines the pages and content on your website and how they relate to each other. Your pages will correspond to directories and files within your website.</p>
 	</section>
 	<section>
 		<h2><a target="_blank" href="https://www.google.com/search?q=site+maps&tbm=isch&tbo=u&source=univ&sa=X&ei=IwkeUqeUIu62sASAuID4Bw&ved=0CFQQsAQ&biw=1824&bih=1079">Examples</a></h2>
 		<p>Each entry is a directory or page on your site</p>
 	</section>
-	<section>
-		<h3>Exercise</h3>
-		<p>Create a site map for <a target="_blank" href="http://www.wnyc.org/">WNYC</a></p>
-	</section>
+</section>
+<section>
+	<h2>Git Workshop</h2>
+</section>
+<section>
+	<h2>Final Project</h2>
+	<p>By the end of the fifth week (March 9) you will have to have completed the basic archiecture and design of a webpage. This page can house content you've already created or content you intend to create (projects are always better when they have a real-world purpose). The idea is to start simple and continually build on your project with the knowledge that you gain throughout this course.</p>
 </section>
 <section>
 	<section>
@@ -260,17 +231,17 @@
 	<section>
 		<h3>Readings</h3>
 		<ul>
-			<li>Read the Intro and Chapter 1 of HTML&CSS: (<a href="http://htmlandcssbook.com/sample-chapter/">Download Sample First Chapter</a>)</li>
-			<li>Read <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.sensible.com%2Fchapter.html&sa=D&sntz=1&usg=AFQjCNHDaiCjjrOI7HS4upTo91Nl3XDdTg">Chapter 2 (free online)</a> excerpted from "<a href="http://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758">Don't Make Me Think</a>" (If the original link doesn't work try this, page 20 (<a href="http://web-profile.com.ua/wp-content/uploads/steve-krug-dont-make-me-think-second-edition.pdf">Alternative link</a>)</li>
+			<li>Read the first chapter in HTML&CSS. If you don't have the book yet you can <a href="http://www.htmlandcssbook.com/sample-chapter/">read the first chapter free online</a>.</li>
+			<li>Add to your homepage (<span class="code">index.html</span>) the four HTML tags that make up the basic structure of a webpage.</li>
 		</ul>
 	</section>
 	<section>
 		<h3>Worksheet</h3>
-		<p>Download the worksheet document from Dropbox called <span class="code">weekone_worksheet.docx</span> and save a copy to your computer. Fill in the answers and upload to your folder in Dropbox.
+		<p>Download the document from Dropbox called <span class="code">weekone_worksheet.docx</span> and save a copy to your computer. Fill in the answers and upload to your folder in Dropbox.</p>
 	</section>
 	<section>
-		<h3>Website Proposal & Site Map</h3>
-		<p>Brainstorm the website you want to begin creating for this class. Download the file <span class="code">weekone_website_proposal.docx</span> and save a copy to your computer. Use this file as a guide for writing your proposal. Your proposal should be detailed, needs to answer the questions posed and needs to include a site map to show how you will organize your content.</p>
+		<h3>Final Project Proposal</h3>
+		<p>Brainstorm the project you want to begin creating for this class. Download the file <span class="code">weekone_proposal.docx</span> and save a copy to your computer. Use this file as a guide for writing your proposal. Your proposal should be detailed and will answer the questions posed. Consider all content you might need and how that content might be organized.</p>
 	</section>
 	<section>
 		<h3>Recommended Extra:</h3>

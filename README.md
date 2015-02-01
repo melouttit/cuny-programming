@@ -1,7 +1,9 @@
 # cuny-programming
 Lessons and notes for CUNY Graduate School of Journalism “Programming for Journalists” class.
 
-<a href="https://www.dropbox.com/s/0luid7t0nt6v3h4/ClassSyllabus.pdf?dl=0">Download the syllabus</a>
+<a href="http://mlouttit.com/cuny/Spring2015_Syllabus.pdf">Download the syllabus</a>
+
+<hr />
 
 <h3>A Note on Learning</h3>
 <p>This course is an attempt to not only introduce you to programming, but to strip away the mystery behind how the Internet works, how files are created, how websites are stored and served, and to introduce to you the development process behind most web apps and projects. We will use tools and systems that you will come across in most newsrooms today. The goal is to make you familiar with the underlying processes so that as these tools inevitably evolve and change over time you will have the base understanding that will allow you to adapt to these changes.</p>
