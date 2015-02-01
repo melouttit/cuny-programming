@@ -2,78 +2,57 @@
 <html lang="en">
 <head>
 
-	<meta charset="utf-8">
-	<meta name="robots" content="noindex, nofollow">
+  <!--HEADER INCLUDE-->
 
-	<title>Programming for Journalists - Week Four</title>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
 
-	<meta name="author" content="Meghan Louttit">
+  <title>Programming for Journalists - Week {{week}}</title>
 
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="author" content="Meghan Louttit">
 
-	<link rel="stylesheet" href="../js/reveal/css/reveal.min.css">
-	<link rel="stylesheet" href="../js/reveal/css/theme/beige.css" id="theme">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-	<!-- For syntax highlighting -->
-	<link rel="stylesheet" href="../js/reveal/lib/css/zenburn.css">
+  <link rel="stylesheet" href="../../js/reveal/css/reveal.min.css">
+  <link rel="stylesheet" href="../../js/reveal/css/theme/beige.css" id="theme">
 
-	<style type="text/css">
-	#backTo{ 
-		margin:0 20px; 
-		font-family: sans-serif;
-		font-size: 13px;
-	}
-	#backTo p a{ 
-		color: #333; 
-		text-decoration:none;
-		padding:3px 5px;
-	}
-	#backTo p a:hover,
-	#backTo p a.current{
-		background:#333;
-		color:#fff;
-	}
-	.code{ color:#000;font-family: monospace!important; }
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="../../js/reveal/lib/css/zenburn.css">
 
-	/*exercise*/
-	div.floatBox{
-		width:200px;
-		height:200px;
-		border:3px solid #000;
-		border-radius:8px;
-		background-color:white;
-		margin:8px;
-	}
-	div.floatBox{
-		position:relative;
-		top:0;
-		left:0;
-	}
-	div#floatOne{}
-	div#floatTwo{}
-	div#floatThree{}
-	</style>
+  <style type="text/css">
+  #backTo{ 
+    margin:0 20px; 
+    font-family: sans-serif;
+    font-size: 13px;
+  }
+  #backTo p a{ 
+    color: #333; 
+    text-decoration:none;
+    padding:3px 5px;
+  }
+  #backTo p a:hover,
+  #backTo p a.current{
+    background:#333;
+    color:#fff;
+  }
+  .code{ color:#000;font-family: monospace!important; }
+  </style>
 
-	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-	<script>
-		document.write( '<link rel="stylesheet" href="../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-	</script>
-
-	<!--page for banner-->
-	<script type="text/javascript">
-		currentPage = 4;
-	</script>
-
-	<!--[if lt IE 9]>
-	<script src="js/reveal/lib/js/html5shiv.js"></script>
-	<![endif]-->
+  <script>
+    document.write( '<link rel="stylesheet" href="../../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script>
 
 </head>
 <body>
-	<div id="backTo"></div>
-	<div class="reveal">
-		<div class="slides">
+  <div id="backTo"></div>
+  <div class="reveal">
+    <div class="slides">
+
+<!--set week number-->
+<script type="text/javascript">
+  currentWeek = 4;
+</script>
 			<section>
 				<h2>Week 4 | Sept. 25, 2014</h2>
 				<h4>Positioning & Homepage Layout</h4>
@@ -192,30 +171,29 @@
 	</div>
   
 
-<script src="../js/reveal/lib/js/head.min.js"></script>
-<script src="../js/reveal/js/reveal.min.js"></script>
+<script src="../../js/reveal/lib/js/head.min.js"></script>
+<script src="../../js/reveal/js/reveal.min.js"></script>
 <script type="text/javascript">
-	Reveal.initialize({
-		controls: true,
-		progress: true,
-		history: true,
-		center: true,
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
 
-		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-		// Optional libraries used to extend on reveal.js
-		dependencies: [
-			{ src: '../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-			{ src: '../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: '../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: '../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-			{ src: '../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-			{ src: '../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-		]
-	});
+    // Optional libraries used to extend on reveal.js
+    dependencies: [
+      { src: '../../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: '../../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '../../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: '../../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    ]
+  });
 </script>
-<script type="text/javascript" src="../js/lessonHeader.js"></script>
+<script type="text/javascript" src="../../js/lessonHeader.js"></script>
 </body>
 </html>

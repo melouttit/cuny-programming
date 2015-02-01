@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!--HEADER INCLUDE-->
+
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Programming for Journalists - Week {{week}}</title>
+
+  <meta name="author" content="Meghan Louttit">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="stylesheet" href="../../js/reveal/css/reveal.min.css">
+  <link rel="stylesheet" href="../../js/reveal/css/theme/beige.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="../../js/reveal/lib/css/zenburn.css">
+
+  <style type="text/css">
+  #backTo{ 
+    margin:0 20px; 
+    font-family: sans-serif;
+    font-size: 13px;
+  }
+  #backTo p a{ 
+    color: #333; 
+    text-decoration:none;
+    padding:3px 5px;
+  }
+  #backTo p a:hover,
+  #backTo p a.current{
+    background:#333;
+    color:#fff;
+  }
+  .code{ color:#000;font-family: monospace!important; }
+  </style>
+
+  <script>
+    document.write( '<link rel="stylesheet" href="../../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script>
+
+</head>
+<body>
+  <div id="backTo"></div>
+  <div class="reveal">
+    <div class="slides">
+
+<!--set week number-->
+<script type="text/javascript">
+  currentWeek = 11;
+</script>
+      <section>
+        <h2>Week 11</h2>
+        <h4>jQuery Plugins</h4>
+      </section>
+      <section>
+        <h2>FTP</h2>
+        <ul>
+          <li>protocol: SFTP</li>
+          <li>host: digitalstorage.journalism.cuny.edu</li>
+          <li>user: your network user name</li>
+          <li>pw: their network password</li>
+          <li>All files must be stored in the public_html folder</li>
+          <li>URL: http://digitalstorage.journalism.cuny.edu/<em>yourusername</em>/path/to/file</li>
+        </ul> 
+      </section>
+      <section>
+        <h2>jQuery Plugins</h2>
+        <ul>
+          <li>A common set of jQuery functions that can be added to your site for quick functionality</li>
+          <li>Anyone can write a plugin and release it for widespread use. Most will include documentation on how to implement and what custimzation is available to you</li>
+          <li><a href="http://plugins.jquery.com/">The jQuery plugin registry</a> is a good starting point for seeing what is available.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Adding a Plugin</h2>
+        <ul>
+          <li>Download the plugin code from the source. On the homepage for your plugin, look for a download link.</li>
+          <li>Usually plugins will come with at least one JavaScript file, a CSS file and sometimes an images directory and README file.</li>
+          <li>Read the instructions for installing carefully. For most plugins, you will just include the source JS and CSS files on the page you want to instantiate the plugin on.</li>
+          <li>Make sure the jQuery library is on the page before the plugin</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Example</h2>
+        <ul>
+          <li>Using <a href="http://baijs.com/tinycarousel/">Tiny Carousel</a></li>
+          <li>Click the Download button on the top right. Open the folder and you will see two options for responsive or simple.</li>
+          <li>In whichever you choose, you will JS and CSS files, an images directory and an index file.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Minified JS</h2>
+        <p>You might see two JS files in the plugin you download with filenames that are similar except for a <span class="code">-min</span> at the end. This means the owner is providing you with two ways to include their JS. The file with the <span class="code">-min</span> at the end is the minified version, meaning it's stripped of white space and lighter to download. You would only want the unminified version if you were planning on altering the plugin. Open both files to see the difference.</p>
+      </section>
+      <section>
+        <h2>Documentation</h2>
+        <ul>
+          <li>Look either in the plugins README file or on the website to find the documentation for how to use the plugin.</li>
+          <li>Most plugins require a standard HTML setup and then only a few lines of JS to get them working.</li>
+          <li><strong>EXAMPLE:</strong> <span class="code">$(document).ready(function() {<br />&nbsp;&nbsp;$('#slider1').tinycarousel();<br />}); </span></li>
+          <li>Where <span class="code">#slider</span> is the HTML element you want to instantiate the plugin on and <span class="code">tinycarousel()</span> is the plugin method that runs the code you need.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Options</h2>
+        <ul>
+          <li>Beyond the standard setup, most plugins have options you can pass in to the customize the plugin.</li>
+          <li>You will need to read through the plugins documentation to find the options that are available to you.</li>
+          <li>The plugin owner might also provide several stylesheets for you to choose from so you can customize the look of the plugin.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Option Example</h2>
+        <ul>
+          <li><strong>EXAMPLE:</strong> <span class="code">$("#slider3").tinycarousel({<br />&nbsp;&nbsp;bullets: true,<br />&nbsp;&nbsp;buttons: false<br />});</span></li>
+          <li>Where <span class="code">bullets: true</span> is an option the plugin provides, allowing you to create bullets under your carousel. And <span class="code">buttons: false</span> allows you to hide the previous/next buttons.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Demos</h2>
+        <p>Many plugins also provide demo pages or have demos working on their page. Use the inspector to see how they set up the demos as a guide to setting up your own.</p>
+      </section>
+      <section>
+        <h2>Assignment</h2>
+        <ul>
+          <li>Make an attempt at setting up the plugin of your choosing, either on your website or in a test page.</li>
+          <li>Upload your test or website to the server.</li>
+          <li><a href="https://docs.google.com/spreadsheets/d/1Q1v60xqickfaxoj-pG8QdtoNaEViTeQ9XwmHBGZE_PU/edit?usp=sharing">Sign up here</a> for a one-on-one meeting with me and we can discuss any issues you have in setting up your plugin. Make sure you have attempted the plugin and send me the url before meeting, so we have a place to start from.</li>
+          <li><em>If we've already met, or you set up your plugin successfully, then it's not necessary to sign up.</em></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+<script src="../../js/reveal/lib/js/head.min.js"></script>
+<script src="../../js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Optional libraries used to extend on reveal.js
+    dependencies: [
+      { src: '../../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: '../../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '../../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: '../../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    ]
+  });
+</script>
+<script type="text/javascript" src="../../js/lessonHeader.js"></script>
+</body>
+</html>

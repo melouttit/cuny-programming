@@ -48,3 +48,8 @@
   <div id="backTo"></div>
   <div class="reveal">
     <div class="slides">
+
+<!--set week number-->
+<script type="text/javascript">
+  currentWeek = 1;
+</script>
