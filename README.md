@@ -3,6 +3,12 @@ Lessons and notes for CUNY Graduate School of Journalism “Programming for Jour
 
 <a href="https://www.dropbox.com/s/0luid7t0nt6v3h4/ClassSyllabus.pdf?dl=0">Download the syllabus</a>
 
+<h3>A Note on Learning</h3>
+<p>This course is an attempt to not only introduce you to programming, but to strip away the mystery behind how the Internet works, how files are created, how websites are stored and served, and to introduce to you the development process behind most web apps and projects. We will use tools and systems that you will come across in most newsrooms today. The goal is to make you familiar with the underlying processes so that as these tools inevitably evolve and change over time you will have the base understanding that will allow you to adapt to these changes.</p>
+
+<h3>The Final Project</h3>
+<p>You will create, at minimum, a one-page project that will by the end of the first five weeks have the basic artchitecture and design set up, and by the end the of semester have multiple interactions handled via javascript. The first week will be dedicated to proposing your project. Start simple.</p>
+
 <h2>HTML/CSS Weeks 1-5</h2>
 <ul>
   <li><strong>1 Introduction, Tools, What is a Website? (2/2):</strong> We introduce the class, go over class objectives and why coding is important in journalism. Then we will make sure everyone has the programs necessary for the next 15 weeks downloaded and accounts et up (Dropbox, Sublime, Slack). The last part of the class will focus on how website files get served and basic page setup.</li>
