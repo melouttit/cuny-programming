@@ -27,5 +27,5 @@ Lessons and notes for CUNY Graduate School of Journalism “Programming for Jour
   <li><strong>FINAL PROJECT:</strong> Using the project created in the HTML/CSS module, students will write either native javascript, jQuery or use plugins to add at least two types of functionality to their project. <strong>DUE: Monday 5/18</strong></li>
 </ul>
 
-<p>* <em>Class is held on Wednesday, no class that Monday 2/16</em></p>
-<p><em>NO class on Monday 4/6 (spring recess)</em></p>
+<p>* <em>Class is held on Wednesday, no class that Monday 2/16</em><br />
+<em>NO class on Monday 4/6 (spring recess)</em></p>
