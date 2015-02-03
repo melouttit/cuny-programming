@@ -58,13 +58,10 @@
 				<h2>Week 2 | Feb. 9, 2015</h2>
 				<h4>HTML & Wireframes</h4>
 			</section>
-			<section>
-				<h2>Week One Review</h2>
-				<p><a href="../reviews/html_review_1.html" target="_blank">Click to take Review Quiz &raquo;</a></p>
-			</section>
-			<section>
+<section>
 	<section>
 		<h2>HTML & Page Setup</h2>
+		<p>Create a new file in your site directory called <span class="code">week2.html</span> to do this week's exercise in.</p>
 	</section>
 	<section>
 		<h3>What is HTML?</h3>
@@ -83,7 +80,6 @@
 		<h3>DOCTYPE</h3>
 		<ul>
 			<li>Declared at the beginning of your page</li>
-			<li>Helps browser know how to read your page so it displays correctly</li>
 			<li>Within the doctype you will declare that the page is in HTML and which version you are using</li>
 			<li>There have been a handful of versions of HTML, we'll be sticking with HTML5: <span class="code">&lt;!DOCTYPE html&gt;</span></li>
 		</ul>	
@@ -91,14 +87,26 @@
 	<section>
 		<h3>Tags</h3>
 		<ul>
-			<li>The heart of any language markup, even if the syntax is different</li>
+			<li>The heart of any markup language</li>
 			<li>Each tag is a keyword surrounded by angle brackets: <span class="code">&lt;p&gt;</span></li>
 			<li>Most tags come in pairs and need to be closed. Closing tags look like this: <span class="code">&lt;/p&gt;</span></li>
 			<li>The basic setup of any HTML content: <pre><code><span class="tag">&lt;<span class="title">tagname</span>&gt;</span>content<span class="tag">&lt;/<span class="title">tagname</span>&gt;</span></code></pre></li>
 		</ul>
 	</section>
 	<section>
-		<h3>Add to your Homepage</h3>
+		<h3>Attributes</h3>
+		<ul>
+			<li>Each tag can also have multiple attribtes that provide more information for the browser.</li>
+			<li>Attributes are defined in the opening tag.</li>
+			<li>They are defined properties with a value that you set. Values can be urls, numbers or names you make up to differentiate on tag from another.</li>
+			<li>EX: 
+				<li><span class="code">&lt;h2 class="subhead"&gt;&lt;/h2&lt;</span></li>
+				<li><span class="code">&lt;div data-index="22"&gt;&lt;/div&gt;</span> (data attribute)</li>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h3>Add to your test page</h3>
 		<ul>
 			<li><span class="code">DOCTYPE, html, head</span> and <span class="code">body</span> tags</li>
 			<li>Page title to your <span class="code">&lt;head&gt;</span></li>
@@ -234,7 +242,7 @@
 				</section>
 				<section>
 					<h3>Exercise</h3>
-					<p>Create a directory in your website for your images. Grab an image from your computer or a Google image search, and add it to your homepage.</p>
+					<p>Grab an image from your computer or a Google image search and save it to your images directory. Then use the <span class="code">img</span> to add it to your page.</p>
 				</section>
 			</section>
 			<section>
@@ -275,35 +283,6 @@
 					<p>Use this syntax to make notes for yourself on your page. When formatted correctly, comments will appear gray in your text editor.</p>
 					<p><span class="code">&lt;div&gt;&lt;/div&gt;&lt;!--END SECTION--&gt;</span></p>
 				</section>
-				<section>
-					<h3>Exercise</h3>
-					<p>Add three sections to your page, giving each one an ID. <a href="http://www.ipsum-generator.com/" target="_blank">Fill with dummy text</a>. Then create an anchor link to each section from your list.</p>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h2>The Box Model</h2>
-				</section>
-				<section>
-					<h3>Definition</h3>
-					<p>Think of each element on your page as a box. The box model outlines the structure of each box or HTML element on your page, and various components available to you.</p>
-				</section>
-				<section>
-					<h3>Example</h3>
-					<img src="http://www.w3schools.com/css/box-model.gif" />
-				</section>
-				<section>
-					<h3>Padding</h3>
-					<p>The padding is the space between the content of your box and the border.</p>
-				</section>
-				<section>
-					<h3>Margin</h3>
-					<p>The margin is the space between the border and the content around the box.</p>
-				</section>
-				<section>
-					<h3>Border</h3>
-					<p>The border is the containing walls of the box.</p>
-				</section>
 			</section>
 			<section>
 				<section>
@@ -314,7 +293,7 @@
 					<p>A sketch of your web page and what information goes on it. It groups your content, defines the hierarchy of information and how much space each part takes up.</p>
 				</section>
 				<section>
-					<img src="http://churchjuice.reframemedia.com/media/images/uploads/Website-Mockup.png" />
+					<img src="../../images/wireframe.png" />
 				</section>
 				<section>
 					<h3><a href="https://www.google.com/search?q=website+wireframe&source=lnms&tbm=isch&sa=X&ei=MwDvUvztM6jSsATCq4D4Bw&sqi=2&ved=0CAcQ_AUoAQ&biw=1920&bih=1079" target="_blank">More Examples &raquo;</a></h3>
@@ -325,48 +304,35 @@
 				</section>
 			</section>
 			<section>
-				<section>
-					<h2>Committing Your Changes</h2>
-				</section>
-				<section>
-					<h3>Connect to FTP</h3>
-					<ul>
-						<li><strong>Protocol:</strong> SFTP</li>
-						<li><strong>Host/Server:</strong> digitalstorage.journalism.cuny.edu</li>
-						<li><strong>Username:</strong> your network username</li>
-						<li><strong>Password:</strong> your network password</li>
-						<li><strong>Path (under More Options):</strong> digitalstorage.journalism.cuny.edu</li>
-						<li><strong>Live:</strong> digitalstorage.journalism.cuny.edu/firstnamelastname/</li>
-					</ul>
-				</section>
-				<section>
-					<h3>Upload Your Site</h3>
-					<p>Once you are connected, make sure your <span class="code">indext.html</span> file is saved and drag your website from your local machine into the <span class="code">public_html</span> folder.</p>
-				</section>
+				<h2>GIT WORKSHOP</h2>
 			</section>
 			<section>
 				<section>
 					<h2>Assignments</h2>
 				</section>
 				<section>
-					<h2>Readings</h2>
+					<h3>Readings</h3>
 					<ul>
 						<li>In HTML&CSS, read Chapters 2 - 5, 8 and 18</li>
 						<li>Go over the <a href="http://www.w3schools.com/css/css_boxmodel.asp" target="_blank">w3schools Box Model page</a></li>
 						<li>Extra: <a href="http://www.smashingmagazine.com/2013/03/07/creating-wireframes-and-prototypes-with-indesign/" target="_blank">Creating Wireframes with InDesign</a></li>
 					</ul>
-
-					<li>Read the Intro and Chapter 1 of HTML&CSS: (<a href="http://htmlandcssbook.com/sample-chapter/">Download Sample First Chapter</a>)</li>
-			<li>Read <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.sensible.com%2Fchapter.html&sa=D&sntz=1&usg=AFQjCNHDaiCjjrOI7HS4upTo91Nl3XDdTg">Chapter 2 (free online)</a> excerpted from "<a href="http://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758">Don't Make Me Think</a>" (If the original link doesn't work try this, page 20 (<a href="http://web-profile.com.ua/wp-content/uploads/steve-krug-dont-make-me-think-second-edition.pdf">Alternative link</a>)</li>
-
 				</section>
 				<section>
-					<h2>Homepage Wireframe</h2>
-					<p>Create a wireframe for the homepage of your website. Make sure to include a spot for your logo, site navigation, footer and content sections. Use one of the following methods:</p>
+					<h3>Check Your Homepage</h3>
+					<ul>
+						<li>Go back to your <span class="code">index.html</span> page and make sure you have the correct page setup for your project and add some more information.</li>
+						<li>Make sure the following tags are on the page correctly: <span class="code">DOCTYPE</span>, <span class="code">html</span>, <span class="code">head</span>, <span class="code">title</span>, <span class="code">body</span>, <span class="code">h1</span></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Project Wireframe</h3>
+					<p>Create a wireframe for your final project. Make sure to include a spot for all the content you need to put on the page. Use one of the following methods:</p>
 					<ul>
 						<li>Draw on paper</li>
 						<li>Use Photoshop, InDesign or Google Draw</li>
 						<li>Use an online tool or app like <a href="https://gomockingbird.com/" target="_blank">mockingbird</a> or <a href="http://lovelycharts.com/">Lovely Charts</a></li>
+						<li>Turn in via Dropbox, or hand in if you have it printed out.</li>
 					</ul>
 				</section>
 				<section>
