@@ -59,6 +59,16 @@
 				<h4>CSS Box Model & Design Basics</h4>
 			</section>
 			<section>
+				<h2>Lesson Prep</h2>
+				<ul>
+					<li>Open up your site in Sublime by selecting File -> Open -> yourwebsite. You should see all your folders and files in a sidebar in Sublime.</li>
+					<li>Make two file windows in Sublime by selecting View -> Layout -> Columns: 2</li>
+					<li>Create a new file called <span class="code">week3.html</span> and copy the code below to get you started:
+						<pre style="width:900px;"><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span><br /><span class="tag">&lt;<span class="title">html</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">head</span>&gt;</span><br />&nbsp;&nbsp;<span class="tag">&lt;<span class="title">title</span>&gt;</span>Week 3 - CSS Practice<span class="tag">&lt;<span class="title">/title</span>&gt;</span><br /><span class="tag">&lt;<span class="title">/head</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">body</span>&gt;</span><br />&nbsp;&nbsp;<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>="<span class="value">content</span>"&gt;</span></span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">h1</span>&gt;</span>My First CSS Styled Page<span class="tag">&lt;<span class="title">/h1</span>&gt;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">hr /</span>&gt;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">p</span>&gt;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et arcu ultricies, vehicula urna ut, lacinia metus. Aenean ac ante odio. Nullam mollis scelerisque urna, eget interdum velit posuere vel. Nullam eu leo ac ipsum tristique scelerisque. Nullam lobortis consequat arcu, id maximus erat sagittis eget.<br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/<span class="title">p</span>&gt;</span><br />&nbsp;&nbsp;<span class="tag">&lt;/<span class="title">div</span>&gt;</span><br /><span class="tag">&lt;/<span class="title">body</span>&gt;</span><br /><br /><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>
+					</li>
+				</ul>
+			</section>
+			<section>
 				<section>
 					<h2>The Box Model</h2>
 				</section>
@@ -93,6 +103,7 @@
 						<li>CSS stands for <strong>Cascading Style Sheets</strong></li>
 						<li>CSS allows you to create style rules that specify how an element will appear on your page.</li>
 						<li>With CSS you can control things like positioning, color, fonts, borders, backgrounds, size and more.</li>
+						<li>CSS3, the latest version, also gives you control over transitions and keyframe animating abilities.</li>
 					</ul>
 				</section>
 				<section>
@@ -179,7 +190,7 @@
 				</section>
 				<section>
 					<h3>Exercise</h3>
-					<p>Create <span class="code">&lt;style&gt;&lt;/style&gt;</span> in your <span class="code">&lt;head&gt;</span> and start a rule for your <span class="code">&lt;h1&gt;</span>.</p>
+					<p>Add <span class="code">&lt;style&gt;&lt;/style&gt;</span> tags in the <span class="code">&lt;head&gt;</span> of your <span class="code">week3.html</span> file and start a rule for your <span class="code">&lt;h1&gt;</span>.</p>
 				</section>
 			</section>
 			<section>
@@ -202,7 +213,7 @@
 					<h3>Color Values</h3>
 					<ul>
 						<li>There are currently 147 predefined colors that are recognized by most browsers, including <span class="code">black</span>, <span class="code">blue</span> and <span class="code">DarkCyan</span>.</li>
-						<li>You can use HEX and RGBA values</li>
+						<li>You can use HEX and RGBA values like #000 for black.</li>
 						<li>HEX values are more common but RGBA is useful if you want to define the opacity of a background color</li>
 					</ul>
 				</section>
@@ -215,11 +226,11 @@
 				</section>
 				<section>
 					<h3>Exercise</h3>
-					<p>Add the following to your page in your <span class="code">&lt;style&gt;</span> tags</p>
+					<p>Add the following to your page in your <span class="code">&lt;style&gt;</span> tags. Make sure to be specific about the tags you are targeting.</p>
 					<ul>
-						<li>Background Color</li>
-						<li>Two text colors</li>
-						<li>A link color</li>
+						<li>A <span class="code">background-color</span> to your <span class="body">body</span> (you can <a href="https://color.adobe.com/">choose from here</a>)</li>
+						<li>A text <span class="code">color</span> for your headline and body text</li>
+						<li>Make the <span class="code">border-color</span> of the <span class="code">hr</span> tag <span class="code">black</span></li>
 					</ul>
 				</section>
 			</section>
@@ -251,17 +262,16 @@
 						<li><span class="code">text-decoration</span></li>
 						<li><span class="code">text-align</span></li>
 						<li><span class="code">text-indent</span></li>
-						<li><span class="code">text-shadow</span> a CSS3 property for drop shadows</li>
 						<li><span class="code">line-height</span></li>
 					</ul>
 				</section>
 				<section>
 					<h3>Exercise</h3>
-					<p>Add the following to your page styles:</p>
+					<p>Add the following rules to your page styles (you can use Google to look up your value options):</p>
 					<ul>
-						<li>A sans-serif font for your headline</li>
-						<li>A serif font for your body text</li>
-						<li>A text-transform, text-decoration OR text-align</li>
+						<li>Using <span class="code">font-family</span> a sans-serif font for your headline and a serif font for your body text</li>
+						<li>Using <span class="code">font-size</span> make your fonts both both the headline and body text larger (check your console for the default)</li>
+						<li>At least one of the following: <span class="code">text-transform</span>, <span class="code">text-decoration</span>, <span class="code">text-align</span></li>
 					</ul>
 				</section>
 			</section>
@@ -336,24 +346,10 @@
 				</section>
 				<section>
 					<h3>Exercise</h3>
-					<p>Add rules to a <span class="code">&lt;h1&gt;</span> or <span class="code">&lt;div&gt;</span> to change the size, padding, margin and borders.</p>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h2>The Float</h2>
-				</section>
-				<section>
-					<h3>The <span class="code">float</span> Property</h3>
-					<p>Allows you to "float" an element to the left or right, which removes the element from the flow of elements on the page, bringing any element beneath up and around.</p>
-				</section>
-				<section>
-					<h3>Exercise</h3>
-					<p>Write a rule for the box below with the ID "floatBox" to float it right or left.</p>
-					<div id="testFloat">
-						<div id="floatBox"></div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra nec ligula sit amet iaculis. Vivamus eget purus diam. Aenean ullamcorper risus non metus tincidunt vehicula. Suspendisse luctus, dui a porta molestie, turpis ante rhoncus nunc, at fermentum urna sapien ac felis.</p>
-					</div>
+					<ul>
+						<li>Add a <span class="code">width</span> property to your <span class="code">content</span> container (targeting the id of the <span class="code">div</span>). Make it no more than <span class="code">700px</span>.</li>
+						<li>Add another property to content for <span class="code">margin</span> to center: <span class="code">margin: 0 auto;</span></li>
+					</ul>
 				</section>
 			</section>
 			<section>
@@ -362,43 +358,51 @@
 				<p><span class="code">/* CSS Comment Here */</span></p>
 			</section>
 			<section>
+				<h2>Create an External Stylesheet</h2>
+				<ul>
+					<li>Via iTerm (<span class="code">mkdir</span>) or in Finder, create a directory in your website called <span class="code">css</span> (lowercase)</li>
+					<li>Start a new file in Sublime (or via iTerm using <span class="code">touch</span>) and save it as <span class="code">styles.css</span> in your new <span class="code">css</span> directory</li>
+					<li>Inside CSS Comments type:<br /> <span class="code">Website: Site Name v.1<br />Author: Your Name</span></li>
+					<li>Add a <span class="code">&lt;link /&gt;</span> tag to your <span class="code">index.html</span> to pull in your new stylesheet</li>
+					<li>Add at least three styles to your stylesheet, save, and test!</li>
+				</ul>
+			</section>
+			<section>
 				<section>
 					<h2>Assignments</h2>
 				</section>
 				<section>
-					<h3>Finish Lesson</h3>
-					<ul>
-						<li>Make sure you take the <a href="../reviews/html_review_2.html" target="_blank">review quiz</a> and submit</li>
-						<li>Go over and practice with the rules the follow slides:
-							<ul>
-								<li><a href="#/6">Color Rules</a></li>
-								<li><a href="#/7">Font Rules</a></li>
-								<li><a href="#/8">Pseudo Elements</a></li>
-								<li><a href="#/11">CSS Comments</a></li>
-							</ul>
-						</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Readings</h2>
+					<h3>Readings</h3>
 					<ul>
 						<li>In HTML&CSS read Chapters 10-13</li>
+						<li>Read <a href="http://www.jefftk.com/p/the-revenge-of-the-ie-box-model">Revenge of the IE Box Model</a></li>
 						<li>Read <em><a href="http://sixrevisions.com/web_design/a-look-into-color-theory-in-web-design/" target="_blank">A Look Into Color Theory and Web Design</a></em></li>
 						<li>Read <em><a href="http://webdesign.tutsplus.com/articles/a-beginners-guide-to-pairing-fonts--webdesign-5706" target="_blank">A Beginner's Guide to Pairing Fonts</a></em></li>
-						<li><strong>Extra:</strong> Smashing Magazine's Color Theory for Designers <a href="http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color/" target="_blank">Part 1</a>, <a href="http://www.smashingmagazine.com/2010/02/02/color-theory-for-designers-part-2-understanding-concepts-and-terminology/" target="_blank">Part 2</a> and <a href="http://www.smashingmagazine.com/2010/02/08/color-theory-for-designer-part-3-creating-your-own-color-palettes/" target="_blank">Part 3</a></li>
-						<li>Read <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.sensible.com%2Fchapter.html&sa=D&sntz=1&usg=AFQjCNHDaiCjjrOI7HS4upTo91Nl3XDdTg">Chapter 2 (free online)</a> excerpted from "<a href="http://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758">Don't Make Me Think</a>" (If the original link doesn't work try this, page 20 (<a href="http://web-profile.com.ua/wp-content/uploads/steve-krug-dont-make-me-think-second-edition.pdf">Alternative link</a>)</li>
+						<li>Read <a href="http://www.sensible.com/chapter.html">Chapter 2</a> excerpted from "<a href="http://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758">Don't Make Me Think</a>" (<a href="http://web-profile.com.ua/wp-content/uploads/steve-krug-dont-make-me-think-second-edition.pdf">Full book here</a>, if you dig it.)</li>
 					</ul>
 				</section>
 				<section>
-					<h2>Choose Colors & Fonts</h2>
+					<h3>Choose Colors & Fonts</h3>
 					<ul>
 						<li>Pick a color theme for your site. Choose at least 3 colors (backgrounds, text, links) using a tool like the <a href="https://kuler.adobe.com/create/color-wheel/" target="_blank">Kuler Color Wheel</a>.</li>
 						<li>Decide on complimentary serif and sans-serif font stacks (refer to <a href="#/7/1">slide 7</a> for <span class="code">font-family</span> example. Use tools like <a href="http://cssfontstack.com/" target="_blank">CSS Font Stack</a> and <a href="http://www.google.com/fonts/" target="_blank">Google Fonts</a>. Your font stacks should have three fonts each: Your ideal font, a fallback, and a generic <span class="code">serif</span> or <span class="code">sans-serif</span> declaration.</li>
 					</ul>
 				</section>
 				<section>
-					<h2>Create Rules</h2>
-					<p>Create example rules for your color and font choices. For example, if you want the background of your page to be blue, you would write:</p><p> <span class="code">body{ background-color: blue; }</span></p><p> Put those rules in a file with a .css extension and upload to your folder in Week 2 on Dropbox. There are more examples in the Week 2 Dropbox file called <strong>zexample.css</strong></p>
+					<h3>Create Rules</h3>
+					<p>Create rules for your color and font choices. These will be the starting points for your project (you can always change them later).</p>
+					<p>For example, if you want the background of your page to be blue, you would write:</p><p> <span class="code">body{ background-color: blue; }</span></p>
+					<p>Upload a copy or screenshot of your <span class="code">style.css</span> file to your folder in Week 3 on Dropbox.</p>
+				</section>
+				<section>
+					<h3>If you're feeling brave...</h3>
+					<p>Use these properties to further perfect your design:</p>
+					<ul>
+						<li><span class="code">rgba()</span> as a value for <span class="code">color</span> or <span class="code">background-color</span></li>
+						<li><span class="code">box-shadow</span> or <span class="code">text-shadow</span></li>
+						<li><span class="code">font-smoothing</span></li>
+						<li><span class="code">letter-spacing</span></li>
+					</ul>
 				</section>
 				<section>
 					<h1>Have a great week!</h1>
