@@ -61,6 +61,7 @@
 			<section>
 				<h2>Lesson Prep</h2>
 				<ul>
+					<li>Open: Class Website (Week 3), GitHub, Slack & Sublime</li>
 					<li>Open up your site in Sublime by selecting File > Open > yourwebsite.</li>
 					<li>Create a new file called <span class="code">week3.html</span> and paste in the code below:
 						<pre style="width:900px;"><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span><br /><span class="tag">&lt;<span class="title">html</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">head</span>&gt;</span><br />&nbsp;&nbsp;<span class="tag">&lt;<span class="title">title</span>&gt;</span>Week 3 - CSS Practice<span class="tag">&lt;<span class="title">/title</span>&gt;</span><br /><span class="tag">&lt;<span class="title">/head</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">body</span>&gt;</span><br />&nbsp;&nbsp;<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>="<span class="value">content</span>"&gt;</span></span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">h1</span>&gt;</span>My First CSS Styled Page<span class="tag">&lt;<span class="title">/h1</span>&gt;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">hr /</span>&gt;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">p</span>&gt;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et arcu ultricies, vehicula urna ut, lacinia metus. Aenean ac ante odio. Nullam mollis scelerisque urna, eget interdum velit posuere vel. Nullam eu leo ac ipsum tristique scelerisque. Nullam lobortis consequat arcu, id maximus erat sagittis eget.<br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/<span class="title">p</span>&gt;</span><br />&nbsp;&nbsp;<span class="tag">&lt;/<span class="title">div</span>&gt;</span><br /><span class="tag">&lt;/<span class="title">body</span>&gt;</span><br /><br /><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>
@@ -357,15 +358,36 @@
 				<p><span class="code">/* CSS Comment Here */</span></p>
 			</section>
 			<section>
-				<h2>Create an External Stylesheet</h2>
-				<ul>
-					<li>Via iTerm (<span class="code">mkdir</span>) or in Finder, create a directory in your website called <span class="code">css</span> (lowercase)</li>
-					<li>Start a new file in Sublime (or via iTerm using <span class="code">touch</span>) and save it as <span class="code">styles.css</span> in your new <span class="code">css</span> directory</li>
-					<li>Inside CSS Comments type:<br /> <span class="code">Website: Site Name v.1<br />Author: Your Name</span></li>
-					<li>Add a <span class="code">&lt;link /&gt;</span> tag to your <span class="code">index.html</span> to pull in your new stylesheet</li>
-					<li>Add at least three styles to your stylesheet, save, and test!</li>
-					<li><strong>TIP:</strong> Make two file windows in Sublime by selecting View > Layout > Columns: 2</li>
-				</ul>
+				<section>
+					<h2>Add CSS to your site and Push</h2>
+				</section>
+				<section>
+					<h3>Create an External Stylesheet</h3>
+					<ul>
+						<li>Via iTerm (<span class="code">mkdir</span>) or in Finder, create a directory in your website called <span class="code">css</span> (lowercase)</li>
+						<li>Start a new file in Sublime (or via iTerm using <span class="code">touch</span>) and save it as <span class="code">styles.css</span> in your new <span class="code">css</span> directory</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Add Some Styles</h3>
+					<ul>
+						<li>Inside CSS Comments type:<br /> <span class="code">Website: Site Name v.1<br />Author: Your Name</span></li>
+						<li>Add a <span class="code">&lt;link /&gt;</span> tag to your <span class="code">index.html</span> to pull in your new stylesheet</li>
+						<li>Add at least three styles to your stylesheet, save, and test!</li>
+						<li><strong>TIP:</strong> Make two file windows in Sublime by selecting View > Layout > Columns: 2</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Add/Commit/Push</h3>
+					<p>Now let's push your changes to Git!</p>
+					<ul>
+						<li>Open up iTerm and use <span class="code">cd</span> to navigate to your website</li>
+						<li><span class="code">git add .</span></li>
+						<li><span class="code">git commit -m 'added css directory'</span></li>
+						<li><span class="code">git push origin master</span></li>
+						<li><span class="code">Refresh your GitHub page and see your new files!</span></li>
+					</ul>
+				</section>
 			</section>
 			<section>
 				<section>
@@ -380,6 +402,10 @@
 						<li>Read <em><a href="http://webdesign.tutsplus.com/articles/a-beginners-guide-to-pairing-fonts--webdesign-5706" target="_blank">A Beginner's Guide to Pairing Fonts</a></em></li>
 						<li>Read <a href="http://www.sensible.com/chapter.html">Chapter 2</a> excerpted from "<a href="http://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758">Don't Make Me Think</a>" (<a href="http://web-profile.com.ua/wp-content/uploads/steve-krug-dont-make-me-think-second-edition.pdf">Full book here</a>, if you dig it.)</li>
 					</ul>
+				</section>
+				<section>
+					<h3>Slack Post</h3>
+					<p>Pick at least one story you've read/watched/interacted with this week and post it in the #spring2015 Slack with a sentence or two about what you like or didn't like about it. It should be a piece that you appreciate beyond the topic or how well it's written (though that counts too!): Does it integrate photos well? Do you think it's confusing to use? Is it too bogged down with video? Did you like the way the chart explained a confusing topic?</p>
 				</section>
 				<section>
 					<h3>Choose Colors & Fonts</h3>
