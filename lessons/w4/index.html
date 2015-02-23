@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex, nofollow">
 
-  <title>Week 3 - Programming for Journalists</title>
+  <title>Week 4 - Programming for Journalists</title>
 
   <meta name="author" content="Meghan Louttit">
 
@@ -59,13 +59,37 @@
 				<h4>Positioning & Homepage Layout</h4>
 			</section>
 			<section>
-				<h2>Week Three Review</h2>
-				<p><a href="../reviews/html_css_review_3.html" target="_blank">Click to take Review Quiz &raquo;</a></p>
+				<h2>Lesson Prep</h2>
+        <ul>
+          <li>Open: Class Website (Week 4), GitHub, Slack & Sublime</li>
+          <li>In Sublime open your site: File > Open > yoursite.</li>
+          <li>Open <span class="code">styles.css</span> (CSS rules from <a href="http://mlouttit.com/cuny/lessons/w2/#/">w3 assignment</a>)</li>
+          <li>Create a new file called <span class="code">week4.html</span> and paste in the code below:
+<pre style="width:900px;"><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Week 4 - Positioning<span class="tag">&lt;<span class="title">/title</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">style</span>&gt;<span class="tag">&lt;<span class="title">/style</span>&gt;</span>
+<span class="tag">&lt;<span class="title">/head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>="<span class="value">position</span>"&gt;</span></span>
+    <span class="tag">&lt;<span class="title">h1</span>&gt;</span>How to Position<span class="tag">&lt;<span class="title">/h1</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="atribute">id</span>="<span class="value">boxes</span>"&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>="<span class="value">box</span>" <span class="atribute">id</span>="<span class="value">red</span>"&gt;</span> <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>="<span class="value">box</span>" <span class="atribute">id</span>="<span class="value">green</span>"&gt;</span> <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>="<span class="value">box</span>" <span class="atribute">id</span>="<span class="value">blue</span>"&gt;</span> <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>
+          </li>
+        </ul>
 			</section>
 			<section>
 				<h2>Review <span class="code">&lt;link&gt;</span></h2>
 				<ul>
 					<li>Homework questions?</li>
+          <li>Make sure you have your external style sheet pulled into your <span class="code">index.html</span> file via <span class="code">linke</span></li>
 					<li><a href="../weekThree/#/4/3" target="_blank">How to use an external style sheet &raquo;</a></li>
 				</ul>
 			</section>
@@ -108,18 +132,28 @@
 					<h3>Fixed Positioning</h3>
 					<p>A form of absolute positioning in that it removes the element from the normal flow of the page, but it <em>fixes</em> an element in the browser window and does not move with the page.</p>
 				</section>
-				<section>
-					<h3>The Float</h3>
-					<p><a href="http://mlouttit.com/cuny/weekThree/#/10/1" target="_blank">Review The Float &raquo;</a></p>
-				</section>
+        <section>
+          <h3>Properties</h3>
+          <ul>
+            <li>Set <span class="code">position</span> to any of the three options above</li>
+            <li>Four other properties allow you to move your element: <span class="code">top</span>, <span class="code">right</span>, <span class="code">bottom</span>, <span class="code">left</span></li>
+            <li>You set the four position options as <span class="code">px</span> which represent the distance <em>from</em> those sides. So setting <span class="code">left: 100px;</span> would put your element 100 pixels from the left.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Example</h3>
+          <p style="text-align:left;"><span class="code">#red{<br />
+          &nbsp;&nbsp;position: relative;<br />
+          &nbsp;&nbsp;top: 100px;<br />
+          &nbsp;&nbsp;left: 20px; <br />
+          }</span></p>
+        </section>
 				<section>
 					<h3>Exercise</h3>
-					<p>On the next slide, open your console and change the positioning of the three boxes. Test out relative, absolute and fixed positioning.</p>
-				</section>
-				<section>
-					<div class="floatBox" id="floatOne"></div>
-					<div class="floatBox" id="floatTwo"></div>
-					<div class="floatBox" id="floatThree"></div>
+          <ul>
+            <li>Add styles to the class <span class="code">box</span> to give it a <span class="code">width</span> and <span class="code">height</span> of <span class="code">300px</span> and a <span class="code">background-color</span>.</li>
+            <li>Add the <span class="code">position</span> property and test out <span class="code">relative</span> and <span class="code">absolute</span> positioning.</li>
+          </ul>
 				</section>
 			</section>
       <section>
@@ -131,12 +165,11 @@
           <p>Allows you to "float" an element to the left or right, which removes the element from the flow of elements on the page, bringing any element beneath up and around.</p>
         </section>
         <section>
-          <h3>Exercise</h3>
-          <p>Write a rule for the box below with the ID "floatBox" to float it right or left.</p>
-          <div id="testFloat">
-            <div id="floatBox"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra nec ligula sit amet iaculis. Vivamus eget purus diam. Aenean ullamcorper risus non metus tincidunt vehicula. Suspendisse luctus, dui a porta molestie, turpis ante rhoncus nunc, at fermentum urna sapien ac felis.</p>
-          </div>
+          <h3>Example</h3>
+          <p style="text-align:left;"><span class="code">.box{<br />
+          &nbsp;&nbsp;float: left;<br />
+          &nbsp;&nbsp;margin-right: 20px;<br />
+          }</span></p>
         </section>
       </section>
 			<section>
@@ -147,12 +180,31 @@
 				<section>
 					<h3><span class="code">z-index</span></h3>
 					<p>You can set the <span class="code">z-index</span> property to any number you want. The elements with the highest numbers will appear on top.</p>
+          <p style="text-align:left;"><span class="code">#red{<br />
+          &nbsp;&nbsp;z-index: 100;<br />
+          }</span></p>
+          <p style="text-align:left;"><span class="code">#green{<br />
+          &nbsp;&nbsp;z-index: 105;<br />
+          }</span></p>
 				</section>
 			</section>
+      <section>
+        <h2>GIT Review</h2>
+        <ul>
+          <li><a href="https://github.com/jueyang/know-your-tools/blob/master/1-use-git.md">Review Add/Commit/Push</a></li>
+          <li>Try committing and pushing your site to GitHub. Complete this before moving on to the workshop</li>
+        </ul>
+      </section>
 			<section>
 				<section>
 					<h2>Workshop</h2>
-					<p>Using your homepage wireframe as a guide, layout your first page in HTML and use your style rules from last week to apply your first styles.</p>
+					<p>Using your wireframe as a guide, layout your page in HTML.</p>
+          <ul>
+            <li>Concentrate on getting the HTML and placeholder content on the page <em>before</em> you worry about styling.</li>
+            <li>One box in your wireframe is roughtly equivalent to one container <span class="code">div</span>. These will be important for positioning.</li>
+            <li>If you get through the layout, then start adding styles. Start with positioning before moving on to fonts and colors.</li>
+            <li>Practice Add/Commit/Push multiple times to save versions of your work.</li>
+          </ul>
 				</section>
 			</section>
 			<section>
@@ -161,24 +213,22 @@
 				</section>
 				<section>
 					<h3>Finish the Workshop</h3>
-					<p>Finish your website from today's workshop. For complete credit, make each piece of content is positioned correctly on the page and that there is dummy content to represent what will go in those places. Design is less important than layout right now.</p>
+					<p>Finish your HTML from today's workshop. For complete credit, make each piece of content is positioned correctly on the page and that there is dummy content to represent what will go in those places. Design is less important than layout right now.</p>
 				</section>
 				<section>
-					<h3>Upload & List Your Site</h3>
-					<p>Upload your site to your remote server (<a href="http://mlouttit.com/cuny/weekTwo/#/8/1">GO HERE</a> for a refresher on how to connect) and paste the live URL to your site <a href="https://docs.google.com/spreadsheets/d/1z8b2JtFG5u4oHowZEzspa24BqBkTbEE6rXPYSba6ECg/edit?usp=sharing">in this Google Doc</a>.</p>
+					<h3>Turn In via Git</h3>
+					<p>When you are satisfied with your HTML, push your site to GitHub. I will be checking your GitHub pages for the state of your pages, so if you have issues please let me know ASAP. </p>
 				</section>
+        <section>
+          <h3>Prep Content</h3>
+          <p>Any content you need to gather for your final site, work on getting that together, whether it is a real representation of the content or dummy content (dummy text and images).</p>
+        </section>
 				<section>
 					<h3>Readings</h3>
 					<ul>
 						<li>In HTML&CSS read Chapters 15-17</li>
 						<li>Read <a href="http://mobile.smashingmagazine.com/2010/07/19/how-to-use-css3-media-queries-to-create-a-mobile-version-of-your-website/">How To Use CSS3 Media Queries To Create a Mobile Version of Your Website</a></li>
 						<li>Reference: <a href="http://mediaqueri.es/">Media Queries / Responsive Design Examples</a></li>
-					</ul>
-				</section>
-				<section>
-					<h3>Inside Page Wireframe</h3>
-					<ul>
-						<li>Create a wireframe for your inside pages. Most of your inside pages should follow the same pattern and will be more simple than your homepage. Turn in as many wireframes as you need to document the layouts you want to use.</li>
 					</ul>
 				</section>
 				<section>
