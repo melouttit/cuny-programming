@@ -59,6 +59,32 @@
 				<h4>Intro to JavaScript</h4>
 			</section>
 			<section>
+				<h2>Lesson Prep</h2>
+        <ul>
+          <li>Open: Class Website (Week 6), GitHub, Slack</li>
+          <li>Open your website in sublime</li>
+          <li>Create a new file called <span class="code">week6.html</span> and paste in the code below:
+<pre style="width:900px;"><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Week 6 - Native JavaScript<span class="tag">&lt;<span class="title">/title</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">style</span>&gt;<span class="tag">&lt;<span class="title">/style</span>&gt;</span>
+<span class="tag">&lt;<span class="title">/head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>="<span class="value">container</span>"&gt;</span></span>
+    <span class="tag">&lt;<span class="title">h1</span>&gt;</span>My First JavaScript<span class="tag">&lt;<span class="title">/h1</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="atribute">id</span>="<span class="value">boxes</span>"&gt;</span>
+    	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>="<span class="value">box</span>" <span class="atribute">id</span>="<span class="value">red</span>"&gt;</span> <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
+    	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>="<span class="value">box</span>" <span class="atribute">id</span>="<span class="value">green</span>"&gt;</span> <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
+    	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>="<span class="value">box</span>" <span class="atribute">id</span>="<span class="value">blue</span>"&gt;</span> <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>
+          </li>
+        </ul>
+			</section>
+			<section>
 				<h2>Objectives for Javascript</h2>
 				<ul>
 					<li>Write introductory JavaScript from scratch to add interactivity to your web pages</li>
@@ -129,27 +155,17 @@
 				<section>
 					<h2>Internally</h2>
 					<p>You can add the following at any point in your HTML file, however, it is best to add it to the bottom of the page, before your closing <span class="code">&lt;/body&gt;</span> tag</p>
-					<p><span class="code">&lt;script type="text/javascript"&gt;Your Script Here&lt;/script&gt;</span></p>
+					<p style="text-align:left;"><span class="code">&lt;script type="text/javascript"&gt;Your Script Here&lt;/script&gt;</span></p>
 				</section>
 				<section>
 					<h2>Externally</h2>
 					<p>Almost the same as adding internal script, except you add a source attribute to the <span class="code">&lt;script&gt;</span> tag, and nothing in between</p>
-					<p><span class="code">&lt;script type="text/javascript" src="js/main.js"&gt;&lt;/script&gt;</span></p>
+					<p style="text-align:left;"><span class="code">&lt;script type="text/javascript" src="js/main.js"&gt;&lt;/script&gt;</span></p>
 				</section>
 			</section>
 			<section>
 				<section>
 					<h2>Javascript Vocab</h2>
-				</section>
-				<section>
-					<h3>Values</h3>
-					<p>Javascript recognizes the following value types:</p>
-					<ul>
-						<li><strong>Numbers:</strong> 42, 1025, 3.14</li>
-						<li><strong>Boolean (Logic):</strong> True / False</li>
-						<li><strong>Strings:</strong> "Hello, World!"</li>
-						<li><strong><code>null</code>:</strong> A special keyword assigned as a representation of no value</li>
-						<li><strong><code>undefined</code>:</strong> A variable that has been declared by has not been assigned a value</li>
 				</section>
 				<section>
 					<h3>Variables</h3>
@@ -159,10 +175,20 @@
 						<li>You can declare variables in two ways:
 							<ul>
 								<li>Using the keyword <code>var</code>. For example <code>var x = 1025;</code> or <code>var x = "Hello, World!";</code></li>
-								<li>Simply declaring. For example <code>x = 1025</code>. This method creates a global variable; however, and in most cases shouldn't be used.</li>
+								<li>Simply declaring. For example <code>x = 1025</code>. This method creates a global variable and should be used sparingly.</li>
 							</ul>
 						</li>
 					</ul>
+				</section>
+				<section>
+					<h3>Values</h3>
+					<p>Javascript recognizes the following value types:</p>
+					<ul>
+						<li><strong>Numbers:</strong> 42, 1025, 3.14</li>
+						<li><strong>Boolean (Logic):</strong> True / False</li>
+						<li><strong>Strings:</strong> "Hello, World!"</li>
+						<li><strong><code>null</code>:</strong> A special keyword assigned as a representation of no value</li>
+						<li><strong><code>undefined</code>:</strong> A variable that has been declared but has not been assigned a value</li>
 				</section>
 				<section>
 					<h3>Scope</h3>
@@ -204,7 +230,16 @@
 				</section>
 				<section>
 					<h3>Native JavaScript</h3>
-					<p>To use methods, Javascript uses <span class="code">document</span> to refer to your HTML. By calling <span class="code">document</span>, we can access the entire DOM (all the nodes!) on the page..
+					<p>To use methods, JavaScript uses <span class="code">document</span> to refer to your HTML. By calling <span class="code">document</span>, we can access the entire DOM (all the nodes!) on the page.</p>
+				</section>
+				<section>
+					<h3>Dot Notation</h3>
+					<p>In JavaScript, this is the way by which we can access various properties, including methods, of an object.</p>
+				</section>
+				<section>
+					<h3><span class="code">document</span> Methods</h3>
+					<p>For example, there are a number of methods we can use to access or set properties of our <span class="code">document</span>.</p>
+					<p style="text-align:left;">The syntax is <span class="code">document.yourproperty</span> or <span class="code">document.yourmethod()</p>
 				</section>
 				<section>
 					<h3>Try It Yourself!</h3>
@@ -218,6 +253,16 @@
 				<section>
 					<h3>Accessing Nodes</h3>
 					<p>To refer to specific nodes on the page that we want to change, we can called <span class="code">document.getElementsByTagName()</span> and <span class="code">document.getElementsById()</span></p>
+				</section>
+				<section>
+					<h3>Store Nodes</h3>
+					<p>When you are accessing nodes on a page, you can <strong>strong</strong> those nodes in a variable to reference later.</p>
+					<p style="text-align:left;"><span class="code">var links = document.getElementsByTagName('a')</span></p>
+				</section>
+				<section>
+					<h3><span class="code">console.log()</span></h3>
+					<p>You can use a log statement to check the value of any variable in your brower's console.</p>
+					<p style="text-align:left;"><span class="code">console.log(links);</span></p>
 				</section>
 			</section>
 			<section>
