@@ -67,18 +67,10 @@
 <pre style="width:900px;"><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
 <span class="tag">&lt;<span class="title">html</span>&gt;</span>
 <span class="tag">&lt;<span class="title">head</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Week 6 - Native JavaScript<span class="tag">&lt;<span class="title">/title</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">style</span>&gt;<span class="tag">&lt;<span class="title">/style</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Week 6 - Intro to JavaScript<span class="tag">&lt;<span class="title">/title</span>&gt;</span>
 <span class="tag">&lt;<span class="title">/head</span>&gt;</span>
 <span class="tag">&lt;<span class="title">body</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>="<span class="value">container</span>"&gt;</span></span>
-    <span class="tag">&lt;<span class="title">h1</span>&gt;</span>My First JavaScript<span class="tag">&lt;<span class="title">/h1</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="atribute">id</span>="<span class="value">boxes</span>"&gt;</span>
-    	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>="<span class="value">box</span>" <span class="atribute">id</span>="<span class="value">red</span>"&gt;</span> <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
-    	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>="<span class="value">box</span>" <span class="atribute">id</span>="<span class="value">green</span>"&gt;</span> <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
-    	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>="<span class="value">box</span>" <span class="atribute">id</span>="<span class="value">blue</span>"&gt;</span> <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>="<span class="value">container</span>"&gt;</span></span><span class="tag">&lt;<span class="title">/div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">body</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>
           </li>
@@ -234,7 +226,7 @@
 				</section>
 				<section>
 					<h3>Dot Notation</h3>
-					<p>In JavaScript, this is the way by which we can access various properties, including methods, of an object.</p>
+					<p>In JavaScript, this is the way by which we can access various properties, including methods, of an object. Start with the top level object and use dots to "drill down".</p>
 				</section>
 				<section>
 					<h3><span class="code">document</span> Methods</h3>
@@ -242,27 +234,38 @@
 					<p style="text-align:left;">The syntax is <span class="code">document.yourproperty</span> or <span class="code">document.yourmethod()</p>
 				</section>
 				<section>
-					<h3>Try It Yourself!</h3>
+					<h3>Check your work</h3>
+					<p>You can use a log statement to check the value of any variable in your brower's console.</p>
+					<p style="text-align:left;"><span class="code">console.log(var);</span></p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Native Methods & Exercises</h2>
+				</section>
+				<section>
+					<h3><span class="code">write</span> to the page</h3>
 					<ul>
 						<li><span class="code">document.write()</span> to add text to a page</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Storing Information</h3>
+					<p>We use variables to "store" information. Whenever we create an HTML or text node, we then have to store it and create a reference to it using a variable, which we can then add to the page at a point of our choosing. Create references to the following:</p>
+					<ul>
 						<li><span class="code">document.createElement()</span> to create an HTML element</li>
 						<li><span class="code">document.createTextNode()</span> to create text</li>
-						<li><span class="code">document.appendChild()</span> to add an element to the page</li>
+						<li><span class="code">document.appendChild()</span> to put your text node into your HTML</li>
 					</ul>
 				</section>
 				<section>
 					<h3>Accessing Nodes</h3>
-					<p>To refer to specific nodes on the page that we want to change, we can called <span class="code">document.getElementsByTagName()</span> and <span class="code">document.getElementsById()</span></p>
-				</section>
-				<section>
-					<h3>Store Nodes</h3>
-					<p>When you are accessing nodes on a page, you can <strong>strong</strong> those nodes in a variable to reference later.</p>
-					<p style="text-align:left;"><span class="code">var links = document.getElementsByTagName('a')</span></p>
-				</section>
-				<section>
-					<h3><span class="code">console.log()</span></h3>
-					<p>You can use a log statement to check the value of any variable in your brower's console.</p>
-					<p style="text-align:left;"><span class="code">console.log(links);</span></p>
+					<p>To refer to specific nodes on the page that we want to change, we can create a reference to them using methods like: 
+					<ul>
+						<li><span class="code">document.getElementsByTagName()</span></li>
+						<li><span class="code">document.getElementsById()</span></li>
+						<li>Add your node to the page using <span class="code">appendChild</span></li>
+					</ul>
 				</section>
 			</section>
 			<section>
@@ -271,17 +274,23 @@
 				</section>
 				<section>
 					<h3>What are they?</h3>
-					<p>Functions in JavaScript combine a series of events or actions into one step. This is useful when there is a series of actions you want to perform more than once. <em>Remember: Functions are also objects!</em></p>
+					<p>Functions in JavaScript combine a series of events or actions into one step. This is useful when there is a series of actions you want to perform more than once. REMEMBER:
+					<ul>
+						<li>Functions are also objects!</em></li>
+						<li>There are multiple ways to create and run functions but basic syntax stays the same.</li>
+						<li>You can create a reference to an anonymous function using a variable or write a named function.</li> 
+					</ul>
 				</section>
 				<section>
-					<h3>Syntax</h3>
-					<p><span class="code" style="text-align:left;">var myFunc = function(param){ <br />
+					<h3>Syntax - Storing a <span class="code">function</span></h3>
+					<p style="text-align:left;"><span class="code" style="text-align:left;">var myFunc = function(param){ <br />
 						&nbsp;&nbsp;&nbsp;&nbsp;console.log("RUN MY FUNCTION");<br />
 					}</span>
+					<p style="text-align:left;"><strong>note:</strong> All lines of JavaScript should end with a semi-colon.</p>
 				</section>
 				<section>
 					<h3>Arguments / Parameters</h3>
-					<p>Can be passed to your function so that the events within the function can be run on different objects. The parameter is a placeholder name for whatever value we pass to the function.</p>
+					<p>Can be passed to your function so that the events within the function can be run on different objects. The parameter is a placeholder name for whatever value we pass to it.</p>
 				</section>
 				<section>
 					<h3>Run your Function</h3>
@@ -289,17 +298,23 @@
 				</section>
 				<section>
 					<h3>A Lack of Class</h3>
-					<p>In other programming languages there are classes, which can be repeated. We can simulate this in JS using named functions:<br />
-					<span class="code" style="text-align:left;">function addItem(param){<br />
+					<p>In other programming languages there are classes, which can be repeated. We can simulate this in JS using named functions:</p>
+					<p style="text-align:left;"><span class="code">function addItem(param){<br />
 						&nbsp;&nbsp;&nbsp;&nbsp;console.log("ADD AN ITEM");<br />
-					}<br/ ></span>
-					And then to run, call the name of the function: <span class="code" style="text-align:left;">addItem(param);</span>
+					}<br/ ></span></p>
+					<p>And then to run, call the name of the function: <span class="code" style="text-align:left;">addItem(param);</span>
 					</p>
 				</section>
 			</section>
 			<section>
 				<h2>Exercise</h2>
-				<p>Write a function on your homepage that triggers an alert when the user clicks your logo.</p>
+				<p>Write a function on your homepage that triggers an alert when the user loads the page. HINTS:</p>
+				<ul>
+					<li>Use a named function.</li>
+					<li>Unless specified, a function will run as soon as the page loads.</li>
+					<li>There are <a href="http://www.w3schools.com/js/js_reserved.asp">special keywords in JavaScript</a> that mean or do specific tasks - you should not use these keywords as variable names. One of those is <span class="code">alert</span>.</li>
+					<li>To put together strings and variables, use concatenation, which is adding a plus sign between the two: <span class="code">'Hello,' + name;</span>
+				</ul>
 			</section>
 			<section>
 				<section>
@@ -309,6 +324,14 @@
 					<h3>Reading</h3>
 					<ul>
 						<li>Read in JavaScript&JQuery, Chapters 1-2 and 5 (pages 184-227).</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Worksheet</h3>
+					<ul>
+						<li>Download the <span class="code">Week6Worksheet.docx</span> worksheet in Dropbox or grab from Slack</li>
+						<li>Put your name at the top and answer the questions. You should be able to answer based on today's lesson and your reading, or you can use Google.</li>
+						<li>Save and upload to your folder in Assignments > Week 6</li>
 					</ul>
 				</section>
 				<section>
