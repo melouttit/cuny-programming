@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!--HEADER INCLUDE-->
+
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Week 7 - Programming for Journalists</title>
+
+  <meta name="author" content="Meghan Louttit">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="stylesheet" href="../../js/reveal/css/reveal.min.css">
+  <link rel="stylesheet" href="../../js/reveal/css/theme/night.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="../../js/reveal/lib/css/zenburn.css">
+
+  <style type="text/css">
+  #backTo{ 
+    margin:0 20px; 
+    font-family: sans-serif;
+    font-size: 13px;
+  }
+  #backTo p,
+  #backTo p a{ 
+    color: #efefef; 
+    text-decoration:none;
+    padding:3px 5px;
+  }
+  #backTo p a:hover,
+  #backTo p a.current{
+    background:#efefef;
+    color:#333;
+  }
+  .code{ color:#fff;font-family: monospace!important; }
+  </style>
+
+  <script>
+    document.write( '<link rel="stylesheet" href="../../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script>
+
+</head>
+<body>
+  <div id="backTo"></div>
+  <div class="reveal">
+    <div class="slides">
+
+<!--set week number-->
+<script type="text/javascript">
+  currentWeek = 7;
+</script>
+			<section>
+				<h2>Week 7 | March 16, 2015</h2>
+				<h4>Arrays, Objects & Loops </h4>
+			</section>
+			<section>
+				<section>
+					<h2>Interpreting the Console</h2>
+					<p>Some common errors and what they mean</p>
+				</section>
+				<section>
+					<ul>
+						<li><span class="red">Failed to load resource</span> means an external file can't be found. Make sure the file both exists in the directory you're pointing to and you are spelling the file name correctly</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<li><span class="red">Unexpected identifier</span> means your syntax is off and something - usually a semi-color, is in the wrong place and/or out of order.</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<li><span class="red">Uncaught SyntaxError: Unexpected token</span> means your opening and closing parentheses or brackets are out of order</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h3>Codecademy Lesson</h3>
+				<p>Lean more about strings, numbers and conditionals in this week's Codecademy lesson. Go to <a href="http://www.codecademy.com/courses/getting-started-v2/0/1">Getting Started With JavaScript</a> and complete lessons 1-17. Take a screenshot of lesson 17 when you finish and submit it to Dropbox as proof of completion.</p>
+			</section>
+			<section>
+				<section>
+					<h2>Assignment</h2>
+				</section>
+				<section>
+					<h3>Reading</h3>
+					<ul>
+						<li>Read in JavaScript&JQuery, Chapter 3</li>
+						<!-- <li>Read <a href="http://blog.teamtreehouse.com/beginners-guide-to-jquery">The Beginners Guide to jQuery</a></li> -->
+					</ul>
+				</section>
+				<section>
+					<h3>Worksheet</h3>
+					<ul>
+						<li>In the Week 7 Dropbox, copy the file <span class="code">worksheet.docx</span> and answer the questions (definitions and describing code actions). Use Google and lecture slides from class to find the answers. Save your worksheet to your folder in Week 7.</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+	</div>
+
+<script src="../../js/reveal/lib/js/head.min.js"></script>
+<script src="../../js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Optional libraries used to extend on reveal.js
+    dependencies: [
+      { src: '../../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: '../../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '../../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: '../../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    ]
+  });
+</script>
+<script type="text/javascript" src="../../js/lessonHeader.js"></script>
+</body>
+</html>

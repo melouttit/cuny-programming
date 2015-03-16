@@ -54,59 +54,228 @@
 <script type="text/javascript">
   currentWeek = 7;
 </script>
-			<section>
-				<h2>Week 7 | March 16, 2015</h2>
-				<h4>Variables, Functions & Methods </h4>
-			</section>
-			<section>
-				<h3>Week 6 Review</h3>
-				<p><a href="../reviews/js_review_1.html">Take the review quiz &raquo;</a></p>
-			</section>
-			<section>
-				<section>
-					<h2>Interpreting the Console</h2>
-					<p>Some common errors and what they mean</p>
-				</section>
-				<section>
-					<ul>
-						<li><span class="red">Failed to load resource</span> means an external file can't be found. Make sure the file both exists in the directory you're pointing to and you are spelling the file name correctly</li>
-					</ul>
-				</section>
-				<section>
-					<ul>
-						<li><span class="red">Unexpected identifier</span> means your syntax is off and something - usually a semi-color, is in the wrong place and/or out of order.</li>
-					</ul>
-				</section>
-				<section>
-					<ul>
-						<li><span class="red">Uncaught SyntaxError: Unexpected token</span> means your opening and closing parentheses or brackets are out of order</li>
-					</ul>
-				</section>
-			</section>
-			<section>
-				<h3>Codecademy Lesson</h3>
-				<p>Lean more about strings, numbers and conditionals in this week's Codecademy lesson. Go to <a href="http://www.codecademy.com/courses/getting-started-v2/0/1">Getting Started With JavaScript</a> and complete lessons 1-17. Take a screenshot of lesson 17 when you finish and submit it to Dropbox as proof of completion.</p>
-			</section>
-			<section>
-				<section>
-					<h2>Assignment</h2>
-				</section>
-				<section>
-					<h3>Reading</h3>
-					<ul>
-						<li>Read in JavaScript&JQuery, Chapter 3</li>
-						<!-- <li>Read <a href="http://blog.teamtreehouse.com/beginners-guide-to-jquery">The Beginners Guide to jQuery</a></li> -->
-					</ul>
-				</section>
-				<section>
-					<h3>Worksheet</h3>
-					<ul>
-						<li>In the Week 7 Dropbox, copy the file <span class="code">worksheet.docx</span> and answer the questions (definitions and describing code actions). Use Google and lecture slides from class to find the answers. Save your worksheet to your folder in Week 7.</li>
-					</ul>
-				</section>
-			</section>
-		</div>
-	</div>
+      <section>
+        <h2>Week 7 | March 16, 2015</h2>
+        <h4>Arrays, Objects & Loops </h4>
+      </section>
+      <section>
+        <h2>Lesson Prep</h2>
+        <ul>
+          <li>Open: Class Website (Week 7), GitHub, Slack</li>
+          <li>Open your website in sublime</li>
+          <li>Create a new file called <span class="code">week7.html</span> and paste in the code below:
+<pre style="width:900px;"><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Week 7 - Arrays, Objects and Loops<span class="tag">&lt;<span class="title">/title</span>&gt;</span>
+<span class="tag">&lt;<span class="title">/head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">id</span>="<span class="value">headline</span>"&gt;</span>Storing Data in JavaScript<span class="tag">&lt;<span class="title">/h1</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>="<span class="value">list</span>"&gt;</span></span><span class="tag">&lt;<span class="title">/ul</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <section>
+          <h2>Definitions / HW Review</h2>
+        </section>
+        <section>
+          <h3>Remember Variables?</h3>
+          <ul>
+            <li>A variable remembers a value that you've assigned to it.</li>
+            <li>For example <span class="code">var x = 102</span>.</li>
+            <li>When we say "store a value" it means we are assigning it to a variable for later use or "creating a reference" to it.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Object</h3>
+          <p>Essentially, everything in JavaScript is an object. You can create object when you need to store multiple variables to a particular place.</p>
+        </section>
+        <section>
+          <h3>Property</h3>
+          <p>A variable that provides information about an object. Needs to be paired with a value.</p>
+        </section>
+        <section>
+          <h3>Array</h3>
+          <p>A way of assigning multiple values to one variable.</p> 
+        </section>
+        <section>
+          <h3>Loop</h3>
+          <p>Allows you to "loop through" each object in an array and perform a function on each.</p>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Arrays</h2>
+          <p>An array is a way of assigning a series of values to a single variable. Each object in an array is separated by commas.</p>
+        </section>
+        <section>
+          <h3>Examples</h3>
+          <ul>
+            <li><span class="code">var x = [100, 454, 900, 128934, 2];</span></li>
+            <li><span class="code">var fruits = ["orange","grape","apple","strawberry"];</span></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Array Index</h3>
+          <p>Each object in an array is assigned an index value, starting with 0.</p>
+          <ul>
+            <li><span class="code">0 = orange</span></li>
+            <li><span class="code">1 = grape</span></li>
+            <li><span class="code">2 = apple</span></li>
+            <li><span class="code">3 = strawberry</span></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Length</h3>
+          <p>You can use the <span class="code">length</span> property of an array to see how many items are in it. For example: <span class="code">arrayName.length;</span></p>
+        </section>
+        <section>
+          <h3>Accessing an Item</h3>
+          <p>To grab an item from an array, you simply need to refer to the variable holding the array, and then the item's index.<br /> <span class="code">var myFruit = fruits[2];</span></p>
+        </section>
+        <section>
+          <h3>Exercise</h3>
+          <ul>
+            <li>In <span class="code">week7.html</span> create an array of five objects (book titles).</li>
+            <li>Store your array in a variable</li>
+            <li>Log the variable so you can see it in your console</li>
+            <li>Log the value of the third item in the array.</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Objects</h2>
+          <p>A way of storing multiple pieces of information in a single place.</p>
+        </section>
+        <section>
+          <h3>Storage</h3>
+          <p>When storing variables to an object, you need to specify both the property and its value.</p>
+        </section>
+        <section>
+          <h3>Examples</h3>
+          <ul>
+            <li><span class="code">weddingGuest = {<br />&nbsp;&nbsp;&nbsp;name:"John Doe",<br />&nbsp;&nbsp;&nbsp;age:"42",<br />&nbsp;&nbsp;&nbsp;meal:"chicken"<br />};</span></li>
+            <li>You can access any object property through the dot syntax: <span class="code">weddingGuest.name</span></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Object Methods</h3>
+          <p>An object can also contain a function that let's you interact with the object's properties. This is called a method.</p>
+        </section>
+        <section>
+          <h3>Method Examples</h3>
+          <p style="text-align:left;"><span class="code">myCountry = {<br />&nbsp;&nbsp;&nbsp;getCapital: function() {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(this.myCapital);<br />&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;myName: "USA",<br />&nbsp;&nbsp;&nbsp;myCapital: "Washington, D.C."<br />};</span></p><br />
+          <p>To call this method: <span class="code">myCountry.getCapital()</span></p>
+        </section>
+        <section>
+          <h3>Everything is an Object</h3>
+          <p>Essentially everything in javascript and jQuery is an object.</p>
+          <p>Arrays, functions, elements, strings, etc. And every element has properties and methods.</p>
+        </section>
+        <section>
+          <h3>Exercise</h3>
+          <ul>
+            <li><p>Create your own object in <span class="code">week7.html</span> with three different properties and store in a variable.</li>
+            <li>Log the variable so you can see it in your console</li>
+            <li>Log one property so you can see it in your console.</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <h2>Arrays & Objects</h2>
+        <p>Arrays and objects can be part of each other. You can have an array of objects, and arrays can be values in objects.</p>
+      </section>
+      <section>
+        <section>
+          <h2>The <span class="code">for</span> Loop</h2>
+          <p>A way of cycling through an array and performing an action on each object.</p>
+        </section>
+        <section>
+          <h3>Types</h3>
+          <p>There are multiple types of loops, and using other JavaScript frameworks, multiple ways of performing them. We will focus today on the <span class="code">for</span> loop, as it will likely be the most used and is the basis for the <span class="code">each</span> method in jQuery and other frameworks.</p>
+        </section>
+        <section>
+          <h3>Loop Parts</h3>
+          <p>Each loop has four parts that need to be defined</p>
+          <ul>
+            <li><strong>Initialization</strong>: Takes place once at the start of the loop</li>
+            <li><strong>Test condition</strong>: Checks the variable to see if the loop should stop or keep going</li>
+            <li><strong>Action</strong>: The code that is repeated as we go through the loop</li>
+            <li><strong>Update</strong>: Updates the variable being used by the test condition to see if we should keep going</li>
+          </ul>
+        </section>
+        <section>
+          <h2><span class="code">For</span> Loops</h2>
+          <p style="text-align:left;"><span class="code">myArr = ["one","two","three","four"];</span></p>
+          <p style="text-align:left;"><span class="code">for ( var i=0 ; i < myArr.length ; i++){<br />&nbsp;&nbsp;&nbsp;alert(myArr[i])<br /> }</span></p>
+        </section>
+        <section>
+          <h3>Lowercase <span class="code" style="text-transform:lowercase;">i</span></h3>
+          <p>In JS, the lowercase <span class="code">i</span> stands for "index" and represents the index of an object in an array. In loops, we use <span class="code">i</span> to represent each index.</p>
+        </section>
+        <section>
+          <h3>Exercise</h3>
+          <ul>
+            <li>Write a <span class="code">for</span> loop that goes through your list of books.</li>
+            <li>Log <span class="code">books[i]</span> to see each instance of the loop.</li>
+            <li>Append each book to the page.</li> 
+            <li>Use the <span class="code">innerHTML</span> property to change the headline of the page.</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>The Tip Calculator & <span class="code">git</span></h2>
+        </section>
+        <section>
+          <h3><span class="code">pull</span> Tip Calculator Files</h3>
+          <p>You can find them on <a href="https://github.com/melouttit/tip-calculator">my GitHub page</a>.</p>
+        </section>
+        <section>
+          <h3>Push to New Branch</h3>
+          <p>Once you are finished with the tip calculator exercise, push your files to a new project in your class project repo.</p>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Assignment</h2>
+        </section>
+        <section>
+          <h3>Reading</h3>
+          <ul>
+            <li>Read in JavaScript&JQuery, Chapter 3-4</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Codecademy</h3>
+          <li>Do Codecademy's <a href="http://www.codecademy.com/courses/javascript-beginner-en-9Sgpi/2/2">Arrays & Objects lesson</a> exercises 1-4 and 9-13 and screenshot lessons 4 and 13.</li>
+          <li>You should upload two screenshots to Dropbox to show that you've complete the exercises.</li>
+        </section>
+        <section>
+          <h3>Hints</h3>
+          <ul>
+            <li>Make sure you read each lesson carefully. There are a lot of clues in the instructions.</li>
+            <li>Utilize Codecademy HINTS on each page in blue</li>
+            <li>Take each task line by line. Programming is all about breaking each task into digestible parts.</li>
+            <li>Use Google, class lessons and each other for references.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Add Reset Function to Tip Calculator</h3>
+          <ul>
+            <li>Add a button in <span class="code">index.html</span> that users can push to "reset" or "calculate another tip"</li>
+            <li>The button will need an <span class="code">onclick</span>attribute to call another function in your code.</li>
+            <li>Write a function that goes through each element on the page and resets it to the initial state.</li>
+            <li>Make sure you <span class="code">add</span>, <span class="code">commit</span>, <span class="code">push</span> when you are finished.</li>
+          </ul>
+        </section>
+      </section>
+    </div>
+  </div>
 
 <script src="../../js/reveal/lib/js/head.min.js"></script>
 <script src="../../js/reveal/js/reveal.min.js"></script>
