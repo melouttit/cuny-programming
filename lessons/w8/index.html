@@ -82,8 +82,39 @@
         </ul>
 			</section>
 			<section>
-				<h2>Homework Review</h2>
-					<p>Go over resetting tip calculator</p>
+        <section>
+				  <h2>Homework Review</h2>
+        </section>
+        <section>
+          <h3>Your Reset Function...</h3>
+          <p style="text-align:left;font-size:24px;"><span class="code">function resetCalc(){<br />
+            &nbsp;&nbsp;document.getElementById('bill').value = '';<br /><br />
+            
+            &nbsp;&nbsp;var percBtns = document.getElementsByClassName('tip-btn');<br />
+            &nbsp;&nbsp;for(var i=0; i < percBtns.length; i++){<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;percBtns[i].checked = false;<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;var tipBox = document.getElementById('tipamount');<br />
+            &nbsp;&nbsp;tipBox.innerHTML = '$0.00';<br />
+          }</span></p>
+        </section>
+        <section>
+          <h3>Radio Button Selection</h3>
+          <p>If you want to allow users to select only one radio button at a time, give each <span class="code">input</span> element a <span class="code">name</span> attribute with the same value. This way the browser will recognize them as a "group" of buttons.</p>
+        </section>
+        <section>
+          <h3>Evaluate</h3>
+          <p>You can use the JavaScript <span class="code">isNaN</span> method to evaluate the total bill, and use an <span class="code">if/else</span> conditional to either evaluate a number or throw an error message.</p>
+        </section>
+        <section>
+          <h3>JS Maths</h3>
+          <ul>
+            <li>You can basic arithmetic using <a href="http://www.w3schools.com/js/js_operators.asp">JS with operators</a>, which should look familiar.</li>
+            <li>There are also <a href="http://www.w3schools.com/js/js_math.asp">more complex evaluations</a> under the <span class="code">Math</span> object.</li>
+            <li>In our tip calculator example, we might want to evaluate the tip amount calculated to only display up to two decimal points. For this we would use <span class="code">Math.floor</span>.</li>
+          </ul>
+        </section>
 			</section>
 			<section>
 				<section>
@@ -231,7 +262,7 @@
 					<ul>
 						<li>This method changes the <span class="code">innerHTML</span> property of any element.</li>
 						<li>Syntax: <span class="code">$('selector').html('&lt;h2&gt;Your New Subhead&lt;/h2&gt;');</li>
-						<li>Use <span class="code">html</span> to change the headline on the page and then <span class="code">css</span> to change the color property.</li>	
+						<li><strong>Exercise:</strong> Use <span class="code">html</span> to change the headline on the page and then <span class="code">css</span> to change the color property.</li>	
 					</ul>
 				</section>
 			</section>
@@ -258,20 +289,21 @@
 					<h3>Reading</h3>
 					<ul>
 						<li>Read in JavaScript&JQuery Chapter 7.</li>
-						<li><a href="">Primer on <span class="code">jQuery</span> plugins.</a></li>
+						<li><a href="https://learn.jquery.com/plugins/">Primer</a> on <span class="code">jQuery</span> plugins and how to <a href="https://learn.jquery.com/plugins/finding-evaluating-plugins/">find and evaluate them</a>.</li>
 					</ul>
 				</section>
 				<section>
 					<h3>Definitions</h3>
-					<p>In the Week 8 Dropbox, copy the file <span class="code">definitions.docx</span> and fill out the definitions for the terms and decribing the code. You'll need to use Google or the resources on the class website. Save your copy your folder in Week 8.</p>
+					<p>In the Week 8 Dropbox, copy the file <span class="code">week8-definitions.docx</span> and fill out the definitions for the terms and decribing the code. You'll need to use Google or the resources on the class website. Save your copy your folder in Week 8 in Dropbox.</p>
 				</section>
 				<section>
 					<h3>Method Presentation</h3>
-					<p>You will be assigned a <span class="code">jQuery</span> method via DM in Slack, which you will then look up and do a short demonstration to the class on how to use it.</p>
+					<p>You will be assigned a <span class="code">jQuery</span> method, which you will research and demonstrate to the class how to use it.</p>
 					<ul>
-						<li>Look up the method online (Google or <span class="code">jQuery</span> docs)</li>
+            <li>Check your Slack DM for the method assigned to you</li>
+						<li>Look up the method online (Google or <a href="http://api.jquery.com/"><span class="code">jQuery</span> docs</a>)</li>
 						<li>Write out a explanation of the method and what it's used for and post in Slack</li>
-						<li>Prepare a short presentation for how to use it to the class. I'll have a page setup for you to type into. Remember, you might also need to have HTML and CSS written for your example.</li>
+						<li>Prepare a short presentation for how to use it to the class. I'll have a page set up for you to type into. Remember, you might also need to have HTML and CSS written for your example.</li>
 					</ul>
 				</section>
 				<section>
