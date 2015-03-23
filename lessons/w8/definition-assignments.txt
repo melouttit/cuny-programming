@@ -1,0 +1,12 @@
+JQUERY DEFINITION ASSIGNMENTS
+
+Helina - slideUp/slideDown
+Danni - scroll
+Jonathan - addClass/removeClass
+Desire - toggle
+Natasha - attr
+Allegra - replace
+Rai - after/before
+Catherine - animate
+Maya - resize
+Liam - empty
