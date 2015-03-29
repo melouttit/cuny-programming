@@ -6,7 +6,7 @@ Jonathan - addClass/removeClass
 Desire - toggle
 Natasha - attr
 Allegra - replace
-Rai - after/before
+Rai - empty
 Catherine - animate
 Maya - resize
-Liam - empty
+Liam - before/after
