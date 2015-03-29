@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Carousel - Plugin Exercise</title>
+
+  <!--stylesheets-->
+  <link rel="stylesheet" href="slick/slick.css" />
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <style>
+  body{
+    background-color:#333;
+  }
+  h1{
+    font-family:arial,helvetica,sans-serif;
+    font-size:30px;
+    text-transform: uppercase;
+    color:lightGray;
+    text-align: center;
+  }
+  #carousel{
+    width:800px;
+    height:450px;
+    margin:30px auto;
+  }
+  #instrux{
+    width:200px;
+    background:#efefef;
+    border-radius:6px;
+    border:1px solid:#f9f9f9;
+    margin:20px auto;
+    padding:4px 12px;
+  }
+  #instrux span{
+    display:block;
+    font-size:11px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family:helvetica,sans-serif;
+    color:#666;
+    cursor:pointer;
+  }
+  #instrux span:hover{
+    color:#121212;
+  }
+  #instrux p{
+    text-align: center;
+    font-family:helvetica,sans-serif;
+    color:#000;
+  }
+  .slick-dots li button:before{
+    content: "";
+    display: block;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    background: #999;
+  }
+  .slick-next:before{
+    content:">";
+  }
+  .slick-prev:before{
+    content:"<";
+  }
+  .slick-dots li.slick-active button:before{
+    color:white;
+  }
+  .slick-dots li button:before{
+    color:#999;
+  }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>My Dale Hollow Photos</h1>
+
+  <div id="instrux" style="display:none;">
+    <span>CLOSE</span>
+    <p>Click on the arrows or drag to scroll through.</p>
+  </div>
+
+  <div id="carousel" class="slick-carousel">
+    <div class="image">
+      <img src="images/carousel/image1.jpg" />
+    </div>
+    <div class="image">
+      <img src="images/carousel/image2.jpg" />
+    </div>
+    <div class="image">
+      <img src="images/carousel/image3.jpg" />
+    </div>
+    <div class="image">
+      <img src="images/carousel/image4.jpg" />
+    </div>
+    <div class="image">
+      <img src="images/carousel/image5.jpg" />
+    </div>
+  </div>
+
+  <!--scripts-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="slick/slick.min.js"></script>
+  <script>
+  $(document).ready(function(){ 
+
+    $('#instrux').slideDown(600);
+    // .delay(5000).slideUp(600);
+
+    $('#instrux span').click(function(){
+      console.log("CLICK CLOSE");
+      $('#instrux').slideUp();
+    });
+
+    $('div.slick-carousel').slick({
+      autoplay:true,
+      autoplaySpeed:500,
+      centerMode:true,
+      dots:true,
+      initialSlide:3
+    });
+
+    $('div.slick-carousel').on('afterChange',function(){
+      console.log('afterChange');
+      
+    });
+  });
+  </script>
+</body>
+
+</html>

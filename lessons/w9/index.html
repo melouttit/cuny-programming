@@ -55,203 +55,165 @@
   currentWeek = 9;
 </script>
       <section>
-        <h2>Week 8 | March 30, 2015</h2>
-        <h4>Intro to JQuery</h4>
+        <h2>Week 9 | March 30, 2015</h2>
+        <h4>Methods & Plugin Practice</h4>
+      </section>
+      <section>
+        <h2>Lesson Prep</h2>
+        <ul>
+          <li>Open: Class Website (Week 9), GitHub, iTerm, Slack</li>
+          <li>Open your website in sublime</li>
+          <li>Create a new file called <span class="code">carousel.html</span> and paste in the code below:
+<pre style="width:900px;"><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Carousel Exercise<span class="tag">&lt;<span class="title">/title</span>&gt;</span>
+<span class="tag">&lt;<span class="title">/head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">id</span>="<span class="value">headline</span>"&gt;</span>My Vacation Photos<span class="tag">&lt;<span class="title">/h1</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>="<span class="value">https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js</span>"&gt;</span><span class="tag">&lt;<span class="title">/script</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">script</span>&gt;</span>
+    //your code here
+  <span class="tag">&lt;<span class="title">/script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Method Presentations</h2>
+        <p>As each student presents their method to the class, you can follow along as necessary. All the demonstrations will be published to my GitHub account, which I will share via Slack (with notes) after class.</p>
+      </section>
+      <section>
+        <h2>jQuery Plugins</h2>
+        <ul>
+          <li>A common set of jQuery functions that can be added to your site for quick functionality</li>
+          <li>Anyone can write a plugin and release it for widespread use. Most will include documentation on how to implement and what custimzation is available to you</li>
+          <li><a href="http://plugins.jquery.com/">The jQuery plugin registry</a> is a good starting point for seeing what is available.</li>
+        </ul>
       </section>
       <section>
         <section>
-          <h2>Definitions / HW Review</h2>
+          <h2>Adding a Plugin</h2>
         </section>
         <section>
-          <h3>Remember Variables?</h3>
+          <h3>Download the Files</h3>
           <ul>
-          	<li>A variable remembers a value that you've assigned to it.</li>
-          	<li>For example <span class="code">var x = 102</span>.</li>
-          	<li>When we say "store a value" it means we are assigning it to a variable for later use.</li>
+            <li>Download the plugin code from the source. On the homepage for your plugin, look for a download link.</li>
+            <li>Usually plugins will come with at least one JavaScript file, a CSS file and sometimes an images directory and README file.</li>
+            <li>Read the instructions for installing carefully. For most plugins, you will just include the source JS and CSS files on the page you want to instantiate the plugin on.</li>
           </ul>
         </section>
         <section>
-          <h3>Method</h3>
-          <p>When an object contains a function that let's you interact with the object's properties.</p>
+          <h3>Minified JS</h3>
+          <p>You might see two JS files in the plugin you download with filenames that are similar except for a <span class="code">-min</span> or <span class="code">.min</span> at the end. This means the owner is providing you with two ways to include their JS. The file with the <span class="code">min</span> is the minified version, meaning it's stripped of white space and lighter to download. You would only want the unminified version if you were planning on altering the plugin.</p>
         </section>
         <section>
-          <h3>Object</h3>
-          <p>Essentially, everything in JavaScript is an object. You can create object when you need to store multiple variables to a particular place.</p>
-        </section>
-        <section>
-          <h3>Property</h3>
-          <p>A variable that provides information about an object. Needs to be paired with a value.</p>
-        </section>
-        <section>
-          <h3>Array</h3>
-          <p>A way of assigning multiple values to one variable.</p> 
-        </section>
-        <section>
-          <h3>Loop</h3>
-          <p>Allows you to "loop through" each object in an array and perform a function on each.</p>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h2>Arrays</h2>
-        </section>
-        <section>
-          <h3>Examples</h3>
+          <h3>Documentation</h3>
           <ul>
-            <li><span class="code">var x = [100, 454, 900, 128934, 2];</span></li>
-            <li><span class="code">var fruits = ["orange","grape","apple","strawberry"];</span></li>
+            <li>Look either in the plugins README file or on the website to find the documentation for how to use the plugin.</li>
+            <li>Most plugins require a standard HTML setup and then only a few lines of JS to get them working.</li>
+            <li>Look in the <span class="code">css</span> directory for any style themes the plugin creator might provide.</li>
           </ul>
         </section>
         <section>
-          <h3>Array Index</h3>
-          <p>Each object in an array is assigned an index value, starting with 0.</p>
+          <h3>Instantiation</h3>
           <ul>
-            <li><span class="code">0 = orange</span></li>
-            <li><span class="code">1 = grape</span></li>
-            <li><span class="code">2 = apple</span></li>
-            <li><span class="code">3 = strawberry</span></li>
+            <li>The method that initiates the plugin in your code is usually the name of the plugin.
+            <li><strong>EXAMPLE:</strong> <span class="code">$(document).ready(function() {<br />&nbsp;&nbsp;$('#carousel').slick();<br />}); </span></li>
+            <li>Where <span class="code">#carousel</span> is the HTML element you want to instantiate the plugin on and <span class="code">slick()</span> is the plugin method that runs the code you need.</li>
           </ul>
         </section>
         <section>
-          <h3>Accessing an Item</h3>
-          <p>To grab an item from an array, you simply need to refer to the variable holding the array, and then the item's index.<br /> <span class="code">var myFruit = fruits[2];</span></p>
-        </section>
-        <section>
-          <h3>Exercise</h3>
+          <h3>Options</h3>
           <ul>
-            <li>Copy <span class="code">arrays.html</span> from Dropbox</li>
-            <li>Create an array of five objects.</li>
-            <li>Store your array in a variable</li>
-            <li>Log the variable so you can see it in your console</li>
-            <li>Then, using jQuery, append the object with an index of 3 to your page.</li>
-          </ul>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h2>Objects</h2>
-        </section>
-        <section>
-          <h3>Storage</h3>
-          <p>When storing variables to an object, you need to specify both the property and its value.</p>
-        </section>
-        <section>
-          <h3>Examples</h3>
-          <ul>
-            <li><span class="code">weddingGuests = {<br />&nbsp;&nbsp;&nbsp;name:"John Doe",<br />&nbsp;&nbsp;&nbsp;age:"42",<br />&nbsp;&nbsp;&nbsp;meal:"chicken"<br />};</span></li>
-            <li>You can access any object property through the dot syntax: <span class="code">weddingGuests.name</span></li>
+            <li>Beyond the standard setup, most plugins have options you can pass in to the customize the plugin.</li>
+            <li>You will need to read through the plugins documentation to find the options that are available to you.</li>
+            <li>The options are a set of properties, passed into the method inside curly brackets.</li>
           </ul>
         </section>
         <section>
-          <h3>Object Methods</h3>
-          <p>An object can also contain a function that let's you interact with the object's properties. This is called a method.</p>
-        </section>
-        <section>
-          <h3>Method Examples</h3>
-          <p style="text-align:left;"><span class="code">myCountry = {<br />&nbsp;&nbsp;&nbsp;getCapital: function() {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(this.myCapital);<br />&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;myName: "USA",<br />&nbsp;&nbsp;&nbsp;myCapital: "Washington, D.C."<br />};</span></p><br />
-          <p>To call this method: <span class="code">myCountry.getCapital()</span></p>
-        </section>
-        <section>
-          <h3>Everything is an Object</h3>
-          <p>This is where it gets confusing - essentially everything in javascript and jQuery is an object.</p>
-          <p>Arrays, functions, elements, strings, etc. And every element has properties and methods.</p>
-        </section>
-        <section>
-          <h3>Exercise</h3>
+          <h3>Options Example</h3>
           <ul>
-            <li><p>Create your own object in <span class="code">arrays.html</span> with four different properties and store in a variable.</li>
-            <li>Log the variable so you can see it in your console</li>
-            <li>Then append one of your properties to your page</li>
+            <li><span class="code">$("#carousel").slick({<br />&nbsp;&nbsp;autoplay: true,<br />&nbsp;&nbsp;autoplaySpeed: 400<br />});</span></li>
+            <li>Where <span class="code">autoplay: true</span> is an option the plugin provides, allowing you to make the carousel loop through without clicking and <span class="code">autoplaySpeed</span> sets the speed in which it loops.</li>
           </ul>
+        </section>
+        <section>
+          <h3>Callbacks or Events</h3>
+          <p><span class="code">jQuery</span> utilizes callback functions, which are found in plugins. These allow you to run a function when a specific event happens in the plugin.</p>
+        </section>
+        <section>
+          <h3>Custom Methods</h3>
+          <p>Additional customization options might come in the form of methods, where you can tap into the plugins internal methods to change how it works. 
+        </section>
+        <section>
+          <h3>Demos</h3>
+          <p>Many plugins also provide demo pages or have demos working on their page. Use the inspector to see how they set up the demos as a guide to setting up your own.</p>
         </section>
       </section>
       <section>
         <section>
-          <h2>The <span class="code">RETURN</span></h2>
+          <h2>Carousel Plugin Exercise</h2>
+          <p>Start a new branch of your website to practice with your plugins. We will use the images you've gathered to create a photo carousle with <a href="http://kenwheeler.github.io/slick/">the slick plugin</a>.</p>
         </section>
         <section>
-          <h3>Definition</h3>
-          <p>A way of passing parameters from one function to another. Remember, in JavaScript we are mostly dealing with local variables, meaning variables are only available to the function in which they're defined. Using <span class="code">return</span> allows us to make those variables to other parts of our code, which may need them to operate.</p>
+          <h3>Create a Branch</h3>
+          <p>In iTerm, navigate to your website and use <span class="code" style="display:inline-block;">git branch carousel</span> to create a new branch to test your plugin on. Use <span class="code">checkout</span> to switch to that branch.</p>
         </section>
         <section>
-          <h3>Example</h3>
-          <p style="text-align:left;"><span class="code">function num(x, y){<br />
-            &nbsp;&nbsp;&nbsp;if(x !== y) { return false; }<br />
-            &nbsp;&nbsp;&nbsp;if(x < 5) { return 5; }<br />
-          }</span></p>
-          <p>When we call this function, we will pass two numbers, and the function will evaluate it and return back an answer based on the numbers we've passed in.</p>
+          <h3>Download the Plugin Files</h3>
+          <p>Go to the <a href="http://kenwheeler.github.io/slick/">slick plugin website</a> and find the download link to grab the files from. Make sure to save the files in your website directory.</p>
+        </section>
+        <section>
+          <h3>Find the Files</h3>
+          <p>Go to the folder you just unzipped and, using the documentation as a guide, find the files you need.</p>
+        </section>
+        <section>
+          <h3>Include Files</h3>
+          <p>On your carousel page include the <span class="code">css</span> and <span class="code">js</span> files you need. Make sure to point to the right location.</p>
+        </section>
+        <section>
+          <h3>Structure <span class="code">HTML</span></h3>
+          <p>Write the <span class="code">HTML</span> you need on your page, again using the documentation as a guide. Make sure the images you want are stacked on the page.</p>
+        </section>
+        <section>
+          <h3>Instantiate</h3>
+          <p>In the last set of <span class="code">script</span> tags write the <span class="code">ready</span> method and inside that instantiate your plugin with the <span class="code">slick</span> method.</p>
+        </section>
+        <section>
+          <h3>Options</h3>
+          <p>Look through the options and test a couple of them on your plugin.</p>
+        </section>
+        <section>
+          <h3>Commit Your Test</h3>
+          <p>Add, commit and push your new plugin branch to GitHub. You will work in this branch for your homework.</p>
+          <ul>
+            <li><span class="code">git add -p</span></li>
+            <li><span class="code">git commit -m 'your commit note'</span></li>
+            <li><span class="code">git push origin master</span></li>
+          </ul>
         </section>
       </section>
       <section>
         <section>
-          <h2>Loops</h2>
+          <h2>Assignments</h2>
         </section>
         <section>
-          <h3>Types</h3>
+          <h3>Add the Carousel</h3>
+          <p>Add an instance of the carousel plugin to your website. You can use the one we used in class today, or pick another one. For full credit, pay attention to design elements and include thumbnails and arrows. You will have to write a little CSS.</p>
+        </section>
+        <section>
+          <h3>Add a Method</h3>
+          <p>Pick one of the methods you learned in class today (not the one you presented) and use it to add a feature or interativity to your website. You can do this within your plugin branch.</p>
+        </section>
+        <section>
+          <h3>Add/Commit/Push</h3>
+          <p>When you've finished, push your changes to GitHub. Make sure to specify in your final commit note, which method you chose.</p>
           <ul>
-            <li>The <span class="code">for</span> loop will let you repeat code a defined number of times</li>
-            <li>The <span class="code">do...while</span> runs your code until a particular condition has been met</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Loop Parts</h3>
-          <p>Each loop has four parts that need to be defined</p>
-          <ul>
-            <li><strong>Initialization</strong>: Takes place once at the start of the loop</li>
-            <li><strong>Test condition</strong>: Checks the variable to see if the loop should stop or keep going</li>
-            <li><strong>Action</strong>: The code that is repeated as we go through the loop</li>
-            <li><strong>Update</strong>: Updates the variable being used by the test condition to see if we should keep going</li>
-          </ul>
-        </section>
-        <section>
-          <h2><span class="code">For</span> Loops</h2>
-          <p style="text-align:left;"><span class="code">myArr = ["one","two","three","four"];</span></p>
-          <p style="text-align:left;"><span class="code">for ( var i=0 ; i < myArr.length ; i++){<br />&nbsp;&nbsp;&nbsp;alert(myArr[i])<br /> }</span></p>
-        </section>
-        <section>
-          <h3>Lowercase <span class="code" style="text-transform:lowercase;">i</span></h3>
-          <p>In JS, the lowercase stands for "index" and represents the index of an object in an array. In loops, we use <span class="code">i</span> to represent each index.</p>
-        </section>
-        <section>
-          <h2><span class="code">do...while</span> Loops</h2>
-          <p style="text-align:left;"><span class="code">myArr = ["one","two","three","four"];</span></p>
-          <p style="text-align:left;"><span class="code">var i=0;<br />while( i < 3) {<br />&nbsp;&nbsp;&nbsp;alert(myArr[i]); <br />i++;<br />}</span></p>
-        </section>
-        <section>
-          <h2>jQuery <span class="code">.each()</span></h2>
-          <p>The jQuery <span class="code">each</span> method operates similar to a <span class="code">for</span> loop in that it lets you iterate over an arry of objects and perform functions on them</p>
-        </section>
-        <section>
-          <h2>Using <span class="code">.each()</span></h2>
-          <p style="text-align:left;"><span class="code">var boxes = $(".box");</span></p>
-          <p style="text-align:left;"><span class="code">$.each(boxes,function(index,box){<br />&nbsp;&nbsp;&nbsp;alert("box");<br />});</span></p>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h2>Assignment</h2>
-        </section>
-        <section>
-          <h3>Reading</h3>
-          <ul>
-            <li>Read JavaScript & jQuery Chapter 4</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Exercise</h3>
-          <ul>
-            <li>Do Codecademy's <a href="http://www.codecademy.com/courses/web-beginner-en-JwhI1/0/1">jQuery events</a> lesson 1-8 and screenshot lesson 8.</li>
-            <li>Do Codecademy's <a href="http://www.codecademy.com/courses/javascript-beginner-en-9Sgpi/2/2">Arrays & Objects lesson</a> exercises 1-4 and 9-13 and screenshot lessons 4 and 13.</li>
-            <li>You should upload three screenshots to Dropbox to show that you've complete the exercises.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Hints</h3>
-          <ul>
-            <li>Make sure you read each lesson carefully. There are a lot of clues in the instructions.</li>
-            <li>Utilize Codecademy HINTS on each page in blue</li>
-            <li>Take each task line by line. Programming is all about breaking each task into digestible parts.</li>
-            <li>Use Google, class lessons and each other for references.</li>
+            <li><span class="code">git add -p</span></li>
+            <li><span class="code">git commit -m 'your commit note'</span></li>
+            <li><span class="code">git push origin master</span></li>
           </ul>
         </section>
       </section>
