@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week Five</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="js/reveal/css/theme/sky.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	.code{
+		margin-bottom:10px;
+	}
+	.reveal .slides{
+		top:40% !important;
+	}
+	#backTo{
+		padding:15px;
+		clear:both;
+	}
+	#backTo p{
+		margin:0;
+		font-family: "Open Sans", sans-serif;
+		color:#333;
+	}
+	#backTo p a{
+		color:#3b759e;
+		text-decoration:none;
+		padding:1px 5px;
+	}
+	#backTo p a:hover{
+		color: #74a7cb;
+  		text-shadow: none;
+  		border: none;
+	}
+	#backTo p a.current{
+		color: white;
+		background: #134674;
+		text-shadow: none;
+	}
+	#weeklySong{
+		margin-top:25px;
+	}
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 5;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 5 | February 25, 2013</h2>
+				<h4>Background Images & Rollovers</h4>
+			</section>
+			<section>
+				<h2>Review</h2>
+				<ul>
+					<li><a target="_blank" href="reviews/html_css_review_4.html">HTML/CSS Review "Quiz"</a></li>
+					<li>Any questions on the readings? Or last week's lesson and assignments?</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Background Images</h2>
+				<p>You can use background images on your page and use several different properties to control them</p>
+				<ul>
+					<li>Set your background image: <strong>background-image:url("image.gif");</strong></li>
+					<li>Decide whether it repeats by setting <strong>background-repeat</strong> to <strong>repeat</strong>, <strong>repeat-x</strong>, <strong>repeat-y</strong> or <strong>no-repeat</strong></li>
+					<li>Decide whether the image scrolls or is fixed in the same place by settting <strong>backgroun-position</strong> to <strong>fixed</strong> or <strong>scroll</strong></li>
+					<li>You can set the <strong>background-position</strong> with a pair of values representing the horizontal and vertical positions</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Exercise</h2>
+				<p>Set a background image on your page.</p>
+			</section>
+			<section>
+				<h2>Rollvers</h2>
+				<ul>
+					<li>You can use CSS to add actions that happen on <em>hover</em> and when a link is <em>active</em>, meaning when the user clicks</li>
+					<li>The best way to do this is using a <em>sprite</em>, which is a single image containing the various link, hover and active states</li>
+					<li><a href="http://mlouttit.com/cuny/excercise/css_day_2_sprites.html" target="_blank">Here's an example</a></li>
+				</ul>
+			</section>
+			<section>
+				<h2>Exercise</h2>
+				<p>Create a sprite for your sidebar prompting people to subscribe to your site</p>
+			</section>
+			<section>
+				<h2>Assignments</h2>
+				<ul>
+					<li>If you're going on to the javascript module, read through the first chapter in <a href="http://www.amazon.com/Head-First-jQuery-ebook/dp/B0064U8F16/ref=sr_1_3?ie=UTF8&qid=1361752840&sr=8-3&keywords=head+first+jquery">Head First jQuery</a> to familiarize yourself with some basic concepts</li>
+					<li><strong>HTML & CSS Extra Credit:</strong> Create a sprite on one of your layouts!</li>
+					<li>Recommended Code Music:</li>
+				</ul>
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F50656325"></iframe>
+			</section>
+			<section>
+				<h1>Have a great week!</h1>
+			</section>
+		</div>
+	</div>
+
+
+<script src="js/reveal/lib/js/head.min.js"></script>
+<script src="js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="js/lessonHeader.js"></script>
+</body>
+</html>

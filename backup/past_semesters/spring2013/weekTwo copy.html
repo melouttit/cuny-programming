@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week Two</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="js/reveal/css/theme/sky.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	.code{
+		margin-bottom:10px;
+	}
+	.reveal .slides{
+		top:40% !important;
+	}
+	#backTo{
+		padding:15px;
+		clear:both;
+	}
+	#backTo p{
+		margin:0;
+		font-family: "Open Sans", sans-serif;
+		color:#333;
+	}
+	#backTo p a{
+		color:#3b759e;
+		text-decoration:none;
+		padding:1px 5px;
+	}
+	#backTo p a:hover{
+		color: #74a7cb;
+  		text-shadow: none;
+  		border: none;
+	}
+	#backTo p a.current{
+		color: white;
+		background: #134674;
+		text-shadow: none;
+	}
+	#weeklySong{
+		margin-top:25px;
+	}
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 2;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 2 | February 4, 2013</h2>
+				<h4>Site Structure, The URL, Containers<br /> & More Tags!</h4>
+			</section>
+			<section>
+				<h2>Review</h2>
+				<ul>
+					<li><a target="_blank" href="reviews/html_review_1.html">HTML Review "Quiz"</a></li>
+					<li>Does everyone have Firebug?</li>
+					<li>Any questions on the readings?</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Directory Structure</h2>
+					<p>Most websites are organized by folders, or directories</p>
+					<ul>
+						<li>The <strong>root</strong> folder is the most top-level folder</li>
+						<li>Each section of a site can be placed in a separate folder</li>
+						<li>The terminology is similar to that of a family tree with parent-child relationships</li>
+						<li>The main homepage of a site or section is index.html, which is returned when no other file type is specified in the URL</li>
+						<li>For example: <em>http://mysite.com</em> will return the same thing as <em>http://mysite.com/index.html</em></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Example MySite.com</h2>
+					<img src="/cuny/images/folder-structure.gif" width="400"/>
+					<p><strong>Let's set up your own!</strong></p>
+				</section>
+				<section>
+					<h2>The URL</h2>
+					<ul>
+						<li>Each image and file on the page has a URL under that site's domain</li>
+						<li>The URL path points to the particular file or directory you want retrieve</li>
+						<li>For example:
+							<ul>
+								<li><em>http://mysite.com/writing</em> is the link to the Writing page</li>
+								<li><em>http://mysite.com/about.html</em> is the link to the About page</li>
+								<li><em>http://mysite.com/images/artoo.jpg</em> is the path to the artoo.jpg image</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Relative URLs</h2>
+					<p>When linking to a page on your own site, you can use shorthand</p>
+						<ul>
+							<li>SAME: When linking to a file in the same folder, just use the file name</li>
+							<li>CHILD FOLDER: Use the name of the child folder + forward slash + file name</li>
+							<li>GRANDCHILD FOLDER: Name of the child folder + forward slash + name of grandchild folder + forward slash + file name</li>
+							<li>PARENT FOLDER: Use ../ to indicate the folder above the current one + the file name</li>
+							<li>GRANDPARENT FOLDER: Repeat ../ to go up two folders + the file name</li>
+						</ul>
+				</section>
+				<section>
+					<h2>The Target Attribute</h2>
+					<p>If you want the link to open in another window or tab, you can set the target attribute to blank:</p>
+					<pre><code class="html"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">target</span>=<span class="value">"_blank"</span> <span class="attribute">href</span>=<span class="value">"http://mysite.com"</span>&gt;</span></span>Go to My Site<span class="tag">&lt;<span class="title">/a</span>&gt;</span></code></pre>
+				</section>
+				<section>
+					<h2>Linking an Email</h2>
+					<p>If you want to link someone's email so that when the user clicks it their designated mail program opens up:</p>
+					<pre><code class="html"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"mailto:mymail@gmail.com"</span>&gt;</span></span>Email Me!<span class="tag">&lt;<span class="title">/a</span>&gt;</span></code></pre>
+				</section>
+				<section>
+					<h2>Anchor & Deep Links</h2>
+					<p>For linking to a specific part of a web page</p>
+					<ul>
+						<li>First, identify the different points on your page using IDs:</li>
+							<ul>
+								<li>The top of your page: <pre><code class="html"><span class="tag">&lt;<span class="title">h1</span> <span class="attribute">id</span>=<span class="value">"top"</span>&gt;</span></span>How to Code<span class="tag">&lt;<span class="title">/h1</span>&gt;</span></code></pre></li>
+								<li>Various sections: <pre><code class="html"><span class="tag">&lt;<span class="title">h2</span> <span class="attribute">id</span>=<span class="value">"css"</span>&gt;</span></span>What is CSS?<span class="tag">&lt;<span class="title">/h2</span>&gt;</span></code></pre></li>
+							</ul>
+						</li>
+						<li>To then link to these points, either on your site or from another site:
+							<ul>
+								<li>Within your site: <pre><code class="html"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#top"</span>&gt;</span></span>To the Top<span class="tag">&lt;<span class="title">/a</span>&gt;</span></code></pre></li>
+								<li>Linked from another site: <pre><code class="html"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://mysite.com/#css"</span>&gt;</span></span>Learn CSS from MySite.com!<span class="tag">&lt;<span class="title">/a</span>&gt;</span></code></pre></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<ul>
+						<li><a href="http://www.lipsum.com/">Dummy text</a></li>
+						<li>Copy and paste some dummy text onto your page. Make sure to add <em>paragraph</em> tags.</li>
+						<li>Create deep links to each paragraph on the page.</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Meta Tags & SEO</h2>
+					<ul>
+						<li>Meta tags provide more information about your page to browers</li>
+						<li>They live in the head tag</li>
+						<li>Are useful for SEO purposes as search engines use them to grab more information about your site</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Most Common Meta</h2>
+					<ul>
+						<li><strong>Description:</strong> A description of the page and often shown in search results</li>
+						<li><strong>Robots:</strong> Indicates whether search engines should add this page to their results.</li>
+						<li><strong>Author:</strong> The author of the web page</li>
+						<li><strong>Keywords:</strong> A list of words separated by commas that users might search to find your site*</li>
+						<li>You can also specify variables like time updated, a refresh interval, and prevent browers from caching the page, among other things</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Meta Examples</h2>
+					<ul>
+						<li>Description: <pre><code class="html"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"description"</span> <span class="attribute">content</span>=<span class="value">"A website about Meghan Louttit<br /> and her programming and design work for The New York Times, The Washington Post"</span></span> /</span>&gt;</span></code></pre></li>
+						<li>Robot: <pre><code class="html"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"robots"</span> <span class="attribute">content</span>=<span class="value">"nofollow"</span></span> /</span>&gt;</span></code></pre></li>
+						<li>Author: <pre><code class="html"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"author"</span> <span class="attribute">content</span>=<span class="value">"Meghan Elizabeth Louttit"</span></span> /</span>&gt;</span></code></pre></li>
+						<li>Keywords: <pre><code class="html"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"keywords"</span> <span class="attribute">content</span>=<span class="value">"Meghan Louttit, portfolio, resume, design,<br /> web design, The New York Times, The Washington Post, multimedia"</span></span> /</span>&gt;</span></code></pre></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<ul>
+						<li>Add each of the four types of meta tags to your homepage</li>
+						<li>Make sure you use relevant keywords and description</li>
+					<ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>More HTML</h2>
+					<p align="left"><strong>Structural Markup:</strong> The elements you can use to describe text like headings and paragraphs. The browser will interpret these to look a certain way.</p>
+					<p align="left"><strong>Semantic Markup:</strong> The tag itself provides extra information to the browser but it does not look different to the user unless specified by a stylesheet.</p>
+				</section>
+				<section>
+					<h2>Some Structural Tags</h2>
+					<ul>
+						<li>Superscript: <pre><code class="html"><span class="tag">&lt;<span class="title">p</span>&gt;</span>Her birthday is the 4<span class="tag">&lt;<span class="title">sup</span>&gt;</span>th<span class="tag">&lt;<span class="title">/sup</span>&gt;</span> day of June.<span class="tag">&lt;<span class="title">p</span>&gt;</span></code></pre></li>
+						<li>Subscript: <pre><code class="html"><span class="tag">&lt;<span class="title">p</span>&gt;</span>There is a lot of CO<span class="tag">&lt;<span class="title">sub</span>&gt;</span>2<span class="tag">&lt;<span class="title">/sub</span>&gt;</span> in the atmosphere.<span class="tag">&lt;<span class="title">p</span>&gt;</span></code></pre></li>
+						<li>Line Breaks: <pre><code class="html"><span class="tag">&lt;<span class="title">p</span>&gt;</span>Wal-Mart found to have issued <span class="tag">&lt;<span class="title">br /</span>&gt;</span> millions in bribes in Mexico City.<span class="tag">&lt;<span class="title">p</span>&gt;</span></code></pre></li>
+						<li>Horizontal Rules: <pre><code class="html"><span class="tag">&lt;<span class="title">p</span>&gt;</span>"The Thornbirds" by Colleen McCullough <span class="tag">&lt;<span class="title">hr /</span>&gt;</span> "Eating Animals" by Jonathan Safran Foer<span class="tag">&lt;<span class="title">p</span>&gt;</span></code></pre></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Some Semantic Tags</h2>
+					<ul>
+						<li>Strong and Emphasis: <pre><code class="html"><span class="tag">&lt;<span class="title">strong</span>&gt;</span>This is strong text!<span class="tag">&lt;<span class="title">/strong</span>&gt;</span></code></pre> and <pre><code class="html"><span class="tag">&lt;<span class="title">em</span>&gt;</span>This is emphasized text!<span class="tag">&lt;<span class="title">/em</span>&gt;</span></code></pre></li>
+						<li>Blockquote: <pre><code class="html"><span class="tag">&lt;<span class="title">blockquote</span>&gt;</span><br />&nbsp;<span class="tag">&lt;<span class="title">p</span>&gt;</span>Where we love is home. Home that our feet may leave but not our hearts.<span class="tag">&lt;<span class="title">/p</span>&gt;</span><br /><span class="tag">&lt;<span class="title">/blockquote</span>&gt;</span><br /><span class="tag">&lt;<span class="title">p</span>&gt;</span>This is a quote from Olive Wendell Holmes. He said a bunch of other things, too.<span class="tag">&lt;<span class="title">/p</span>&gt;</span></code></pre></li>
+						<li>Insert & Delete: <pre><code class="html"><span class="tag">&lt;<span class="tag">p</span>&gt;</span>This class is going to start at <span class="tag">&lt;<span class="title">del</span>&gt;</span>5:00<span class="tag">&lt;<span class="title">/del</span>&gt;</span> <span class="tag">&lt;<span class="title">ins</span>&gt;</span>6:00<span class="tag">&lt;<span class="title">/ins</span>&gt;</span> p.m. on Mondays.<span class="tag">&lt;<span class="title">/p</span>&gt;</span></code></pre></li>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Images</h2>
+					<ul>
+						<li>*You can't just use any image you find online. When in doubt, ask.</li>
+						<li>There are several steps to putting an image in a web page, most happen before you do any coding</li>
+						<li><a href="http://www.stockvault.net/">Let's find an image</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Download and Prep</h2>
+					<ul>
+						<li>Download the image or upload from your camera</li>
+						<li>Make sure to crop the image to the size you'll be using it on your page</li>
+						<li>Save it as one of the following file types:
+							<ul>
+								<li><strong>.jpg</strong> is for images with many colors, typically photographs</li>
+								<li><strong>.gif</strong> is for images with fewer and bolder colors, good for illustrations and graphics</li>
+								<li><strong>.png</strong> transparent, also good for graphics</li>
+							</ul>
+						</li>
+						<li>Save to the correct directory in your site (probably your "images" directory)</li>
+					</ul>
+				</section>
+				<section>
+					<h2>.jpg example</h2>
+					<img src="http://images.topix.com/gallery/up-NVIB3M0CPL79IAQP.jpg" />
+				</section>
+				<section>
+					<h2>.gif example</h2>
+					<img src="http://upload.wikimedia.org/wikipedia/commons/2/25/Nasa-logo.gif" width="550" />
+				</section>
+				<section>
+					<h2>.png example</h2>
+					<img src="http://icons.iconarchive.com/icons/deleket/sleek-xp-basic/256/Ok-icon.png" style="border:none;box-shadow:none;" />
+				</section>
+				<section>
+					<h2>Add to Your Site</h2>
+					<ul>
+						<li>Use the image tag: <pre><code class="html"><span class="tag">&lt;<span class="title">img</span>&gt;</span></code></pre></li>
+						<li>There are several attributes you can use in your image tag: Source, Alt, Title, Width and Height</li>
+						<li>Source must be declared: <pre><code class="html"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"images/artoo.jpg"</span> /&gt;</span></code></pre></li>
+						<li>Alt and Title are used to provide more information about the photo. The title will appear in a tooltip and alt is read by screen reader software for people with visual impairments.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Example & Exercise</h2>
+					<ul>
+						<li>Example: <pre><code class="html"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"images/artoo.jpg"</span> <span class="attribute">title</span>=<span class="value">"Artoo Swimsuit"</span> <span class="attribute">alt</span>=<span class="value">"A woman<br /> wearing a swimsuit that looks like R2-D2 from Star Wars"</span> /&gt;</span></code></pre></li>
+						<li><strong>Exercise:</strong> 
+							<ul>
+								<li>Create a gallery page on your site</li>
+								<li>Add 3 images to the page that are hosted elsewhere</li>
+								<li>Add 3 images to the page that are hosted locally</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Containers</h2>
+					<ul>
+						<li><strong>Inline Elements:</strong> Always appear to continue on the same line as their neighboring elements. Examples include anchors, strong and emphasis, images and span.</li>
+						<li><strong>Block Elements:</strong> Ones that always appear to start on a new line in your browser. Examples include header tags, paragraphs, lists and div.</li>
+						<li>The <em>div</em> and <em>span</em> tags are especially useful for grouping these elements together and controlling certain elements through CSS</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Grouping Inline: <strong>span</strong></h2>
+					<ul>
+						<li>Use it to contain a section of text that should look different from surrounding text</li>
+						<li>Hold a number of inline elements</li>
+						<li>Needs classes or IDs to be of use to the reader</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Grouping Blocks: <strong>div</strong></h2>
+					<ul>
+						<li>Use it to group various elements on your page together</li>
+						<li>Think of the <em>div</em> as a container - you might want it to hold your navigation elements, or all your header elements.</li>
+						<li>Like the <em>span</em>, it usually has a class or ID to make it relevent for positioning and styling</li>
+						<li><strong>Exercise:</strong>
+							<ul>
+								<li>Create a digram on paper of your site, including containers for header, navigation and lead story</li>
+								<li>Translate that diagram into code using <em>div</em>'s</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Class & ID</h2>
+					<ul>
+						<li>Attributes that can be applied to any HTML tag. Used to target elements through CSS.</li>
+						<li><strong>Class:</strong> Use it to identify more than alike elements within a page <pre><code class="html"><span class="tag">&lt;<span class="title">p</span>&gt;</span>There are <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"important"</span>&gt;</span>no subways<br /> running today<span class="tag">&lt;<span class="title">/span</span>&gt;</span>, according to <span class="tag">&lt;<span class="title">em</span>&gt;</span>The New York Times<span class="tag">&lt;<span class="title">/em</span>&gt;</span><span class="tag">&lt;<span class="title">/p</span>&gt;</span></code></pre></li>
+						<li><strong>ID:</strong> Use it to identify a unique element on a page <pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"navigation"</span>&gt;</span><br /> &nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">ul</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>Home<span class="tag">&lt;<span class="title">/li</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>About Me<span class="tag">&lt;<span class="title">/li</span>&gt;</span><span class="tag">&lt;<span class="title">/ul</span>&gt;</span><br /><span class="tag">&lt;<span class="title">/div</span>&gt;</span></code></pre></li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2>HTML Comments</h2>
+				<p align="left">Use to make notes in an html file. Especially useful for noting where <em>div</em> tags are closed</p>
+				<p align="left">Example: <pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"navigation"</span>&gt;</span><br /> &nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">ul</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>Home<span class="tag">&lt;<span class="title">/li</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>About Me<span class="tag">&lt;<span class="title">/li</span>&gt;</span><span class="tag">&lt;<span class="title">/ul</span>&gt;</span><br /><span class="tag">&lt;<span class="title">/div</span>&gt;</span><span class="tag">&lt;<span class="title">!--</span>END OF NAVIGATION<span class="title">--</span>&gt;</span></code></pre></p>
+			</section>
+			<section>
+				<h2>Assignments</h2>
+				<ul>
+					<li>Read Chapters 2-5 and 8 of HTML&CSS</li>
+					<li>Complete excercises in the Dropbox <a target="_blank" href="https://www.dropbox.com/home/CUNY%20-%20Programming%20for%20Journalists/Spring%202013/Assignments/Week%202%20-%20URLS%20and%20Links">Week 2 folder</a> named <strong>assignment_2_1.html</strong> and <strong>assignment_2_2.html</strong> and submit both as .html files with your last name in the file name</li>
+					<li>Listen to this song while you work:</li>
+				</ul>
+				<iframe id="weeklySong" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F63263560"></iframe>
+			</section>
+			<section>
+				<h1>Have a great week!</h1>
+			</section>
+		</div>
+	</div>
+
+
+<script src="js/reveal/lib/js/head.min.js"></script>
+<script src="js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="js/lessonHeader.js"></script>
+</body>
+</html>

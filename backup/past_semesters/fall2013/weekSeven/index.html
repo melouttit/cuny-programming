@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week Seven</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="../js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="../js/reveal/css/theme/sky.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	.code{
+		margin-bottom:10px;
+	}
+	.reveal .slides{
+		top:40% !important;
+	}
+	#backTo{
+		padding:15px;
+		clear:both;
+	}
+	#backTo p{
+		margin:0;
+		font-family: "Open Sans", sans-serif;
+		color:#333;
+	}
+	#backTo p a{
+		color:#3b759e;
+		text-decoration:none;
+		padding:1px 5px;
+	}
+	#backTo p a:hover{
+		color: #74a7cb;
+  		text-shadow: none;
+  		border: none;
+	}
+	#backTo p a.current{
+		color: white;
+		background: #134674;
+		text-shadow: none;
+	}
+	#weeklySong{
+		margin-top:25px;
+	}
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 6;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 7 | Oct. 16, 2013</h2>
+				<h4>Animations & DOM Trees</h4>
+			</section>
+			<section>
+				<section>
+					<h2>Site Set-Up Review</h2>
+					<ul>
+						<li>Including External Files: Make sure your path is correct</li>
+						<li>Your JS reads a page top to bottom, so the elements you are executing on have to exist before the programs run. This is why it's best to keep your JS at the bottom of the page</li>
+						<li>Always make sure to include jQuery on your page</li>
+						<li>For homework, if you're uploading a page that includes external files, those files also need to be uploaded</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Example MyJSSite.com</h2>
+					<img src="../images/site-structure-js.png" width="400"/>
+				</section>
+			</section>
+			<section>
+				<h2>Interpreting the Console</h2>
+				<p>Some common errors and what they mean</p>
+				<ul>
+					<li><span class="red">Failed to load resource</span> means an external file can't be found. Make sure the file both exists in the directory you're pointing to and you are spelling the file name correctly</li>
+					<li><span class="red">Unexpected identifier</span> means your syntax is off and something - usually a semi-color, is in the wrong place and/or out of order.</li>
+					<li><span class="red">Uncaught SyntaxError: Unexpected token</span> means your opening and closing parentheses or brackets are out of order</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Functions</h2>
+						<ul>
+							<li>The Syntax: <code>function(){ };</code></li>
+							<li>Named Function: <code>function readLips(){ };</code></li>
+							<li>Diagraming a <code>function</code>: What does each piece do</li>
+						</ul>
+				</section>
+				<section>
+					<h2><h2><code>$()</code></h2>
+					<p>The Wrapper - The dollar sign calls the jQuery library and indicates that a jQuery method will be used on the element in the wrapper.</p>
+				</section>
+				<section>
+					<h2><code>document</code></h2>
+					<p>The Selector - the element that you are going to run your method on. This can be the page itself (document) or a tag ('h1'), an ID ('#idname') or class ('.classname')</p>
+				</section>
+				<section>
+					<h2><code>.ready()</code></h2>
+					<p>The Method - whatever jQuery method you are running on the element you've specified. In this case we are running <code>ready</code>, which means to wait until the page is loaded before running the code.</p>
+				</section>
+				<section>
+					<h2><code>function(){ }</code></h2>
+					<p>The beginning of your function. The parenthese after <code>function</code> is where you can pass in other information that your function needs, but not neessary. The code you are going to run goes inside the curly brackets.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Animations</h2>
+					<p>The <code>.animate()</code> method allows you to create custom animations</p>
+					<ul>
+						<li><code>$(<em>selector</em>)</code> is the element to be animated</li>
+						<li><code>.animate()</code> calls the animate method</li>
+						<li><code>.animate({<em>params</em>},<em>speed</em>,<em>callback</em>);</code></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Animation Resources</h2>
+					<ul>
+						<li><a href="http://api.jquery.com/animate/">jQuery site</li>
+						<li><a href="http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_animation1">w3Schools Try It Yourself!</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>The Parameters</h2>
+					<ul>
+						<li><code>params</code> defines the CSS properties to be animated. Not all CSS properties can be used. Must be expressed as a series of <code>key: value</code> pairs and separated by commas if more than one.</li>
+						<li><code>speed</code> is the optional definiton for how fast to complete the animations. You can use the strings <code>'slow'</code> and <code>'fast'</code> or numerical values.</li>
+						<li><code>callback</code> is a function that runs once the animation is complete. This is also optional</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Display</h2>
+					<p>There are several methods that allow you to hide an element. They set the inline style of your element to <code>display:none;</code> but does not change this in the stylesheet.</p>
+					<ul>
+						<li><code>.animate()</code> You can hide by setting height to 0 or toggle it</li>
+						<li><code>fadeOut()</code> and <code>fadeIn()</code></li>
+						<li><code>slideUp()</code> and <code>slideDown()</code></li>
+						<li><code>hide()</code> and <code>show()</code></li>
+					<ul>
+				</section>
+				<section>
+					<h2>Chaining</h2>
+					<p>This is simply the term for executing several methods on one element. For example: <code>$(<em>selector</em>).animate({left:'50px'},'500').fadeOut();</code></p>
+					<p>You can also use the <code>delay()</code> method to queue your animations: <br /><code>$(<em>selector</em>).animate({<br />&nbsp;&nbsp;&nbsp;left:'50px'<br />},'500').delay(500).fadeOut();</code>
+				</section>
+				<section>
+					<h2>Explaining Animations</h2>
+					<p>Complete the attached handout and turn into Week 7 Dropbox under a folder with your name.
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>The DOM</h2>
+					<ul>
+						<li>DOM stands for Document Object Model</li>
+						<li>You can think about the DOM like a family tree</li>
+					</ul>
+				</section>
+				<section>
+					<h2>DOM Tree Example</h2>
+					<img src="/cuny/images/dom-tree-example.png" width="800"/>
+				</section>
+				<section>
+					<h2>DOM Tree In Code</h2>
+					<img src="/cuny/images/dom-tree-code-example.png" width="600"/>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Create a DOM tree for a page where you have a series of three short articles. Make sure to include:</p>
+					<ul>
+						<li>Headline & Byline</li>
+						<li>Intro Paragraph</li>
+						<li>Navigation</li>
+						<li>Three boxes, one for each article. Each should have:</li>
+						<ul>
+							<li>Name</li>
+							<li>Photo</li>
+							<li>Photo Credit & Caption</li>
+							<li>Text block</li>
+							<li>A Link for more information</li>
+						</ul>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2>Assignments</h2>
+				<ul>
+					<li>Read chapters 4-5 in <a href="http://www.headfirstlabs.com/books/hfjquery/">Head First jQuery</a></li>
+					<li>Using the code from your DOM tree, created a <a href="http://www.htmldrive.net/items/demo/1023/Very-Simple-jQuery-Tabs">tabbed feature</a> or <a href="http://www.designchemical.com/lab/jquery/demo/jquery_simple_accordion_menu.htm#">accordion feature</a> for a set of three articles about any topic you want.</li>
+					<li><strong>HINT:</strong> For tabs you'll want to use the hide/show methods. For the accordion you'll want to use slideUp/slideDown.</li>
+					<li>USE YOUR CONSOLE</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+
+<script src="../js/reveal/lib/js/head.min.js"></script>
+<script src="../js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: '../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: '../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: '../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: '../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="../js/lessonHeader.js"></script>
+</body>
+</html>

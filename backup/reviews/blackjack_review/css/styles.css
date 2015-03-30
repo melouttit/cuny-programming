@@ -1,0 +1,32 @@
+#controls{
+	clear:both;
+}
+#my_hand{
+	clear:both;
+	border:1px solid gray;
+	height:250px;
+	width:835px;
+}
+h3 {
+	display:inline;
+	padding-right:40px;
+}
+#btnHit, #btnStick, #btnRestart{
+	display:none;
+	float:left; 
+}
+.current_hand{
+	float:left;
+}
+#btnDeal:hover, #btnRestart{
+	cursor:pointer;
+}
+#result{
+	display:none;
+	position:absolute;
+	top: 97px;
+	left: 250px;
+}
+#result img{
+	width:300px;
+}

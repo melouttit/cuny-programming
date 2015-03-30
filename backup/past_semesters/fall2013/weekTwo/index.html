@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week Two</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="../js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="../js/reveal/css/theme/sky.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	.code{
+		margin-bottom:10px;
+	}
+	.reveal .slides{
+		top:40% !important;
+	}
+	#backTo{
+		padding:15px;
+		clear:both;
+	}
+	#backTo p{
+		margin:0;
+		font-family: "Open Sans", sans-serif;
+		color:#333;
+	}
+	#backTo p a{
+		color:#3b759e;
+		text-decoration:none;
+		padding:1px 5px;
+	}
+	#backTo p a:hover{
+		color: #74a7cb;
+  		text-shadow: none;
+  		border: none;
+	}
+	#backTo p a.current{
+		color: white;
+		background: #134674;
+		text-shadow: none;
+	}
+	#weeklySong{
+		margin-top:25px;
+	}
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 2;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 2 | Sept. 11, 2013</h2>
+				<h4>Site Structure, Images & Containers</h4>
+			</section>
+			<section>
+				<h2>Review</h2>
+				<ul>
+					<li><a target="_blank" href="../reviews/html_review_1.html">HTML Review "Quiz"</a></li>
+					<li>Does everyone have Firebug?</li>
+					<li>Any questions on the readings?</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Linking an Email</h2>
+				<p>If you want to link someone's email so that when the user clicks it their designated mail program opens up:</p>
+				<pre><code class="html"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"mailto:mymail@gmail.com"</span>&gt;</span></span>Email Me!<span class="tag">&lt;<span class="title">/a</span>&gt;</span></code></pre>
+			</section>
+			<section>
+				<h2>HTML Comments</h2>
+				<p align="left">Use to make notes in an html file. Especially useful for noting where <em>div</em> tags are closed</p>
+				<p align="left">Example: <pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"navigation"</span>&gt;</span><br /> &nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">ul</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>Home<span class="tag">&lt;<span class="title">/li</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>About Me<span class="tag">&lt;<span class="title">/li</span>&gt;</span><span class="tag">&lt;<span class="title">/ul</span>&gt;</span><br /><span class="tag">&lt;<span class="title">/div</span>&gt;</span><span class="tag">&lt;<span class="title">!--</span>END OF NAVIGATION<span class="title">--</span>&gt;</span></code></pre></p>
+			</section>
+			<section>
+				<section>
+					<h2>Meta Tags & SEO</h2>
+					<ul>
+						<li>Meta tags provide more information about your page to browers</li>
+						<li>They live in the head tag</li>
+						<li>Are useful for SEO purposes as search engines use them to grab more information about your site</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Most Common Meta</h2>
+					<ul>
+						<li><strong>Description:</strong> A description of the page and often shown in search results</li>
+						<li><strong>Robots:</strong> Indicates whether search engines should add this page to their results.</li>
+						<li><strong>Author:</strong> The author of the web page</li>
+						<li><strong>Keywords:</strong> A list of words separated by commas that users might search to find your site*</li>
+						<li>You can also specify variables like time updated, a refresh interval, and prevent browers from caching the page, among other things</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Meta Examples</h2>
+					<ul>
+						<li>Description: <pre><code class="html"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"description"</span> <span class="attribute">content</span>=<span class="value">"A website about Meghan Louttit<br /> and her programming and design work for The New York Times, The Washington Post"</span></span> /</span>&gt;</span></code></pre></li>
+						<li>Robot: <pre><code class="html"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"robots"</span> <span class="attribute">content</span>=<span class="value">"nofollow"</span></span> /</span>&gt;</span></code></pre></li>
+						<li>Author: <pre><code class="html"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"author"</span> <span class="attribute">content</span>=<span class="value">"Meghan Elizabeth Louttit"</span></span> /</span>&gt;</span></code></pre></li>
+						<li>Keywords: <pre><code class="html"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"keywords"</span> <span class="attribute">content</span>=<span class="value">"Meghan Louttit, portfolio, resume, design,<br /> web design, The New York Times, The Washington Post, multimedia"</span></span> /</span>&gt;</span></code></pre></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<ul>
+						<li>Add each of the four types of meta tags to your homepage</li>
+						<li>Make sure you use relevant keywords and description</li>
+					<ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Directory Structure</h2>
+					<p>Most websites are organized by folders a.k.a. directories</p>
+					<ul>
+						<li>The <strong>root</strong> folder is the most top-level folder with you content in directories or files within the root.</li>
+						<li>The main homepage of a site or section is always index.html, which is returned when no other file type is specified in the URL</li>
+						<li>For example: <strong>http://mysite.com</strong> will return the same thing as <strong>http://mysite.com/index.html</strong></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Example MySite.com</h2>
+					<img src="../images/folder-structure.gif" width="400"/>
+				</section>
+				<section>
+					<h2>The URL</h2>
+					<ul>
+						<li>Each image and file on the page has a URL under that site's domain</li>
+						<li>The URL path points to the particular file or directory you want retrieve</li>
+						<li>Find the following in the example site:
+							<ul>
+								<li><strong>http://mysite.com/writing</strong> links to the Writing page</li>
+								<li><strong>http://mysite.com/about.html</strong> links to the About page</li>
+								<li><strong>http://mysite.com/images/artoo.jpg</strong> is the path to the artoo.jpg image</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Anchor & Deep Links 1</h2>
+					<p>First, identify the different points on your page using IDs:</p>
+						<ul style="text-align:left;">
+							<li style="width:500px;">The top of your page: <pre><code class="html"><span class="tag">&lt;<span class="title">h1</span> <span class="attribute">id</span>=<span class="value">"top"</span>&gt;</span></span>How to Code<span class="tag">&lt;<span class="title">/h1</span>&gt;</span></code></pre></li>
+							<li style="width:500px;">Various sections: <pre><code class="html"><span class="tag">&lt;<span class="title">h2</span> <span class="attribute">id</span>=<span class="value">"css"</span>&gt;</span></span>What is CSS?<span class="tag">&lt;<span class="title">/h2</span>&gt;</span></code></pre></li>
+						</ul>
+				</section>
+				<section>
+					<h2>Anchor & Deep Links 2</h2>
+					<p>To then link to these points, either on your site or from another site:</p>
+						<ul>
+							<li>Within your site: <pre><code class="html"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#top"</span>&gt;</span></span>To the Top<span class="tag">&lt;<span class="title">/a</span>&gt;</span></code></pre></li>
+							<li>Linked from another site: <pre><code class="html"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://mysite.com/#css"</span>&gt;</span></span>Learn CSS from MySite.com!<span class="tag">&lt;<span class="title">/a</span>&gt;</span></code></pre></li>
+						</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<ul>
+						<li><a href="http://www.lipsum.com/">Dummy text</a></li>
+						<li>Copy and paste some dummy text onto your page. Make sure to add <em>paragraph</em> tags.</li>
+						<li>Create deep links to each paragraph on the page.</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Images</h2>
+					<ul>
+						<li>*You can't just use any image you find online. When in doubt, ask.</li>
+						<li>There are several steps to putting an image in a web page, most happen before you do any coding</li>
+						<li><a href="http://www.stockvault.net/">Let's find an image</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Download and Prep</h2>
+					<ul>
+						<li>Download the image or upload from your camera</li>
+						<li>Make sure to crop the image to the size you'll be using it on your page</li>
+						<li>Save to the correct directory in your site (probably your "images" directory)</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Types of Images</h2>
+					<ul>
+						<li><strong>.jpg</strong> is for images with many colors, typically photographs</li>
+						<li><strong>.gif</strong> is for images with fewer and bolder colors, good for illustrations and graphics</li>
+						<li><strong>.png</strong> transparent, also good for graphics</li>
+					</ul>
+				</section>
+				<section>
+					<h2>.jpg example</h2>
+					<img src="http://images.topix.com/gallery/up-NVIB3M0CPL79IAQP.jpg" />
+				</section>
+				<section>
+					<h2>.gif example</h2>
+					<img src="http://upload.wikimedia.org/wikipedia/commons/2/25/Nasa-logo.gif" width="550" />
+				</section>
+				<section>
+					<h2>.png example</h2>
+					<img src="http://icons.iconarchive.com/icons/deleket/sleek-xp-basic/256/Ok-icon.png" style="border:none;box-shadow:none;" />
+				</section>
+				<section>
+					<h2>Add to Your Site</h2>
+					<ul>
+						<li>Use the image tag: <pre><code class="html"><span class="tag">&lt;<span class="title">img</span>&gt;</span></code></pre></li>
+						<li>There are several attributes you can use in your image tag: <strong>source</strong>, <strong>alt</strong>, <strong>title</strong>, <strong>width</strong> and <strong>height</strong></li>
+						<li>Source must be declared: <pre><code class="html"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"images/artoo.jpg"</span> /&gt;</span></code></pre></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Example & Exercise</h2>
+					<ul>
+						<li>Example: <pre><code class="html"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"images/artoo.jpg"</span> <span class="attribute">title</span>=<span class="value">"Artoo Swimsuit"</span> <span class="attribute">alt</span>=<span class="value">"A woman<br /> wearing a swimsuit that looks like R2-D2 from Star Wars"</span> /&gt;</span></code></pre></li>
+						<li><strong>Exercise:</strong> 
+							<ul>
+								<li>Create a gallery page on your site</li>
+								<li>Add an image to the page that are hosted elsewhere</li>
+								<li>Add an image to the page that are hosted locally</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Containers</h2>
+					<ul>
+						<li><strong>Inline Elements:</strong> Always appear to continue on the same line as their neighboring elements. *Examples include anchors, strong and emphasis, images and span.</li>
+						<li><strong>Block Elements:</strong> Ones that always appear to start on a new line in your browser. *Examples include header tags, paragraphs, lists and div.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Grouping Inline: <strong>span</strong></h2>
+					<ul>
+						<li>Use it to contain a section of text that should look different from surrounding text</li>
+						<li>Hold a number of inline elements</li>
+						<li>Needs classes or IDs to be of use to the reader</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Grouping Blocks: <strong>div</strong></h2>
+					<ul>
+						<li>Use it to group various elements on your page together</li>
+						<li>Think of the <em>div</em> as a container - you might want it to hold your navigation elements, or all your header elements.</li>
+						<li>Like the <em>span</em>, it usually has a class or ID to make it relevent for positioning and styling</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Class & ID</h2>
+					<ul>
+						<li>Attributes that can be applied to any HTML tag. Used to target elements through CSS.</li>
+						<li><strong>Class:</strong> Use it to identify multiple elements within a page <pre><code class="html"><span class="tag">&lt;<span class="title">p</span>&gt;</span>There are <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"important"</span>&gt;</span>no subways<br /> running today<span class="tag">&lt;<span class="title">/span</span>&gt;</span>, according to <span class="tag">&lt;<span class="title">em</span>&gt;</span>The New York Times<span class="tag">&lt;<span class="title">/em</span>&gt;</span><span class="tag">&lt;<span class="title">/p</span>&gt;</span></code></pre></li>
+						<li><strong>ID:</strong> Use it to identify a unique element on a page <pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"navigation"</span>&gt;</span><br /> &nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">ul</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>Home<span class="tag">&lt;<span class="title">/li</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>About Me<span class="tag">&lt;<span class="title">/li</span>&gt;</span><span class="tag">&lt;<span class="title">/ul</span>&gt;</span><br /><span class="tag">&lt;<span class="title">/div</span>&gt;</span></code></pre></li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Wireframes</h2>
+					<ul>
+						<li>This is the next step in the design process, after you've created your Site Map. It is a simple sketch of the information that needs to go on each page.</li>
+						<li>The wireframe should demonstrate the hierarchy of the information and how much space it might require.</li>
+						<li>This the step that connects your site map to your code - you are literally drawing <em>containers</em> that you will then translate into code.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Example</h2>
+				</section>
+			</section>
+			<section>
+				<h2>Assignments</h2>
+				<ul>
+					<li>Read Chapters 5-6, 8 and 18 of HTML&CSS</li>
+					<li>Create a wireframe for your personal website (digitally or by hand)</li>
+					<li>Code up your wireframe! Use the page we started in the first class. Create a div container for each box. Must include: <strong>Logo</strong> or <strong>Headline</strong> at the top, <strong>navigation</strong> (using an unordered list), and <strong>intro blurb with paragraphs</strong> and <strong>at least three sections</strong> of information. You must also incorporate an <strong>image</strong> and <strong>links</strong>. Use <strong>HTML comments</strong> to keep yourself organized.</li>
+					<li>EXTRA: Check out this <a href="http://www.rollingstone.com/feature/the-geeks-on-the-frontlines">story by <em>Rolling Stone</em></a> and the <a href="http://html5hub.com/project/rollingstone/#i.1ec9y8511ase6h">programmer who built it</a>.</li>
+				</ul>
+			</section>
+			<section>
+				<h1>Have a great week!</h1>
+			</section>
+		</div>
+	</div>
+
+
+<script src="../js/reveal/lib/js/head.min.js"></script>
+<script src="../js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: '../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: '../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: '../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: '../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="../js/lessonHeader.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON Test Page</title>
+	<style type="text/css">
+	body{ padding:10px 0 0 30px; }
+	h1{
+		font:38px/38px arial,helvetica,sans-serif;
+		color:#111;
+		font-weight:800;
+		margin-bottom:6px;
+		letter-spacing:1px;
+		text-shadow:1px 0 1px #2a2a2a;
+	}
+	p.summary{
+		font:17px/24px arial,helvetica,sans-serif;
+		color:#666;
+		margin:0;
+	}
+	#presidents{
+		width:600px;
+		margin-top:15px;
+		border-top:1px solid #ccc;
+	}
+	#presidents .presBox{
+		margin:12px 0;
+		padding:10px;
+		background:#efefef;
+	}
+	#presidents .presBox.yellow{
+		background:yellow;
+	}
+	#presidents h2{
+		font:21px/25px georgia,"times new roman",serif;
+		font-style:italic;
+		font-weight:300;
+		margin:0 0 4px 0;
+	}
+	#presidents p{
+		font:15px/21px georgia,"times new roman",serif;
+		color:#333;
+		margin:0;
+	}
+	#footnote{
+		font:13px/15px georgia,"times new roman",serif;
+		font-style:italic;
+		color:#666;
+		margin-top:25px;
+	}
+	</style>
+</head>
+<body>
+
+	<h1></h1>
+
+	<p class="summary"></p>
+
+	<div id="presidents"></div>
+
+	<div id="footnote"><storng>Note:</strong> Yellow background signifies president was assassinated before he could finish out his term.</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$.getJSON('http://mlouttit.com/cuny/js/testJSON.js',function(data){
+				console.log(data);
+
+				$('h1').append(data.title);
+				$('p.summary').append(data.summary);
+
+				$.each(data.presidents,function(index,pres){
+
+					if(pres.terms == 1){
+						var term = 'Term';
+					} else {
+						var term = "Terms";
+					}
+
+					if(pres.assassinated){
+						var color = 'yellow';
+					} else {
+						var color = 'gray';
+					}
+
+					var presBox = '<div class="presBox '+color+'"><h2>'+pres.name+'</h2><p>'+term+' lasted during the years <strong>'+pres.years+'</strong> and he was born in <strong>'+pres.from+'</strong>.</p></div>';
+
+					$('#presidents').append(presBox);
+
+
+				});
+
+			}
+		);
+
+	});
+	</script>
+</body>
+</html>

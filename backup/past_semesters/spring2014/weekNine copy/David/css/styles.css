@@ -1,0 +1,36 @@
+body {background-color: #c0c0c0;
+}
+
+p {font-family: arial, Century,sans-serif;
+	font-size: 14;
+		color:black;
+		padding: 0px 0px 5px 0px;
+	}
+img {margin: 5px 5px 0px 0;
+}
+
+
+img {margin-left:5px;}
+
+h1 {font-family: arial, Century, sans-serif;
+
+}
+
+h2 {font-family: arial, Century, sans-serif;
+}
+
+h3 {font-family: arial, Century, sans-serif;
+}
+
+#menu {background: gray;
+z-index: 105;
+}
+
+#navigation:hover{font-weight:bold;
+}
+
+#navigation:active {color:pink;
+}
+
+/*FIGURE OUT WHY TEXT IS ALIGNED TO LEFT WITHOUT ANY CODE SAYING SO*/
+

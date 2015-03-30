@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week Eight</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="js/reveal/css/theme/sky.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	.code{
+		margin-bottom:10px;
+	}
+	.reveal .slides{
+		top:40% !important;
+	}
+	.reveal .slides p{
+		text-align:left;
+	}
+	#backTo{
+		padding:15px;
+		clear:both;
+	}
+	#backTo p{
+		margin:0;
+		font-family: "Open Sans", sans-serif;
+		color:#333;
+	}
+	#backTo p a{
+		color:#3b759e;
+		text-decoration:none;
+		padding:1px 5px;
+	}
+	#backTo p a:hover{
+		color: #74a7cb;
+  		text-shadow: none;
+  		border: none;
+	}
+	#backTo p a.current{
+		color: white;
+		background: #134674;
+		text-shadow: none;
+	}
+	span.red{
+		color:red;
+		font-style:italic;
+	}
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 8;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 8 | March 18, 2013</h2>
+				<h4>Arrays, Objects & Loops</h4>
+			</section>
+			<section>
+				<h2>Review</h2>
+				<ul>
+					<li><a href="reviews/js_review_2.html" target="_blank">JS Review #2</a></li>
+					<li>Homework & Reading questions?</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Remember Variables?</h2>
+				<p>A variable remembers a value that you've assigned to it. For example <code>var x = 102</code>.</p>
+			</section>
+			<section>
+				<section>
+					<h2>Arrays</h2>
+					<p>An array is simply a way to assign multiple values to one variable.</p>
+					<ul>
+						<li><code>var v = [100, 101, 102, 103, 104, 105]</code></li>
+						<li><code>var fruits = ["orange", "grape", "apple", "strawberry"]</code></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Array Index</h2>
+					<p>Each object in an array is assigned an index value, starting with 0. Using the second example above:</p>
+					<ul>
+						<li><code>0 = orange</code></li>
+						<li><code>1 = grape</code></li>
+						<li><code>2 = apple</code></li>
+						<li><code>3 = strawberry</code></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Create an array of five objects in <code>arrays.html</code> and store in a variable. Log the variable so you can see it in your console. Then append the object with an index of 3 to your page.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Objects</h2>
+					<p>An object offers even smarter storage. You can creat objects when you need to store multiple variables about a particular thing. In an object, you need to specifiy both a property and its value.</p>
+					<ul>
+						<li><code>weddingGuests = {<br />&nbsp;&nbsp;&nbsp;name:"John Doe",<br />&nbsp;&nbsp;&nbsp;age:"42",<br />&nbsp;&nbsp;&nbsp;meal:"chicken"<br />};</code></li>
+						<li>You can access any object property through the dot syntax: <code>weddingGuests.name</code></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Object Methods</h2>
+					<p>An object can also contain a function that let's you interact with the object's properties. This is called a method.</p>
+					<p><code>getCapital: function() {<br />&nbsp;&nbsp;&nbsp;alert(this.myCapital)<br />},<br />&nbsp;&nbsp;&nbsp;myName: "USA",<br />&nbsp;&nbsp;&nbsp;myCapital: "Washington, D.C."<br />};</code></p><br />
+					<p>To call this method: <code>myCountry.getCapital()</code></p>
+				</section>
+				<section>
+					<h2>Everything is an Object</h2>
+					<p>This is where it gets confusing - essentially everything in javascript and jQuery is an object. Arrays, functions, elements, strings, etc. And every element has properties and methods.</p>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Create your own object in <code>arrays.html</code> with three different properties and store in a variable. Log the variable so you can see it in your console. Then append one of your properties to your page.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Loops</h2>
+					<p>In javascript, loops allow you to essentially "loop through" each object in your array and perform a function on each.</p>
+					<ul>
+						<li>The <code>for</code> loop will let you repeat code a defined number of times</li>
+						<li>The <code>do...while</code> runs your code until a particular condition has been met</li>
+						<li>Each loop has four parts that need to be defined:
+							<ul>
+								<li><strong>Initialization</strong>: Takes place once at the start of the loop</li>
+								<li><strong>Test condition</strong>: Checks the variable to see if the loop should stop or keep going</li>
+								<li><strong>Action</strong>: The code that is repeated as we go through the loop</li>
+								<li><strong>Update</strong>: Updates the variable being used by the test condition to see if we should keep going</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2><code>For</code> Loops</h2>
+					<p><code>myArr = ["one","two","three","four"];</code></p>
+					<p><code>for ( var i=0 ; i < myArr.length ; i++){<br />&nbsp;&nbsp;&nbsp;alert("myArr[i]")<br /> }</code></p>
+				</section>
+				<section>
+					<h2><code>do...while</code> Loops</h2>
+					<p><code>myArr = ["one","two","three","four"];</code></p>
+					<p><code>var i=0;<br />do {<br />&nbsp;&nbsp;&nbsp;alert(myArr[i]); <br />} <br /> while ( i <=3 );</code></p>
+				</section>
+				<section>
+					<h2>jQuery <code>.each()</code></h2>
+					<p>The jQuery <code>each</code> method operates similar to a <code>for</code> loop in that it lets you iterate over an arry of objects and perform functions on them</p>
+					<p><code>var boxes = $(".box");</code></p>
+					<p><code>$.each(boxes,function(index,box){<br />&nbsp;&nbsp;&nbsp;alert("box");<br />});</code></p>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<ul>
+						<li>Create an array of names. Then write a loop that puts each name on the page inside a <code>div</code> with a class of name. Check your console to make sure it's worked.</li>
+						<li>Then, using the jQuery each method, write another function that, when you click the button, loops through those <code>div</code>s and changes the font color.</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2>Assignments</h2>
+				<ul>
+					<li>Read chapters 6 in <a href="http://www.headfirstlabs.com/books/hfjquery/">Head First jQuery</a></li>
+					<li>As you read through chapter 6, complete the chapter exercise - creating a Blackjack Application. Copy the starter files for the app from the <a href="https://www.dropbox.com/home/CUNY%20-%20Programming%20for%20Journalists/Spring%202013/Assignments/Week%208">class Dropbox, Week 8</a>, and create another instance using your name in the folder.</li>
+				</ul>
+				<iframe style="margin-top:15px;" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F24832522"></iframe>
+			</section>
+		</div>
+	</div>
+
+
+<script src="js/reveal/lib/js/head.min.js"></script>
+<script src="js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="js/lessonHeader.js"></script>
+</body>
+</html>

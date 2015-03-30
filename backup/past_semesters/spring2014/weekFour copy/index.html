@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week Four</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="../js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="../js/reveal/css/theme/beige.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	#backTo{ 
+		margin:0 20px; 
+		font-family: sans-serif;
+		font-size: 13px;
+	}
+	#backTo p a{ 
+		color: #333; 
+		text-decoration:none;
+		padding:3px 5px;
+	}
+	#backTo p a:hover,
+	#backTo p a.current{
+		background:#333;
+		color:#fff;
+	}
+	.code{ color:#000;font-family: monospace!important; }
+
+	/*exercise*/
+	div.floatBox{
+		width:200px;
+		height:200px;
+		border:3px solid #000;
+		border-radius:8px;
+		background-color:white;
+		margin:8px;
+	}
+	div.floatBox{
+		position:relative;
+		top:0;
+		left:0;
+	}
+	div#floatOne{}
+	div#floatTwo{}
+	div#floatThree{}
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 4;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 4 | Feb. 20, 2014</h2>
+				<h4>Positioning & Sprites</h4>
+			</section>
+			<section>
+				<h2>Week Three Review</h2>
+				<p><a href="../reviews/html_css_review_3.html" target="_blank">Click to take Review Quiz &raquo;</a></p>
+			</section>
+			<section>
+				<h2>Review <span class="code">&lt;link&gt;</span></h2>
+				<p><a href="../weekThree/#/4/3" target="_blank">How to use an external style sheet &raquo;</a></p>
+			</section>
+			<section>
+				<section>
+					<h2>Display Review</h2>
+					<p>Each HTML node can be displayed in one of two ways.</p>
+				</section>
+				<section>
+					<h3>Block-Level</h3>
+					<p>HTML elements that start on a new line. Examples: <span class="code">&lt;h1&gt;</span>, <span class="code">&lt;p&gt;</span>, <span class="code">&lt;div&gt;</span></p>
+				</section>
+				<section>
+					<h3>Inline</h3>
+					<p>HTML elements that stay on one line and flow in between surrounding text. Examples: <span class="code">&lt;span&gt;</span>, <span class="code">&lt;strong&gt;</span>, <span class="code">&lt;img&gt;</span></p>
+				</section>
+				<section>
+					<h3>Both</h3>
+					<p>In your CSS, you can determin that an element take on the properties of both. Example: <span class="code">display: inline-block;</span></p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>CSS Positioning</h2>
+					<p>There are a handful of positioning schemes that CSS makes available for you to control the layout of a page.</p>
+				</section>
+				<section>
+					<h3>Normal Flow</h3>
+					<p>This is the default behavior for any block-level element, that they sit on top of each other no matter how much space is around them.</p>
+				</section>
+				<section>
+					<h3>Relative Positioning</h3>
+					<p>Moves the element <em>relative</em> to where it would be in the normal flow. This does not affect the position of the elements around it.</p>
+				</section>
+				<section>
+					<h3>Absolute Positioning</h3>
+					<p>Positions an element relative to its containing element. It is taken out the normal flow and the elements around it are positioned as if it's not there. These elements move with the page as a user scrolls.</p>
+				</section>
+				<section>
+					<h3>Fixed Positioning</h3>
+					<p>A form of absolute positioning in that it removes the element from the normal flow of the page, but it <em>fixes</em> an element in the browser window and does not move with the page.</p>
+				</section>
+				<section>
+					<h3>The Float</h3>
+					<p><a href="http://mlouttit.com/cuny/weekThree/#/10/1" target="_blank">Review The Float &raquo;</a></p>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<p>On the next slide, open your console and change the positioning of the three boxes. Test out relative, absolute and fixed positioning.</p>
+				</section>
+				<section>
+					<div class="floatBox" id="floatOne"></div>
+					<div class="floatBox" id="floatTwo"></div>
+					<div class="floatBox" id="floatThree"></div>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Overlaps</h2>
+					<p>When positioning elements, you might run into cases where one element overlaps another.</p>
+				</section>
+				<section>
+					<h3><span class="code">z-index</span></h3>
+					<p>You can set the <span class="code">z-index</span> property to any number you want. The elements with the highest numbers will appear on top.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Sprites</h2>
+					<p>Using CSS, you can give an element a different style both when a user hovers on the element and when it is clicked. Instead of using different images for each of these instances, you can use the same image. This is known as a <strong>sprite</strong>.</p>
+				</section>
+				<section>
+					<h3>Why Use Them?</h3>
+					<p>The browser only makes one request for an image rather than several, which helps the page load faster and makes your animation more seamless.</p>
+				</section>
+				<section>
+					<h3>Rules</h3>
+					<p>To control the sprite, use the psuedo elements <span class="code">:hover</span> and <span class="code">:active</span> and set the <span class="code">background-position</span> accordingly.</p>
+				</section>
+				<section>
+					<h3>Example</h3>
+					<p><a href="sprite_example.html" target="_blank">Click for example page &raquo;</a></p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Assignments</h2>
+				</section>
+				<section>
+					<h2>Readings</h2>
+					<ul>
+						<li>In HTML&CSS read Chapters 15-17</li>
+						<li>Read <a href="http://mobile.smashingmagazine.com/2010/07/19/how-to-use-css3-media-queries-to-create-a-mobile-version-of-your-website/">How To Use CSS3 Media Queries To Create a Mobile Version of Your Website</a></li>
+						<li>Reference: <a href="http://mediaqueri.es/">Media Queries / Responsive Design Examples</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>More Wireframes</h2>
+					<ul>
+						<li>Create a wireframe for your inside pages. Most of your inside pages should follow the same pattern and will be more simple than your homepage.</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Have a great week!</h1>
+				</section>
+			</section>
+		</div>
+	</div>
+  
+
+<script src="../js/reveal/lib/js/head.min.js"></script>
+<script src="../js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: '../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: '../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: '../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: '../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="../js/lessonHeader.js"></script>
+</body>
+</html>

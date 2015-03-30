@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week Three</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="../js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="../js/reveal/css/theme/sky.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	.code{
+		margin-bottom:10px;
+	}
+	.reveal .slides{
+		top:40% !important;
+	}
+	#backTo{
+		padding:15px;
+		clear:both;
+	}
+	#backTo p{
+		margin:0;
+		font-family: "Open Sans", sans-serif;
+		color:#333;
+	}
+	#backTo p a{
+		color:#3b759e;
+		text-decoration:none;
+		padding:1px 5px;
+	}
+	#backTo p a:hover{
+		color: #74a7cb;
+  		text-shadow: none;
+  		border: none;
+	}
+	#backTo p a.current{
+		color: white;
+		background: #134674;
+		text-shadow: none;
+	}
+	#weeklySong{
+		margin-top:25px;
+	}
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 3;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 3 | Sept. 18, 2013</h2>
+				<h4>Introducing CSS!</h4>
+			</section>
+			<section>
+				<h2>Review</h2>
+				<ul>
+					<li><a target="_blank" href="../reviews/html_review_2.html">HTML Review "Quiz"</a></li>
+					<li>Questions on readings or assignments?</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>What is CSS?</h2>
+					<ul>
+						<li>CSS stands for Cascading Style Sheets</li>
+						<li>It allows you to create rules that specify how elements on a website should look</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Where do I put it?</h2>
+					<ul>
+						<li>Always in the head of your page
+						<li><strong>Inline Styles</strong> go inside the <em>style</em> tag
+							<pre><code class="html"><span class="tag">&lt;<span class="title">style <span class="attribute">type</span>=<span class="value">"text/css"</span></span></span>&gt;</span><span class="tag">&lt;<span class="title">/style</span>&gt;</span></code></pre>
+						</li>
+						<li><strong>External Stylesheet</strong> are pulled in using the <em>link</em> tag<br />
+							<pre><code class="html"><span class="tag">&lt;<span class="title">link <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"css/styles.css"</span></span> /</span>&gt;</span></code></pre>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Style Syntax</h2>
+					<ul>
+						<li>There are 2 parts to each CSS rule:</li>
+						<ul>
+							<li><strong>Selector</strong> - Indicates which element(s) the rule applies to. Can be tagnames, classes and IDs</li>
+							<li><strong>Declaration</strong> - How the element referred to should be styled. There are two parts to each delcaration:</li>
+							<ul>
+								<li><strong>Property</strong> - The aspect of the element you want to style</li>
+								<li><strong>Value</strong> - The setting you chooose for each property</li>
+							</ul>
+						</ul>
+					</ul>
+				</section>
+				<section>
+					<h2>Types of Selectors</h2>
+					<ul>
+						<li><strong>Universal</strong> targets all elements on a page: <em>*</em></li>
+						<li><strong>Type</strong> matches an element name: <em>h1, p, a</em></li>
+						<li><strong>Class</strong> matches an element with that class value: <em>.credit</em></li>
+						<li><strong>ID</strong> matches the element with that ID value: <em>#container</em></li>
+						<li><strong>Child</strong> matches an element that is the direct child of another: <em>li > a</em></li>
+						<li><strong>Descendant</strong> matches an element that is a descendant of anotehr element (not necessarily a direct child): <em>p a</em></li>
+					</ul>
+				</section>
+				<section>
+					<h2>How CSS Cascades</h2>
+					<ul>
+						<li>If two or more rules apply to the same element the one that takes precedence is either:
+							<ul>
+								<li><strong>Last</strong> - If the selectors are identical the latter will take precedence. The stylesheet is read by the browser from top to bottom.</li>
+								<li><strong>Specificity</strong> - If one selector is more specific it will take precedence.</li>
+							</ul>
+						<li>Child elements, unless specificed in the styles, will usually <em>inherit</em> a style from their parent element. You can also delcare <em>inherit</em> as a value in your declarations.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>EXAMPLES</h2>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Colors</h2>
+					<ul>
+						<li>You can specify the color of text, background and borders</li>
+						<li>There are currently 147 predefined colors that recognize by browsers, including black and DarkCyan</li>
+						<li>You can also use HEX codes and RGB values but you will most commonly come across HEX codes</li>
+						<li>You can grab these codes from Photoshop or one of the many charts that exist online, <a href="http://www.w3schools.com/tags/ref_colorpicker.asp">like this one</a>.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>How to pick colors</h2>
+					<ul>
+						<li>When picking foreground (text) and background colors, you want to make sure that there is enough contrast to be legible</li>
+						<li><strong>Low contrast</strong> can make text <a href="http://mypresosucks.com/wp-content/uploads/2010/02/rule6-bad1.png">difficult to read</a></li>
+						<li><strong>High contrast</strong> makes text easier to read, but is better for shorter and important text, <a href="http://contrastrebellion.com/public/images/page5-img1.jpg">like headlines</a></li>
+						<li><strong>Medium contrast</strong> is better for big blocks of text because it is easier on the eyes when <a href="http://cdncms.fonts.net/images/d23b38f2be003b48/D.Boldface.gif">viewed on a screen</a>, and also for less important text, like image credits</li>
+						<li>Reverse, high contrast (like <a href="http://typekit.files.wordpress.com/2011/01/contrast-reverse.png?w=560&h=104">white text on a black background</a>) should not be used for large blocks of text because it strains the eye. <a href="http://www.nytimes.com/interactive/2012/11/26/sports/basketball/section15.html?ref=sports">Example</a>.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Add the following colors to your page:</p>
+					<ul>
+						<li>Background color</li>
+						<li>Two text colors</li>
+						<li>A link color for you page</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Text Terms</h2>
+					<ul>
+						<li><strong>Serif</strong> fronts have extra details (serifs) on the ends of the main strokes of the letters</li>
+						<li><strong>Sans-Serif</strong> have straight ends to letters</li>
+						<li><strong>Monospace</strong> means each letter has the same width</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Font Aspects</h2>
+					<ul>
+						<li><strong>Weight</strong> - Light, Medium, Bold, Black</li>
+						<li><strong>Style</strong> - Normal, Italic, Oblique</li>
+						<li><strong>Stretch</strong> - Condensed, Regular, Extended</li>
+				</section>
+				<section>
+					<h2>Adding Font Styles</h2>
+					<ul>
+						<li>font-family (<a href="http://cssfontstack.com/">Guide to predefined web fonts</a>)</li>
+						<li>font-size</li>
+						<li>font-weight</li>
+						<li>font-style</li>
+						<li>text-transform</li>
+						<li>text-decoration</li>
+						<li>line-height</li>
+						<li>letter-spacing & word-spacing</li>
+						<li>text-align & text-indent</li>
+						<li>text-shadow</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Pseudo-Elements</h2>
+					<p>You may add these to the end of a selector
+					<ul>
+						<li>:first-letter & :first-line</li>
+						<li>:link & :visited</li>
+						<li>:hover & :active</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Add the following to your page styles:</p>
+					<ul>
+						<li>Sans-serif font (headline)</li>
+						<li>Serif font (body text)</li>
+						<li>A text-transform, text-decoration OR text-align</li>
+						<li>One of the pseudo elements</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Boxes</h2>
+					<p>You can set properties to control how any box looks</p>
+					<ul>
+						<li>width & height</li>
+						<li>min-width & max-width</li>
+						<li>min-height & max-height</li>
+						<li>overflow</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Box Appearance</h2>
+					<ul>
+						<li>border</li>
+							<ul>
+								<li>width</li>
+								<li>style</li>
+								<li>color</li>
+							</ul>
+						<li>margin</li>
+							<ul>
+								<li>centering</li>
+							</ul>
+						<li>padding</li>
+						<li>box-shadow</li>
+						<li>border-radius</li>
+						<li>display</li>
+						<li>visibility</li>
+					</ul>
+				</section>
+				<section>
+					<h2>The Float!</h2>
+					<ul>
+						<li><strong>float left</strong> aligns your element to the left and brings content up beside it on the right</li>
+						<li><strong>float right</strong> aligns your element to the right and brings up content beside it on the left</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Excercise</h2>
+					<p>Add the following box properties to your article page</p>
+					<ul>
+						<li>Width and height to at least one box</li>
+						<li>A box border</li>
+						<li>Padding and margin to at least one box</li>
+						<li>At least one float</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2>Listserv</h2>
+				<p>This listserv is for class members to ask questions and share tips, tricks and cool shit. <a href="https://mailman-mail5.webfaction.com/listinfo/cuny_fall2013" target="_blank">Sign up here</a>.<p>
+			</section>
+			<section>
+				<h2>Assignments</h2>
+				<ul>
+					<li>Read Chapters 8-12 and 16 of HTML&CSS</li>
+					<li>Create a Web page with a set of five columns. <a href="http://mlouttit.com/cuny/excercise/css_day_1.html">Use this example as a guide</a>.</li>
+					<li>Create an external stylesheet and add it to your page. You can include styles you added during exercises today. Add at least 5 more rules. Make sure to upload both your page file and your CSS file to your Dropbox folder.</li>
+				</ul>
+			</section>
+			<section>
+				<h1>Have a great week!</h1>
+			</section>
+		</div>
+	</div>
+
+
+<script src="../js/reveal/lib/js/head.min.js"></script>
+<script src="../js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: '../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: '../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: '../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: '../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="../js/lessonHeader.js"></script>
+</body>
+</html>

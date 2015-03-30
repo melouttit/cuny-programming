@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week Three</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="js/reveal/css/theme/sky.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	.code{
+		margin-bottom:10px;
+	}
+	.reveal .slides{
+		top:40% !important;
+	}
+	#backTo{
+		padding:15px;
+		clear:both;
+	}
+	#backTo p{
+		margin:0;
+		font-family: "Open Sans", sans-serif;
+		color:#333;
+	}
+	#backTo p a{
+		color:#3b759e;
+		text-decoration:none;
+		padding:1px 5px;
+	}
+	#backTo p a:hover{
+		color: #74a7cb;
+  		text-shadow: none;
+  		border: none;
+	}
+	#backTo p a.current{
+		color: white;
+		background: #134674;
+		text-shadow: none;
+	}
+	#weeklySong{
+		margin-top:25px;
+	}
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 3;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 3 | February 11, 2013</h2>
+				<h4>Introducing CSS!</h4>
+			</section>
+			<section>
+				<h2>Review</h2>
+				<ul>
+					<li><a target="_blank" href="reviews/html_review_2.html">HTML Review "Quiz"</a></li>
+					<li>Any questions on the readings? Or last week's lesson and assignments?</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Containers</h2>
+					<ul>
+						<li><strong>Inline Elements:</strong> Always appear to continue on the same line as their neighboring elements. Examples include anchors, strong and emphasis, images and span.</li>
+						<li><strong>Block Elements:</strong> Ones that always appear to start on a new line in your browser. Examples include header tags, paragraphs, lists and div.</li>
+						<li>The <em>div</em> and <em>span</em> tags are especially useful for grouping these elements together and controlling certain elements through CSS</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Grouping Inline: <strong>span</strong></h2>
+					<ul>
+						<li>Use it to contain a section of text that should look different from surrounding text</li>
+						<li>Hold a number of inline elements</li>
+						<li>Needs classes or IDs to be of use to the reader</li>
+					</ul>
+				</section>
+				<section>		
+					<h2>Grouping Blocks: <strong>div</strong></h2>
+					<ul>
+						<li>Use it to group various elements on your page together</li>
+						<li>Think of the <em>div</em> as a container - you might want it to hold your navigation elements, or all your header elements.</li>
+						<li>Like the <em>span</em>, it usually has a class or ID to make it relevent for positioning and styling</li>
+						<li><strong>Exercise:</strong>
+							<ul>
+								<li>Create a digram on paper of your site, including containers for header, navigation and lead story</li>
+								<li>Translate that diagram into code using <em>div</em>'s</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Class & ID</h2>
+					<ul>
+						<li>Attributes that can be applied to any HTML tag. Used to target elements through CSS.</li>
+						<li><strong>Class:</strong> Use it to identify more than alike elements within a page <pre><code class="html"><span class="tag">&lt;<span class="title">p</span>&gt;</span>There are <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"important"</span>&gt;</span>no subways<br /> running today<span class="tag">&lt;<span class="title">/span</span>&gt;</span>, according to <span class="tag">&lt;<span class="title">em</span>&gt;</span>The New York Times<span class="tag">&lt;<span class="title">/em</span>&gt;</span><span class="tag">&lt;<span class="title">/p</span>&gt;</span></code></pre></li>
+						<li><strong>ID:</strong> Use it to identify a unique element on a page <pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"navigation"</span>&gt;</span><br /> &nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">ul</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>Home<span class="tag">&lt;<span class="title">/li</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>About Me<span class="tag">&lt;<span class="title">/li</span>&gt;</span><span class="tag">&lt;<span class="title">/ul</span>&gt;</span><br /><span class="tag">&lt;<span class="title">/div</span>&gt;</span></code></pre></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Block out your own Web page for a blog post. Then translate it using html tags you know to create a Web page. Include the following:</p>
+					<ul>
+						<li>Headline</li>
+						<li>Byline</li>
+						<li>Publish Date</li>
+						<li>Image, Image Caption, Image Credit</li>
+						<li>Article Text</li>
+						<li>Contact Info</li>
+					</ul>
+					<p>You should use the following tags:<strong> div, h1, p, img, a</strong></p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>What is CSS?</h2>
+					<ul>
+						<li>CSS stands for Cascading Style Sheets</li>
+						<li>It allows you to create rules that specify how elements on a website should look</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Style Syntax</h2>
+					<ul>
+						<li>There are 2 parts to each CSS rule:</li>
+						<ul>
+							<li><strong>Selector</strong> - Indicates which element(s) the rule applies to. Can be tagnames, classes and IDs</li>
+							<li><strong>Declaration</strong> - How the element referred to should be styled. There are two parts to each delcaration:</li>
+							<ul>
+								<li><strong>Property</strong> - The aspect of the element you want to style</li>
+								<li><strong>Value</strong> - The setting you chooose for each property</li>
+							</ul>
+						</ul>
+					</ul>
+				</section>
+				<section>
+					<h2>Types of Selectors</h2>
+					<ul>
+						<li><strong>Universal</strong> targets all elements on a page: <em>*</em></li>
+						<li><strong>Type</strong> matches an element name: <em>h1, p, a</em></li>
+						<li><strong>Class</strong> matches an element with that class value: <em>.credit</em></li>
+						<li><strong>ID</strong> matches the element with that ID value: <em>#container</em></li>
+						<li><strong>Child</strong> matches an element that is the direct child of another: <em>li > a</em></li>
+						<li><strong>Descendant</strong> matches an element that is a descendant of anotehr element (not necessarily a direct child): <em>p a</em></li>
+					</ul>
+				</section>
+				<section>
+					<h2>How CSS Cascades</h2>
+					<ul>
+						<li>If two or more rules apply to the same element the one that takes precedence is either:
+							<ul>
+								<li><strong>Last</strong> - If the selectors are identical the latter will take precedence. The stylesheet is read by the browser from top to bottom.</li>
+								<li><strong>Specificity</strong> - If one selector is more specific it will take precedence.</li>
+							</ul>
+						<li>Child elements, unless specificed in the styles, will usually <em>inherit</em> a style from their parent element. You can also delcare <em>inherit</em> as a value in your declarations.</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Colors</h2>
+					<ul>
+						<li>You can specify the color of text, background and borders</li>
+						<li>There are currently 147 predefined colors that recognize by browsers, including black and DarkCyan</li>
+						<li>You can also use HEX codes and RGB values but you will most commonly come across HEX codes</li>
+						<li>You can grab these codes from Photoshop or one of the many charts that exist online, <a href="http://www.pagetutor.com/common/bgcolors1536.png">like this one</a>.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>How to pick colors</h2>
+					<ul>
+						<li>When picking foreground (text) and background colors, you want to make sure that there is enough contrast to be legible</li>
+						<li><strong>Low contrast</strong> can make text difficult to read</li>
+						<li><strong>High contrast</strong> makes text easier to read, but is better for shorter and important text, like headlines</li>
+						<li><strong>Medium contrast</strong> is better for big blocks of text because it is easier on the eyes when viewed on a screen, and also for less important text, like image credits</li>
+						<li>Reverse contrast (like white text on a black background) is okay to use, but for large blocks of text it can make it more uncofortable to read - try to avoid this</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Add colors to your article page</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Text Terms</h2>
+					<ul>
+						<li><strong>Serif</strong> fronts have extra details (serifs) on the ends of the main strokes of the letters</li>
+						<li><strong>Sans-Serif</strong> have straight ends to letters</li>
+						<li><strong>Monospace</strong> means each letter has the same width</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Font Aspects</h2>
+					<ul>
+						<li><strong>Weight</strong> - Light, Medium, Bold, Black</li>
+						<li><strong>Style</strong> - Normal, Italic, Oblique</li>
+						<li><strong>Stretch</strong> - Condensed, Regular, Extended</li>
+				</section>
+				<section>
+					<h2>Adding Font Styles</h2>
+					<ul>
+						<li>font-family (<a href="http://cssfontstack.com/">Guide to predefined web fonts</a>)</li>
+						<li>font-size</li>
+						<li>font-weight</li>
+						<li>font-style</li>
+						<li>text-transform</li>
+						<li>text-decoration</li>
+						<li>line-height</li>
+						<li>letter-spacing & word-spacing</li>
+						<li>text-align & text-indent</li>
+						<li>text-shadow</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Pseudo-Elements</h2>
+					<p>You may add these to the end of a selector
+					<ul>
+						<li>:first-letter & :first-line</li>
+						<li>:link & :visited</li>
+						<li>:hover & :active</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Add font properties to your article page</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Boxes</h2>
+					<p>You can set properties to control how any box looks</p>
+					<ul>
+						<li>width & height</li>
+						<li>min-width & max-width</li>
+						<li>min-height & max-height</li>
+						<li>overflow</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Box Appearance</h2>
+					<ul>
+						<li>border</li>
+							<ul>
+								<li>width</li>
+								<li>style</li>
+								<li>color</li>
+							</ul>
+						<li>margin</li>
+							<ul>
+								<li>centering</li>
+							</ul>
+						<li>padding</li>
+						<li>box-shadow</li>
+						<li>border-radius</li>
+						<li>display</li>
+						<li>visibility</li>
+					</ul>
+				</section>
+				<section>
+					<h2>The Float!</h2>
+					<ul>
+						<li><strong>float left</strong> aligns your element to the left and brings content up beside it on the right</li>
+						<li><strong>float right</strong> aligns your element to the right and brings up content beside it on the left</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Excercise</h2>
+					<p>Add some box properties to your article page</p>
+				</section>
+			</section>
+			<section>
+				<h2>Assignments</h2>
+				<ul>
+					<li>Read Chapters 6-7,9 and 10-13 of HTML&CSS</li>
+					<li>Create a Web page with a set of five columns. <a href="http://mlouttit.com/cuny/excercise/css_day_1.html">Use this example as a guide</a>. See the exercise <strong>assignment_3_1.html</strong> in the <a target="_blank" href="https://www.dropbox.com/home/CUNY%20-%20Programming%20for%20Journalists/Spring%202013/Assignments/Week%203">Week 3 folder</a> in Drobox for the full list of requirements</li>
+					<li>Listen to this song while you work:</li>
+				</ul>
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F50261894"></iframe>
+			</section>
+			<section>
+				<h1>Have a great week!</h1>
+			</section>
+		</div>
+	</div>
+
+
+<script src="js/reveal/lib/js/head.min.js"></script>
+<script src="js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="js/lessonHeader.js"></script>
+</body>
+</html>

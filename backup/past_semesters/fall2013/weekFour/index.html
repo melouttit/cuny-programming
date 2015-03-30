@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week Four</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="../js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="../js/reveal/css/theme/sky.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	.code{
+		margin-bottom:10px;
+	}
+	.reveal .slides{
+		top:40% !important;
+	}
+	#backTo{
+		padding:15px;
+		clear:both;
+	}
+	#backTo p{
+		margin:0;
+		font-family: "Open Sans", sans-serif;
+		color:#333;
+	}
+	#backTo p a{
+		color:#3b759e;
+		text-decoration:none;
+		padding:1px 5px;
+	}
+	#backTo p a:hover{
+		color: #74a7cb;
+  		text-shadow: none;
+  		border: none;
+	}
+	#backTo p a.current{
+		color: white;
+		background: #134674;
+		text-shadow: none;
+	}
+	#weeklySong{
+		margin-top:25px;
+	}
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 4;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 4 | Sept. 25, 2013</h2>
+				<h4>Lists, Positioning and FTP!</h4>
+			</section>
+			<section>
+				<h2>Review</h2>
+				<ul>
+					<li><a target="_blank" href="../reviews/html_css_review_3.html">HTML/CSS Review "Quiz"</a></li>
+					<li>Any questions on the readings? Or last week's lesson and assignments?</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>List Styles</h2>
+					<p>Used on the list items in unordered and ordered lists using the property name: <em>list-style</em></p>
+				</section>
+				<section>
+					<h2>Unordered Lists</h2>
+					<ul>
+						<li style="list-style:disc;">list-style: disc; (<em>This is the default on most browsers</em>)</li>
+						<li style="list-style:circle;">list-style: circle;</li>
+						<li style="list-style:square;">list-style: square;</li>
+						<li style="list-style: none;">list-style: none;</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Ordered Lists</h2>
+					<ol>
+						<li style="list-style:decimal;">list-style: decimal;</li>
+						<li style="list-style:decimal-leading-zero">list-style: decimal-leading-zero</li>
+						<li style="list-style:lower-alpha;">list-style: lower-alpha;</li>
+						<li style="list-style:upper-alpha;">list-style: upper-alpha;</li>
+						<li style="list-style:lower-roman;">list-style: lower-roman;</li>
+						<li style="list-style:upper-roman;">list-style: upper-roman;</li>
+					</ol>
+				</section>
+				<section>
+					<h2>List Images</h2>
+					<p>If you want to replace any of the specified bullets with an image of your choosing you can use the <em>list-style-image</em> property. Note that this can only be used on &lt;ul&gt; and &lt;li&gt; elements</p>
+					<ul style="list-style-image:url('http://cdn4.iconfinder.com/data/icons/cc_mono_icon_set/blacks/48x48/checkmark.png');">
+						<li style="margin-top:10px;">list-style-image: url("images/icon.png");</li>
+						<li style="margin-top:10px;">As with any image, you can use external and interal link sources</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Style the navigation on your page using list styles and floats.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Positioning</h2>
+					<p>Through CSS you can control where an element sits on a page. Positioning is actually very powerful and comes in handy when you start thinking about screen sizes, how your site will look on various devices and responsive layouts.</p>
+					<ol>
+						<li>Set the value of your <strong>position</strong></li>
+						<li>Then you can set where it sits based on the properties <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> and <strong>left</strong></li>
+					</ol>
+				</section>
+					<section>
+						<h2>The Position Property</h2>
+					</section>
+					<section>
+						<li><strong>Normal</strong> flow means every block element appears on a new line. This is default browser behavior.</li>
+					</section>
+					<section>
+						<li><strong>Relative</strong> positioning moves an element from the position it would be in a normal flow, moving it <em>relative</em> to where it would have been placed</li>
+					</section>
+					<section>
+						<li><strong>Absolute</strong> positioning takes the element out of it's normal flow, meaning it does affect the position of surrounding elements</li>
+					</section>
+					<section>
+						<li><strong>Fixed</strong> positioning is a form of absolute positioning, in that the element is removed from the normal flow, but then they are additional fixed on the page, meaning they don't move when the user scrolls</li>
+					</section>
+				<section>
+					<h2>Z-Index</h2>
+					<p>Use the <em>z-index</em> propety to control which element goes on top. To do this, both elements must have a z-index set</p>
+					<p><strong>z-index: 100px;</strong></p>
+				</section>
+				<section>
+					<h2>Clear</h2>
+					<p>This property allows you to clear elements from one or both sides of a box</p>
+					<ul>
+						<li><strong>clear:both;</strong> clears the elements on both sides of a box</li>
+						<li><strong>clear:left;</strong> clears elments on the left-hand side of a box</li>
+						<li><strong>clear:right;</strong> clears elements on the right-hand side of a box</li>
+						<li><strong>clear:none;</strong> elements can touch either side. this is the default</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Use the four different position designations in your article:</p>
+					<ul>
+						<li>Try making your page title and navigation fixed</li>
+						<li>Add a z-index if you need to</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Background Images</h2>	
+					<ul>
+						<li>Set your background image:<br /> <strong>background-image:url("image.gif");</strong></li>
+					</ul>
+				</section>
+				<section>
+					<li>You can decide how it repeats <strong>background-repeat</strong>
+						<ul>
+							<li><strong>repeat</strong></li>
+							<li><strong>repeat-x</strong></li>
+							<li><strong>repeat-y</strong></li>
+							<li><strong>no-repeat</strong></li>
+						</ul>
+					</li>
+				</section>
+				<section>
+					<li>Decide whether the image scrolls or is fixed by settting <strong>background-position</strong> to <strong>fixed</strong> or <strong>scroll</strong></li>
+					<li>You can set the <strong>background-position</strong> with a pair of values representing the horizontal and vertical positions</li>
+					<li>Ex: <strong>background:url('images/foo.jpg') no-repeat 5px 5px;</strong></li>
+				</section>
+				<section>
+					<h2>What are Sprites?</h2>
+					<ul>
+						<li>The best way to set an image rollover is using a <em>sprite</em>, which is a single image containing the various link, hover and active states</li>
+						<li><a href="http://mlouttit.com/cuny/excercise/css_day_2_sprites.html" target="_blank">Here's an example</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Set a background image on your page or an element on your page.</p>
+				</section>
+			</section>
+			<section>
+				<h2>FTP</h2>
+				<p>Stands for <strong>File Transfer Protocol</strong> and is how we transfer files from and in between your local computer network and a server. Let's connect!</p>
+				<ul>
+					<li><strong>Protocol:</strong> FTP</li>
+					<li><strong>Server:</strong> digitalstoragespace.com</li>
+					<li><strong>Username:</strong> 2013b@digitalstoragespace.com</li>
+					<li><strong>Password:</strong> *********</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Assignments</h2>
+				<ul>
+					<li>Read Chapters 13-15 of HTML&CSS</li>
+					<li>First, create a menu on your page using list styles, and make it fixed position on your page. Try to position the rest of your content so the menu does not overlap with any other content.</li>
+					<li>Second, create a sprite with different rollover states either for your navigation, share tools or another promo somewhere on your page. <a href="http://www.w3schools.com/css/css_image_sprites.asp">More on Sprites here</a>.</li>
+					<li>Prepare questions for site workshop next class.</li>
+				</ul>
+			</section>
+			<section>
+				<h1>Have a great week!</h1>
+			</section>
+		</div>
+	</div>
+
+
+<script src="../js/reveal/lib/js/head.min.js"></script>
+<script src="../js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: '../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: '../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: '../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: '../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="../js/lessonHeader.js"></script>
+</body>
+</html>

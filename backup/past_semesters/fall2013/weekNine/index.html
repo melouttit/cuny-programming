@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week Nine</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="../js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="../js/reveal/css/theme/sky.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	.code{
+		margin-bottom:10px;
+	}
+	.reveal .slides{
+		top:40% !important;
+	}
+	#backTo{
+		padding:15px;
+		clear:both;
+	}
+	#backTo p{
+		margin:0;
+		font-family: "Open Sans", sans-serif;
+		color:#333;
+	}
+	#backTo p a{
+		color:#3b759e;
+		text-decoration:none;
+		padding:1px 5px;
+	}
+	#backTo p a:hover{
+		color: #74a7cb;
+  		text-shadow: none;
+  		border: none;
+	}
+	#backTo p a.current{
+		color: white;
+		background: #134674;
+		text-shadow: none;
+	}
+	#weeklySong{
+		margin-top:25px;
+	}
+	p{ text-align:left!important;}
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 8;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 9 | Oct. 30, 2013</h2>
+				<h4>AJAX It!</h4>
+			</section>
+			<section>
+				<h2>Review</h2>
+				<ul>
+					<li>Homework Review</li>
+				</ul>
+			</section>
+			<section>
+				<h2>FTP</h2>
+				<p>Make sure you can connect to the CUNY server or your personal space</p>
+			</section>
+			<section>
+				<section>
+					<h2>What is AJAX?</h2>
+					<ul>
+						<li>Stands for <strong>Asynchronous Javascript And XML</strong></li>
+						<li>The process allows you to exchange data with a server without having the user refresh the page</li>
+						<li>It is a combination of technologies allowing multiple things to happen at once</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>XML</h2>
+				</section>
+				<section>
+					<ul>
+						<li>Stands for eXtensible Markup Language</li>
+						<li>Data formatted in a way that it can be shared across an array of development tools</li>
+						<li>Like HTML, it is tag-based, and easy to use</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Example</h2>
+					<p><code>&nbsp;&nbsp;&lt;books&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;book&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Lullaby&lt;/title&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;author&gt;Chuck Palahniuk&lt;/author&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;/book&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;book&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;House of Leaves&lt;/title&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;author&gt;Mark Danielewski&lt;/author&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;/book&gt;<br />
+								&nbsp;&nbsp;&lt;/books&gt;
+							</code></p>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Open a new file, and write your own XML listing your three favorite books or magazines. Save your file as <em>filename</em>.xml</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>JSON</h2>
+				</section>
+				<section>
+					<ul>
+						<li>Stands for JavaScript Object Notation</li>
+						<li>Like XML, formatted for use across tools and environments</li>
+						<li>Works best with Javascript, which is why it has become a preferred data structure</li>
+					</ul>
+				</section>
+				<section>
+					<h2>JSON Example</h2>
+					<p><code>
+					{<br />
+					&nbsp;&nbsp;"books":[<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title":"Lullaby",<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"author":"Chuck Palahnuik"<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;},<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title":"House of Leaves",<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"author":"Mark Danielewski"<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+					&nbsp;&nbsp;]<br />
+					}
+					</code></p>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Open a new file and write your own JSON using the same three favorite books or magazines. Save your file as <em>filename</em>.json</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Grabbing Data</h2>
+					<p>There are multiple jQuery methods you can use to grab data from a server, including:</p>
+					<ul>
+						<code style="position: relative;left: -315px;">
+							<li>$.ajax</li>
+							<li>$.get</li>
+							<li>$.getJSON</li>
+							<li>$.load</li>
+						</code>
+					</ul>
+				</section>
+				<section>
+					<h2>Example: Grabbing JSON</h2>
+					<p><code style="text-align:left;">$.ajax({<br />
+							  &nbsp;&nbsp;&nbsp;dataType: "json",<br />
+							  &nbsp;&nbsp;&nbsp;url: url,<br />
+							  &nbsp;&nbsp;&nbsp;data: data,<br />
+							  &nbsp;&nbsp;&nbsp;success: success<br />
+						   });
+					</code></p>
+				</section>
+				<section>
+					<h2>JSON Shorthand</h2>
+					<p><code style="text-align:left;">$.getJSON("http://dataurl.com/json.js",<br />function(data){ });
+					</code></p>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<ul>
+						<li>Copy the directory <em>myJsonTest</em> from the class Dropbox and upload to your folder on the digitalstoragespace server.</li>
+						<li>Grab this test <a href="http://digitalstoragespace.com/13/javascript_louttit/testJSON.js" target="_blank">set of data about presidents</a> using <code>$.getJSON</code></li>
+						<li>Log your data so you can see the result in your console</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2>jQuery Plugins</h2>
+				<ul>
+					<li>A common set of jQuery functions that can be added to your site for quick functionality</li>
+					<li>Anyone can write a plugin and release it for widespread use. Most will include documentation on how to implement and what custimzation is available to you</li>
+					<li><a href="http://plugins.jquery.com/">The jQuery plugin registry is a good starting point for seeing what is available.</li>
+			</section>
+			<section>
+				<h2>Assignment</h2>
+				<ul>
+					<li>Read chapter 8 in <a href="http://www.headfirstlabs.com/books/hfjquery/">Head First jQuery</a></li>
+					<li>Use the site we set up from <em>myJsonTest</em> that is pulling in our presidents data. Loop through the objects using <code>$.each</code> or a <code>for</code> loop, and <code>append</code> them to the page - <strong>Upload to the FTP and send me the link</strong></li>
+					<li>Search through the <a href="http://plugins.jquery.com/">jQuery plugin registry</a> or use Google to find a plugin you'd like to learn how to implement. <a href="https://docs.google.com/forms/d/1bJJFuDGcQ-lrPwqYlEfrf7f0kdh5yOl8ymbPDSLNB5U/viewform">Fill out this form</a> specifying which plugin you want to learn about. The more specific of an idea you have for its use, the better!</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+
+<script src="../js/reveal/lib/js/head.min.js"></script>
+<script src="../js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: '../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: '../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: '../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: '../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="../js/lessonHeader.js"></script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week One</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="../js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="../js/reveal/css/theme/beige.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	#backTo{ 
+		margin:0 20px; 
+		font-family: sans-serif;
+		font-size: 13px;
+	}
+	#backTo p a{ 
+		color: #333; 
+		text-decoration:none;
+		padding:3px 5px;
+	}
+	#backTo p a:hover,
+	#backTo p a.current{
+		background:#333;
+		color:#fff;
+	}
+	.code{ color:#000;font-family: monospace!important; }
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 1;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 1 | Jan. 27, 2014</h2>
+				<h4>Introduction, Tools, Survey, What is a Website?</h4>
+			</section>
+			<section>
+				<section>
+					<h2>Syllabus Review</h2>
+				</section>
+				<section>
+					<h2>How This Class Works</h2>
+					<ul>
+						<li>Weekly lessons will be on the <a href="http://mlouttit.com/cuny">class site</a>, along with links to other resources - some of which we will cover in class, others are there for your own exploration.</li>
+						<li>Each class we will review assignments from previous week, followed by a lecture on a new concept and a workshop on that lesson.</li>
+						<li>Assignments are <strong>due by midnight</strong> the day before class (Sunday). Most assignments will be turned in via <a href="https://www.dropbox.com/sh/ic2bawljgzqyu4n/aKOttsL4pe">the class Dropbox</a>.</li>
+						<li>Some chapters will be assigned for reading, along with other online resources.</li>
+					</ul>
+				</section>
+				<section>
+				<h2>Class Objectives</h2>
+					<ul>
+						<li>Write introductory-to-intermediate HTML from scratch to build web pages and sites.</li>
+						<li>Write introductory-to-intermediate CSS to precisely control and manipulate HTML for Web page layout.</li>
+						<li>Ability to follow a design workflow</li>
+						<li>Knowledge of the basic structure and infrastructure of a website.</li>
+						<li>Understand the empowering role of design and programming in journalism.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Always Be Learning</h2>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Why learn to code?</h2>
+					<ul>
+						<li>Become a better problem solver</li>
+						<li>To gain an understanding for how your work is delivered</li>
+						<li>To be able to communicate with technology professionals in the workplace</li>
+						<li>Brainstorm new ideas for how to tell a story</li>
+						<li>It'll help you get a job</li>
+					</ul>
+				</section>
+				<section>
+					<iframe width="853" height="480" src="//www.youtube.com/embed/dU1xS07N-FA" frameborder="0" allowfullscreen></iframe>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Introductions</h2>
+				</section>
+				<section>
+					<h2>Skills Survey</h2>
+					<p><a href="../skills">Click here to take the survey</a></p>
+					<p>*There are no right or wrong answers, this is to learn more about where you currently are skills-wise so I can better adjust the course.</p>
+				</section>
+				<section>
+					<h2>Student Introductions</h2>
+					<ul>
+						<li>Where are you from?</li>
+						<li>Why are you at CUNY?</li>
+						<li>Why did you take this class?</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Getting Started</h2>
+				</section>
+				<section>	
+					<h2>Necessary Programs</h2>
+					<ul>
+						<li>Browsers: <a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/new/?utm_expid=65789850-8&utm_referrer=https%3A%2F%2Fwww.google.com%2F">Firefox</a></li>
+						<li>Text Editors: <a href="http://www.barebones.com/products/textwrangler/download.html">Textwrangler</a>, <a href="http://www.sublimetext.com/">Sublime</a>*</li>
+						<li>Class Docs & Turning in Assignments: <a href="http://db.tt/Jn9caQe">Dropbox</a></li>
+						<li>FTP Program: <a href="http://fetchsoftworks.com/">Fetch</a>, <a href="http://cyberduck.ch/">Cyberduck</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Connect to FTP</h2>
+					<ul>
+						<li><strong>Protocol:</strong> FTP</li>
+						<li><strong>Server:</strong> digitalstoragespace.com</li>
+						<li><strong>Username:</strong> 2013c@digitalstoragespace.com</li>
+						<li><strong>Password:</strong> *********</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Start Your Website</h2>
+					<p>Create a folder on your laptop somewhere easily accessible. You will create all your files in this folder, so it's important to know where you save it and to keep it organzied.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Website Structure</h2>
+					<ul>
+						<li>Websites are simply an organized set of files.</li>
+						<li>The files are stored on servers in <strong>directories</strong> (folders).</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Directory Structure</h2>
+					<ul>
+						<li>The <strong>root</strong> folder is the most top-level folder with you content in directories or files within the root.</li>
+						<li>The main homepage of a site or section is always <span class="code">index.html</span>, which is returned when no other file type is specified in the URL</li>
+						<li>For example: <span class="code">http://mysite.com</span> will return the same thing as <span class="code">http://mysite.com/index.html</code></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Example</h2>
+					<img src="http://mlouttit.com/cuny/images/folder-structure.gif" width="300"/>
+				</section>
+				<section>
+					<h2>Disect Directory Structure</h2>
+					<ul>
+						<li>Each image and file on the page has a URL under that site's domain</li>
+						<li>The URL path points to the particular file or directory you want retrieve</li>
+						<li>Find the following in the example site:
+							<ul>
+								<li><span class="code">http://mysite.com/writing</span> links to the Writing page</li>
+								<li><span class="code">http://mysite.com/about.html</span> links to the About page</li>
+								<li><span class="code">http://mysite.com/images/artoo.jpg</span> is the path to the artoo.jpg image</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Create Your Homepage</h2>
+					<p>In your site's root directory, create a file called <span class="code">index.html</span>. This will be your site's homepage.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Local v. Remote</h2>
+				</section>
+				<section>
+					<h2>Your Local Website</h2>
+					<p>This is the directory for your site that is stored on your machine. You can access it by viewing your index file in a web browser, but no one else can see it.</p>
+				</section>
+				<section>
+					<h2>Your Live Website</h2>
+					<p>When you upload your site files to a server via FTP, they are then considered "live" and can be accessed by anyone who has the URL.</p>
+				</section>
+				<section>
+					<h2>Tip</h2>
+					<p>It is best to work on your site locally and then upload changes, as opposed to working live (though we will be doing some of that).</p>
+				</section>
+				<section>
+					<h2>View Your Website</h2>
+					<p>Type a line of text in your <span class="code">index.html</span> file, save it, and open in a browser.</p>
+					<p>In your FTP program create a folder using your last name and upload your site. The path for your site is <span class="code">http://digitalstoragespace.com/13/</span> plus <span class="code">YOURLASTNAME/YOURFOLDERNAME</span> to see your site.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>HTML & Page Setup</h2>
+				</section>
+				<section>
+					<h2>What is HTML?</h2>
+					<ul>
+						<li>Stands for <strong>Hyper-Text Markup Language</strong></li>
+						<li>It is a language for 'writing' or 'describing' web pages. Those pages are then 'read' by your browser.</li>
+						<li>HTML is a semantic language - some tags have default styles but most do not</li>
+						<li><strong>Valid HTML:</strong> HTML with the proper syntax. Most modern browers will interpret invalid HTML correctly, but it is <em>not</em> a good idea to leave it that way - your page might not look correct in other browers, older browers, on mobile or in newer versions of browsers. Think of it as using bad grammer.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Standard Page Setup</h2>
+					<pre><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span><br /><span class="tag">&lt;<span class="title">html</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">head</span>&gt;</span><br /><span class="tag">&lt;<span class="title">/head</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">body</span>&gt;</span><br /><span class="tag">&lt;/<span class="title">body</span>&gt;</span><br /><br /><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>	
+				</section>
+				<section>
+					<h2>DOCTYPE</h2>
+					<ul>
+						<li>Declared at the beginning of your page</li>
+						<li>Helps browser know how to read your page so it displays correctly</li>
+						<li>Within the doctype you will declare that the page is in HTML and which version you are using</li>
+						<li>There have been a handful of versions of HTML, we'll be sticking with HTML5: <span class="code">&lt;!DOCTYPE html&gt;</span></li>
+					</ul>	
+				</section>
+				<section>
+					<h2>Tags</h2>
+					<ul>
+						<li>The heart of any language markup, even if the syntax is different</li>
+						<li>Each tag is a keyword surrounded by angle brackets: <span class="code">&lt;p&gt;</span></li>
+						<li>Most tags come in pairs and need to be closed. Closing tags look like this: <span class="code">&lt;/p&gt;</span></li>
+						<li>The basic setup of any HTML content: <pre><code><span class="tag">&lt;<span class="title">tagname</span>&gt;</span>content<span class="tag">&lt;/<span class="title">tagname</span>&gt;</span></code></pre></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Add to your Homepage</h2>
+					<ul>
+						<li><span class="code">DOCTYPE, html, head</span> and <span class="code">body</span> tags</li>
+						<li>Page title to your <span class="code">&lt;head&gt;</span></li>
+						<li>Page headline using an <span class="code">h1</span></li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Site Maps</h2>
+					<p>A "family tree" style chart that outlines the pages and content on your website and how they relate to each other.</p>
+				</section>
+				<section>
+					<h2><a target="_blank" href="https://www.google.com/search?q=site+maps&tbm=isch&tbo=u&source=univ&sa=X&ei=IwkeUqeUIu62sASAuID4Bw&ved=0CFQQsAQ&biw=1824&bih=1079">Examples</a></h2>
+					<p>Each entry is a directory or page on your site</p>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Create a site map for <a target="_blank" href="https://www.atavist.com/">the Atavist</a></p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Assignments</h2>
+				</section>
+				<section>
+					<h2>Readings</h2>
+					<ul>
+						<li>Read the Intro and Chapter 1 of HTML&CSS: (<a href="http://htmlandcssbook.com/sample-chapter/">Download Sample First Chapter</a>)</li>
+						<li>Read <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.sensible.com%2Fchapter.html&sa=D&sntz=1&usg=AFQjCNHDaiCjjrOI7HS4upTo91Nl3XDdTg">Chapter 2 (free online)</a> excerpted from "<a href="http://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758">Don't Make Me Think</a>"</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Website Proposal & Site Map</h2>
+					<p>Brainstorm the website you want to begin creating for this class. Create a site proposal based on the document in Dropbox. Your proposal should be detailed, needs to answer the questions posed and needs to include a site map to show how you will organize your content.</p>
+				</section>
+				<section>
+					<h1>Have a great week!</h1>
+				</section>
+			</section>
+		</div>
+	</div>
+
+
+<script src="../js/reveal/lib/js/head.min.js"></script>
+<script src="../js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: '../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: '../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: '../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: '../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: '../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="../js/lessonHeader.js"></script>
+</body>
+</html>

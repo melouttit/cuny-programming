@@ -1,0 +1,70 @@
+
+	body {background-color: #c0c0c0;
+	}
+	li {list-style: none;
+	}
+
+	#navigation {float:right;
+		position:fixed;
+		right:50px;
+	}
+
+
+	h1 {font-family: arial, Century, sans-serif;
+	}
+
+	h2 {font-family: arial, Century, sans-serif;
+	}
+
+	h3 {font-family: Helvetica, Century, sans-serif;
+		font-weight: lighter;
+	}
+
+	h4 {font-weight:normal;
+		font-family: Helvetica, Century, sans-serif;
+		font-size: 14px;
+	}
+
+	p {font-family: arial, Century, sans-serif;
+		font-size: 14px;
+	}
+
+	li {font-family: arial, Century, sans-serif;
+		font-size: 16px;
+		margin: 2px;
+		font-color: black;
+	}
+
+/* SPECIFIC MARGINS FOR NAVIGATION LINKS LI DOWN BELOW */
+
+#links:hover {font-weight: bold;
+}
+
+#links:active {color: pink;
+}
+	.column {float:left;
+		background-color:#708090;
+		width:300px;
+		margin: 10px;
+	}
+
+#navigation li {margin: 6px;
+}
+
+/* DIFFERENT MARGIN THAN REGULAR LI */
+
+#navigation li a {text-decoration: none;
+	color: black;
+	}
+
+	#navigation li a:visited {text-decoration: none;
+	}
+
+	#navigation li a:active {text-decoration: none; 
+	}
+
+	#navigation li a:hover {text-decoration: none;
+		font-weight: bold;
+	}
+
+

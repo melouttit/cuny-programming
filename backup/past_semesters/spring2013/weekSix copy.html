@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week Six</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="js/reveal/css/theme/sky.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	.code{
+		margin-bottom:10px;
+	}
+	.reveal .slides{
+		top:40% !important;
+	}
+	.reveal .slides p{
+		text-align:left;
+	}
+	#backTo{
+		padding:15px;
+		clear:both;
+	}
+	#backTo p{
+		margin:0;
+		font-family: "Open Sans", sans-serif;
+		color:#333;
+	}
+	#backTo p a{
+		color:#3b759e;
+		text-decoration:none;
+		padding:1px 5px;
+	}
+	#backTo p a:hover{
+		color: #74a7cb;
+  		text-shadow: none;
+  		border: none;
+	}
+	#backTo p a.current{
+		color: white;
+		background: #134674;
+		text-shadow: none;
+	}
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 6;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 6 | March 4, 2013</h2>
+				<h4>Introduction to Javascript and jQuery</h4>
+			</section>
+			<section>
+				<h2>How This Class Works</h2>
+				<ul>
+					<li>Weekly lessons will be on <a href="/cuny">class site</a>, along with, eventually, links to other resources.</li>
+					<li>Each class will focus on small lectures on a new topic or skill, followed by exercises to practice.</li>
+					<li>Assignments are due by midnight the day before class. Most assignments will be turned in via <a href="https://www.dropbox.com/sh/ezx3bcwrcaggkuy/rb6xBCdKkM">the class Dropbox</a>.</li>
+					<li>Some chapters will be assigned for reading, but Google will be your best friend (if it isn't already), as well as other online learning tools.</li>
+					<li><strong>Always be learning</strong>. This is the key to being a good programmer.</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Objectives for Javascript</h2>
+				<ul>
+					<li>Write introductory javascript from scratch to add interactivity to their web pages and sites.</li>
+					<li>Use basic jQuery libraries (plugins).</li>
+					<li>A feel for the capabilities and limitations of programming.</li>
+					<li>Understand the basics of functional programming, which provide the basis for any language.</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Javascript, A History</h2>
+				</section>
+				<section>
+					<h2>An 'Old' Language</h2>
+					<ul>
+						<li>Was created in 1995 by Brendan Eich</li>
+						<li>In 1996-1997 was taken to the Ecma Board to set standards, which could then be implemented by other browsers</li>
+						<li>The base for modern javascript was released in 1999 as ECMAScript 3</li>
+						<li>Originally, Microsoft had no intention of properly implementing JS into IE</li>
+						<li>In the mid-late aughts, while there was turmoil between major players, the open source and developer communities were revolutionizing what could be done with JS</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Present Day</h2>
+					<ul>
+						<li>In 2005, partly in response to a paper released by Jesse James Garret, JS began its renaissance, spearheaded by open source communities</li>
+						<li>Out of this, libraries like jQuery, Prototype, MooTools and more were released</li>
+						<li>The latest rounds of innovation have produced developments like the Nodejs platform, HTML5 APIs, Moustache templates, and more</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2>Javascript's Purpose</h2>
+				<ul>
+					<li>Dynamically add elements to a web page</li>
+					<li>Add hover and click animations and actions</li>
+					<li>Alert users to form actions</li>
+					<li>Add motions and transitions to text and photos</li>
+					<li>Load data from a server only when a user needs it</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Javascript v. jQuery</h2>
+				<ul>
+					<li>Javascript is the language, jQuery is the library</li>
+					<li>jQuery is a toolbox - a set of predefined functions or shortcuts</li>
+					<li>Use the <a href="http://jquery.com/">jQuery website</a> to look up specific uses</li>
+				</ul>
+			</section>
+			<section>
+				<h2>What JS Can Do</h2>
+				<ul>
+					<li><a href="http://travel.nytimes.com/interactive/2012/03/09/travel/evita-buenos-aires.html">Evita's Buenos Aires</a></li>
+					<li><a href="http://www.nytimes.com/interactive/2013/02/12/science/12scibook-unfeathered-bird-zoomer.html">The Naked Bird, Illustrated</a></li>
+					<li><a href="http://www.nytimes.com/interactive/business/global/european-debt-crisis-tracker.html">Tracking Europe's Debt Crisis</a></li>
+					<li><a href="http://www.nytimes.com/interactive/health/vanishing-minds-series.html">The Vanishing Mind</a></li>
+					<li><a href="http://www.nytimes.com/2012/12/18/business/walmart-bribes-teotihuacan.html">How Wal-Mart Got Its Way in Mexico</a></li>
+					<li><a href="http://www.nytimes.com/interactive/2012/11/26/sports/basketball/section15.html">Portraits of Nets Fans</a></li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Adding Javascript to Your Page</h2>
+					<p>The following methods are true whether you are using native javascript, a library like jQuery, plugins, etc.</p>
+				</section>
+				<section>
+					<h2>Internally</h2>
+					<p>You can add the following at any point in your HTML file, however, it is best to add it to the bottom of the page, before your closing <code>&lt;/body&gt;</code> tag</p>
+					<p><code><strong>&lt;script type="text/javascript"&gt;</strong>Your Script Here<strong>&lt;/script&gt;</strong></code></p>
+				</section>
+				<section>
+					<h2>Externally</h2>
+					<p>Almost the same as adding internal script, except you add a source attribute to the <code>&lt;script&gt;</code> tag, and nothing in between</p>
+					<p><code><strong>&lt;script type="text/javascript" src="js/main.js"&gt;&lt;/script&gt;</strong></code></p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Using jQuery</h2>
+					<ul>
+						<li>Since jQuery is a library, we have to download the set of predefined functions</li>
+						<li>Then we include the library on the page like any other script</li>
+						<li>Make sure the script tag that pulls in the jQuery library is on the page <em>before</em> any script to write that uses jQuery</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<ul>
+						<li>Download the file setup for a basic site from <a href="https://www.dropbox.com/home/CUNY%20-%20Programming%20for%20Journalists/Spring%202013">the class Dropbox folder</a>, or use your own set up</li>
+						<li><a href="http://jquery.com/download/">Download jQuery</a> and put it in your js folder on your site</li>
+						<li>Include jQuery on your site</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Javascript Terms</h2>
+				</section>
+				<section>
+					<h2>Values</h2>
+					<p>Javascript recognizes the following value types:</p>
+					<ul>
+						<li><strong>Numbers:</strong> 42, 1025, 3.14</li>
+						<li><strong>Boolean (Logic):</strong> True / False</li>
+						<li><strong>Strings:</strong> "Hello, World!"</li>
+						<li><strong><code>null</code>:</strong> A special keyword denoting a <strong><code>null</code></strong> value</li>
+						<li><strong><code>undefined</code>:</strong> A property that is <strong><code>undefined</code></strong></li>
+				</section>
+				<section>
+					<h2>Variables</h2>
+					<p>Variables are symbolic names for values in your code</p>
+					<ul>
+						<li>Javascript is case-sensitive</li>
+						<li>You can declare variables in two ways:
+							<ul>
+								<li>Using the keyword <code>var</code>. For example <code>var x = 1025;</code> or <code>var x = "Hello, World!";</code></li>
+								<li>Simply declaring. For example <code>x = 1025</code>. This method creates a global variable; however, and in most cases shouldn't be used.</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Declare a variable and view it with <code><strong>console.log();</strong></code></p>
+				</section>
+				<section>
+					<h2>Scope</h2>
+					<ul>
+						<li>When you declare a variable outside of a function it is called a <em>global</em> variable because it is available to all functions in a document</li>
+						<li>When you declar a variable inside a function it is called a <em>local</em> variable because it is only available inside that function</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Object-Oriented Programming</h2>
+					<ul>
+						<li><strong>Objects:</strong> In programming, something that has a value, which can be a variable, function or data structure</li>
+						<li><strong>Class:</strong> In OOP this is an object that is used to created instances of itself</li>
+						<li><strong>Methods:</strong> Behaviors associated with a class that are executed when the program is run</li>
+						<li><a href="http://en.wikipedia.org/wiki/Object-oriented_programming">Extra Reading about OOP</a></li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Syntax</h2>
+				</section>
+				<section>
+					<h2>Commonalities</h2>
+					<ul>
+						<li>Like CSS, most lines need to end with a semicolon</li>
+						<li>Also like HTML and CSS, white space doesn't matter. Use line breaks and tabs to keep your code readable and manageable.</li>
+						<li>Line breaks <em>do</em> matter in some cases - an accidental line break can break up a variable declaration, for example.</li>
+						<li>Use your text editor to help spot syntax errors</li>
+					</ul>
+				</section>
+				<section>
+					<h2>jQuery Specific</h2>
+					<ul>
+						<li>To define a jQuery function, you would write <code>jQuery();</code> and put your elements or functions inside the parentheses</li>
+						<li>In shorthand <code>jQuery();</code> equals <code>$();</code></li>
+				</section>
+				<section>
+					<h2>Selectors:<br /> jQuery vs. CSS</h2>
+					<ul>
+						<li>jQuery selects elements the same way CSS does</li>
+						<li>Remember, selectors can be <strong>tags</strong>, <strong>classes</strong> and <strong>IDs</strong></li>
+						<li><strong>CSS:</strong> &nbsp;<code>h1 { font-weight:bold; }</code></li>
+						<li><strong>jQuery:</strong> &nbsp;<code>$('h1').hide();</code></li>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Use jQuery to alter the CSS on your headline. Use the <a href="http://api.jquery.com/css/">CSS</a> page on the jQuery website for reference. Check your work in your console.</p> 
+				</section>
+			</section>
+			<section>
+				<h2>The Wrapper</h2>
+				<p><strong><code>$(document).ready(function(){
+
+				});</code></strong></p>
+				<p>It's best to wrap any jQuery you write in the ready function. This means that all the code in between the curly brackets will run when the page has loaded.</p>
+			</section>
+			<section>
+				<h2>Native Javascript</h2>
+				<p>Where <code>document</code> comes from</p>
+				<ul>
+					<li><code>document.write</code></li>
+					<li><code>document.createElement</code></li>
+					<li><code>document.appendChild</code></li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Hover & Click</h2>
+				</section>
+				<section>
+					<h2>Hovering</h2>
+					<p>The jQuery <code>hover</code> function allows you to define mouse hover actions, both in and out. When you run <code>$.hover();</code> you need to define both these functions. The first function is on hover, the second function is when the mouse is done hovering.</p>
+					<p>For example:<br /><code>$.hover(function(){ <br />&nbsp;&nbsp;&nbsp;<span style="color:#555">// do something</span><br />},function(){ <br />&nbsp;&nbsp;&nbsp;<span style="color:#555">//undo that action</span> <br />});</code></p>
+				</section>
+				<section>
+					<h2>The Click</h2>
+					<p>The jQuery <code>click</code> function is a very useful tool. When you run <code>$.click(function(){ });</code> it runs the code inside your curly brackets on a click event.</p>
+					<p>For example:<br /><code>$.click(function(){<br />&nbsp;&nbsp;&nbsp;alert("You've Clicked Me!")<br />});</code></p>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p style="text-align:center;">Add hover and click actions to your button.</p>
+				</section>
+			</section>
+			<section>
+				<h2>Assignments</h2>
+				<ul>
+					<li>Read chapters 1-3 in <a href="http://www.amazon.com/Head-First-jQuery-ebook/dp/B0064U8F16/ref=sr_1_3?ie=UTF8&qid=1361752840&sr=8-3&keywords=head+first+jquery">Head First jQuery</a></li>
+					<li>Write three different functions that will run when you click the button on your page:<ol><li>Changes the color of the test-box div</li><li>Hides the box using either <code>slide</code> or <code>fade</code></li><li>Uses <code>animate</code> to move the box <code>100px</code> to the left</li></ol></li>
+					<li>Paste the three functions into a file named yourname.js and upload to the <a href="https://www.dropbox.com/home/CUNY%20-%20Programming%20for%20Journalists/Spring%202013/Assignments">Week 6 folder</a></li>
+					<li><strong>HINT</strong> Make use of the <a href="http://api.jquery.com/">jQuery documentation</a></li>
+					<li>Recommended Coding Music:</li>
+				</ul>
+				<iframe width="100%" height="166" style="margin-top:15px;" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F11670669"></iframe>
+			</section>
+			<section>
+				<h2>Why Code?</h2>
+				<iframe width="900" height="506" src="http://www.youtube.com/embed/dU1xS07N-FA" frameborder="0" allowfullscreen></iframe>
+			</section>
+		</div>
+	</div>
+
+
+<script src="js/reveal/lib/js/head.min.js"></script>
+<script src="js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="js/lessonHeader.js"></script>
+</body>
+</html>

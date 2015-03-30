@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week Nine</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="js/reveal/css/theme/sky.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	.code{
+		margin-bottom:10px;
+	}
+	.reveal .slides{
+		top:40% !important;
+	}
+	.reveal .slides p{
+		text-align:left;
+	}
+	#backTo{
+		padding:15px;
+		clear:both;
+	}
+	#backTo p{
+		margin:0;
+		font-family: "Open Sans", sans-serif;
+		color:#333;
+	}
+	#backTo p a{
+		color:#3b759e;
+		text-decoration:none;
+		padding:1px 5px;
+	}
+	#backTo p a:hover{
+		color: #74a7cb;
+  		text-shadow: none;
+  		border: none;
+	}
+	#backTo p a.current{
+		color: white;
+		background: #134674;
+		text-shadow: none;
+	}
+	span.red{
+		color:red;
+		font-style:italic;
+	}
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 10;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 10 | April 15, 2013</h2>
+				<h4>Fun With Plugins</h4>
+			</section>
+			<section>
+				<h2>Review</h2>
+				<ul>
+					<li><a href="reviews/js_review_4.html" target="_blank">JS Review #4</a></li>
+					<li>Homework review: Google Docs errors & Embedding a YouTube video</a></li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Note on Strings</h2>
+					<p>In Javascript, strings can contain anything, including quote marks, which are also used to designated the beginning and end of a string. This can cause problems...</p>
+				</section>
+				<section>
+					<h2>The Problem</h2>
+					<p><code>var str = "Her favorite book is "The Thornbirds" and she was named after the main character.";</code></p>
+					<p style="margin-top:20px;">In this example, the string thinks you are ending after "is" and starting a new string at "and," which will make your variable undefined.</p>
+				</section>
+				<section>
+					<h2>The Solution</h2>
+					<p>There are several ways to get around this error</p>
+				</section>
+				<section>
+					<h2>Use Single Quotes</h2>
+					<p><code>var str = 'Her favorite book is "The Thornbirds" and she was named after the main character.';</code></p>
+				</section>
+				<section>
+					<h2>Use Curly Quotes</h2>
+					<p><code>var str = "Her favorite book is “The Thornbirds” and she was named after the main character.";</code></p>
+				</section>
+				<section>
+					<h2>Use ASCII Codes</h2>
+					<p><code>var str = 'Her favorite book is &#8220;The Thornbirds&#8221; and she was named after the main character.';</code></p>
+					<ul>
+						<li>ASCII characters start with &# and end with ;</li>
+						<li>Opening quote: &# + 8220 + ;</li>
+						<li>Closing quote: &# + 8221 + ;</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Escape the Quotes</h2>
+					<p><code>var str = 'Her favorite book is \"The Thornbirds\" and she was named after the main character.';</code></p>
+				</section>
+			</section>
+			<section>
+				<h2>Evaluation</h2>
+				<p style="text-align:center;">Class Code: <strong>28433</strong></p>
+			</section>
+			<section>
+				<h2>What is a plugin?</h2>
+				<ul>
+					<li>A reusable script that programmers can "plug in" to their page to perform certain functions</li>
+					<li>The point is to reduce the amount of original code one has to write</li>
+					<li>They are especially useful for common features like photo galleries and countdowns</li>
+					<li>When using jQuery, make sure to search for plugins written using the jQuery framework</li>
+					<li>You can use the <a href="http://plugins.jquery.com/">jQuery plugin registry</a> to find plugins for your project (or just search Google)</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Integrating a plugin</h2>
+					<p>While each plugin usually comes with specific instructions, all (jQuery) plugins begin with the following steps:</p>
+					<ul>
+						<li>Make sure you have jQuery included on your page</li>
+						<li>Download the plugin</li>
+						<li>Move the plugin files to a directory on your site</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Exercise</h2>
+					<p>Copy the myPluginSite directory from Dropbox onto your laptop, which contains the files <a href="http://cssglobe.com/easy-slider-17-numeric-navigation-jquery-slider/">from this plugin</a>. Set up a slider on your page using instructions from the demo.</p>
+				</section>
+			</section>
+			<section>
+				<h2>Extra Credit</h2>
+				<ul>
+					<li>Create a slider using <a href="http://tympanus.net/codrops/2012/12/31/how-to-create-a-simple-multi-item-slider/">this mult-item slider plugin</a> (or a plugin of your choice). Think about design, style, etc. Make sure to upload all your files to the Dropbox Week 10 folder or to your FTP folder.</li>
+					<li>One Final Song:</li>
+				</ul>
+				<iframe style="margin-top:15px;" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F81926995"></iframe>
+			</section>
+		</div>
+	</div>
+
+
+<script src="js/reveal/lib/js/head.min.js"></script>
+<script src="js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="js/lessonHeader.js"></script>
+</body>
+</html>

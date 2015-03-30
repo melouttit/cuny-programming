@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Emilia David's Portfolio</title>
+
+	<meta name="description" content="This is the portfolio site for Emilia David, a multimedia reporter currently with the NYCity News Service, previously with BusinessWorld"/>
+	<meta name="author" content="Emilia David" />
+
+
+	<!--REMEMBER TO MOVE STYLES TO CSS STYLE SHEET-->
+<link rel="stylesheet" href="CSS/style.css"/><script type="text/javascript" src="portfolio/js/jquery-1.11.0.min.js">
+
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+
+	<div id="logo">
+		<img src="images/logo.png" width="237" height="72">
+	</div>
+
+<div id="navigation" class="sections">
+<ul>
+	<li>Home</li>
+	<li><a href="About/index.html">About Me</a></li>
+	<li><a href="Published/index.html">Published</a></li>
+	<li><a href="Unpublished/index.html">Unpublished</a></li>
+	<li><a href="Resume/index.html">Resume</a></li>
+	<li><a href="Blog/index.html">Blog</a></li>
+</ul>
+</div>
+
+<h1>Emilia David, Multimedia Reporter</h1>
+
+
+
+<div id="firstimage" class="image">
+		<img src="images/timessquare.JPG" height="300" width="400" id="floatbox">
+		<img src="images/scarves.jpg" height="300" width="400" id="floatbox">
+		
+</div>
+
+<div class="box" id="recent stories">
+
+<h2>Recent Stories</h2>
+
+<p> Here are the latest stories I have done</p>
+</div>
+
+<div id="left" class="column">
+<div id="recent" class="sections">
+	<h3>Posts</h3>
+</div>
+
+<div id="comments" class="sections">
+	<h3>Comments</h3>
+</div>
+
+<div id="tags" class="sections">
+	<h3>Tags</h3>
+</div>
+
+<div id="archive" class="sections">
+	<h3>Archives</h3>
+</div>
+</div>
+<!---LINK BOX LEFT PLACE WIDTH-->
+
+<div id="center" class="column">
+
+<div id="categories" class="sections">
+	<h3>Categories</h3>
+</div>
+
+<div id="subscribe" class="form">
+	<h4>Leave your email to subscribe to this website and get updates</h4>
+	<form>
+<input type="text" name="email" />
+<input id="button" type="submit" name="subscribe"
+value="Subscribe" />
+</form>
+</div>
+
+</div>
+
+<div id="right" class="column">
+
+<div id="links" class="sites">
+	<h3>Links</h3>
+	<ul>
+		<li><a href="http://www.bworldonline.com" target="_blank">BusinessWorld</a></li>
+		<li><a href="http://www.nycitynewsservice.com" target="_blank">NYCity News Servie</a></li>
+		<li><a href="http://www.interaksyon.com" target="_blank">Interaksyon</a></li>
+		<li><a href="http://www.linkedin.com/pub/emilia-david/81/9b1/133/">My LinkedIn</a></li>
+	</ul>
+</div>
+
+</div>
+
+<script type="text/javascript">
+
+var logo = document.getElementById('logo')
+
+var logoalert = function (name){alert("Welcome " + name + " to my portfolio site");
+}
+
+
+logo.onclick = function(){logoalert ('visitor');
+}
+
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$.ajax({
+		dataType:'json',
+		url:'http://mlouttit.com/cuny/weekNine/David/js/stories.js',
+		success:function(data){
+			console.log(data);
+			$.each(data.portfolio,function(index,item){
+				console.log(item);
+				var portfolioItem='<h2>'+item.title+'</h2>';
+		$('#recent stories').append(item.title);
+			});
+
+		},
+
+		error:function(){
+			console.log("ERROR");
+		}
+	});
+
+});
+</script>
+
+
+
+</body>
+
+</html>

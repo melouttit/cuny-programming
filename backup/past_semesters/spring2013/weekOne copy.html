@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Programming for Journalists - Week One</title>
+
+	<meta name="author" content="Meghan Louttit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<link rel="stylesheet" href="js/reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="js/reveal/css/theme/sky.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="js/reveal/lib/css/zenburn.css">
+
+	<style type="text/css">
+	.code{
+		margin-bottom:10px;
+	}
+	.reveal .slides{
+		top:40% !important;
+	}
+	#backTo{
+		padding:15px;
+		clear:both;
+	}
+	#backTo p{
+		margin:0;
+		font-family: "Open Sans", sans-serif;
+		color:#333;
+	}
+	#backTo p a{
+		color:#3b759e;
+		text-decoration:none;
+		padding:1px 5px;
+	}
+	#backTo p a:hover{
+		color: #74a7cb;
+  		text-shadow: none;
+  		border: none;
+	}
+	#backTo p a.current{
+		color: white;
+		background: #134674;
+		text-shadow: none;
+	}
+	</style>
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+	<!--page for banner-->
+	<script type="text/javascript">
+		currentPage = 1;
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="js/reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="backTo"></div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Week 1 | January 28, 2013</h2>
+				<h4>Introduction to the class, Tools, Skills Survey, What is HTML?</h4>
+			</section>
+			<section>
+				<h2>How This Class Works</h2>
+				<ul>
+					<li>Weekly lessons will be on <a href="/cuny">class site</a>, along with, eventually, links to other resources.</li>
+					<li>Each class we will review assignments from previous week, followed by a lecture on a new concept.</li>
+					<li>Assignments are due by midnight the day before class. Most assignments will be turned in via <a href="https://www.dropbox.com/sh/ezx3bcwrcaggkuy/rb6xBCdKkM">the class Dropbox</a>.</li>
+					<li>Some chapters will be assigned for reading, but Google will be your best friend (if it isn't already), as well as other online learning tools that will introduced in class.</li>
+					<li>Always be learning. This is the key to being a good programmer.</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Introductions</h2>
+					<ul>
+						<li> Who am I?</li>
+						<li> Who are you?</li>
+						<li> What do you want to get out of this class?</li>
+						<li> <a href="skills">Skills Survey</a></li>
+					</ul>
+				</section>
+				<section class="code" id="html">
+					<h4>Which line is valid HTML?</h4>
+					<ul>
+					<li><strong>A.</strong> <pre><code class="html"><span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">strong></span></span>Hello, World!</span><span class="tag">&lt;<span class="title">/p</span>&gt;</span><span class="tag">&lt;<span class="title">/strong></span></code></pre></li>
+					<li><strong>B.</strong> <pre><code class="html"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">id</span>=<span class="title">"myName'</span>&gt;</span><span class="tag">&lt;<span class="title">strong></span></span>Hello, World!</span><span class="tag">&lt;<span class="title">/strong</span>&gt;</span><span class="tag">&lt;<span class="title">/p></span></code></pre></li>
+					<li><strong>C.</strong> <pre><code><span class="tag">&lt;<span class="title">h1</span> <span class="attribute">class</span>=<span class="title">'headline'</span>&gt;</span><span class="tag">&lt;<span class="title">strong></span></span>Hello, World!</span><span class="tag">&lt;<span class="title">/strong</span>&gt;</span><span class="tag">&lt;<span class="title">/p></span></code></pre></li>
+					<li><strong>D.</strong> <pre><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="title">"box"</span>&gt;</span><span class="tag">&lt;<span class="title">p></span></span>Hello, World!</span><span class="tag">&lt;<span class="title">/p</span>&gt;</span></code></pre></li>
+				</section>
+				<section class="code" id="css">
+					<h4>The following CSS does what?</h4>
+					<pre><code><span class="tag">h1</span><span class="class">.headline</span><span class="rules">{ <br />&nbsp;&nbsp;&nbsp;<span class="rule"><span class="attribute">color</span>:<span class="value">#000000;</span></span><br />&nbsp;&nbsp;&nbsp;<span class="rule"><span class="attribute">margin</span>:<span class="value">0 0 10px 0;</span></span> <br /><span class="rule">}</span></code></pre>
+					<ul>
+						<li><strong>A.</strong> Changes color of all header text with an id of <em>headline</em> to black, and gives it a 10px margin </li>
+						<li><strong>B.</strong> Changes color of all header text with a class of <em>headline</em> to black and gives it a bottom margin of 10px</li>
+						<li><strong>C.</strong> Changes color of all header text to white and gives it a right margin of 10px</li>
+						<li><strong>D.</strong> Changes all elements with class <em>headline</em> to the color white and gives it a bottom margin of 10px</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2>Objectives for HTML/CSS</h2>
+					<ul>
+						<li>Write introductory-to-intermediate HTML from scratch to build web pages and sites.</li>
+						<li>Write introductory-to-intermediate CSS to precisely control and manipulate HTML for Web page layout.</li>
+						<li>Ability to follow a design workflow</li>
+						<li>Knowledge of the basic structure and infrastructure of the internet.</li>
+						<li>Understand the empowering role of design and programming in journalism.</li>
+					</ul>
+			</section>
+			<section>
+				<h2>Objectives for Javascript</h2>
+				<ul>
+					<li>Write introductory javascript from scratch to add interactivity to their web pages and sites.</li>
+					<li>Use basic jQuery libraries (plugins).</li>
+					<li>A feel for the capabilities and limitations of programming.</li>
+					<li>Understand the basics of functional programming: loops, control structures, data types, and so on, which provide a foundation for any language.</li>
+				</ul>
+			</section>
+			<section>
+				<h2>TO Download</h2>
+				<ul>
+					<li>Browsers: <a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/new/?utm_expid=65789850-8&utm_referrer=https%3A%2F%2Fwww.google.com%2F">Firefox</a></li>
+					<li>Text Editors: <a href="http://www.barebones.com/products/textwrangler/download.html">Textwrangler</a>, <a href="http://www.sublimetext.com/">Sublime</a>*</li>
+					<li>Class Docs & Turning in Assignments: <a href="https://www.dropbox.com/">Dropbox</a></li>
+					<li>FTP Program: <a href="http://fetchsoftworks.com/">Fetch</a>, <a href="http://cyberduck.ch/">Cyberduck</a></li>
+				</ul>
+			</section>
+			<section>
+				<h2>What is HTML?</h2>
+				<ul>
+					<li>Stands for <strong>Hyper-Text Markup Language</strong></li>
+					<li>It is a language for 'writing' or 'describing' webpages. Those pages are then 'read' by your browser.</li>
+					<li><strong>Valid HTML:</strong> HTML with the proper syntax. Most browers will interpret some invalid HTML correctly, but it is still <em>not</em> a good idea to leave it that way - your page might not look correct in other browers, older browers, or in newer versions of browsers. Think of it as using bad grammer.</li>
+					<li>Let's set up a page!</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Standard Page Setup</h2>
+				<pre><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">/head</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre>	
+			</section>
+			<section>
+				<h2>DOCTYPE</h2>
+				<ul>
+					<li>Declared at the beginning of your page</li>
+					<li>Helps browser know how to read your page so it displays correctly</li>
+					<li>Within the doctype you will declare that the page is in HTML and which version you are using</li>
+					<li>There have been a handful of versions of HTML, we'll be sticking with HTML5: <pre><code><span class="tag">&lt;<span class="title">!DOCTYPE html</span>&gt;</span></code></pre></li>
+				</ul>	
+			</section>
+			<section>
+				<h2>Tags</h2>
+				<ul>
+					<li>The heart of any language markup, even if the syntax is different</li>
+					<li>Each tag is a keyword surrounded by angle brackets: <pre><code>&lt;p&gt;</code></pre></li>
+					<li>Most tags come in pairs and need to be closed. Closing tags look like this: <pre><code>&lt;/p&gt;</code></pre></li>
+					<li>The basic setup of any HTML content: <pre><code><span class="tag">&lt;<span class="title">tagname</span>&gt;</span>content<span class="tag">&lt;/<span class="title">tagname</span>&gt;</span></code></pre></li>
+				</ul>
+			</section>
+			<section>
+				<h2>Attributes</h2>
+				<ul>
+					<li>HTML tags can take on attributes, which describes the content inside that tag.</li>
+					<li>Attributes are written as key - value pairs: <pre><code><span class="tag">&lt;<span class="title">p</span> <span class="attribute">align</span>=<span class="value">"center"</span>&gt;</span>Paragraph text goes here<span class="tag">&lt;<span class="title">/p</span>&gt;</span></code></pre></li>
+					<li>These will come into play later on as we use them in conjunction with CSS to target elements</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Add the Following</h2>
+				<ul>
+					<li>Page title to your &lt;head&gt;</li>
+					<li>Page headline</li>
+					<li>Some paragraph content</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Adding Some Content</h2>
+				<pre><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+&nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">title</span>&gt;</span>Meghan's Reading List<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+<span class="tag">&lt;<span class="title">/head</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+  &nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">h1</span>&gt;</span>What I'm Reading<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+  &nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">p</span>&gt;</span>This page is going to tell you a list of books I'm currently reading (or ones I've just finished!) I will bold my favorites.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre>	
+			</section>
+			<section>
+				<h2>Building Blocks of a Website</h2>
+				<ul>
+					<li><a href="http://www.nytimes.com">NYTimes.com</a></li>
+					<li><a href="http://www.google.com">Google.com</a></li>
+					<li>Note the different elements we've already talked about</li>
+					<li>Use view source to see guts of the page</li>
+					<li><a href="https://www.dropbox.com/s/195aywnzbmywwfh/Sample%20Annotation-%20Google.com.pdf">Diagram a Site</a></li>
+			</section>
+			<section>
+				<section>
+					<h2>Assignments</h2>
+					<ul>
+						<li>Read the first chapter of HTML&CSS: Design and Build Websites (<a href="http://htmlandcssbook.com/sample-chapter/">Download Sample First Chapter</a>)</li>
+						<li>Inventory and annotate the the homepage and article page of a major news website. Note the major layout components, content types (by color-coding regions) and aesthetic choices (colors, fonts, grid). Turn into <a href="https://www.dropbox.com/home/CUNY%20-%20Programming%20for%20Journalists/Spring%202013/Assignments/Week%201%20-%20Annotations">Week 1 Dropbox folder</a>.</li>
+						<li>Extensions: <a href="https://chrome.google.com/webstore/detail/webpage-webcam-screenshot/ckibcdccnfeookdmbahgiakhnjcddpki">Screengrabs for Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/screengrab/">Screengrabs for Firefox</a>, <a href="http://derailer.org/paparazzi/downloads">Standalone screengrabs</a></li>
+						<li>If you are choosing to use Firefox, please make sure you <a href="http://getfirebug.com/">download the Firebug extension</a> for next class.</li>
+						<li>Extra Credit: Keep playing with your webpage!</li>
+					</ul>
+				</section>
+				<section>
+					<h4>How to Diagram</h4>
+					<ul>
+						<li>Opening the screenshot in Photoshop or a similar editor program and making boxes over the content and using the text tool to note font and color choices</li>
+						<li>In Google Docs: Under the Create New menu, select Drawing. Then, under the Insert menu, select Image. Select your screenshot. Then be sure to select 100% from the View menu to see your image at the correct scale. Use the drawing tools to annotate.</li>
+						<li>Use different colors to note different parts of the page - i.e. headlines, sets of links, naviagtion, etc. Also note common fonts, colors, etc.</li>
+						<li><a href="https://www.dropbox.com/s/195aywnzbmywwfh/Sample%20Annotation-%20Google.com.pdf">Example here</a></li>
+						<li>To turn in, save your PSD file or in Google File > Download As a JPG, then move your file into the <a href="https://www.dropbox.com/home/CUNY%20-%20Programming%20for%20Journalists/Spring%202013/Assignments/Week%201%20-%20Annotations">Week 1 Dropbox folder</a></li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h1>Have a great week!</h1>
+			</section>
+		</div>
+	</div>
+
+
+<script src="js/reveal/lib/js/head.min.js"></script>
+<script src="js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
+<script type="text/javascript" src="js/lessonHeader.js"></script>
+</body>
+</html>
