@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Method Presentation - slide</title>
+  <style>
+
+  h1{ font-family:serif; 
+    font-size:24px;
+    color:blue;}
+    p{
+      display:none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>slideUp/slideDown</h1>
+
+  <p>If only I could slide to the left...</p>
+
+<button class="btn1">Slide down</button>
+<button class="btn2">Slide up</button>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $(".btn1").click(function(){
+      $("p").slideDown(400);
+        });
+    $(".btn2").click(function(){
+      $("p").slideUp(400);
+    });
+
+  });
+
+
+    //YOUR CODE HERE
+  </script>
+
+</body>
+
+</html>

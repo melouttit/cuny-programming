@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Method Presentation - toggle</title>
+  <style>
+  /*YOUR CSS HERE*/
+  h1{ font-family:monospace; }
+  </style>
+</head>
+
+<body>
+
+  <h1>toggle</h1>
+
+  <button>Switch Me</button>
+    <div>
+      Look at me disappear
+    </div>
+
+
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+  $(document).ready(function(){
+$('button').click(function(){
+  $('div').toggle("shake");
+
+})
+
+    //YOUR CODE HERE
+
+  });
+  </script>
+
+</body>
+
+</html>
