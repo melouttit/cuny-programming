@@ -24,9 +24,9 @@
 
     $.ajax({
       dataType:'json',
-      url:'http://mlouttit.com/cuny/weekTwelve/js/json.js',
+      url:'http://mlouttit.com/cuny/lessons/w10/js/json.js',
       success:function(data){
-        //console.log(data);
+        console.log(data);
         $(function(){
           console.log("LAUNCHING APP");
           portfolioapp.init(data);
