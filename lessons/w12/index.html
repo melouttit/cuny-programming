@@ -56,156 +56,83 @@
 </script>
       <section>
         <h2>Week 12 | April 27, 2015</h2>
-        <h4>Data Types & AJAX</h4>
+        <h4>Project Workshop 1</h4>
       </section>
       <section>
-        <h2>FTP</h2>
+        <h2>Project Goal</h2>
+        <p>Build an app out of a publicly available dataset that displays the data somehow and provides at least one form of interaction with users (i.e. Click to sort).</p>
+      </section>
+      <section>
+        <h2>Project Groups</h2>
         <ul>
-          <li>protocol: SFTP</li>
-          <li>host: digitalstorage.journalism.cuny.edu</li>
-          <li>user: your network user name</li>
-          <li>pw: their network password</li>
-          <li>All files must be stored in the public_html folder</li>
-          <li>URL: http://digitalstorage.journalism.cuny.edu/<em>yourusername</em>/path/to/file</li>
-        </ul> 
+          <li>Group A: <strong>Catherine</strong>, <strong>Maya</strong>, <strong>Rai</strong></li>
+          <li>Group B: <strong>Desiree</strong>, <strong>Danni</strong>, <strong>Helina</strong></li>
+          <li>Group C: <strong>Liam</strong>, <strong>Natasha</strong>, <strong>Allegra</strong>, <strong>Jonathan</strong></li>
+        </ul>
       </section>
       <section>
-      	<h2>Slack</h2>
-      	<p>Make sure to join the <a href="https://cunyjprogramming.slack.com/messages/fall2014/">class Slack</a>. There is a channel specifically for the this class, though we may create more for specific issues. The Fall 2014 room is also where I'll hold additional "office hours" to respond to questions. Email me if you need an invite.</p>
+        <h2>Loose To Do:</h2>
+        <ul>
+          <li>Create a <span class="code">git</span> repo that members will contribute to</li>
+          <li>Pick a dataset you want to use</li>
+          <li>Start loose skeleton for your site: <span class="code">index.html</span>, <span class="code">css/styles.css</span>, <span class="code">js/script.js</span>, <span class="code">images</span></li>
+          <li>Assign each person to take charge of a specific language</li>
+          <li>Decide what you want users to be able to do with your app</li>
+          <li>Wireframe the different pages/states of your app</li>
+          <li>Make use of <span class="code">jquery</span>, <span class="code">underscore</span>, etc. to build.</li>
+          <li>Frequently push your changes to version your app</li>
+          <li>Publish by pushing to a <span class="code">gh-pages</span> branch in your repo.</li>
+        </ul>
       </section>
       <section>
-        <section>
-          <h2>What is AJAX?</h2>
-        </section>
-        <section>
-          <h3>AJAX...</h3>
-          <p>...stands for <strong>Asynchronous Javascript And XML</strong></p>
-        </section>
-        <section>
-          <h3>Why do we use it?</h3>
-          <p>The process allows you to exchange data with a server without having the user refresh the page</p>
-        </section>
-        <section>
-          <h3>Simply</h3>
-          <p>It is a combination of technologies allowing multiple things to happen at once</p>
-        </section>
-      </section>
-      <section>
-        <h2>Data Types</h2>
-        <p>The way in which your data is formatted. Your data can be any content you want to organize and display. The most common types, especially in using AJAX, are XML and JSON.</p>
+        <h2><span class="code">git</span> Workshop</h2>
+        <p>How to use  <span class="code">git</span> to collaborate</p>
       </section>
       <section>
         <section>
-          <h2>XML</h2>
+          <h2>A few things to get you started...</h2>
         </section>
         <section>
+          <h3><span class="code">jsonp</span></h3>
           <ul>
-            <li>Stands for <strong>eXtensible Markup Language</strong></li>
-            <li>Data formatted in a way that it can be shared across an array of development tools</li>
-            <li>Like HTML, it is tag-based, and easy to use</li>
+            <li>Stands for "JSON with padding"</li>
+            <li>Wraps your JSON in a variable that can be accessed between domains</li>
+            <li>Pro: Cross-domain requests!!</li>
+            <li>Con: Weaker sercurity (only load JSONP from trusted sources) and less control over data requests</li>
+            <li>More detailed explanations <a href="http://en.wikipedia.org/wiki/JSONP">here</a> and <a href="http://json-p.org/">here</a> (if you're interested)</li>
           </ul>
         </section>
         <section>
-          <h2>Example</h2>
-          <p style="text-align:left;"><span class="code">&nbsp;&nbsp;&lt;work&gt;<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;project&gt;<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Out, And Serving&lt;/title&gt;<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;type&gt;photo essay&lt;/type&gt;<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;url&gt;http://www.nytimes.com/interactive/2014/03/09/opinion/sunday/exposures-military.html&lt;/url&gt;<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;pubDate&gt;March 9, 2014&lt;/pubDate&gt;<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/project&gt;<br />
-                &nbsp;&nbsp;&lt;/work&gt;
-              </span></p>
-        </section>
-        <section>
-          <h2>Exercise</h2>
-          <p>Open a new file, and write your own XML listing your three most recent journalism projects. Save your file as <span class="code">filename.xml</span> in a directory called <span class="code">xml</span>. Make sure to include at least three entries.</p>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h2>JSON</h2>
-        </section>
-        <section>
+          <h3>Finding a Dataset</h3>
+          <p>A links to help get you started. Remember: For some you maybe need to register and request API Keys. Read carefully.</p>
           <ul>
-            <li>Stands for <strong>JavaScript Object Notation</strong></li>
-            <li>Like XML, formatted for use across tools and environments</li>
-            <li>Works best with Javascript, which is why it has become a preferred data structure</li>
+            <li><a href="http://blog.visual.ly/data-sources/">Visually Roundup</a></li>
+            <li><a href="http://developer.nytimes.com/docs">The New York Times Developers APIs</a></li>
+            <li><a href="http://www.data.gov/">Government Data</a></li>
+            <li><a href="http://www.programmableweb.com/apis/directory">Programmable Web</a> list</li>
+            <li>Have an idea? Check Google!</li>
           </ul>
         </section>
         <section>
-          <h2>JSON Example</h2>
-          <p style="text-align:left;"><span class="code">
-          {<br />
-          &nbsp;&nbsp;"title":"Out, And Serving",<br />
-          &nbsp;&nbsp;"type":"photo essay",<br />
-          &nbsp;&nbsp;"url":"http://www.nytimes.com/interactive/<br />2014/03/09/opinion/sunday/exposures-military.html",<br />
-          &nbsp;&nbsp;"pubDate":"March 9, 2014"<br />
-          }
-          </span></p>
+          <h3>Proposal</h3>
+          <p>Download a copy of the app propsal from the Week 12 Dropbox folder and use it to help you think through the purpose of your app. This will need to be turned in as part of your assignment.</p>
         </section>
         <section>
-          <h2>Exercise</h2>
-          <p>Open a new file and write your own JSON using the same data from your XML file. Save your file as <span class="code">filename.js</span> and save it in your <span class="code">js</span> directory and then upload to your class site via FTP.</p>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h2>Grabbing Data</h2>
-        </section>
-        <section>
-          <h3>Methods</h3>
-          <p>There are multiple jQuery methods you can use to grab data from a server, including:</p>
-          <ul>
-            <span class="code" style="position: relative;left: -315px;">
-              <li>$.ajax</li>
-              <li>$.get</li>
-              <li>$.getJSON</li>
-              <li>$.load</li>
-            </span>
-          </ul>
-        </section>
-        <section>
-          <h3>Example: Grabbing JSON</h3>
-          <p style="text-align:left;"><span class="code" style="text-align:left;">$.ajax({<br />
-                &nbsp;&nbsp;&nbsp;dataType: "json",<br />
-                &nbsp;&nbsp;&nbsp;url: url,<br />
-                &nbsp;&nbsp;&nbsp;data: data,<br />
-               });
-          </span></p>
-        </section>
-        <section>
-          <h3>Convenience Methods</h3>
-        </section>
-        <section>
-          <p>There are multiple shorthand methods that are wrappers around the <span class="code">ajax</span> method. Generally, you want to use <span class="code">ajax</span> because it offers more configuration options.
-        </section>
-        <section>
-          <h3>JSON Convenience Method</h3>
-          <p style="text-align:left;"><span class="code">$.getJSON("http://dataurl.com/json.js",<br />function(data){ });
-          </span></p>
-        </section>
-        <section>
-          <h3>Exercise</h3>
-          <ul>
-            <li>Download a copy of <span class="code">ajaxTest.html</span> from the Week 12 folder in Dropbox.</li>
-            <li>Use the <span class="code">ajax</span> method to pull in your JSON and log your data.</li>
-            <li>Then upload your <span class="code">ajaxTest.html</span> file to your site via FTP.</li>
-          </ul>
+          <h3>Example</h3>
+          <p>Check out a quick example I built in about 30 minutes: <a href="http://melouttit.github.io/test-project/">http://melouttit.github.io/test-project/</a>. You can <a href="https://github.com/melouttit/test-project">view the raw files here</a>.</p> 
+          <p><span class="code">git clone https://github.com/melouttit/test-project.git your-new-directory</span></p>
         </section>
       </section>
       <section>
       	<section>
-      		<h2>Assignment</h2>
+      		<h2>Assignments</h2>
+          <ul>
+            <li>Create a folder for your group in Week 12</li>
+            <li>Turn in your filled out app proposal</li>
+            <li>Using the <span class="code">jQuery ajax</span> method, successfull make a call to get your data on the page</li>
+            <li>Submit a wireframe for the various parts of your app (either digitall in Dropbox or in person if drawn by hand) - make sure this is a detailed representation of your proposed app</li>
+          </ul>
       	</section>
-        <section>
-          <h3>Lesson</h3>
-          <p>Do Codecademy's <a href="http://www.codecademy.com/courses/javascript-beginner-en-g7vdk/0/1">jQuery & AJAX Lesson</a>, parts 1-7.</p>
-        </section>
-        <section>
-        	<h3>Exercise</h3>
-        	<p>Using the json you wrote today, write a loop using the jQuery <span class="code">each</span> method to go through your JSON and put your items on the page. Make sure to upload to your public site or put both the html and js files in Dropbox.</p> <p>Refer to the last lesson for a <a href="http://mlouttit.com/cuny/weekNine/#/5">refresher on loops</a>.</p>
-        </section>
       </section>
     </div>
   </div>
