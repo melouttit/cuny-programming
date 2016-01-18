@@ -33,7 +33,7 @@ Lessons and notes for CUNY Graduate School of Journalism “Programming for Jour
   <li><strong>12 Collaboration Workshop (5/2):</strong> Students will come prepared to work collaboratively on a small app, they will split the work between getting the data ready, displaying and designing it, using <strong>git</strong> to manage their work. A <strong>git</strong> workshop will go over pulling and merging.</li>
   <li><strong>13 Collaboration Workshop 2 (5/9):</strong> Students will put the finishing touches on their app.</li>
   <li><strong>14 Multimedia (5/16):</strong> We will go over some HTML and JavaScript options for including video and audio files on our page.</li>
-  <li><strong>Final Workshop (5/23):</strong> Using the project created in the HTML/CSS module, students will write either native javascript, jQuery or use plugins to add at least two types of functionality to their project. <strong>DUE: Monday 5/18</strong></li>
+  <li><strong>Final Workshop (5/23):</strong> Using the project created in the HTML/CSS module, students will write either native javascript, jQuery or use plugins to add at least two types of functionality to their project.</li>
 </ul>
 
 <!-- <p>* <em>Class is held on Wednesday, no class that Monday 2/16</em><br />
