@@ -1,7 +1,7 @@
 # cuny-programming
 Lessons and notes for CUNY Graduate School of Journalism “Programming for Journalists” class.
 
-<a href="http://mlouttit.com/cuny/Spring2015_Syllabus.pdf">Download the syllabus</a>
+<!-- <a href="http://mlouttit.com/cuny/Spring2015_Syllabus.pdf">Download the syllabus</a> -->
 
 <hr />
 
