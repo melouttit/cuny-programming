@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!--HEADER INCLUDE-->
+
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Week 8 - Programming for Journalists</title>
+
+  <meta name="author" content="Meghan Louttit">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="stylesheet" href="../../js/reveal/css/reveal.min.css">
+  <link rel="stylesheet" href="../../js/reveal/css/theme/night.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="../../js/reveal/lib/css/zenburn.css">
+
+  <style type="text/css">
+  #backTo{ 
+    margin:0 20px; 
+    font-family: sans-serif;
+    font-size: 13px;
+  }
+  #backTo p,
+  #backTo p a{ 
+    color: #efefef; 
+    text-decoration:none;
+    padding:3px 5px;
+  }
+  #backTo p a:hover,
+  #backTo p a.current{
+    background:#efefef;
+    color:#333;
+  }
+  .code{ color:#fff;font-family: monospace!important; }
+  </style>
+
+  <script>
+    document.write( '<link rel="stylesheet" href="../../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script>
+
+</head>
+<body>
+  <div id="backTo"></div>
+  <div class="reveal">
+    <div class="slides">
+
+<!--set week number-->
+<script type="text/javascript">
+  currentWeek = 8;
+</script>
+			<section>
+				<h2>Week 8 | March 23, 2015</h2>
+				<h4>Intro to Frameworks</h4>
+			</section>
+			<section>
+				<h2>Lesson Prep</h2>
+        <ul>
+          <li>Open: Class Website (Week 8), GitHub, Slack</li>
+          <li>Open your tip calculator files in sublime</li>
+          <li>Open your website in sublime</li>
+          <li>Create a new file called <span class="code">week8.html</span> and paste in the code below:
+<pre style="width:900px;"><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Week 8 - Intro to Frameworks<span class="tag">&lt;<span class="title">/title</span>&gt;</span>
+<span class="tag">&lt;<span class="title">/head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">id</span>="<span class="value">headline</span>"&gt;</span>jQuery Practice<span class="tag">&lt;<span class="title">/h1</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">id</span>="<span class="value">list</span>"&gt;</span></span><span class="tag">&lt;<span class="title">/ul</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">script</span>&gt;</span>
+  	var colors = ["red","blue","yellow","black","green"];
+  <span class="tag">&lt;<span class="title">/script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>
+          </li>
+        </ul>
+			</section>
+			<section>
+				<h2>Git Lab: <span class="code">branch</span> & <span class="code">merge</span></h2>
+			</section>
+			<section>
+        <section>
+				  <h2>Homework Review</h2>
+        </section>
+        <section>
+          <h3>Your Reset Function...</h3>
+          <p style="text-align:left;font-size:24px;"><span class="code">function resetCalc(){<br />
+            &nbsp;&nbsp;document.getElementById('bill').value = '';<br /><br />
+            
+            &nbsp;&nbsp;var percBtns = document.getElementsByClassName('tip-btn');<br />
+            &nbsp;&nbsp;for(var i=0; i < percBtns.length; i++){<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;percBtns[i].checked = false;<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;var tipBox = document.getElementById('tipamount');<br />
+            &nbsp;&nbsp;tipBox.innerHTML = '$0.00';<br />
+          }</span></p>
+        </section>
+        <section>
+          <h3>Radio Button Selection</h3>
+          <p>If you want to allow users to select only one radio button at a time, give each <span class="code">input</span> element a <span class="code">name</span> attribute with the same value. This way the browser will recognize them as a "group" of buttons.</p>
+        </section>
+        <section>
+          <h3>Evaluate</h3>
+          <p>You can use the JavaScript <span class="code">isNaN</span> method to evaluate the total bill, and use an <span class="code">if/else</span> conditional to either evaluate a number or throw an error message.</p>
+        </section>
+        <section>
+          <h3>JS Maths</h3>
+          <ul>
+            <li>You can basic arithmetic using <a href="http://www.w3schools.com/js/js_operators.asp">JS with operators</a>, which should look familiar.</li>
+            <li>There are also <a href="http://www.w3schools.com/js/js_math.asp">more complex evaluations</a> under the <span class="code">Math</span> object.</li>
+            <li>In our tip calculator example, we might want to evaluate the tip amount calculated to only display up to two decimal points. For this we would use <span class="code">Math.floor</span>.</li>
+          </ul>
+        </section>
+			</section>
+			<section>
+				<section>
+					<h2>JavaScript vs. Frameworks</h2>
+				</section>
+				<section>
+					<h3>What are Frameworks?</h3>
+					<ul>
+						<li>Javascript is the native language that frameworks are written in.</li>
+						<li>Frameworks (or libraries) contain predefined functions for common JavaScript tasks that make writing JS more concise and organized.</li>
+						<li>The uses of frameworks are as varied as JavaScript itself.</li>
+						<li>Popular modern frameworks: <strong><a href="http://jquery.com/">jQuery</a></strong>, <strong><a href="http://underscorejs.org/">Underscore</a></strong>, <strong><a href-"http://requirejs.org/">RequireJS</a></strong>, <strong><a href="https://angularjs.org/">AngularJs</a></strong>, <strong><a href="http://backbonejs.org/">Backbone</a></strong>, <strong><a href="http://yuilibrary.com/">YUI</a></strong>, <strong><a href="http://modernizr.com/">Modernizr</a></strong>, etc.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Why <span class="code">jQuery</span>?</h3>
+					<ul>
+						<li>It is still one of the most ubiquitous libraries and one you will likely come across should you continue programming and utilizing various digital tools.</li>
+						<li>It's fairly simple to learn and has many useful methods in front-end development - allowing us to easily manipulate the DOM.</li>
+						<li>It utilizes the same CSS selectors we've been working with.</li>
+						<li>It has a vast and vibrant <a href="http://plugins.jquery.com/">registry of plug-ins</a> that allow you to add bits of interactivity to your page fairly quickly.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Don't get Stuck...</h3>
+					<p>...on <span class="code">jQuery</span></p>
+					<p>Even though we will mostly be working with it, I will introduce a couple other frameworks that operate similarly to <span class="code">jQuery</span>. It's important that you remember that <span class="code">jQuery</span> is not the only, and is not always the best, option for completing certain tasks.</p><p>Programming is about deciding what you want to do and then investigating the best option for getting it done.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>How to Use a Framework</h2>
+					<p>To access the methods and shortcuts of any library or framework, you have to have access to them on your page</p>
+				</section>
+				<section>
+					<h3>Steps:</h3>
+					<ul>
+						<li>First, download the set of predefined functions.</li>
+						<li>Then we include the library on the page like any other script</li>
+						<li>Make sure the script tag that pulls in the library is on the page <em>before</em> any script you write that uses that library.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<ul>
+						<li><a href="http://jquery.com/download/">Download <span class="code">jQuery</span></a> to a directory named <span class="code">js</span>.</li>
+						<li>Include <span class="code">jQuery</span> on your page by adding a <span class="code">script</span> tag on your page, with a <span class="code">src</span> attribute pointing to the library.</li>
+						<li>You can also use <a href="https://developers.google.com/speed/libraries/devguide">Google's Hosted Libraries</a>.</li>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2><span class="code">jQuery</span> Parts</h2>
+				</section>
+				<section>
+					<h3>jQuery Methods</h3>
+					<ul>
+						<li>A series of predefined events and effects that you can run on any jQuery selector</li>
+						<li>For example: <span class="code">jQuery('h1').click();</span> allows you to run a function when that element has been clicked</li>
+						<li><a href="http://api.jquery.com/">Refer to the documention</a> for the methods that are available</li>
+						<li>Method syntax: <span class='code'>.method();</span></li>
+					</ul>
+				</section>
+				<section>
+					<h3>jQuery Selectors</h3>
+					<ul>
+						<li><span class="code">jQuery</span> selects elements just like CSS</li>
+						<li>Remember, selectors can be <strong>tags</strong>, <strong>classes</strong> and <strong>IDs</strong></li>
+						<li><strong>CSS:</strong> <span class="code">h1 {}</span></li>
+						<li><strong>jQuery:</strong> <span class="code">jQuery('h1')</span></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Common Syntax</h3>
+					<p style="text-align:left;"><span class="code">jQuery('<strong>selector</strong>').<strong>method</strong>(function(){ <br />&nbsp;&nbsp;<em>//your function code here</em> <br />});</span></p>
+				</section>
+				<section>
+					<h3>The Dollar Sign</h3>
+					<p>To use <span class="code">jQuery</span>, you have to declare when you are going to access the library. You can either write out <span class="code">jQuery</span> before your selector or use the <span class="code">$</span> sign.</p>
+				</section>
+				<section>
+					<h3>The <span class="code">ready</span> Method</h3>
+					<p>This method prevents your script from running until the page has loaded. It's best to wrap all your <span class="code">jQuery</span> in this method to make sure all the elements you are targeting are on the page.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>The <span class="code">jQuery</span> Wrapper</h2>
+					<p style="text-align:left;"><span class="code">$(document).ready(<span style="color:cyan">function(){</span>
+						<br />&nbsp;&nbsp;<em><span style="color:lightGray">//your function code here</span></em> <br /> 
+					<span style="color:cyan">}</span>)</p>
+				</section>
+				<section>
+					<h3>Let's dissect the wrapper...</h3>
+				</section>
+				<section>
+					<h3><span class="code">$()</span></h3>
+					<p>The Wrapper - The dollar sign calls the jQuery library and indicates that a jQuery method will be used on the element in the wrapper.</p>
+				</section>
+				<section>
+					<h3><span class="code">document</span></h3>
+					<p>The Selector - the element that you are going to run your method on. This can be the page itself <span class="code">document</span> or a tag <span class="code">'h1'</span>, an ID <span class="code">'#idname'</span> or class <span class="code">'.classname'</span></p>
+				</section>
+				<section>
+					<h3><span class="code">.ready()</span></h3>
+					<p>The Method - whatever jQuery method you are running on the element you've specified. In this case we are running <span class="code">ready</span>, which means to wait until the page is loaded before running the code.</p>
+				</section>
+				<section>
+					<h3><span class="code">function(){ }</span></h3>
+					<p>The beginning of your function. The parenthese after <span class="code">function</span> is where you can pass in other information that your function needs, if anything. The code you are going to run goes inside the curly brackets.</p>
+				</section>
+			</section>
+			<section>
+				<h2>Exercise</h2>
+				<ul>
+					<li>Start your code by writing a wrapper with the <span class="code">ready</span> method on your page.</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Common Methods & Exercises</h2>
+				</section>
+				<section>
+					<h3><span class="code">each</span> & <span class="code">append</span></h3>
+					<ul>
+						<li>The <span class="code">each</span> method is another way to write a <span class="code">for</span> loop.</li>
+						<li>Syntax: <span class="code">$.each(<strong>yourArray</strong>,function(<strong>index</strong>,<strong>item</strong>){});</span></li>
+						<li>Inside the method you specify the array to loop through and the function you want to run on each.</li>
+						<li>The function takes two arguments: The first is the index of the item, the second is a name to reference each object in the array.</li>
+						<li><strong>Exercise:</strong> Run an each loop on the <span class="code">colors</span> array in <span class="code">week8.html</span> and use the <span class="code">append</span> method to add them to the page.</li>
+						<li><span class="code">append</span> is equivalent to <span class="code">appendChild</span> in native JS.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><span class="code">css</span></h3>
+					<ul>
+						<li>This is a specific method that allows us to alter the style rules of an element via JavaScript.</li>
+						<li>The <span class="code">css</span> method injects styles into the html inline, which will supersede most styles in your stylesheet.</li>
+						<li>Syntax: <span class="code">$('selector').css('property','value');</li>
+						<li>You can also get the value of any css property:<br /> <span class="code">var c = $('selector').css('color');</span> will return the value of the color property, where <span class="code">c</span> will equal whatever color is defined in the css.</li>
+					</ul>
+				</section>
+				<section>
+					<h3><span class="code">html</span></h3>
+					<ul>
+						<li>This method changes the <span class="code">innerHTML</span> property of any element.</li>
+						<li>Syntax: <span class="code">$('selector').html('&lt;h2&gt;Your New Subhead&lt;/h2&gt;');</li>
+						<li><strong>Exercise:</strong> Use <span class="code">html</span> to change the headline on the page and then <span class="code">css</span> to change the color property.</li>	
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2>Chaining</h2>
+				<p>You can run multiple methods on a single selector with jQuery. For example: <span class="code">$('h1').css('color','red').fadeOut();</span> will change the color of your headline and the fade it off the page.</p>
+			</section>
+			<section>
+				<h2>A <span class="code">jQuery</span> Tip Calculator</h2>
+				<ul>
+					<li>Open your tip calculator files from last class</li>
+					<li>Start a new branch in your tip-calculator repository called <strong>jquery</strong>.</li>
+					<li>Re-write the tip calulator using <span class="code">jQuery</span> and add / commit / push your work</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Assignments</h2>
+				</section>
+				<section>
+					<h3>Reading</h3>
+					<ul>
+						<li>Read in JavaScript&JQuery Chapter 7.</li>
+						<li><a href="https://learn.jquery.com/plugins/">Primer</a> on <span class="code">jQuery</span> plugins and how to <a href="https://learn.jquery.com/plugins/finding-evaluating-plugins/">find and evaluate them</a>.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Definitions</h3>
+					<p>In the Week 8 Dropbox, copy the file <span class="code">week8-definitions.docx</span> and fill out the definitions for the terms and decribing the code. You'll need to use Google or the resources on the class website. Save your copy your folder in Week 8 in Dropbox.</p>
+				</section>
+				<section>
+					<h3>Method Presentation</h3>
+					<p>You will be assigned a <span class="code">jQuery</span> method, which you will research and demonstrate to the class how to use it.</p>
+					<ul>
+            <li>Check your Slack DM for the method assigned to you</li>
+						<li>Look up the method online (Google or <a href="http://api.jquery.com/"><span class="code">jQuery</span> docs</a>)</li>
+						<li>Write out a explanation of the method and what it's used for and post in Slack</li>
+						<li>Prepare a short presentation for how to use it to the class. I'll have a page set up for you to type into. Remember, you might also need to have HTML and CSS written for your example.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Plugin Prep</h3>
+					<p>In preparation for an exercise next week on <span class="code">jQuery</span> plugins, where we will be adding a photo carousel to your class site:</p>
+					<ul>
+						<li>Pick five images you want to use</li>
+						<li>Size them to 800w x 450h</li>
+						<li>Save them in the <span class="code">images</span> directory in your class site, in a separate directory called <span class="code">carousel</span>.<br />
+						<span class="code">- yourwebsite<br />
+							&nbsp;&nbsp;- images<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;- carousel<br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- image1.jpg<br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- image2.jpg<br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- image3.jpg, etc.</span>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+	</div>
+
+<script src="../../js/reveal/lib/js/head.min.js"></script>
+<script src="../../js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Optional libraries used to extend on reveal.js
+    dependencies: [
+      { src: '../../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: '../../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '../../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: '../../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    ]
+  });
+</script>
+<script type="text/javascript" src="../../js/lessonHeader.js"></script>
+</body>
+</html>

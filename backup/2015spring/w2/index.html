@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!--HEADER INCLUDE-->
+
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Week 2 - Programming for Journalists</title>
+
+  <meta name="author" content="Meghan Louttit">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="stylesheet" href="../../js/reveal/css/reveal.min.css">
+  <link rel="stylesheet" href="../../js/reveal/css/theme/night.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="../../js/reveal/lib/css/zenburn.css">
+
+  <style type="text/css">
+  #backTo{ 
+    margin:0 20px; 
+    font-family: sans-serif;
+    font-size: 13px;
+  }
+  #backTo p,
+  #backTo p a{ 
+    color: #efefef; 
+    text-decoration:none;
+    padding:3px 5px;
+  }
+  #backTo p a:hover,
+  #backTo p a.current{
+    background:#efefef;
+    color:#333;
+  }
+  .code{ color:#fff;font-family: monospace!important; }
+  </style>
+
+  <script>
+    document.write( '<link rel="stylesheet" href="../../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script>
+
+</head>
+<body>
+  <div id="backTo"></div>
+  <div class="reveal">
+    <div class="slides">
+
+<!--set week number-->
+<script type="text/javascript">
+  currentWeek = 2;
+</script>
+			<section>
+				<h2>Week 2 | Feb. 9, 2015</h2>
+				<h4>HTML & Wireframes</h4>
+			</section>
+<section>
+	<section>
+		<h2>HTML & Page Setup</h2>
+		<p>Create a new file in your site directory called <span class="code">week2.html</span> to do this week's exercise in.</p>
+	</section>
+	<section>
+		<h3>What is HTML?</h3>
+		<ul>
+			<li>Stands for <strong>Hyper-Text Markup Language</strong></li>
+			<li>It is a language for 'writing' or 'describing' web pages. Those pages are then 'read' by your browser.</li>
+			<li>HTML is a semantic language - some tags have default styles but most do not</li>
+			<li><strong>Valid HTML:</strong> HTML with the proper syntax. Most modern browers will interpret invalid HTML correctly, but it is <em>not</em> a good idea to leave it that way - your page might not look correct in other browers, older browers, on mobile or in newer versions of browsers. Think of it as using bad grammer.</li>
+		</ul>
+	</section>
+	<section>
+		<h3>Standard Page Setup</h3>
+		<pre><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span><br /><span class="tag">&lt;<span class="title">html</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">head</span>&gt;</span><br /><span class="tag">&lt;<span class="title">/head</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">body</span>&gt;</span><br /><span class="tag">&lt;/<span class="title">body</span>&gt;</span><br /><br /><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>	
+	</section>
+	<section>
+		<h3>DOCTYPE</h3>
+		<ul>
+			<li>Declared at the beginning of your page</li>
+			<li>Within the doctype you will declare that the page is in HTML and which version you are using</li>
+			<li>There have been a handful of versions of HTML, we'll be sticking with HTML5: <span class="code">&lt;!DOCTYPE html&gt;</span></li>
+		</ul>	
+	</section>
+	<section>
+		<h3>Tags</h3>
+		<ul>
+			<li>The heart of any markup language</li>
+			<li>Each tag is a keyword surrounded by angle brackets: <span class="code">&lt;p&gt;</span></li>
+			<li>Most tags come in pairs and need to be closed. Closing tags look like this: <span class="code">&lt;/p&gt;</span></li>
+			<li>The basic setup of any HTML content: <pre><code><span class="tag">&lt;<span class="title">tagname</span>&gt;</span>content<span class="tag">&lt;/<span class="title">tagname</span>&gt;</span></code></pre></li>
+		</ul>
+	</section>
+	<section>
+		<h3>Attributes</h3>
+		<ul>
+			<li>Each tag can also have multiple attribtes that provide more information for the browser.</li>
+			<li>Attributes are defined in the opening tag.</li>
+			<li>They are defined properties with a value that you set. Values can be urls, numbers or names you make up to differentiate on tag from another.</li>
+			<li>EX: 
+				<li><span class="code">&lt;h2 class="subhead"&gt;&lt;/h2&gt;</span></li>
+				<li><span class="code">&lt;div data-index="22"&gt;&lt;/div&gt;</span></li>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h3>Add to your test page</h3>
+		<ul>
+			<li><span class="code">DOCTYPE, html, head</span> and <span class="code">body</span> tags</li>
+			<li>Page title to your <span class="code">&lt;head&gt;</span></li>
+		</ul>
+	</section>
+</section>
+			<section>
+				<section>
+					<h2>HTML Text Tags</h2>
+				</section>
+				<section>
+					<h3>Heading Tags</h3>
+					<ul>
+						<li>There are six level of heading tags in HTML.</li>
+						<li>The first is <span class="code">&lt;h1&gt;</span>. There should only be one on your page.</li>
+						<li>Subheads are <span class="code">&lt;h2&gt;</span>.</li>
+						<li>The rest are <span class="code">&lt;h3&gt;</span>, <span class="code">&lt;h4&gt;</span> and so on.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Paragraph Text</h3>
+					<p>In most cases, nearly all the body text on your pages should be inside <span class="code">&lt;p&gt;&lt;/p&gt;</span> tags. This ads a line break and space between paragraphs by default.</p>
+				</section>
+				<section>
+					<h3>Strong & Emphasis</h3>
+					<ul>
+						<li>To indicate importance, you can use <span class="code">&lt;strong&gt;</span> or <span class="code">&lt;b&gt;</span>. Text will display bold by default.</li>
+						<li>To emphasize a word that slightly changes the meaning of a sentance, use <span class="code">&lt;em&gt;</span> or <span class="code">&lt;i&gt;</span>. Text will be italic by default.</li>
+						<li>There are subtle differences, but most of the time you will want to use <span class="code">&lt;strong&gt;</span> and <span class="code">&lt;em&gt;</span> as they refer specifically to how the word is understood.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Breaks</h3>
+					<ul>
+						<li>To insert a line break, use <span class="code">&lt;br /&gt;</span> after the text.</li>
+						<li>To insert a divider, use <span class="code">&lt;hr /&gt;.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Unordered List</h3>
+					<ul>
+						<li>Use to make a bulleted list of items that have no particular order.</li>
+						<li>Your items should be inside a set of <span class="code">&lt;ul&gt;&lt;/ul&gt;</span> tags.</li>
+						<li>Each item should be enclosed inside <span class="code">&lt;li&gt;&lt;/li&gt;</span></li>
+						<li><span class="code">&lt;ul&gt;&lt;li&gt;</span>List Item Here.<span class="code">&lt;/li&gt;&lt;/ul&gt;</span></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Ordered List</h3>
+					<ul>
+						<li>Use to make a list of numbered items.</li>
+						<li>Your items should be inside a set of <span class="code">&lt;ol&gt;&lt;/ol&gt;</span> tags.</li>
+						<li>Each item should be enclosed inside <span class="code">&lt;li&gt;&lt;/li&gt;</span></li>
+						<li><span class="code">&lt;ol&gt;&lt;li&gt;</span>List Item Here.<span class="code">&lt;/li&gt;&lt;/ol&gt;</span></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<p>Add the following to your page:</p>
+					<ul>
+						<li>A headline</li>
+						<li>A paragraph of text (you can use <a href="http://www.ipsum-generator.com/">dummy text</a>)</li>
+						<li>A divider under your paragraph.</li>
+						<li>A list with three items.</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>HTML Links</h2>
+					<ul>
+						<li>The Tag: <span class="code">&lt;a&gt;&lt;/a&gt;</span></li>
+						<li>The Attribute: <span class="code">href</span></li>
+						<li>Structure: <span class="code">&lt;a href="URL"&gt;</span>LINK TEXT<span class="code">&lt;/a&gt;</span></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Absolute URL</h3>
+					<p>A full URL that points towards a web page that is not the one you are linking from. </p><p><span class="code">&lt;a href="http://nytimes.com"&gt;</span>NY Times<span class="code">&lt;/a&gt;</span></p>
+				</section>
+				<section>
+					<h3>Relative URL</h3>
+					<p>A URL pointing to a file or directory on your site. You do not need to specify the domain in these URLs.</p><p><span class="code">&lt;a href="about.html"&gt;</span>About Me<span class="code">&lt;/a&gt;</span></p>
+				</section>
+				<section>
+					<h3>Anchor URL</h3>
+					<p>A URL pointing to an element within a page.</p><p><span class="code">&lt;a href="#contact"&gt;</span>Contact Form<span class="code">&lt;/a&gt;</span></p>
+				</section>
+				<section>
+					<h3>Email</h3>
+					<p>A link that opens a user's default email program and fills in your specified email address.</p><p><span class="code">&lt;a href="mailto:me@gmail.com"&gt;</span>Email Me!<span class="code">&lt;/a&gt;</span></p>
+				</section>
+				<section>
+					<h3>Open in New Tab</h3>
+					<p>You can use the target attribute to have a link open in a new tab or window.</p><p><span class="code">&lt;a href="http://facebook.com" target="_blank"&gt;</span>Facebook<span class="code">&lt;/a&gt;</span></p>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<p>Add a link to your page allowing users to email you.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>HTML Images</h2>
+				</section>
+				<section>
+					<h3>Gif</h3>
+					<p>Best type for images with fewer and bolder colors. Good for illustrations and graphics.</li>
+					<img src="http://upload.wikimedia.org/wikipedia/commons/2/25/Nasa-logo.gif" width="550" />
+				</section>
+				<section>
+					<h3>JPG</h3>
+					<p>Best type for images with many colors. Best to use for photographs.</p>
+					<img src="http://images.topix.com/gallery/up-NVIB3M0CPL79IAQP.jpg" />
+				</section>
+				<section>
+					<h3>PNG</h3>
+					<p>Transparent background. Typically used for graphics and icons.</p>
+					<img src="http://www.queness.com/resources/images/png/apple_ex.png" style="border:none;box-shadow:none;" />
+				</section>
+				<section>
+					<h3>Storing Images</h3>
+					<p>Once you have cropped, sized and saved your images as the correct type, place your image file in a directory named <strong>images</strong>.</p>
+				</section>
+				<section>
+					<h3>Image Tag</h3>
+					<ul>
+						<li>The Tag: <span class="code">&lt;img /&gt;</span></li>
+						<li>The Attribute: <span class="code">src</span></li>
+						<li>Structure: <span class="code">&lt;img src="images/logo.gif" /&gt;</span></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<p>Create an <span class="code">images</span> directory in your site. Grab an image from your computer or a Google image search and save it to your images directory. Then use the <span class="code">img</span> tag to add it to your page.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>HTML Containers</h2>
+				</section>
+				<section>
+					<h3>Block Element</h3>
+					<p>Block level elements always appear to start on the same line.</p>
+					<p>Examples: <span class="code">&lt;h1&gt;, &lt;p&gt;, &lt;li&gt;</span></p>
+				</section>
+				<section>
+					<h3>The DIV</h3>
+					<p>A block-level container element used to group sections of content</p><p><span class="code">&lt;div&gt;&lt;p&gt;</span>Content goes here<span class="code">&lt;/p&gt;&lt;/div&gt;</span></p>
+				</section>
+				<section>
+					<h3>Inline Element</h3>
+					<p>Inline elements always appear to start on the same line.</p>
+					<p>Examples: <span class="code">&lt;a&gt;, &lt;em&gt;, &lt;img&gt;</span></p>
+				</section>
+				<section>
+					<h3>The SPAN</h3>
+					<p>An inline container element used to group elements on the same line, usually text.</p>
+					<p><span class="code">&lt;span&gt;</span>Sentence text<span class="code">&lt;/span&gt;</span> goes here.</p>
+				</section>
+				<section>
+					<h3>The ID Attribute</h3>
+					<p>An attribute used to identify the content and target using CSS. IDs can <strong>only be used once</strong> on a page.</p>
+					<p><span class="code">&lt;div id="navigation"&gt;&lt;/div&gt;</span></p>
+				</section>
+				<section>
+					<h3>The Class Attribute</h3>
+					<p>An attribute used to identify content and target multiple elements at once using CSS. Classes can be used many times on a page.</p>
+					<p><span class="code">&lt;div class="section"&gt;&lt;/div&gt;</span></p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>HTML Comments</h2>
+				</section>
+				<section>
+					<h3>Make Notes</h3>
+					<p>Use this syntax to make notes for yourself on your page. When formatted correctly, comments will appear gray in your text editor.</p>
+					<p><span class="code">&lt;div&gt;&lt;/div&gt;&lt;!--END SECTION--&gt;</span></p>
+				</section>
+				<section>
+					<h3>Hide Code</h3>
+					<p>You can also use the same syntax to hide code that you don't want to show on your page but you still want to keep in your file.</p>
+					<p><span class="code">&lt;!-- &lt;div&gt;Hide this box.&lt;/div&gt; --&gt;</span></p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Wireframes</h2>
+				</section>
+				<section>
+					<h3>Definition</h3>
+					<p>A sketch of your web page and what information goes on it. It groups your content, defines the hierarchy of information and how much space each part takes up.</p>
+				</section>
+				<section>
+					<img src="../../images/wireframe.png" />
+				</section>
+				<section>
+					<h3><a href="https://www.google.com/search?q=website+wireframe&source=lnms&tbm=isch&sa=X&ei=MwDvUvztM6jSsATCq4D4Bw&sqi=2&ved=0CAcQ_AUoAQ&biw=1920&bih=1079" target="_blank">More Examples &raquo;</a></h3>
+				</section>
+			</section>
+			<section>
+				<h2>GIT WORKSHOP</h2>
+			</section>
+			<section>
+				<section>
+					<h2>Assignments</h2>
+				</section>
+				<section>
+					<h3>Readings</h3>
+					<ul>
+						<li>In HTML&CSS, read Chapters 2 - 5, 8 and 18</li>
+						<li>Go over the <a href="http://www.w3schools.com/css/css_boxmodel.asp" target="_blank">w3schools Box Model page</a></li>
+						<li>Extra: <a href="http://www.smashingmagazine.com/2013/03/07/creating-wireframes-and-prototypes-with-indesign/" target="_blank">Creating Wireframes with InDesign</a></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Add To Your Homepage</h3>
+					<ul>
+						<li>Go back to your <span class="code">index.html</span> page and make sure you have the correct page setup for your project, including: <span class="code">DOCTYPE</span>, <span class="code">html</span>, <span class="code">head</span> and <span class="code">body</span></li>
+						<li>Add the follow tags and content to your homepage: <span class="code">title</span>, <span class="code">h1</span> and a <span class="code">div</span> with an <span class="code">id</span> attribute to hold your content.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Project Wireframe</h3>
+					<p>Create a wireframe for your final project. Make sure to include a spot for all the content you need to put on the page. Use one of the following methods:</p>
+					<ul>
+						<li>Draw on paper</li>
+						<li>Use Photoshop, InDesign or Google Draw</li>
+						<li>Use an online tool or app like <a href="https://gomockingbird.com/" target="_blank">mockingbird</a> or <a href="http://lovelycharts.com/">Lovely Charts</a></li>
+						<li>Turn in via Dropbox, or hand in if you have it printed out.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Finish your <a href="https://github.com/jueyang/know-your-tools/blob/master/week2.md#ok-time-for-homework-of-the-week">GIT Assignment</a></h3>
+				</section>
+				<section>
+					<h1>Have a great week!</h1>
+				</section>
+			</section>
+		</div>
+	</div>
+
+<script src="../../js/reveal/lib/js/head.min.js"></script>
+<script src="../../js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Optional libraries used to extend on reveal.js
+    dependencies: [
+      { src: '../../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: '../../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '../../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: '../../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    ]
+  });
+</script>
+<script type="text/javascript" src="../../js/lessonHeader.js"></script>
+</body>
+</html>
