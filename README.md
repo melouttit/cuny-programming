@@ -33,6 +33,7 @@ Lessons and notes for CUNY Graduate School of Journalism “Programming for Jour
 </ul>
 
 <h2>JavaScript Weeks 6-15</h2>
+<p>TK</p>
 <ul>
   <!-- <li><strong>6 What is JavaScript? (3/14):</strong> Discussing JavaScript as a language, how it was created and it’s current place in modern web technology. We will go over what it is used for and how it can be incorporated into journalism projects. We will also discuss its relationship to the Document Object Model and how to add it to the students’ websites. </li> -->
   <!-- debugging tips / finding the error -->
