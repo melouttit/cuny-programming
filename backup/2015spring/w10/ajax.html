@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>AJAX Test</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <style type="text/css"></style>
+</head>
+
+<body>
+
+  <h1>My Portfolio</h1>
+
+  <div id="porfolio"></div>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+
+    var portfolioapp = {
+      init:function(data){
+        console.log(data);
+      }
+    }
+
+    $.ajax({
+      dataType:'json',
+      url:'//mlouttit.com/cuny/js/portfolio.js',
+      success:function(data){
+        console.log(data);
+        $(function(){
+          console.log("LAUNCHING APP");
+          portfolioapp.init(data);
+        });
+
+        $.each(data,function(index,portItem){
+          console.log(portItem);
+        });
+      }
+    });
+
+    // $.getJSON("http://mlouttit.com/cuny/js/portfolio.js",
+    // function(data){ 
+    //   console.log(data);
+    // });
+
+  });
+  </script>
+
+</body>
+
+</html>

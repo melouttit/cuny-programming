@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Week 7 - Arrays, Objects and Loops</title>
+</head>
+
+<body>
+
+	<h1 id="headline">Storing Data in JavaScript</h1>
+	<ul id="list"></ul>
+ 
+	<script type="text/javascript">
+
+	//arrays
+	var books = ['The Thorn Birds','The Shock Doctrine','Night of the Gun','Eleanor and Park','The Lord of the Rings Triology'];
+	console.log(books);
+	console.log(books[3]);
+	var favorite = books[2];
+	console.log(favorite);
+
+	//objects
+	var favoriteBook = {
+		title:'The Thorn Birds',
+		author:'Colleen McCullough',
+		pubYear:'1977',
+		buyLink:'http://www.amazon.com/The-Thorn-Birds-Colleen-McCullough/dp/0380018179'
+	}
+	console.log(favoriteBook);
+	console.log(favoriteBook.author);
+
+	var favoriteBooks = [
+		{
+			title:'The Thorn Birds',
+			author:'Colleen McCullough',
+			pubYear:'1977',
+			buyLink:'http://www.amazon.com/The-Thorn-Birds-Colleen-McCullough/dp/0380018179'
+		},
+		{
+			title:'The Shock Doctrine',
+			author:'Naomi Klein',
+			pubYear:'2007',
+			buyLink:'http://www.amazon.com/The-Shock-Doctrine-Disaster-Capitalism/dp/0312427999'
+		},
+		{
+			title:'Night of the Gun',
+			author:'David Carr',
+			pubYear:'2008',
+			buyLink:'http://www.amazon.com/The-Night-Gun-reporter-investigates/dp/1416541535'
+		}
+	];
+	console.log(favoriteBooks);
+	console.log(favoriteBooks[2]);
+	console.log(favoriteBooks[2].author);
+
+	appendString='';
+	for(var i = 0; i<10;i++){
+		appendString += "<p>This is number "+i+"</p>";
+	}
+	// document.write(appendString);
+
+	var container = document.getElementById('list');
+	for (var i=0; i < books.length; i++){
+		console.log(books[i]);
+		var bp = document.createElement('li');
+		var book = document.createTextNode(books[i]);
+		bp.appendChild(book);
+		// document.write('<p>'+book+'</p>');
+		container.appendChild(bp);
+	}
+
+	document.getElementById('headline').innerHTML = 'My Favorite Books';
+	</script>
+
+</body>
+
+</html>

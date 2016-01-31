@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>AJAX Test</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<style type="text/css">
+	h6{ margin:0;}
+	h2{ margin:0 0 3px 0; }
+	p{ font-size:12px;margin:0;}
+	.item{ border-bottom:1px solid #ccc;padding-bottom:20px;margin-bottom:20px; }
+	img{ width:75px;}
+	</style>
+</head>
+
+<body>
+
+	<h1>My Portfolio</h1>
+
+	<div id="portfolio"></div>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+		var portfolioapp = {
+			init:function(){
+				$.each(data.portfolio,function(index,item){
+					console.log(item);
+					var kicker = '<h6>'+item.type+'</h6>';
+					var headline = '<h2>'+item.title+'</h2>';
+					var pubDate = '<p class="pubDate">'+item.pubDate+'</p>';
+					var image = '<a href="'+item.url+'"><img src="'+item.image+'" /></a>';
+					var refer = '<p><a href="'+item.url+'">View this Project &raquo;</a></p>';
+
+					var portfolioItem = $('<div class="item"></div>');
+					$(portfolioItem).append(kicker);
+					$(portfolioItem).append(headline);
+					$(portfolioItem).append(pubDate);
+					$(portfolioItem).append(image);
+					$(portfolioItem).append(refer);
+					$('#portfolio').append(portfolioItem);
+				});
+			}
+		}
+
+		$.ajax({
+			dataType:'json',
+			url:'http://mlouttit.com/cuny/js/portfolio.js',
+			success:function(data){
+				console.log(data);
+				$(function(){
+					portfolioapp.init();
+				});
+			},
+			error:function(){
+				console.log("ERROR");
+			}
+		});
+
+	});
+	</script>
+
+</body>
+
+</html>

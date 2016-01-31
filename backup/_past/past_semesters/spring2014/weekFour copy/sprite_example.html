@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sprites Example</title>
+
+	<style type="text/css">
+	h1{
+		font:arial,helvetica,sans-serif;
+		font-size:28px;
+		color:#333;
+		text-shadow:2px 2px 3px #ddd;
+		font-weight:bold;
+	}
+	div.sprite{
+		width:600px;
+		height:300px;
+		overflow:hidden;
+		position:relative;
+		background:url("../images/flowers-sprite.gif") no-repeat 0 0;
+		cursor:pointer;
+	}
+	div.sprite:hover{
+		background-position:0 -300px;
+	}
+	div.sprite:active{
+		background-position:0 -600px;
+	}
+	</style>
+</head>
+<body>
+
+	<h1>Fun with Sprites!</h1>
+
+	<div class="sprite"></div>
+
+</body>
+</html>
