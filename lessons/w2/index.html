@@ -61,28 +61,19 @@
 <section>
 	<section>
 		<h2>HTML & Page Setup</h2>
-		<p>Create a new directory in your site's root folder called <span class="code">week2</span> to house this week's exercises. Then use <span class="code">touch index.html</span> to make the hompage for this directory.</p>
+		<p>In terminal, navigate to your website's root directory. Use <span class="code">mkdir</span> to create a new directory called <span class="code">week2</span> to house this week's exercises. Then use <span class="code">touch</span> to make the hompage for this directory.</p>
 	</section>
 	<section>
 		<h3>What is HTML?</h3>
 		<ul>
 			<li>Stands for <strong>Hyper-Text Markup Language</strong></li>
 			<li>It is a language for 'writing' or 'describing' web pages. Those pages are then 'read' by your browser.</li>
-			<li>HTML is a semantic language - some tags have default styles but most do not</li>
-			<li><strong>Valid HTML:</strong> HTML with the proper syntax. Most modern browers will interpret invalid HTML correctly, but it is <em>not</em> a good idea to leave it that way - your page might not look correct in other browers, older browers, on mobile or in newer versions of browsers. Think of it as using bad grammer.</li>
+			<li>HTML is a semantic or language - some tags have default styles but most do not</li>
 		</ul>
 	</section>
 	<section>
-		<h3>Standard Page Setup</h3>
-		<pre><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span><br /><span class="tag">&lt;<span class="title">html</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">head</span>&gt;</span><br /><span class="tag">&lt;<span class="title">/head</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">body</span>&gt;</span><br /><span class="tag">&lt;/<span class="title">body</span>&gt;</span><br /><br /><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>	
-	</section>
-	<section>
-		<h3>DOCTYPE</h3>
-		<ul>
-			<li>Declared at the beginning of your page</li>
-			<li>Within the doctype you will declare that the page is in HTML and which version you are using</li>
-			<li>There have been a handful of versions of HTML, we'll be sticking with HTML5: <span class="code">&lt;!DOCTYPE html&gt;</span></li>
-		</ul>	
+		<h3>Valid HTML</h3>
+		<p>HTML with the proper syntax. Most modern browers will interpret invalid HTML correctly, but it is <em>not</em> a good idea to leave it that way - your page might not look correct in other browers, older browers, on mobile or in newer versions of browsers. Think of it as using bad grammer.</p>
 	</section>
 	<section>
 		<h3>Tags</h3>
@@ -98,7 +89,7 @@
 		<ul>
 			<li>Each tag can also have multiple attribtes that provide more information for the browser.</li>
 			<li>Attributes are defined in the opening tag.</li>
-			<li>They are defined properties with a value that you set. Values can be urls, numbers or names you make up to differentiate on tag from another.</li>
+			<li>They are defined properties with a value that you set. Values can be urls, numbers or names you make up to differentiate one tag from another.</li>
 			<li>EX: 
 				<li><span class="code">&lt;h2 class="subhead"&gt;&lt;/h2&gt;</span></li>
 				<li><span class="code">&lt;div data-index="22"&gt;&lt;/div&gt;</span></li>
@@ -106,7 +97,19 @@
 		</ul>
 	</section>
 	<section>
-		<h3>Add to your test page</h3>
+		<h3>Standard Page Setup</h3>
+		<pre><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span><br /><span class="tag">&lt;<span class="title">html</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">head</span>&gt;</span><br /><span class="tag">&lt;<span class="title">/head</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">body</span>&gt;</span><br /><span class="tag">&lt;/<span class="title">body</span>&gt;</span><br /><br /><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>	
+	</section>
+	<section>
+		<h3>DOCTYPE</h3>
+		<ul>
+			<li>Declared at the beginning of your page</li>
+			<li>Within the doctype you will declare that the page is in HTML and which version you are using</li>
+			<li>There have been a handful of versions of HTML, we'll be sticking with HTML5: <span class="code">&lt;!DOCTYPE html&gt;</span></li>
+		</ul>	
+	</section>
+	<section>
+		<h3>Add to your Week 2 homepage</h3>
 		<ul>
 			<li><span class="code">DOCTYPE, html, head</span> and <span class="code">body</span> tags</li>
 			<li>Page title to your <span class="code">&lt;head&gt;</span></li>
@@ -114,11 +117,39 @@
 	</section>
 </section>
 <section>
-				<h2>GIT WORKSHOP</h2>
-			</section>
+	<h2>GIT WORKSHOP</h2>
+</section>
+<section>
+	<section>
+		<h2>Wireframes</h2>
+	</section>
+	<section>
+		<h3>Definition</h3>
+		<p>A sketch of your web page and what information goes on it. It groups your content, defines the hierarchy of information and how much space each part takes up.</p>
+	</section>
+	<section>
+		<img src="../../images/wireframe.png" />
+	</section>
+	<section>
+		<h3><a href="https://www.google.com/search?q=website+wireframe&source=lnms&tbm=isch&sa=X&ei=MwDvUvztM6jSsATCq4D4Bw&sqi=2&ved=0CAcQ_AUoAQ&biw=1920&bih=1079" target="_blank">More Examples &raquo;</a></h3>
+	</section>
+	<section>
+		<h3>Why We Use Them</h3>
+		<p>Wireframes help us to think through and define which pieces of information are most important and help us commicate that to users through space and layout. It is helpful to work out these questions <em>before</em> you being coding.</p>
+	</section>
+	<section>
+		<h3>Translating into Code</h3>
+		<p>You can think of each HTML element or tag as a box. Your layouts are built by arranging your boxes on the page. You can envision each box of a wireframe as a separate HTML element.</p> 
+	</section>
+	<section>
+		<h3>Exercise</h3>
+		<p>Go to <a href="http://www.npr.org/">NPR.org</a>. On a piece of paper, draw out a wireframe for this page.</p>
+	</section>
+</section>
 			<section>
 				<section>
 					<h2>HTML Text Tags</h2>
+					<p>All text on your page should fall inside of one the following categories.</p>
 				</section>
 				<section>
 					<h3>Heading Tags</h3>
@@ -168,7 +199,7 @@
 				</section>
 				<section>
 					<h3>Exercise</h3>
-					<p>Add the following to your page:</p>
+					<p>Using the theme "My Favorite Books" - add the following to your Week 2 page:</p>
 					<ul>
 						<li>A headline</li>
 						<li>A paragraph of text (you can use <a href="http://www.ipsum-generator.com/">dummy text</a>)</li>
@@ -310,22 +341,7 @@
 				</section>
 				<section>
 					<h3>Exercise</h3>
-					<p>Open up XXXXX.com and open the inspector. Copy the markup from the main article. (Right click and Edit as HTML).</p>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h2>Wireframes</h2>
-				</section>
-				<section>
-					<h3>Definition</h3>
-					<p>A sketch of your web page and what information goes on it. It groups your content, defines the hierarchy of information and how much space each part takes up.</p>
-				</section>
-				<section>
-					<img src="../../images/wireframe.png" />
-				</section>
-				<section>
-					<h3><a href="https://www.google.com/search?q=website+wireframe&source=lnms&tbm=isch&sa=X&ei=MwDvUvztM6jSsATCq4D4Bw&sqi=2&ved=0CAcQ_AUoAQ&biw=1920&bih=1079" target="_blank">More Examples &raquo;</a></h3>
+					<p>Open up your Week 2 page in Chrome. Use <span class="code">cmd + alt + i</span> or right click and select Inspect Element to open up the developer tools. Under the Elements tab you can look through the markup on your page (or any page).</p>
 				</section>
 			</section>
 			<section>
@@ -344,26 +360,26 @@
 					<h3>Add To Your Homepage</h3>
 					<ul>
 						<li>Go back to your <span class="code">index.html</span> page and make sure you have the correct page setup for your project, including: <span class="code">DOCTYPE</span>, <span class="code">html</span>, <span class="code">head</span> and <span class="code">body</span></li>
-						<li>Add the follow tags and content to your homepage: <span class="code">title</span>, <span class="code">h1</span> and a <span class="code">div</span> with an <span class="code">id</span> attribute to hold your content.</li>
+						<li>Add the following tags and content to your homepage: <span class="code">title</span>, a headline "My Assignments" in an <span class="code">h1</span>, and start an unordered list with a link to your Week 2 directory.</li>
 					</ul>
 				</section>
 				<section>
 					<h3>Wireframe</h3>
-					<p>Create a wireframe for XXXXX.com showing how the information is organized on the page.</p>
+					<p>Draw out a wireframe for your Week 2 homepage for creating a list of your favorite books (or movies or musicians or periodicals). <a href="http://www.nytimes.com/interactive/2015/12/02/books/review/best-books-of-2015.html">Use this page as a guide</a> for the kind of information you will need to include. At minimum include a title and description for the page and a title, author name, description and image for each item.</p>
 					<ul>
 						<li>Draw on paper</li>
 						<li>Use Photoshop, InDesign or Google Draw</li>
 						<li>Use an online tool or app like <a href="https://gomockingbird.com/" target="_blank">mockingbird</a> or <a href="http://lovelycharts.com/">Lovely Charts</a></li>
-						<li>Turn in via Dropbox, or hand in if you have it printed out.</li>
+						<li>If you draw on paper, you can hand in in-class. If you have a digital file, save in your website to commit via GIT.</li>
 					</ul>
 				</section>
 				<section>
 					<h3>HTML Practice</h3>
-					<p>Codecademy?</p>
-					<p>Recreate this page with markup</p>
+					<p>Translate your wireframe into code on your Week 2 homepage. You can alter the content we added in class. Add actual content but don't worry about the design (everything will be stacked) - concentrate on using the appropriate markup for your content.</p>
 				</section>
 				<section>
-					<h3>Finish your <a href="https://github.com/jueyang/know-your-tools/blob/master/week2.md#ok-time-for-homework-of-the-week">GIT Assignment</a></h3>
+					<h3>GIT</h3>
+					<p>When you are finished with your work on your homepage and in Week 2, use your <span class="code">add</span>, <span class="code">commit</span> and <span class="code">push</span> commands to upload your repo. Complete this by next Monday.</p>
 				</section>
 				<section>
 					<h1>Have a great week!</h1>
