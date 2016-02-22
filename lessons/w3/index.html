@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex, nofollow">
 
-  <title>Week 4 - Programming for Journalists</title>
+  <title>Week 3 - Programming for Journalists</title>
 
   <meta name="author" content="Meghan Louttit">
 
@@ -37,7 +37,7 @@
     background:#efefef;
     color:#333;
   }
-  .code{ color:#fff;font-family: monospace!important; }
+  .code{ color:#9e9e9e;font-family: monospace!important; }
   </style>
 
   <script>
@@ -59,15 +59,34 @@
 				<h4>CSS Box Model & Design Basics</h4>
 			</section>
 			<section>
-				<h2>Lesson Prep</h2>
-				<ul>
-					<li>Open: Class Website (Week 3), GitHub, Slack & Sublime</li>
-					<li>In Sublime open your site: File > Open > yoursite.</li>
-					<li>Open <span class="code">index.html</span>, which should have tags from <a href="http://mlouttit.com/cuny/lessons/w2/#/">w2 assignment</a></li>
-					<li>Create a new file called <span class="code">week3.html</span> and paste in the code below:
-						<pre style="width:900px;"><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span><br /><span class="tag">&lt;<span class="title">html</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">head</span>&gt;</span><br />&nbsp;&nbsp;<span class="tag">&lt;<span class="title">title</span>&gt;</span>Week 3 - CSS Practice<span class="tag">&lt;<span class="title">/title</span>&gt;</span><br /><span class="tag">&lt;<span class="title">/head</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">body</span>&gt;</span><br />&nbsp;&nbsp;<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>="<span class="value">content</span>"&gt;</span></span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">h1</span>&gt;</span>My First CSS Styled Page<span class="tag">&lt;<span class="title">/h1</span>&gt;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">hr /</span>&gt;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">p</span>&gt;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et arcu ultricies, vehicula urna ut, lacinia metus. Aenean ac ante odio. Nullam mollis scelerisque urna, eget interdum velit posuere vel. Nullam eu leo ac ipsum tristique scelerisque. Nullam lobortis consequat arcu, id maximus erat sagittis eget.<br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/<span class="title">p</span>&gt;</span><br />&nbsp;&nbsp;<span class="tag">&lt;/<span class="title">div</span>&gt;</span><br /><span class="tag">&lt;/<span class="title">body</span>&gt;</span><br /><br /><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>
-					</li>
-				</ul>
+				<section>
+					<h2>Lesson Prep</h2>
+					<ul>
+						<li>Open: Class Website, GitHub, Slack & Sublime</li>
+						<li>In Sublime open your site: File > Open > <span class="code">yoursite</span>.</li>
+						<li>In Terminal, <span class="code">cd</span> into your site and use <span class="code">mkdir week3</span> to make a directory for your week 3 practice.</li>
+						<li>Next, <span class="code">cd</li> into week3 and use <span class="code">touch index.html</span> to create the index page for week 3.</li>
+						<li>Check in Sublime to see that you've created all these correctly and double click <span class="code">week3/index.html</span> to open.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Set Up Your Index</h3>
+					<p>Paste the code below into your <span class="code">week3/index.html</span></p>
+					<div><pre style="width:900px;"><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span><br /><span class="tag">&lt;<span class="title">html</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">head</span>&gt;</span><br />&nbsp;&nbsp;<span class="tag">&lt;<span class="title">title</span>&gt;</span>Week 3 - CSS Practice<span class="tag">&lt;<span class="title">/title</span>&gt;</span><br /><span class="tag">&lt;<span class="title">/head</span>&gt;</span><br /><br /><span class="tag">&lt;<span class="title">body</span>&gt;</span><br />&nbsp;&nbsp;<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>="<span class="value">content</span>"&gt;</span></span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">h1</span>&gt;</span>My First CSS Styled Page<span class="tag">&lt;<span class="title">/h1</span>&gt;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">hr /</span>&gt;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;<span class="title">p</span>&gt;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et arcu ultricies, vehicula urna ut, lacinia metus. Aenean ac ante odio. Nullam mollis scelerisque urna, eget interdum velit posuere vel. Nullam eu leo ac ipsum tristique scelerisque. Nullam lobortis consequat arcu, id maximus erat sagittis eget.<br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/<span class="title">p</span>&gt;</span><br />&nbsp;&nbsp;<span class="tag">&lt;/<span class="title">div</span>&gt;</span><br /><span class="tag">&lt;/<span class="title">body</span>&gt;</span><br /><br /><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre></div>
+				</section>
+				<section>
+					<h3>Your Site Should Look Like This:</h3>
+					<img src="../../images/class-stack.png" />
+				</section>
+				<section>
+					<h3>Push Your Changes</h3>
+					<p>Now that we're set up let's commit and push the changes to your repo.</p>
+					<ul>
+						<li><span class="code">git add -A</span></li>
+						<li><span class="code">git commit -m 'added week 3'</span></li>
+						<li><span class="code">git push origin master</span></li>
+					</ul>
+				</section>
 			</section>
 			<section>
 				<section>
@@ -121,6 +140,50 @@
 			</section>
 			<section>
 				<section>
+					<h2>Adding CSS to your page</h2>
+					<p>There are three ways to apply CSS to your page.</p>
+				</section>
+				<section>
+					<h3>1. Inline Styles</h3>
+					<ul>
+						<li>You can add a <span class="code">style</span> attribute to any HTML tag, with the value being CSS styling.</li>
+						<li>EX: <span class="code">&lt;div style="width:200px;"&gt;&lt;/div&gt;</span></li>
+						<li>Using inline styles is generally not good practice, but you will alter them when you start using JavaScript.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>2. External: In Your Head</h3>
+					<ul>
+						<li>Within your <span class="code">&lt;head&gt;</span> include a set of <span class="code">&lt;style&gt;&lt;/style&gt;</span> tags</li>
+						<li>Write your styles inside these tags.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>3. External: Using <span class="code">&lt;link /&gt;</span></h3>
+					<ul>
+						<li>Also goes in your <span class="code">&lt;head&gt;</span></li>
+						<li>Pulls in styles from a separate sheet on your server.</li>
+						<li>EX: <span class="code">&lt;link rel="stylesheet" href="css/styles.css" /&gt;</span></li>
+					</ul>
+				</section>
+				<section>
+					<h3>External Practice</h3>
+					<ul>
+						<li>Use <span class="code">mkdir</span> to create a directory in your root folder called <span class="code">css</span>.</li>
+						<li><span class="code">cd</span> into your css directory and use <span class="code">touch styles.css</span> to make your stylesheet.</li>
+						<li>Within your <span class="code">&lt;head&gt;</span> write out a <span class="code">&lt;link /&gt;</span> tag and include an <span class="code">href</span> attribute to link to your stylesheet.</li>
+						<li><span class="code">&lt;link rel="stylesheet" href="css/styles.css" /&gt;</span></li>
+						<li>The <span class="code">rel</span> attribute describes the relationship between the current document and the linked document.</li>
+						<li><strong>TIP:</strong> Make two file windows in Sublime by selecting View > Layout > Columns: 2</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Note</h3>
+					<p>Anything you add into your stylesheet could also be added into the <span class="code">style</span> tags in <span class="code">head</span>.</p><p>But <span class="code">style</span> tags do <strong>not</strong> go in your stylesheet - they are HTML, only CSS rules go in your stylesheet.</p>
+				</section>
+			</section>
+			<section>
+				<section>
 					<h2>Style Syntax</h2>
 				</section>
 				<section>
@@ -166,40 +229,6 @@
 			</section>
 			<section>
 				<section>
-					<h2>Adding CSS to your page</h2>
-					<p>There are three ways to apply CSS to your page.</p>
-				</section>
-				<section>
-					<h3>1. Inline Styles</h3>
-					<ul>
-						<li>You can add a <span class="code">style</span> attribute to any HTML tag, with the value being CSS styling.</li>
-						<li>EX: <span class="code">&lt;div style="width:200px;"&gt;&lt;/div&gt;</span></li>
-						<li>Using inline styles is generally not good practice, but you will alter them when you start using JavaScript.</li>
-					</ul>
-				</section>
-				<section>
-					<h3>2. External: In Your Head</h3>
-					<ul>
-						<li>Within your <span class="code">&lt;head&gt;</span> include a set of <span class="code">&lt;style&gt;&lt;/style&gt;</span> tags</li>
-						<li>Write your styles inside these tags.</li>
-					</ul>
-				</section>
-				<section>
-					<h3>3. External: Using <span class="code">&lt;link /&gt;</span></h3>
-					<ul>
-						<li>Create a file called <span class="code">styles.css</span> and store it in a directory on your site called <strong>css</strong>.</li>
-						<li>Within your <span class="code">&lt;head&gt;</span> write out a <span class="code">&lt;link /&gt;</span> tag and include an <span class="code">href</span> attribute to link to your stylesheet.</li>
-						<li><span class="code">&lt;link rel="stylesheet" href="css/styles.css" /&gt;</span></li>
-						<li>The <span class="code">rel</span> attribute describes the relationship between the current document and the linked document.</li>
-					</ul>
-				</section>
-				<section>
-					<h3>Exercise</h3>
-					<p>Add <span class="code">&lt;style&gt;&lt;/style&gt;</span> tags in the <span class="code">&lt;head&gt;</span> of your <span class="code">week3.html</span> file and start a rule for your <span class="code">&lt;h1&gt;</span>.</p>
-				</section>
-			</section>
-			<section>
-				<section>
 					<h2>Colors</h2>
 				</section>
 				<section>
@@ -234,6 +263,14 @@
 						<li>Make the <span class="code">border-color</span> of the <span class="code">hr</span> tag <span class="code">black</span></li>
 					</ul>
 				</section>
+			</section>
+			<section>
+				<h3>Add/Commit/Push Your Work</h3>
+				<ul>
+					<li><span class="code">git add -A</span></li>
+					<li><span class="code">git commit -m 'added colors'</span></li>
+					<li><span class="code">git push origin master</span></li>
+				</ul>
 			</section>
 			<section>
 				<section>
@@ -277,6 +314,14 @@
 				</section>
 			</section>
 			<section>
+				<h3>Add/Commit/Push Your Work</h3>
+				<ul>
+					<li><span class="code">git add -A</span></li>
+					<li><span class="code">git commit -m 'added fonts'</span></li>
+					<li><span class="code">git push origin master</span></li>
+				</ul>
+			</section>
+			<section>
 				<section>
 					<h2>Psuedo Elements</h2>
 					<p>Can be added to the end of your selector for more control.</p>
@@ -309,10 +354,10 @@
 				<section>
 					<h3>Box Margins</h3>
 					<ul>
-						<li><span class="code">margin</span> set in pixels or percentage</li>
-						<li><span class="code">margin-top, margin-right, margin-bottom, margin-left</span></li>
-						<li>Set all sides at the same time: <span class="code">margin: 10px;</span></li>
-						<li>Set all four in one: <span class="code">margin: 5px 0px 10px 5px;</span> going clockwise from the top side to the left side.</li>
+						<li>Rule: <span class="code">margin</span> (set in pixels or percentage)</li>
+						<li>Specific sides: <span class="code">margin-top, margin-right, margin-bottom, margin-left</span></li>
+						<li>Set all sides at once: <span class="code">margin: 10px;</span></li>
+						<li>Collapse side styles: <span class="code">margin: 5px 0px 10px 5px;</span> going clockwise from the top side to the left side.</li>
 						<li>To center a box, you can set <span class="code">margin: 0 auto;</span></li>
 					</ul>
 				</section>
@@ -320,10 +365,10 @@
 					<h3>Box Padding</h3>
 					<p>Set exactly like margins, except the property name is <span class="code">padding</span></p>
 					<ul>
-						<li><span class="code">padding</span></li>
-						<li><span class="code">padding-top, padding-right, padding-bottom, padding-left</span></li>
-						<li><span class="code">padding: 10px;</span></li>
-						<li><span class="code">padding: 5px 0px 10px 5px;</span></li>
+						<li>Rule: <span class="code">padding</span></li>
+						<li>Specific sides: <span class="code">padding-top, padding-right, padding-bottom, padding-left</span></li>
+						<li>Set all sides at once: <span class="code">padding: 10px;</span></li>
+						<li>Collapse side styles: <span class="code">padding: 5px 0px 10px 5px;</span></li>
 					</ul>
 				</section>
 				<section>
@@ -344,47 +389,44 @@
 				<section>
 					<h3>Exercise</h3>
 					<ul>
-						<li>Add a <span class="code">width</span> property to your <span class="code">content</span> container (targeting the id of the <span class="code">div</span>). Make it no more than <span class="code">700px</span>.</li>
+						<li>Add a <span class="code">width</span> property to your <span class="code">content</span> container (targeting the id of the <span class="code">div</span>)</li>
+						<li>Make it no more than <span class="code">700px</span>.</li>
+						<li>Add a <span class="code">background-color</span>.</li>
 						<li>Add another property to content for <span class="code">margin</span> to center: <span class="code">margin: 0 auto;</span></li>
 					</ul>
 				</section>
 			</section>
 			<section>
-				<h2>Comments in CSS</h2>
-				<p>Same principle as in HTML, you use these to write notes to yourself or anyone who is looking at your code.</p>
-				<p><span class="code">/* CSS Comment Here */</span></p>
+				<h3>Add/Commit/Push Your Work</h3>
+				<ul>
+					<li><span class="code">git add -A</span></li>
+					<li><span class="code">git commit -m 'added box'</span></li>
+					<li><span class="code">git push origin master</span></li>
+				</ul>
 			</section>
 			<section>
 				<section>
-					<h2>Add CSS to your site and Push to GitHub</h2>
+					<h2>Comments in CSS</h2>
 				</section>
 				<section>
-					<h3>Create an External Stylesheet</h3>
-					<ul>
-						<li>Via iTerm (<span class="code">mkdir</span>) or in Finder, create a directory in your website called <span class="code">css</span> (lowercase)</li>
-						<li>Start a new file in Sublime (or via iTerm using <span class="code">touch</span>) and save it as <span class="code">styles.css</span> in your new <span class="code">css</span> directory</li>
-					</ul>
+					<p>Same principle as in HTML, you use these to write notes to yourself or anyone who is looking at your code.</p>
+					<p><span class="code">/* CSS Comment Here */</span></p>
 				</section>
 				<section>
-					<h3>Add Some Styles</h3>
+					<h3>Add Author Info to Styles</h3>
 					<ul>
-						<li>Inside CSS Comments type:<br /> <span class="code">Website: Site Name v.1<br />Author: Your Name</span></li>
-						<li>Add a <span class="code">&lt;link /&gt;</span> tag to your <span class="code">index.html</span> to pull in your new stylesheet</li>
-						<li>Add at least three styles to your stylesheet, save, and test!</li>
-						<li><strong>TIP:</strong> Make two file windows in Sublime by selecting View > Layout > Columns: 2</li>
+						<li>Inside CSS comments on your external stylesheet, type:<br /> <span class="code">Website: SITE NAME v.1<br />Author: YOUR NAME</span></li>
 					</ul>
 				</section>
-				<section>
-					<h3>Add/Commit/Push</h3>
-					<p>Now let's push your changes to Git! (<a href="https://github.com/jueyang/know-your-tools/blob/master/week2.md#make-life-easier">Refer to w2 Git Lab</a>)</p>
-					<ul>
-						<li>Open up iTerm and use <span class="code">cd</span> to navigate to your website</li>
-						<li><span class="code">git add -A</span></li>
-						<li><span class="code">git commit -m 'added css directory'</span></li>
-						<li><span class="code">git push origin master</span></li>
-						<li><span class="code">Refresh your GitHub page and see your new files!</span></li>
-					</ul>
-				</section>
+			</section>
+			<section>
+				<h3>Add/Commit/Push Your Work</h3>
+				<ul>
+					<li><span class="code">git add -A</span></li>
+					<li><span class="code">git commit -m 'added author info'</span></li>
+					<li><span class="code">git push origin master</span></li>
+				</ul>
+			</section>
 			</section>
 			<section>
 				<section>
@@ -402,7 +444,7 @@
 				</section>
 				<section>
 					<h3>Slack Post</h3>
-					<p>Pick at least one story you've read/watched/interacted with this week and post it in the <a href="https://cunyjprogramming.slack.com/messages/spring2015/">#spring2015 Slack</a> with a sentence or two about what you like or didn't like about it. It should be a piece that you appreciate beyond the topic or how well it's written (though that counts too!): Does it integrate photos well? Do you think it's confusing to use? Is it too bogged down with video? Did you like the way the chart explained a confusing topic?</p>
+					<p>Pick at least one story you've read/watched/interacted with this week and post it in the class Slack with a sentence or two about what you like or didn't like about it. It should be a piece that you appreciate beyond the topic or how well it's written (though that counts too!): Does it integrate photos well? Do you think it's confusing to use? Is it too bogged down with video? Did you like the way the chart explained a confusing topic?</p>
 				</section>
 				<section>
 					<h3>Choose Colors & Fonts</h3>
@@ -415,7 +457,7 @@
 					<h3>Create Rules</h3>
 					<p>Create rules for your color and font choices. These will be the starting points for your project (you can always change them later).</p>
 					<p>For example, if you want the background of your page to be blue, you would write:</p><p> <span class="code">body{ background-color: blue; }</span></p>
-					<p>Upload a copy or screenshot of your <span class="code">style.css</span> file to your folder in Week 3 on Dropbox.</p>
+					<p>Add/Commit/Push your changes and send me a DM in Slack with the link to the stylesheet on GitHub.</p>
 				</section>
 				<section>
 					<h3>If you're feeling brave...</h3>
