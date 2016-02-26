@@ -55,189 +55,67 @@
   currentWeek = 4;
 </script>
 			<section>
-				<h2>Week 4 | Feb. 23, 2015</h2>
-				<h4>Positioning & Homepage Layout</h4>
-			</section>
-			<section>
-				<h2>Lesson Prep</h2>
-        <ul>
-          <li>Open: Class Website (Week 4), GitHub, Slack & Sublime</li>
-          <li>In Sublime open your site: File > Open > yoursite.</li>
-          <li>Open <span class="code">styles.css</span> (CSS rules from <a href="http://mlouttit.com/cuny/lessons/w2/#/">w3 assignment</a>)</li>
-          <li>Create a new file called <span class="code">week4.html</span> and paste in the code below:
-<pre style="width:900px;"><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="tag">&lt;<span class="title">html</span>&gt;</span>
-<span class="tag">&lt;<span class="title">head</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Week 4 - Positioning<span class="tag">&lt;<span class="title">/title</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">style</span>&gt;<span class="tag">&lt;<span class="title">/style</span>&gt;</span>
-<span class="tag">&lt;<span class="title">/head</span>&gt;</span>
-<span class="tag">&lt;<span class="title">body</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>="<span class="value">position</span>"&gt;</span></span>
-    <span class="tag">&lt;<span class="title">h1</span>&gt;</span>How to Position<span class="tag">&lt;<span class="title">/h1</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="atribute">id</span>="<span class="value">boxes</span>"&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>="<span class="value">box</span>" <span class="atribute">id</span>="<span class="value">red</span>"&gt;</span> <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>="<span class="value">box</span>" <span class="atribute">id</span>="<span class="value">green</span>"&gt;</span> <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>="<span class="value">box</span>" <span class="atribute">id</span>="<span class="value">blue</span>"&gt;</span> <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">/div</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>
-          </li>
-        </ul>
-			</section>
-			<section>
-				<h2>Review <span class="code">&lt;link&gt;</span></h2>
-				<ul>
-					<li>Homework questions?</li>
-          <li>Make sure you have your external style sheet pulled into your <span class="code">index.html</span> file via <span class="code">linke</span></li>
-					<li><a href="../weekThree/#/4/3" target="_blank">How to use an external style sheet &raquo;</a></li>
-				</ul>
+				<h2>Week 4 | March 7, 2016</h2>
+				<h4>SEO & GIT Lab</h4>
 			</section>
 			<section>
 				<section>
-					<h2>Display Review</h2>
-					<p>Each HTML node can be displayed in one of two ways.</p>
+					<h2>Meta Tags</h2>
 				</section>
 				<section>
-					<h3>Block-Level</h3>
-					<p>HTML elements that start on a new line. Examples: <span class="code">&lt;h1&gt;</span>, <span class="code">&lt;p&gt;</span>, <span class="code">&lt;div&gt;</span></p>
-				</section>
-				<section>
-					<h3>Inline</h3>
-					<p>HTML elements that stay on one line and flow in between surrounding text. Examples: <span class="code">&lt;span&gt;</span>, <span class="code">&lt;strong&gt;</span>, <span class="code">&lt;img&gt;</span></p>
-				</section>
-				<section>
-					<h3>Both</h3>
-					<p>In your CSS, you can determin that an element take on the properties of both. Example: <span class="code">display: inline-block;</span></p>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h2>CSS Positioning</h2>
-					<p>There are a handful of positioning schemes that CSS makes available for you to control the layout of a page.</p>
-				</section>
-				<section>
-					<h3>Normal Flow</h3>
-					<p>This is the default behavior for any block-level element, that they sit on top of each other no matter how much space is around them.</p>
-				</section>
-				<section>
-					<h3>Relative Positioning</h3>
-					<p>Moves the element <em>relative</em> to where it would be in the normal flow. This does not affect the position of the elements around it.</p>
-				</section>
-				<section>
-					<h3>Absolute Positioning</h3>
-					<p>Positions an element relative to its containing element. It is taken out the normal flow and the elements around it are positioned as if it's not there. These elements move with the page as a user scrolls.</p>
-				</section>
-				<section>
-					<h3>Fixed Positioning</h3>
-					<p>A form of absolute positioning in that it removes the element from the normal flow of the page, but it <em>fixes</em> an element in the browser window and does not move with the page.</p>
-				</section>
-        <section>
-          <h3>Properties</h3>
-          <ul>
-            <li>Set <span class="code">position</span> to any of the three options above</li>
-            <li>Four other properties allow you to move your element: <span class="code">top</span>, <span class="code">right</span>, <span class="code">bottom</span>, <span class="code">left</span></li>
-            <li>You set the four position options as <span class="code">px</span> which represent the distance <em>from</em> those sides. So setting <span class="code">left: 100px;</span> would put your element 100 pixels from the left.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Example</h3>
-          <p style="text-align:left;"><span class="code">#red{<br />
-          &nbsp;&nbsp;position: relative;<br />
-          &nbsp;&nbsp;top: 100px;<br />
-          &nbsp;&nbsp;left: 20px; <br />
-          }</span></p>
-        </section>
-				<section>
-					<h3>Exercise</h3>
-          <ul>
-            <li>Add styles to the class <span class="code">box</span> to give it a <span class="code">width</span> and <span class="code">height</span> of <span class="code">300px</span> and a <span class="code">background-color</span>.</li>
-            <li>Add the <span class="code">position</span> property and test out <span class="code">relative</span> and <span class="code">absolute</span> positioning.</li>
-          </ul>
-				</section>
-			</section>
-      <section>
-        <section>
-          <h2>The Float</h2>
-        </section>
-        <section>
-          <h3>The <span class="code">float</span> Property</h3>
-          <p>Allows you to "float" an element to the left or right, which removes the element from the flow of elements on the page, bringing any element beneath up and around.</p>
-        </section>
-        <section>
-          <h3>Example</h3>
-          <p style="text-align:left;"><span class="code">.box{<br />
-          &nbsp;&nbsp;float: left;<br />
-          &nbsp;&nbsp;margin-right: 20px;<br />
-          }</span></p>
-        </section>
-      </section>
-			<section>
-				<section>
-					<h2>Overlaps</h2>
-					<p>When positioning elements, you might run into cases where one element overlaps another.</p>
-				</section>
-				<section>
-					<h3><span class="code">z-index</span></h3>
-					<p>You can set the <span class="code">z-index</span> property to any number you want. The elements with the highest numbers will appear on top.</p>
-          <p style="text-align:left;"><span class="code">#red{<br />
-          &nbsp;&nbsp;z-index: 100;<br />
-          }</span></p>
-          <p style="text-align:left;"><span class="code">#green{<br />
-          &nbsp;&nbsp;z-index: 105;<br />
-          }</span></p>
-				</section>
-			</section>
-      <section>
-        <h2>GIT Review</h2>
-        <ul>
-          <li><a href="https://github.com/jueyang/know-your-tools/blob/master/1-use-git.md">Review Add/Commit/Push</a></li>
-          <li>Try committing and pushing your site to GitHub. Complete this before moving on to the workshop</li>
-        </ul>
-      </section>
-			<section>
-				<section>
-					<h2>Workshop</h2>
-					<p>Using your wireframe as a guide, layout your page in HTML.</p>
-          <ul>
-            <li>Concentrate on getting the HTML and placeholder content on the page <em>before</em> you worry about styling.</li>
-            <li>One box in your wireframe is roughtly equivalent to one container <span class="code">div</span>. These will be important for positioning.</li>
-            <li>If you get through the layout, then start adding styles. Start with positioning before moving on to fonts and colors.</li>
-            <li>Practice Add/Commit/Push multiple times to save versions of your work.</li>
-          </ul>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h2>Assignments</h2>
-				</section>
-				<section>
-					<h3>Finish the Workshop</h3>
-					<p>Finish your HTML from today's workshop. For complete credit, make each piece of content is positioned correctly on the page and that there is dummy content to represent what will go in those places. Design is less important than layout right now.</p>
-				</section>
-				<section>
-					<h3>Turn In via Git</h3>
-					<p>When you are satisfied with your HTML, push your site to GitHub. I will be checking your GitHub pages for the state of your pages, so if you have issues please let me know ASAP. </p>
-				</section>
-        <section>
-          <h3>Prep Content</h3>
-          <p>Any content you need to gather for your final site, work on getting that together, whether it is a real representation of the content or dummy content (dummy text and images).</p>
-        </section>
-        <section>
-          <h3>Slack (Mobile) Post</h3>
-          <p>Pick at least one story you've read/watched/interacted with this week on your phone or tablet and post it in the <a href="https://cunyjprogramming.slack.com/messages/spring2015/">#spring2015 Slack</a> with a sentence or two about what you like or didn't like about it. Concentrate on why it did or didn't work on your mobile device.</p>
-        </section>
-				<section>
-					<h3>Readings</h3>
+					<h3>What are <span class="code">meta</span> tags?</h3>
 					<ul>
-						<li>In HTML&CSS read Chapters 15-17</li>
-						<li>Read <a href="http://mobile.smashingmagazine.com/2010/07/19/how-to-use-css3-media-queries-to-create-a-mobile-version-of-your-website/">How To Use CSS3 Media Queries To Create a Mobile Version of Your Website</a></li>
-						<li>Reference: <a href="http://mediaqueri.es/">Media Queries / Responsive Design Examples</a></li>
+						<li>Meta tags provide more information about your page to browers</li>
+						<li>They live in the head tag</li>
+						<li>Are useful for SEO purposes as search engines use them to grab more information about your site</li>
 					</ul>
 				</section>
 				<section>
-					<h1>Have a great week!</h1>
+					<h3>Syntax</h3>
+					<p>Constructed similar to <span class="code">link</span> and <span class="code">img</span> tags, with specific attributes depending on the type of information you want to include: <span class="code">&lt;meta /&gt;</span></p>
 				</section>
+				<section>
+					<h3>Most Common Types (SEO)</h3>
+					<ul>
+						<li><strong>Description:</strong> Description of the page, often shown in search results</li>
+						<li><strong>Robots:</strong> Indicates whether search engines should add this page to their results</li>
+						<li><strong>Author:</strong> The author of the web page</li>
+						<li><strong>Keywords:</strong> A list of words separated by commas that users might search to find your site*</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Example: Description</h3>
+					<p><span class="code">&lt;meta name="description" content="Profile website of Meghan Louttit, including her programming and design work at The New York Times, The Washington Post, and a blog about eating vegan in Brooklyn. /&gt;</span></p>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<p>Add both a <strong>description</strong> and <strong>author</strong> tag to your root folder's <span class="code">index.html</span> file and to your week2 <span class="code">index.html</span> page (or whatever page you've been working on for homework).</p>
+				</section>
+			</section>
+			<section>
+				<h2>GIT WORKSHOP</h2>
+				<p>Configure <a href="https://github.com/jueyang/know-your-tools"><span class="code">git pages</span></a> to host your project.</p>
+			</section>
+			<section>
+				<section>
+					<h2>Assignment</h2>
+				</section>
+        <section>
+          <h3>Readings</h3>
+          <ul>
+            <li>In HTML&CSS read Chapters 15-17</li>
+            <li>Read <a href="http://mobile.smashingmagazine.com/2010/07/19/how-to-use-css3-media-queries-to-create-a-mobile-version-of-your-website/">How To Use CSS3 Media Queries To Create a Mobile Version of Your Website</a></li>
+            <li>Reference: <a href="http://mediaqueri.es/">Media Queries / Responsive Design Examples</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Attempt <span class="code">float</span></h3>
+          <p>In the stylesheet for your week 2 <span class="code">index.html</span> (or wherever you're working on your "Favorite Books" page), attempt to create a grid of columns using the CSS property <span class="code">float</span>. Use your class book and Google as a starting point.</p>
+        </section>
+				<section>
+          <h3>Slack (Mobile) Post</h3>
+          <p>Pick at least one story you've read/watched/interacted with this week on your phone or tablet and post it in the <a href="https://cunyjprogramming.slack.com/messages/spring2015/">#spring2015 Slack</a> with a sentence or two about what you like or didn't like about it. Concentrate on why it did or didn't work on your mobile device.</p>
+        </section>
 			</section>
 		</div>
 	</div>
