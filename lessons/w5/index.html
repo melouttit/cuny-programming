@@ -55,20 +55,20 @@
   currentWeek = 5;
 </script>
       <section>
-        <h2>Week 5 | Feb. 29, 2016</h2>
-        <h4>Positioning & Homepage Layout</h4>
+        <h2>Week 5 | March 7, 2016</h2>
+        <h4>CSS Positioning & Layouts</h4>
       </section>
       <section>
         <h2>Lesson Prep</h2>
         <ul>
-          <li>Open: Class Website (Week 4), GitHub, Slack & Sublime</li>
-          <li>In Sublime open your site: File > Open > yoursite.</li>
-          <li>Open <span class="code">styles.css</span> (CSS rules from <a href="http://mlouttit.com/cuny/lessons/w2/#/">w3 assignment</a>)</li>
-          <li>Create a new file called <span class="code">week4.html</span> and paste in the code below:
+          <li>Open: Class Website (Week 5), GitHub, Slack & Sublime</li>
+          <li>In Sublime open your site: File > Open > <span class="code">yoursite</span>.</li>
+          <li>Start a new directory in your root folder called <span class="code">week5</span>.</li>
+          <li>Create a new file called <span class="code">index.html</span> in your <span class="code">week5</span> directory and paste in the code below:
 <pre style="width:900px;"><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
 <span class="tag">&lt;<span class="title">html</span>&gt;</span>
 <span class="tag">&lt;<span class="title">head</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Week 4 - Positioning<span class="tag">&lt;<span class="title">/title</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Week 5 - Positioning<span class="tag">&lt;<span class="title">/title</span>&gt;</span>
   <span class="tag">&lt;<span class="title">style</span>&gt;<span class="tag">&lt;<span class="title">/style</span>&gt;</span>
 <span class="tag">&lt;<span class="title">/head</span>&gt;</span>
 <span class="tag">&lt;<span class="title">body</span>&gt;</span>
@@ -87,15 +87,28 @@
       </section>
       <section>
         <h2>Course Eval</h2>
-        <p>Validation no: <strong>93865</strong></p>
+        <p>Validation no: <strong>137804</strong></p>
       </section>
       <section>
-        <h2>Review <span class="code">&lt;link&gt;</span></h2>
-        <ul>
-          <li>Homework questions?</li>
-          <li>Make sure you have your external style sheet pulled into your <span class="code">index.html</span> file via <span class="code">linke</span></li>
-          <li><a href="../weekThree/#/4/3" target="_blank">How to use an external style sheet &raquo;</a></li>
-        </ul>
+        <section>
+          <h2>The Float</h2>
+          <p>Open the <span class="code">index.html</span> page from your <span class="code">float</span> homework in a browser.</p>
+        </section>
+        <section>
+          <h3>The <span class="code">float</span> Property</h3>
+          <p>Allows you to "float" an element to the left or right, which brings any element beneath it up, while still respecting the space the floated element occupies.</p>
+        </section>
+        <section>
+          <h3>The <span class="code">clear</span> Property</h3>
+          <p>Allows you control the float, meaning you can determine on which side of an elements other elements are <em>not</em> allowed to float.</p>
+        </section>
+        <section>
+          <h3>Example</h3>
+          <p style="text-align:left;"><span class="code">.box{<br />
+          &nbsp;&nbsp;float: left;<br />
+          &nbsp;&nbsp;margin-right: 20px;<br />
+          }</span></p>
+        </section>
       </section>
       <section>
         <section>
@@ -112,7 +125,7 @@
         </section>
         <section>
           <h3>Both</h3>
-          <p>In your CSS, you can determin that an element take on the properties of both. Example: <span class="code">display: inline-block;</span></p>
+          <p>In your CSS, you can determine that an element take on the properties of both. Example: <span class="code">display: inline-block;</span></p>
         </section>
       </section>
       <section>
@@ -121,8 +134,8 @@
           <p>There are a handful of positioning schemes that CSS makes available for you to control the layout of a page.</p>
         </section>
         <section>
-          <h3>Normal Flow</h3>
-          <p>This is the default behavior for any block-level element, that they sit on top of each other no matter how much space is around them.</p>
+          <h3>Static Positioning</h3>
+          <p>This is the default or normal behavior for any block-level element, that they sit on top of each other no matter how much space is around them.</p>
         </section>
         <section>
           <h3>Relative Positioning</h3>
@@ -155,25 +168,10 @@
         <section>
           <h3>Exercise</h3>
           <ul>
-            <li>Add styles to the class <span class="code">box</span> to give it a <span class="code">width</span> and <span class="code">height</span> of <span class="code">300px</span> and a <span class="code">background-color</span>.</li>
-            <li>Add the <span class="code">position</span> property and test out <span class="code">relative</span> and <span class="code">absolute</span> positioning.</li>
+            <li>Start a stylesheet in your <span class="code">week5</span> directory and link it to your <span class="code">index.html</span> file.</li>
+            <li>In your stylesheet, add styles to the class <span class="code">box</span> to give it a <span class="code">width</span> and <span class="code">height</span> of <span class="code">300px</span> and a <span class="code">background-color</span>.</li>
+            <li>Add the <span class="code">position</span> property and set it to <span class="code">relative</span> with a <span class="code">top:200px;</span> and <span class="code">left:300px;</span></li>
           </ul>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h2>The Float</h2>
-        </section>
-        <section>
-          <h3>The <span class="code">float</span> Property</h3>
-          <p>Allows you to "float" an element to the left or right, which removes the element from the flow of elements on the page, bringing any element beneath up and around.</p>
-        </section>
-        <section>
-          <h3>Example</h3>
-          <p style="text-align:left;"><span class="code">.box{<br />
-          &nbsp;&nbsp;float: left;<br />
-          &nbsp;&nbsp;margin-right: 20px;<br />
-          }</span></p>
         </section>
       </section>
       <section>
@@ -193,22 +191,22 @@
         </section>
       </section>
       <section>
-        <h2>GIT Review</h2>
+        <h2>Commit Your Work</h2>
         <ul>
-          <li><a href="https://github.com/jueyang/know-your-tools/blob/master/1-use-git.md">Review Add/Commit/Push</a></li>
-          <li>Try committing and pushing your site to GitHub. Complete this before moving on to the workshop</li>
+          <li><span class="code">git add -A</span></li>
+          <li><span class="code">git commit -m 'Your Commit Message'</span></li>
+          <li><span class="code">git push origin master</span></li>
         </ul>
       </section>
       <section>
         <section>
-          <h2>Workshop</h2>
-          <p>Using your wireframe as a guide, layout your page in HTML.</p>
-          <ul>
-            <li>Concentrate on getting the HTML and placeholder content on the page <em>before</em> you worry about styling.</li>
-            <li>One box in your wireframe is roughtly equivalent to one container <span class="code">div</span>. These will be important for positioning.</li>
-            <li>If you get through the layout, then start adding styles. Start with positioning before moving on to fonts and colors.</li>
-            <li>Practice Add/Commit/Push multiple times to save versions of your work.</li>
-          </ul>
+          <h2>In-Class Layout Practice</h2>
+          <p>Using your recently gained knowledge of <span class="code">position</span> properties, start a new directory called <span class="code">position-practice</span> and new <span class="code">index.html</span> and <span class="code">style.css</span> files, and use HTML and CSS to roughly re-create the wireframe on the next slide. Choose your own fonts and colors.</p>
+          <p><strong>Hint:</strong> Use your book, Google and each other. There are multiple ways to do this. Remember how to center block level objects.</p>
+          <p>Before you leave, push your changes to GitHub.</p>
+        </section>
+        <section>
+          <img src="images/layout-practice.png" />
         </section>
       </section>
       <section>
@@ -217,7 +215,8 @@
         </section>
         <section>
           <h3>Next Module</h3>
-          <p>If you are in the Javascript & jQuery module and haven't yet ordered the book, please do so (<a href="http://javascriptbook.com/buy/">BUY Javascript&JQuery</a>)</p>
+          <p>If you are in the Javascript & jQuery module and haven't yet ordered the book, please do so (<a href="http://javascriptbook.com/buy/">BUY Javascript&JQuery</a>).</p>
+          <p><strong>Read Chapter 1.</strong></p>
         </section>
         <section>
           <h1>Have a great week!</h1>
