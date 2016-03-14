@@ -34,7 +34,7 @@ Lessons and notes for CUNY Graduate School of Journalism “Programming for Jour
 
 <h2>JavaScript Weeks 6-15</h2>
 <ul>
-  <li><strong>6 What is JavaScript? (3/14):</strong> Discussing JavaScript as a language, how it was created and it’s current place in modern web technology. We will go over what it is used for and how it can be incorporated into journalism projects. We will also discuss its relationship to the Document Object Model and how to add it to the students’ websites. </li> -->
+  <li><strong>6 What is JavaScript? (3/14):</strong> Discussing JavaScript as a language, how it was created and it’s current place in modern web technology. We will go over what it is used for and how it can be incorporated into journalism projects. We will also discuss its relationship to the Document Object Model and how to add it to the students’ websites. </li>
   <!-- debugging tips / finding the error -->
   <!-- small exercises for each class -->
   <!-- <li><strong>7 Arrays, Objects & Loops (3/21):</strong> Continuing with basic JavaScript vocabulary, we cover various ways of storing data and variables for use in our code, and how to loop through them to perform actions. We will apply our JavaScript knowledge so far to the writing of a tip calculator, using <strong>git</strong> to pull files.</li>
