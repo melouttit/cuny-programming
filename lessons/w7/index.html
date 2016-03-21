@@ -55,15 +55,16 @@
   currentWeek = 7;
 </script>
       <section>
-        <h2>Week 7 | March 16, 2015</h2>
+        <h2>Week 7 | March 21, 2016</h2>
         <h4>Arrays, Objects & Loops </h4>
       </section>
       <section>
         <h2>Lesson Prep</h2>
         <ul>
-          <li>Open: Class Website (Week 7), GitHub, Slack</li>
+          <li>Open: Class Website (Week 7)</li>
           <li>Open your website in sublime</li>
-          <li>Create a new file called <span class="code">week7.html</span> and paste in the code below:
+          <li>Start a new directory in your website called <span class="code">arrays-and-objects</span>.</li>
+          <li>In <span class="code">arrays-and-objects</span> create an <span class="code">index.html</span> file and paste in the markup below:
 <pre style="width:900px;"><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
 <span class="tag">&lt;<span class="title">html</span>&gt;</span>
 <span class="tag">&lt;<span class="title">head</span>&gt;</span>
@@ -131,6 +132,7 @@
         <section>
           <h3>Length</h3>
           <p>You can use the <span class="code">length</span> property of an array to see how many items are in it. For example: <span class="code">arrayName.length;</span></p>
+          <p>Or using the array from the previous example, <span class="code">fruits.length</span>, which will return <span class="code">4</span>.</p>
         </section>
         <section>
           <h3>Accessing an Item</h3>
@@ -139,9 +141,9 @@
         <section>
           <h3>Exercise</h3>
           <ul>
-            <li>In <span class="code">week7.html</span> create an array of five objects (book titles).</li>
+            <li>On your <span class="code">index</span> page, create an array of five objects. Use book titles (a string of text)</li>
             <li>Store your array in a variable</li>
-            <li>Log the variable so you can see it in your console</li>
+            <li>Log the variable so you can see it in your console using <span class="code">console.log();</span></li>
             <li>Log the value of the third item in the array.</li>
           </ul>
         </section>
@@ -179,15 +181,36 @@
         <section>
           <h3>Exercise</h3>
           <ul>
-            <li><p>Create your own object in <span class="code">week7.html</span> with three different properties and store in a variable.</li>
+            <li><p>Create your own object on your <span class="code">index</span> page with three different properties and store in a variable called <span class="code">book</span>. Use your favorite book and define the <span class="code">title</span>, <span class="code">author</span>, <span class="code">genre</span></li>
             <li>Log the variable so you can see it in your console</li>
             <li>Log one property so you can see it in your console.</li>
           </ul>
         </section>
       </section>
       <section>
-        <h2>Arrays & Objects</h2>
-        <p>Arrays and objects can be part of each other. You can have an array of objects, and arrays can be values in objects.</p>
+        <section>
+          <h2>Arrays & Objects</h2>
+        </section>
+        <section>
+          <p>Arrays and objects can be part of each other. You can have an array of objects, and arrays can be values in objects.</p>
+        </section>
+        <section>
+          <h3>Example</h3>
+          <p style="text-align:left;"><span class="code">
+          var books = [<br />
+          &nbsp;&nbsp;{<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;title: The Thornbirds,<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;author: Colleen McCullough,<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;genre: Fiction<br />
+          &nbsp;&nbsp;},<br />
+          &nbsp;&nbsp;{<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;title: The Price of Inequality,<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;author: Joseph Stiglitz,<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;genre: Economics<br />
+          &nbsp;&nbsp;},<br />
+          ];
+          </span></p>
+        </section>
       </section>
       <section>
         <section>
@@ -196,7 +219,7 @@
         </section>
         <section>
           <h3>Types</h3>
-          <p>There are multiple types of loops, and using other JavaScript frameworks, multiple ways of performing them. We will focus today on the <span class="code">for</span> loop, as it will likely be the most used and is the basis for the <span class="code">each</span> method in jQuery and other frameworks.</p>
+          <p>There are multiple types of loops, and using other JavaScript frameworks, multiple ways of performing them. We will focus today on the <span class="code">for</span> loop, as it will likely be the most used and is the basis for the <span class="code">each</span> method in jQuery.</p>
         </section>
         <section>
           <h3>Loop Parts</h3>
@@ -215,15 +238,15 @@
         </section>
         <section>
           <h3>Lowercase <span class="code" style="text-transform:lowercase;">i</span></h3>
-          <p>In JS, the lowercase <span class="code">i</span> stands for "index" and represents the index of an object in an array. In loops, we use <span class="code">i</span> to represent each index.</p>
+          <p>In JS, the lowercase <span class="code">i</span> represents the index of an object in an array. In loops, we use <span class="code">i</span> to represent each index.</p>
         </section>
         <section>
           <h3>Exercise</h3>
           <ul>
-            <li>Write a <span class="code">for</span> loop that goes through your list of books.</li>
+            <li>Write a <span class="code">for</span> loop that goes through your list of books created during the array exercise.</li>
             <li>Log <span class="code">books[i]</span> to see each instance of the loop.</li>
             <li>Append each book to the page.</li> 
-            <li>Use the <span class="code">innerHTML</span> property to change the headline of the page.</li>
+            <li>Use the <span class="code">innerHTML</span> property to change the headline of the page (Google it if you don't know!) to My Favorite Books.</li>
           </ul>
         </section>
       </section>
@@ -236,9 +259,20 @@
           <p>You can find them on <a href="https://github.com/melouttit/tip-calculator">my GitHub page</a>.</p>
         </section>
         <section>
+          <h3>Remove origin and init new repo</h3>
+          <ul>
+            <li><span class="code">git remote remove origin</span></li>
+            <li><span class="code">git remote -v</span> should return nothing</li>
+            <li><span class="code">git init</span></li>
+          </ul>
+        </section>
+        <section>
+          <h3><span class="code">add/commit/push</span></h3><h3> your new Tip Calculator</h3>
+        </section>
+        <!-- <section>
           <h3><span class="code">merge</span> Exercise</h3>
           <p></p>
-        </section>
+        </section> -->
       </section>
       <section>
         <section>
