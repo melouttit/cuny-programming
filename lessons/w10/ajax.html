@@ -16,6 +16,8 @@
   <script type="text/javascript">
   $(document).ready(function(){
 
+    console.log("INIT");
+
     var portfolioapp = {
       init:function(data){
         console.log(data);
@@ -24,8 +26,8 @@
 
     $.ajax({
       dataType:'json',
-      // url:'//mlouttit.com/cuny/js/portfolio.js',
-      url:'json.js',
+      // url:'https://github.com/melouttit/cuny-programming/blob/gh-pages/lessons/w9/js/books.js',
+      url:'js/books.js',
       success:function(data){
         console.log(data);
         $(function(){
