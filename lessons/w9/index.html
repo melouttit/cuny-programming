@@ -56,22 +56,39 @@
   currentWeek = 9;
 </script>
       <section>
-        <h2>Week 9 | March 30, 2015</h2>
-        <h4>Methods & Plugin Practice</h4>
+        <h2>Week 9 | April 4, 2016</h2>
+        <h4>Data & AJAX</h4>
       </section>
+
+      <!--review methods-->
+      <section>
+        <h2>Method Presentations</h2>
+        <ul>
+          <li>As each student presents their method to the class. You can follow along as necessary for your own practice.</li>
+          <li>Once you've presented, make sure your final presentation page is prepared to add to the <a href="https://github.com/melouttit/method-presentations">method-presentations repo</a>.</li>
+          <li>Follow the <span class="code">git pull</span> lab to complete a request to add your method assignment to the repo.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Git Lab: Pull Requests</h2>
+        <p>Create a pull request for your final method presentation file to be submitted to the final repo.</p>
+      </section>
+
+      <!--lesson prep-->
       <section>
         <h2>Lesson Prep</h2>
         <ul>
-          <li>Open: Class Website (Week 9), GitHub, iTerm, Slack</li>
+          <li>Open: Class Website (Week 10) and iTerm</li>
           <li>Open your website in sublime</li>
-          <li>Create a new file called <span class="code">carousel.html</span> and paste in the code below:
+          <li>Create a new directory called <span class="code">ajax-practice</span> and file in that folder called <span class="code">index.html</span></li>
+          <li>Paste the code below in your index:
 <pre style="width:900px;"><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
 <span class="tag">&lt;<span class="title">html</span>&gt;</span>
 <span class="tag">&lt;<span class="title">head</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Carousel Exercise<span class="tag">&lt;<span class="title">/title</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">title</span>&gt;</span>AJAX Exercise<span class="tag">&lt;<span class="title">/title</span>&gt;</span>
 <span class="tag">&lt;<span class="title">/head</span>&gt;</span>
 <span class="tag">&lt;<span class="title">body</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">id</span>="<span class="value">headline</span>"&gt;</span>My Vacation Photos<span class="tag">&lt;<span class="title">/h1</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">id</span>="<span class="value">headline</span>"&gt;</span>My Work<span class="tag">&lt;<span class="title">/h1</span>&gt;</span>
   <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>="<span class="value">https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js</span>"&gt;</span><span class="tag">&lt;<span class="title">/script</span>&gt;</span>
   <span class="tag">&lt;<span class="title">script</span>&gt;</span>
     //your code here
@@ -80,145 +97,173 @@
 <span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre></li>
         </ul>
       </section>
-      <section>
-        <h2>Method Presentations</h2>
-        <p>As each student presents their method to the class, you can follow along as necessary. All the demonstrations will be published to my GitHub account, which I will share via Slack (with notes) after class.</p>
-      </section>
-      <section>
-        <h2>jQuery Plugins</h2>
+
+      <!-- start data types lesson -->
+      <!-- <section>
+        <h2>Start a new branch</h2>
+        <p>Open iTerm and <span class="code">cd</span> into your website and start a new branch for your ajax practie.</p>
         <ul>
-          <li>A common set of jQuery functions that can be added to your site for quick functionality</li>
-          <li>Anyone can write a plugin and release it for widespread use. Most will include documentation on how to implement and what custimzation is available to you</li>
-          <li><a href="http://plugins.jquery.com/">The jQuery plugin registry</a> is a good starting point for seeing what is available.</li>
+          <li><span class="code">git branch</span> to check which branch you're on</li>
+          <li><span class="code">git branch ajax</span> to create a new branch called ajax</li>
+          <li><span class="code">git checkout ajax</span> to switch to your new branch</li>
         </ul>
-      </section>
+      </section> -->
       <section>
         <section>
-          <h2>Adding a Plugin</h2>
+          <h2>What is AJAX?</h2>
         </section>
         <section>
-          <h3>Download the Files</h3>
-          <ul>
-            <li>Download the plugin code from the source. On the homepage for your plugin, look for a download link.</li>
-            <li>Usually plugins will come with at least one JavaScript file, a CSS file and sometimes an images directory and README file.</li>
-            <li>Read the instructions for installing carefully. For most plugins, you will just include the source JS and CSS files on the page you want to instantiate the plugin on.</li>
-          </ul>
+          <h3>AJAX...</h3>
+          <p>...stands for <strong>Asynchronous Javascript And XML</strong></p>
         </section>
         <section>
-          <h3>Minified JS</h3>
-          <p>You might see two JS files in the plugin you download with filenames that are similar except for a <span class="code">-min</span> or <span class="code">.min</span> at the end. This means the owner is providing you with two ways to include their JS. The file with the <span class="code">min</span> is the minified version, meaning it's stripped of white space and lighter to download. You would only want the unminified version if you were planning on altering the plugin.</p>
+          <h3>Why do we use it?</h3>
+          <p>The process allows you to exchange data with a server without having the user refresh the page</p>
         </section>
         <section>
-          <h3>Documentation</h3>
-          <ul>
-            <li>Look either in the plugins README file or on the website to find the documentation for how to use the plugin.</li>
-            <li>Most plugins require a standard HTML setup and then only a few lines of JS to get them working.</li>
-            <li>Look in the <span class="code">css</span> directory for any style themes the plugin creator might provide.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Instantiation</h3>
-          <ul>
-            <li>The method that initiates the plugin in your code is usually the name of the plugin.
-            <li><strong>EXAMPLE:</strong> <span class="code">$(document).ready(function() {<br />&nbsp;&nbsp;$('#carousel').slick();<br />}); </span></li>
-            <li>Where <span class="code">#carousel</span> is the HTML element you want to instantiate the plugin on and <span class="code">slick()</span> is the plugin method that runs the code you need.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Options</h3>
-          <ul>
-            <li>Beyond the standard setup, most plugins have options you can pass in to the customize the plugin.</li>
-            <li>You will need to read through the plugins documentation to find the options that are available to you.</li>
-            <li>The options are a set of properties, passed into the method inside curly brackets.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Options Example</h3>
-          <ul>
-            <li><span class="code">$("#carousel").slick({<br />&nbsp;&nbsp;autoplay: true,<br />&nbsp;&nbsp;autoplaySpeed: 400<br />});</span></li>
-            <li>Where <span class="code">autoplay: true</span> is an option the plugin provides, allowing you to make the carousel loop through without clicking and <span class="code">autoplaySpeed</span> sets the speed in which it loops.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Callbacks or Events</h3>
-          <p><span class="code">jQuery</span> utilizes callback functions, which are found in plugins. These allow you to run a function when a specific event happens in the plugin.</p>
-        </section>
-        <section>
-          <h3>Custom Methods</h3>
-          <p>Additional customization options might come in the form of methods, where you can tap into the plugins internal methods to change how it works. 
-        </section>
-        <section>
-          <h3>Demos</h3>
-          <p>Many plugins also provide demo pages or have demos working on their page. Use the inspector to see how they set up the demos as a guide to setting up your own.</p>
+          <p>It sounds fancy, but AJAX is simply a reference to a combination of technologies that allow multiple things to happen at once</p>
         </section>
       </section>
       <section>
+        <h2>Data Types</h2>
+        <p>The way in which your data is formatted. Your data can be any content you want to organize and display. The most common types in modern web development are XML and JSON.</p>
+      </section>
+      <section>
         <section>
-          <h2>Carousel Plugin Exercise</h2>
-          <p>Start a new branch of your website to practice with your plugins. We will use the images you've gathered to create a photo carousle with <a href="http://kenwheeler.github.io/slick/">the slick plugin</a>.</p>
+          <h2>XML</h2>
         </section>
         <section>
-          <h3>Create a Branch</h3>
-          <p>In iTerm, navigate to your website and use <span class="code" style="display:inline-block;">git branch carousel</span> to create a new branch to test your plugin on. Use <span class="code">checkout</span> to switch to that branch.</p>
-        </section>
-        <section>
-          <h3>Download the Plugin Files</h3>
-          <p>Go to the <a href="http://kenwheeler.github.io/slick/">slick plugin website</a> and find the download link to grab the files from. Make sure to save the files in your website directory.</p>
-        </section>
-        <section>
-          <h3>Find the Files</h3>
-          <p>Go to the folder you just unzipped and, using the documentation as a guide, find the files you need.</p>
-        </section>
-        <section>
-          <h3>Include Files</h3>
-          <p>On your carousel page include the <span class="code">css</span> and <span class="code">js</span> files you need. Make sure to point to the right location.</p>
-        </section>
-        <section>
-          <h3>Structure <span class="code">HTML</span></h3>
-          <p>Write the <span class="code">HTML</span> you need on your page, again using the documentation as a guide. Make sure the images you want are stacked on the page.</p>
-        </section>
-        <section>
-          <h3>Instantiate</h3>
-          <p>In the last set of <span class="code">script</span> tags write the <span class="code">ready</span> method and inside that instantiate your plugin with the <span class="code">slick</span> method.</p>
-        </section>
-        <section>
-          <h3>Options</h3>
-          <p>Look through the options and test a couple of them on your plugin.</p>
-        </section>
-        <section>
-          <h3>Commit Your Test</h3>
-          <p>Add, commit and push your new plugin branch to GitHub. You will work in this branch for your homework.</p>
           <ul>
-            <li><span class="code">git add -p</span></li>
-            <li><span class="code">git commit -m 'your commit note'</span></li>
-            <li><span class="code">git push origin master</span></li>
+            <li>Stands for <strong>eXtensible Markup Language</strong></li>
+            <li>Data formatted in a way that it can be shared across an array of development tools</li>
+            <li>Like HTML, it is tag-based, and easy to use</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Example</h3>
+          <p style="text-align:left;"><span class="code">&nbsp;&nbsp;&lt;work&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;project&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Out, And Serving&lt;/title&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;type&gt;photo essay&lt;/type&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;url&gt;http://www.nytimes.com/interactive/2014/03/09/opinion/sunday/exposures-military.html&lt;/url&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;pubDate&gt;March 9, 2014&lt;/pubDate&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/project&gt;<br />
+                &nbsp;&nbsp;&lt;/work&gt;
+              </span></p>
+        </section>
+        <section>
+          <ul>
+            <li>The tagnames are created by you, but make sure they're consistent. If you open with <span class="code">work</span> then you have to close with <span class="code">work</span>
+            <li>Nest your tags like you do <span class="code">HTML</span> tags for better organization</li>
+            <li>XML also takes attributes to provide more information and they are formatted the same way: <span class="code">&lt;person gender="female"&gt;</span></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Exercise</h3>
+          <ul>
+            <li>Open a new file, and write your own XML to hold data about your favorite books. Create at least three listings.</li>
+            <li>Create a directory called <span class="code">xml</span> in your website.</li>
+            <li>Save your file as <span class="code">books.xml</span> in that directory.</li>
           </ul>
         </section>
       </section>
       <section>
         <section>
-          <h2>Assignments</h2>
+          <h2>JSON</h2>
         </section>
         <section>
-          <h3>Add the Carousel</h3>
-          <p>Add an instance of the carousel plugin to your website. For full credit, pay attention to design elements and include thumbnails and arrows. You will have to write or alter some  CSS.</p>
-        </section>
-        <section>
-          <h3>Add a Method</h3>
-          <p>Pick one of the methods you learned in class today (not the one you presented) and use it to add a feature or interativity to your website. You can do this within your plugin branch.</p>
-        </section>
-        <section>
-          <h3>Add/Commit/Push</h3>
-          <p>When you've finished, push your changes to GitHub. Make sure to specify in your final commit note, which method you chose.</p>
           <ul>
-            <li><span class="code">git add -p</span></li>
-            <li><span class="code">git commit -m 'your commit note'</span></li>
-            <li><span class="code">git push origin master</span></li>
+            <li>Stands for <strong>JavaScript Object Notation</strong></li>
+            <li>Like XML, formatted for use across tools and environments</li>
+            <li>Works best with Javascript, which is why it has become a preferred data structure</li>
           </ul>
+        </section>
+        <section>
+          <h3>JSON Example</h3>
+          <p style="text-align:left;"><span class="code">
+          {<br />
+          &nbsp;&nbsp;"title":"Out, And Serving",<br />
+          &nbsp;&nbsp;"type":"photo essay",<br />
+          &nbsp;&nbsp;"url":"http://www.nytimes.com/interactive/<br />2014/03/09/opinion/sunday/exposures-military.html",<br />
+          &nbsp;&nbsp;"pubDate":"March 9, 2014"<br />
+          }
+          </span></p>
+        </section>
+        <section>
+          <ul>
+            <li>JSON uses the same syntax as JavaScript.</li>
+            <li>You can use both objects <span class="code">{}</span> and arrays <span class="code">[]</span> in your JSON.</li>
+            <li>Remember commas in between objects and properties.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Exercise</h3>
+          <ul>
+            <li>Open a new file, and write your own JSON to hold data about your favorite books. Create at least three listings.</li>
+            <li>Save your file as <span class="code">books.js</span> to your <span class="code">js</span> directory.</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Grabbing Data</h2>
+        </section>
+        <section>
+          <h3>Methods</h3>
+          <p>There are multiple jQuery methods you can use to grab data from a server, including:</p>
+          <ul>
+            <span class="code" style="position: relative;left: -315px;">
+              <li>$.ajax</li>
+              <li>$.get</li>
+              <li>$.getJSON</li>
+              <li>$.load</li>
+            </span>
+          </ul>
+        </section>
+        <section>
+          <h3>Example: Grabbing JSON</h3>
+          <p style="text-align:left;"><span class="code" style="text-align:left;">$.ajax({<br />
+                &nbsp;&nbsp;&nbsp;dataType: "json",<br />
+                &nbsp;&nbsp;&nbsp;url: url,<br />
+                &nbsp;&nbsp;&nbsp;data: data,<br />
+               });
+          </span></p>
+        </section>
+        <section>
+          <h3>Convenience Methods</h3>
+        </section>
+        <section>
+          <p>There are multiple shorthand methods that are wrappers around the <span class="code">ajax</span> method. Generally, you want to use <span class="code">ajax</span> because it offers more configuration options.
+        </section>
+        <section>
+          <h3>JSON Convenience Method</h3>
+          <p style="text-align:left;"><span class="code">$.getJSON("http://dataurl.com/json.js",<br />function(data){ });
+          </span></p>
+        </section>
+        <section>
+          <h3>Exercise</h3>
+          <ul>
+            <li>Use the <span class="code">ajax</span> method to pull in the example JSON and log your data.</li>
+            <li>Make sure to commit your work:
+              <ul>
+                <li><span class="code">git add -p</span></li>
+                <li><span class="code">git commit -m 'your commit message'</span></li>
+                <li><span class="code">git push origin ajax</span></li>
+              </ul>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Assignment</h2>
         </section>
         <section>
           <h3>Reading</h3>
-          <p>Chapter 8 in JavaScript&JQuery</p>
+          <p>Read Chapters 8 & 9 in Javascript&JQuery</p>
+        </section>
+        <section>
+          <h3>Lesson</h3>
+          <p>Do Codecademy's <a href="http://www.codecademy.com/courses/javascript-beginner-en-g7vdk/0/1">jQuery & AJAX Lesson</a>, parts 1-7. Make sure to upload a screenshot of the last lesson to the Week 10 folder in Dropbox.</p>
         </section>
       </section>
     </div>
