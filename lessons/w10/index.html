@@ -155,7 +155,7 @@
           <ul>
             <li>Stands for <strong>JavaScript Object Notation</strong></li>
             <li>Like XML, formatted for use across tools and environments</li>
-            <li>Works best with Javascript, which is why it has become a preferred data structure</li>
+            <li>Convenient way to transport data between applications (which is handy when you are writing JavaScript applications)</li>
           </ul>
         </section>
         <section>
@@ -220,22 +220,31 @@
           <p style="text-align:left;"><span class="code">$.getJSON("http://dataurl.com/json.js",<br />function(data){ });
           </span></p>
         </section>
+      </section>
+      <section>
+         <section>
+          <h2>Cross-Domain Issues</h2>
+          <p>For security reasons, modern browsers don't allow you to grab data from a server that is located on a different domain.</p>
+        </section>
         <section>
-          <h3>Exercise</h3>
+          <h3>Exception: APIs</h3>
+          <p>When you are you using an API you generate a security key that you define in your code, that gives you permission to access data.</p>
+        </section>
+        <section>
+          <h3>Exception: JSONP</h3>
           <ul>
-            <li>Use the <span class="code">ajax</span> method to pull in the example JSON and log your data.</li>
-            <li>Via Iterm, <span class="code">cd</span> into your <span class="code">ajax</span> directory and run <span class="code">python -m SimpleHTTPServer</span> to run your code on <span class="code">http://localhost:8000/</span></li>
-            <li>Commit your work.</li>
+            <li>JSON with Padding</li>
+            <li>Wraps your data in a callback so the browser knows how to parse the data.</li>
           </ul>
         </section>
       </section>
-      <section>
         <section>
           <h2>Assignment</h2>
         </section>
         <section>
           <h3>Reading</h3>
           <p>Read Chapter 9 in Javascript&JQuery</p>
+          <p>Extra: <a href="http://www.sitepoint.com/ajaxjquery-getjson-simple-example/">SitePoint Tutorial</a></p>
         </section>
         <section>
           <h3>Lesson</h3>

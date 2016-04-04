@@ -1,5 +1,6 @@
-"summary":"This is a site of my work",
-"portfolio":[
+{
+  "summary":"This is a site of my work",
+  "portfolio":[
     {
       "title":"Out, and Serving",
       "type":"photographs",
@@ -22,3 +23,4 @@
       "image":"http://placekitten.com/g/200/133"
     }
   ]
+}

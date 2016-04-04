@@ -1,5 +1,6 @@
-"summary":"My Favorite Books",
-"books":[
+{
+  "summary":"My Favorite Books",
+  "books":[
     {
       "title":"The Thornbirds",
       "genre":"fiction",
@@ -25,3 +26,4 @@
       "buy":"http://www.amazon.com/Night-Gun-reporter-investigates-darkest-ebook/dp/B001DXNZ9Q/"
     },
   ]
+}

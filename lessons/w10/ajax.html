@@ -24,27 +24,28 @@
       }
     }
 
-    $.ajax({
-      dataType:'json',
-      // url:'https://github.com/melouttit/cuny-programming/blob/gh-pages/lessons/w9/js/books.js',
-      url:'js/books.js',
-      success:function(data){
-        console.log(data);
-        $(function(){
-          console.log("LAUNCHING APP");
-          portfolioapp.init(data);
-        });
+    // $.ajax({
+    //   dataType:'json',
+    //   // url:'https://github.com/melouttit/cuny-programming/blob/gh-pages/lessons/w9/js/books.js',
+    //   url:'/js/json.js',
+    //   success:function(data){
+    //     console.log(data);
+    //     $(function(){
+    //       console.log("LAUNCHING APP");
+    //       portfolioapp.init(data);
+    //     });
 
-        $.each(data,function(index,portItem){
-          console.log(portItem);
-        });
-      }
-    });
-
-    // $.getJSON("http://mlouttit.com/cuny/js/portfolio.js",
-    // function(data){ 
-    //   console.log(data);
+    //     $.each(data,function(index,portItem){
+    //       console.log(portItem);
+    //     });
+    //   }
     // });
+
+    $.getJSON("http://localhost:8000/js/json.js?callback=portfolio",
+    function(data){ 
+      console.log("SUCCESS");
+      console.log(data);
+    });
 
   });
   </script>
