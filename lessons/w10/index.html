@@ -55,200 +55,106 @@
   currentWeek = 10;
 </script>
 			<section>
-				<h2>Week 10 | April 13, 2015</h2>
-				<h4>Data & AJAX</h4>
+				<h2>Week 10 | April 11, 2016</h2>
+				<h4>Templating</h4>
 			</section>
       <section>
         <h2>Lesson Prep</h2>
         <ul>
-          <li>Open: Class Website (Week 10), GitHub, iTerm, Slack</li>
+          <li>Open: Class Website, Week 10</li>
           <li>Open your website in sublime</li>
-          <li>Create a new file called <span class="code">ajax.html</span> and paste in the code below:
-<pre style="width:900px;"><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="tag">&lt;<span class="title">html</span>&gt;</span>
-<span class="tag">&lt;<span class="title">head</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">title</span>&gt;</span>AJAX Exercise<span class="tag">&lt;<span class="title">/title</span>&gt;</span>
-<span class="tag">&lt;<span class="title">/head</span>&gt;</span>
-<span class="tag">&lt;<span class="title">body</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">id</span>="<span class="value">headline</span>"&gt;</span>My Work<span class="tag">&lt;<span class="title">/h1</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>="<span class="value">https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js</span>"&gt;</span><span class="tag">&lt;<span class="title">/script</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">script</span>&gt;</span>
-    //your code here
-  <span class="tag">&lt;<span class="title">/script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre></li>
+          <li>Open the <span class="code">template-practice</span> repository <a href="https://github.com/melouttit/template-practice">from my GitHub page</a>.</li>
         </ul>
       </section>
       <section>
-        <h2>Start a new branch</h2>
-        <p>Open iTerm and <span class="code">cd</span> into your website and start a new branch for your ajax practie.</p>
+        <h2>Method Presentations Part 2</h2>
         <ul>
-          <li><span class="code">git branch</span> to check which branch you're on</li>
-          <li><span class="code">git branch ajax</span> to create a new branch called ajax</li>
-          <li><span class="code">git checkout ajax</span> to switch to your new branch</li>
+          <li>As each student presents their method to the class. You can follow along as necessary for your own practice.</li>
+          <li>Once you've presented, make sure your final presentation page is prepared to add to the <a href="https://github.com/melouttit/method-presentations">method-presentations repo</a>.</li>
+          <li>Follow the <span class="code">git pull</span> lab to complete a request to add your method assignment to the repo.</li>
         </ul>
       </section>
-			<section>
-        <section>
-          <h2>What is AJAX?</h2>
-        </section>
-        <section>
-          <h3>AJAX...</h3>
-          <p>...stands for <strong>Asynchronous Javascript And XML</strong></p>
-        </section>
-        <section>
-          <h3>Why do we use it?</h3>
-          <p>The process allows you to exchange data with a server without having the user refresh the page</p>
-        </section>
-        <section>
-          <p>It sounds fancy, but AJAX is simply a reference to a combination of technologies that allow multiple things to happen at once</p>
-        </section>
-      </section>
       <section>
-        <h2>Data Types</h2>
-        <p>The way in which your data is formatted. Your data can be any content you want to organize and display. The most common types in modern web development are XML and JSON.</p>
+        <h2>Git Lab: <span class="code">branch</span> and <span class="code">pull</span></h2>
+        <p>Create a pull request for your final method presentation file to be submitted to the final repo.</p>
       </section>
       <section>
         <section>
-          <h2>XML</h2>
+          <h2>Templating - WHY?</h2>
         </section>
         <section>
-          <ul>
-            <li>Stands for <strong>eXtensible Markup Language</strong></li>
-            <li>Data formatted in a way that it can be shared across an array of development tools</li>
-            <li>Like HTML, it is tag-based, and easy to use</li>
-          </ul>
+          <p>When building applications or pages the problem will quickly arise where you will need to format part of your page's HTML in your JavaScript files</p>
         </section>
         <section>
-          <h3>Example</h3>
-          <p style="text-align:left;"><span class="code">&nbsp;&nbsp;&lt;work&gt;<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;project&gt;<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Out, And Serving&lt;/title&gt;<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;type&gt;photo essay&lt;/type&gt;<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;url&gt;http://www.nytimes.com/interactive/2014/03/09/opinion/sunday/exposures-military.html&lt;/url&gt;<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;pubDate&gt;March 9, 2014&lt;/pubDate&gt;<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/project&gt;<br />
-                &nbsp;&nbsp;&lt;/work&gt;
-              </span></p>
+          <p>Templating libraries allow you to quickly create your own templates in your code and on-the-fly to render bulks of data quickly.</p>
         </section>
         <section>
-          <ul>
-            <li>The tagnames are created by you, but make sure they're consistent. If you open with <span class="code">work</span> then you have to close with <span class="code">work</span>
-            <li>Nest your tags like you do <span class="code">HTML</span> tags for better organization</li>
-            <li>XML also takes attributes to provide more information and they are formatted the same way: <span class="code">&lt;person gender="female"&gt;</span></li>
-          </ul>
+          <h3>Rule of Thumb</h3>
+          <p>If you find yourself writing a few lines of JavaScript soley to form HTML blocks for your page, you might want to utilize a templating library.</p>
         </section>
         <section>
-          <h3>Exercise</h3>
-          <ul>
-            <li>Open a new file, and write your own XML to hold data about your favorite books. Create at least three listings.</li>
-            <li>Create a directory called <span class="code">xml</span> in your website.</li>
-            <li>Save your file as <span class="code">books.xml</span> in that directory.</li>
-          </ul>
+          <h3>Options</h3>
+          <p>A search will yield a handful -but a good place to start is either <a href="http://underscorejs.org/">Underscore</a> or <a href="http://handlebarsjs.com/">Handlebars (Mustache)</a>.</p>
         </section>
       </section>
       <section>
         <section>
-          <h2>JSON</h2>
+          <h2>For Example</h2>
+          <p>Say we are researching police incidents caught on tape by body cams and are pulling together a dataset based on the information we find. <a href="https://docs.google.com/spreadsheets/d/1orrt5JXOt-o57krcESMky0CbHa-r3Bpi_ZTc-QvwcMA/edit?usp=sharing">It might look something like this</a> (Note: This data is made up and should not be published! For example only)</p>
         </section>
         <section>
-          <ul>
-            <li>Stands for <strong>JavaScript Object Notation</strong></li>
-            <li>Like XML, formatted for use across tools and environments</li>
-            <li>Convenient way to transport data between applications (which is handy when you are writing JavaScript applications)</li>
-          </ul>
-        </section>
-        <section>
-          <h3>JSON Example</h3>
-          <p style="text-align:left;"><span class="code">
-          {<br />
-          &nbsp;&nbsp;"title":"Out, And Serving",<br />
-          &nbsp;&nbsp;"type":"photo essay",<br />
-          &nbsp;&nbsp;"url":"http://www.nytimes.com/interactive/<br />2014/03/09/opinion/sunday/exposures-military.html",<br />
-          &nbsp;&nbsp;"pubDate":"March 9, 2014"<br />
-          }
-          </span></p>
-        </section>
-        <section>
-          <ul>
-            <li>JSON uses the same syntax as JavaScript.</li>
-            <li>You can use both objects <span class="code">{}</span> and arrays <span class="code">[]</span> in your JSON.</li>
-            <li>Remember commas in between objects and properties.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Exercise</h3>
-          <ul>
-            <li>Open a new file, and write your own JSON to hold data about your favorite books. Create at least three listings.</li>
-            <li>Save your file as <span class="code">books.js</span> to your <span class="code">js</span> directory.</li>
-          </ul>
+          <h3>Convert to JSON</h3>
+          <p>You could write out in JSON initially but sometimes a program like Excel is better for pulling information together. Once you're finished, you can convert to JSON using an online program like <a href="https://shancarter.github.io/mr-data-converter/">Mr. Data Converter</a>.</p>
+          <p>* <a href="https://github.com/melouttit/template-practice/blob/master/js/incidents.js">Result</a> *</p>
         </section>
       </section>
       <section>
         <section>
-          <h2>Grabbing Data</h2>
+          <h2>Underscore</h2>
+          <p>We are going to go over <a href="http://underscorejs.org/">Underscore</a>, partly because it is a good library to know in general and because it has many useful methods for parsing data.</p>
         </section>
         <section>
-          <h3>Methods</h3>
-          <p>There are multiple jQuery methods you can use to grab data from a server, including:</p>
+          <p><strong>To use</strong>, download the library or find a hosted version to include on your page. For our purposes today we are using a version hosted by <a href="https://cdnjs.com/">cdnjs</a>.</p>
+        </section>
+        <section>
+          <h3>Syntax</h3>
           <ul>
-            <span class="code" style="position: relative;left: -315px;">
-              <li>$.ajax</li>
-              <li>$.get</li>
-              <li>$.getJSON</li>
-              <li>$.load</li>
-            </span>
+            <li>Run a method: <span class="code">_.<em>methodName</em>(<em>params</em>);</span></li>
+            <li>Define template: <span class="code"><%= object %></span></li>
+            <li>Write JavaScript in a template: <span class="code"><% <em>Your Code Here</em> %></li>
           </ul>
+          <p>
         </section>
         <section>
-          <h3>Example: Grabbing JSON</h3>
-          <p style="text-align:left;"><span class="code" style="text-align:left;">$.ajax({<br />
-                &nbsp;&nbsp;&nbsp;dataType: "json",<br />
-                &nbsp;&nbsp;&nbsp;url: url,<br />
-                &nbsp;&nbsp;&nbsp;data: data,<br />
-               });
-          </span></p>
-        </section>
-        <section>
-          <h3>Convenience Methods</h3>
-        </section>
-        <section>
-          <p>There are multiple shorthand methods that are wrappers around the <span class="code">ajax</span> method. Generally, you want to use <span class="code">ajax</span> because it offers more configuration options.
-        </section>
-        <section>
-          <h3>JSON Convenience Method</h3>
-          <p style="text-align:left;"><span class="code">$.getJSON("http://dataurl.com/json.js",<br />function(data){ });
-          </span></p>
+          <p><strong>Underscore</strong> has many very useful methods. We will use a few in our example, but make sure to look at the documentation for the full breadth of the library.</p>
         </section>
       </section>
       <section>
-         <section>
-          <h2>Cross-Domain Issues</h2>
-          <p>For security reasons, modern browsers don't allow you to grab data from a server that is located on a different domain.</p>
-        </section>
         <section>
-          <h3>Exception: APIs</h3>
-          <p>When you are you using an API you generate a security key that you define in your code, that gives you permission to access data.</p>
-        </section>
-        <section>
-          <h3>Exception: JSONP</h3>
-          <ul>
-            <li>JSON with Padding</li>
-            <li>Wraps your data in a callback so the browser knows how to parse the data.</li>
-          </ul>
+          <h2>Exercise</h2>
+          <p>Using the files from <span class="code"><a href="https://github.com/melouttit/template-practice">template-practice</a></span> as a base, let's write a small application that will run through your body cam data and display it on the page.</p>
         </section>
       </section>
+      <section>
         <section>
-          <h2>Assignment</h2>
+          <h2>Assignments</h2>
         </section>
         <section>
           <h3>Reading</h3>
-          <p>Read Chapter 9 in Javascript&JQuery</p>
-          <p>Extra: <a href="http://www.sitepoint.com/ajaxjquery-getjson-simple-example/">SitePoint Tutorial</a></p>
+          <ul>
+            <li>Read Chapter 12 in Javascript&JQuery</li>
+            <li>Dive Into HTML5: 
+              <ul>
+                <li><a href="http://diveintohtml5.info/semantics.html#new-elements">New Semantic Elements</a> to the end of that chapter.</li>
+                <li><a href="">Video:</a> Read the intros Diving In and Video Containers, then you can skip down to the <a href="http://diveintohtml5.info/video.html#markup">Markup</a> section.</li>
+                <li>Extra: <a href="http://diveintohtml5.info/canvas.html">The Canvas Element for Drawing</a></li>
+              </ul>
+            </li>
+          </ul>
         </section>
         <section>
-          <h3>Lesson</h3>
-          <p>Do Codecademy's <a href="http://www.codecademy.com/courses/javascript-beginner-en-g7vdk/0/1">jQuery & AJAX Lesson</a>, parts 1-7. Make sure to upload a screenshot of the last lesson to the Week 10 folder in Dropbox.</p>
+          <h3>Practice</h3>
+          <p>Do Codecademy's <a href="http://www.codecademy.com/courses/javascript-beginner-en-g7vdk/0/1">Game exercise</a> to build a "Rock, Paper, Scissors" application to continue practicing writing JavaScript.</p>
         </section>
       </section>
 		</div>
