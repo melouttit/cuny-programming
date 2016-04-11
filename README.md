@@ -49,4 +49,5 @@ Lessons and notes for CUNY Graduate School of Journalism “Programming for Jour
 </ul>
 
 <p>* <em>Meghan is out, Jue will sub in</em><br />
-<em>NO CLASS on Monday, Feb. 15 - Presidents' Day</em></p>
+<em>NO CLASS on Monday, Feb. 15 - Presidents' Day</em><br />
+<em>NO CLASS on Monday, April 25 - Spring Recess</em></p>
