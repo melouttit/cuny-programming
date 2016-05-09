@@ -54,29 +54,135 @@
 <script type="text/javascript">
   currentWeek = 13;
 </script>
-			<section>
-				<h2>Week 13 | May 4, 2015</h2>
-				<h4>Workshop</h4>
-			</section>
-			<section>
-				<h3>Example</h3>
-				<p>A quick example of a small app using publicly available data with a form of interaction.</p>
-				<ul>
-					<li><a href-"https://github.com/melouttit/test-project">On GitHub</a></li>
-					<li><a href="http://melouttit.github.io/test-project/">Live Example</a></li>
-					<li><a href="https://inventory.data.gov/api/action/datastore_search?resource_id=38625c3d-5388-4c16-a30f-d105432553a4&q=NY">The Data Set</a></li>
-					<li>Built using jQuery and <a href="http://underscorejs.org/">Underscore</a></li>
-				</ul>
-			</section>
-			<section>
-				<h3>Workshop!</h3>
-			</section>
-			<section>
-				<h2>Assignment</h2>
-				<p>Keep working on your assignment with your group and making commits to your project's GitHub. By next week you should have data on the page and be working out your interaction.</p>
-			</section>
-		</div>
-	</div>
+      <section>
+        <h2>Week 13 | May 9, 2016</h2>
+        <h4>Article & Video Workshop</h4>
+      </section>
+      <section>
+        <section>
+          <h2>HTML5</h2>
+        </section>
+        <section>
+          <p>At the end of 2014, HTML5 was officially released. It introduced 30 new tags, a number of which gave media outlets better options for semantic markup.</p>
+        </section>
+        <section>
+          <h3>Before</h3>
+          <p>In order to identify parts of the page that were headers, footers, the article body, etc. we would have to use <span class="code">div</span>s all day long.</p>
+          <ul>
+            <li><span class="code">&lt;div id="article"&gt;&lt;/div&gt;</span></li>
+            <li><span class="code">&lt;div id="footer"&gt;&lt;/div&gt;</span></li>
+            <li><span class="code">&lt;div id="navigation"&gt;&lt;/div&gt;</span></li>
+          </ul>
+        </section>
+        <section>
+          <h3>After</h3>
+          <p>These IDs that were commonly used have been ported into their own tags for page use for more concise and descriptive markup.</p>
+          <ul>
+            <li><span class="code">&lt;article&gt;&lt;/article&gt;</span></li>
+            <li><span class="code">&lt;footer&gt;&lt;/footer&gt;</span></li>
+            <li><span class="code">&lt;nav&gt;&lt;/nav&gt;</span></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Other Examples</h3>
+          <ul>
+            <li><span class="code">&lt;header&gt;&lt;/header&gt;</span></li>
+            <li><span class="code">&lt;section&gt;&lt;/section&gt;</span></li>
+            <li><span class="code">&lt;aside&gt;&lt;/aside&gt;</span></li>
+            <li><span class="code">&lt;time&gt;&lt;/time&gt;</span></li>
+            <li><span class="code">&lt;figure&gt;<span class="code">&lt;figcaption&gt;&lt;/figcaption&gt;</span>&lt;/figure&gt;</span></li>
+            <li><span class="code">&lt;time&gt;&lt;/time&gt;</span></li>
+            <li><span class="code">&lt;mark&gt;&lt;/mark&gt;</span></li>
+            <li><span class="code">&lt;details&gt;&lt;/details&gt;</span></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Exercise</h3>
+          <p>Start a directory for your article page and an <span class="code">index.html</span> file inside of it to house your content. Make sure you include the following tags on your page (in addition to your standard setup): <span class="code">header, article, footer</span>. And make sure you have a headline!</p>
+          <p>Our goal is to start a feature article template, that <a href="http://www.nytimes.com/interactive/2015/10/27/world/greenland-is-melting-away.html">might look something like this</a>.</p>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>HTML5 Video</h2>
+          <p>To prep, start a media directory inside your article directory to house our video files. Download the video files from Slack.</p>
+        </section>
+        <section>
+          <p>Pre-HTML5, most web video was served via Adobe's Flash. As use of Flash has fallen out of favor and JavaScript took its place, Flash still had a hold on the serving of video (and audio).</p>
+        </section>
+        <section>
+          <h3>Media Tags</h3>
+          <p>Two of the most powerful new tags in HTML5 are the <span class="code">video</span> and <span class="code">audio</span> tags, which allow you to simple define a source and control attributes to serve basic web video.</p>
+        </section>
+        <section>
+          <h3>Video</h3>
+          <ul>
+            <li>Tag: <span class="code">video</span></li>
+            <li>Attribute Options: <span class="code">poster</span>, <span class="code">controls</span>, <span class="code">loop</span>, <span class="code">autoplay</span></li>
+            <li><span class="code">poster</span> needs a value, the image you want to use as the poster image for the video.</li>
+            <li>The other attributes just need defined in the tag to be set to true.</li>
+            <li>You will get default styling on the controls, which you can change via CSS.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>The <span class="code">source</span></h3>
+          <p> For both <span class="code">video</span> and <span class="code">audio</span>, within each tag, you will need to define source file so they know <em>which</em> video or audio file to play.</p>
+          <p>The <span class="code">source</span> tag is an inline tag (so no closing tag) that needs the <span class="code">src</span> and <span class="type">type</span> attributes.</p>
+        </section>
+        <section>
+          <h3>File Types</h3>
+          <p><strong>A Note:</strong> There are two main types of video file types that we use on the web - mp4 and webm. To make sure that your video works across all browers, it is best to include both file types. Firefox in particular is selective about using webm. (<em>As with everything, this is subject to change.</em>)</p>
+        </section>
+        <section>
+          <h3>Example</h3>
+          <p style="text-align:left;">
+            <span class="code">
+              &lt;video&gt;<br />
+                &nbsp;&nbsp;&lt;source src="your-video-file.mp4" type="video/mp4&gt;<br />
+                &nbsp;&nbsp;&lt;source src="your-video-file.webm" type="video/webm&gt;<br />
+              &lt;/video&gt;
+            </span>
+          </p>
+        </section>
+        <section>
+          <h3>Exercise</h3>
+          <p>Using the Greenland video files (or one you've brought) - add a lead video to your page that autoplays and loops. Inspect the page to see what kind of default styles are being added. </p>
+        </section>
+        <section>
+          <h3>Advance Usage</h3>
+          <p>To gain more control over the <span class="code">video</span> element, you can utilize a javascript library, like <a href="http://videojs.com/">videojs</a> for even more interactions.</p>
+        </section>
+      </section>
+      <section>
+        <h2>GIT Collab Workshop</h2>
+        <p>Split into groups that you'll be working with the next two weeks to build a small application using a publicly available dataset. For now, let's just get your project files started.</p>
+      </section>
+      <section>
+        <section>
+          <h2>Assignments</h2>
+        </section>
+        <section>
+          <h3>Reading</h3>
+          <ul>
+            <li><a href="http://www.currybet.net/cbet_blog/2010/08/html5-for-journalists.php">HTML5 for Journalists</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Finish Article Page</h3>
+          <ul>
+            <li>Finish styling your article page so it's in presentation condition. Replace or add any content you want using proper HTML5 markup.</li>
+            <li>Create a new git repo (<a href="https://help.github.com/articles/create-a-repo/">Refesher here</a>) and push your article directory to your new repo.</li>
+            <li>Create a <span class="code">gh-pages</span> branch and push to create a live link.</li>
+            <li>Send me the link in Slack.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Practice</h3> 
+          <p>Do Codecademy's <a href="https://www.codecademy.com/courses/web-beginner-en-SWM11/0/1?curriculum_id=50b91eda28c2fb212300039e">Introduction to Canvas</a>: An HTML5 element that allows you draw on your page using JavaScript.</p>
+        </section>
+      </section>
+    </div>
+  </div>
 
 <script src="../../js/reveal/lib/js/head.min.js"></script>
 <script src="../../js/reveal/js/reveal.min.js"></script>

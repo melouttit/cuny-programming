@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!--HEADER INCLUDE-->
+
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Week 12 - Programming for Journalists</title>
+
+  <meta name="author" content="Meghan Louttit">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="stylesheet" href="../../js/reveal/css/reveal.min.css">
+  <link rel="stylesheet" href="../../js/reveal/css/theme/night.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="../../js/reveal/lib/css/zenburn.css">
+
+  <style type="text/css">
+  #backTo{ 
+    margin:0 20px; 
+    font-family: sans-serif;
+    font-size: 13px;
+  }
+  #backTo p,
+  #backTo p a{ 
+    color: #efefef; 
+    text-decoration:none;
+    padding:3px 5px;
+  }
+  #backTo p a:hover,
+  #backTo p a.current{
+    background:#efefef;
+    color:#333;
+  }
+  .code{ color:#fff;font-family: monospace!important; }
+  </style>
+
+  <script>
+    document.write( '<link rel="stylesheet" href="../../js/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script>
+
+</head>
+<body>
+  <div id="backTo"></div>
+  <div class="reveal">
+    <div class="slides">
+
+<!--set week number-->
+<script type="text/javascript">
+  currentWeek = 12;
+</script>
+      <section>
+        <h2>Week 12 | April 27, 2015</h2>
+        <h4>Project Workshop 1</h4>
+      </section>
+      <section>
+        <h2>Project Goal</h2>
+        <p>Build an app out of a publicly available dataset that displays the data somehow and provides at least one form of interaction with users (i.e. Click to sort).</p>
+      </section>
+      <section>
+        <h2>Project Groups</h2>
+        <ul>
+          <li>Group A: <strong>Catherine</strong>, <strong>Maya</strong>, <strong>Rai</strong></li>
+          <li>Group B: <strong>Desiree</strong>, <strong>Danni</strong>, <strong>Helina</strong></li>
+          <li>Group C: <strong>Liam</strong>, <strong>Natasha</strong>, <strong>Allegra</strong>, <strong>Jonathan</strong></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Loose To Do:</h2>
+        <ul>
+          <li>Create a <span class="code">git</span> repo that members will contribute to</li>
+          <li>Pick a dataset you want to use</li>
+          <li>Start loose skeleton for your site: <span class="code">index.html</span>, <span class="code">css/styles.css</span>, <span class="code">js/script.js</span>, <span class="code">images</span></li>
+          <li>Assign each person to take charge of a specific language</li>
+          <li>Decide what you want users to be able to do with your app</li>
+          <li>Wireframe the different pages/states of your app</li>
+          <li>Make use of <span class="code">jquery</span>, <span class="code">underscore</span>, etc. to build.</li>
+          <li>Frequently push your changes to version your app</li>
+          <li>Publish by pushing to a <span class="code">gh-pages</span> branch in your repo.</li>
+        </ul>
+      </section>
+      <section>
+        <h2><span class="code">git</span> Workshop</h2>
+        <p>How to use  <span class="code">git</span> to collaborate</p>
+      </section>
+      <section>
+        <section>
+          <h2>A few things to get you started...</h2>
+        </section>
+        <section>
+          <h3><span class="code">jsonp</span></h3>
+          <ul>
+            <li>Stands for "JSON with padding"</li>
+            <li>Wraps your JSON in a variable that can be accessed between domains</li>
+            <li>Pro: Cross-domain requests!!</li>
+            <li>Con: Weaker sercurity (only load JSONP from trusted sources) and less control over data requests</li>
+            <li>More detailed explanations <a href="http://en.wikipedia.org/wiki/JSONP">here</a> and <a href="http://json-p.org/">here</a> (if you're interested)</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Finding a Dataset</h3>
+          <p>A links to help get you started. Remember: For some you maybe need to register and request API Keys. Read carefully.</p>
+          <ul>
+            <li><a href="http://blog.visual.ly/data-sources/">Visually Roundup</a></li>
+            <li><a href="http://developer.nytimes.com/docs">The New York Times Developers APIs</a></li>
+            <li><a href="http://www.data.gov/">Government Data</a></li>
+            <li><a href="http://www.programmableweb.com/apis/directory">Programmable Web</a> list</li>
+            <li>Have an idea? Check Google!</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Proposal</h3>
+          <p>Download a copy of the app propsal from the Week 12 Dropbox folder and use it to help you think through the purpose of your app. This will need to be turned in as part of your assignment.</p>
+        </section>
+        <section>
+          <h3>Example</h3>
+          <p>Check out a quick example I built in about 30 minutes: <a href="http://melouttit.github.io/test-project/">http://melouttit.github.io/test-project/</a>. You can <a href="https://github.com/melouttit/test-project">view the raw files here</a>.</p> 
+          <p><span class="code">git clone https://github.com/melouttit/test-project.git your-new-directory</span></p>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Assignments</h2>
+          <ul>
+            <li>Create a folder for your group in Week 12</li>
+            <li>Turn in your filled out app proposal</li>
+            <li>Using the <span class="code">jQuery ajax</span> method, successfull make a call to get your data on the page</li>
+            <li>Submit a wireframe for the various parts of your app (either digitall in Dropbox or in person if drawn by hand) - make sure this is a detailed representation of your proposed app</li>
+          </ul>
+        </section>
+      </section>
+    </div>
+  </div>
+
+<script src="../../js/reveal/lib/js/head.min.js"></script>
+<script src="../../js/reveal/js/reveal.min.js"></script>
+<script type="text/javascript">
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Optional libraries used to extend on reveal.js
+    dependencies: [
+      { src: '../../js/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: '../../js/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../../js/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../../js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '../../js/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: '../../js/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    ]
+  });
+</script>
+<script type="text/javascript" src="../../js/lessonHeader.js"></script>
+</body>
+</html>
