@@ -1,4 +1,0 @@
-TO DO Week 14
-- Find public data set for them to use
-- Tips for collaborating (always do git pull first, commit often, etc.)
-- By end of class should have data getting pulled onto the page
